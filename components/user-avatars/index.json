@@ -1,0 +1,103 @@
+{
+  "type": "custom-component",
+  "name": "user-avatars",
+  "nodeName": null,
+  "description": null,
+  "children": [
+    {
+      "name": "div",
+      "nodeName": "div",
+      "elementId": "",
+      "attributes": [
+        {
+          "property": "data-id",
+          "value": "gTSmHV"
+        }
+      ],
+      "classList": [
+        "avatars"
+      ],
+      "conditionalClasses": [],
+      "contentType": "text",
+      "displayExpression": "",
+      "events": {},
+      "iterate": {
+        "array": "",
+        "variable": "",
+        "trackByIndex": false
+      },
+      "styles": [],
+      "children": [
+        {
+          "name": "span",
+          "nodeName": "span",
+          "elementId": "",
+          "attributes": [
+            {
+              "property": "data-id",
+              "value": "_cVcp4"
+            }
+          ],
+          "classList": [
+            "avatar"
+          ],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "user && $ctrl.style",
+          "events": {
+            "click": "$ctrl.viewOnClick ? $ctrl.$modal.open(\"user-overview-modal\", {info: user}) : null"
+          },
+          "iterate": {
+            "array": "$ctrl.users",
+            "variable": "user"
+          },
+          "styles": [],
+          "children": [
+            {
+              "name": "text",
+              "nodeName": "text",
+              "textContent": "user.firstName.substring(0, 1) + user.lastName.substring(0, 1)",
+              "evaluate": true
+            }
+          ],
+          "comments": ""
+        }
+      ],
+      "comments": ""
+    }
+  ],
+  "variables": [
+    {
+      "name": "style",
+      "type": "object",
+      "description": "",
+      "properties": []
+    },
+    {
+      "name": "$modal",
+      "type": "service"
+    }
+  ],
+  "bindings": [
+    {
+      "name": "users",
+      "type": "<",
+      "description": "",
+      "propertyType": "array",
+      "default": "[{\r\n    firstName: \"John\",\r\n    lastName: \"Doe\",\r\n    email: \"john.doe@gmail.com\"\r\n}]"
+    },
+    {
+      "name": "viewOnClick",
+      "type": "<",
+      "description": "",
+      "propertyType": "boolean",
+      "default": "true"
+    }
+  ],
+  "modules": [],
+  "marketplaceId": null,
+  "formControl": null,
+  "transclude": null,
+  "externalScripts": [],
+  "externalStylesheets": []
+}

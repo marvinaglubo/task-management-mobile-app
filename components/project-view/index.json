@@ -1,0 +1,1658 @@
+{
+  "type": "custom-component",
+  "name": "project-view",
+  "nodeName": null,
+  "description": null,
+  "children": [
+    {
+      "name": "div",
+      "nodeName": "div",
+      "elementId": "",
+      "attributes": [],
+      "classList": [
+        "view-header"
+      ],
+      "conditionalClasses": [],
+      "contentType": "text",
+      "displayExpression": "",
+      "events": {},
+      "iterate": {
+        "array": "",
+        "variable": "",
+        "trackByIndex": false
+      },
+      "styles": [],
+      "children": [
+        {
+          "name": "Button",
+          "nodeName": "bln-button",
+          "elementId": "",
+          "attributes": [
+            {
+              "property": "core",
+              "value": ""
+            }
+          ],
+          "classList": [],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [
+            {
+              "property": "--bln-button-font-size",
+              "value": "1.5rem",
+              "enabled": true
+            },
+            {
+              "property": "--bln-button-default-bg-color",
+              "value": "transparent",
+              "enabled": true
+            },
+            {
+              "property": "--bln-button-default-hovered-bg-color",
+              "value": "transparent",
+              "enabled": true
+            },
+            {
+              "property": "--bln-button-default-active-bg-color",
+              "value": "transparent",
+              "enabled": true
+            },
+            {
+              "property": "--bln-button-margin",
+              "value": "0",
+              "enabled": true
+            }
+          ],
+          "children": [
+            {
+              "name": "div",
+              "nodeName": "div",
+              "elementId": "",
+              "attributes": [
+                {
+                  "property": "title",
+                  "value": "{{ $ctrl.tooltip }}"
+                }
+              ],
+              "classList": [
+                "bln-core-component",
+                "bln-button"
+              ],
+              "conditionalClasses": [
+                {
+                  "className": "default",
+                  "condition": "$ctrl.type === 'default'"
+                },
+                {
+                  "className": "primary",
+                  "condition": "$ctrl.type === 'primary'"
+                },
+                {
+                  "className": "secondary",
+                  "condition": "$ctrl.type === 'secondary'"
+                },
+                {
+                  "className": "disabled",
+                  "condition": "$ctrl.isDisabled"
+                },
+                {
+                  "className": "isLoading",
+                  "condition": "$ctrl.isLoading()"
+                }
+              ],
+              "contentType": "text",
+              "displayExpression": "",
+              "events": {
+                "click": "$ctrl.handleClick($event)"
+              },
+              "iterate": {
+                "array": "",
+                "variable": "",
+                "trackByIndex": false
+              },
+              "styles": [],
+              "children": [
+                {
+                  "name": "span",
+                  "nodeName": "span",
+                  "elementId": "",
+                  "attributes": [
+                    {
+                      "property": "ng-if",
+                      "value": "$ctrl.icon.type === 'font-icon'"
+                    },
+                    {
+                      "property": "bln-icon",
+                      "value": ""
+                    },
+                    {
+                      "property": "icon-type",
+                      "value": "font-icon"
+                    },
+                    {
+                      "property": "icon-style",
+                      "value": "{{::$ctrl.icon.style}}"
+                    },
+                    {
+                      "property": "icon-name",
+                      "value": "{{::$ctrl.icon.name}}"
+                    },
+                    {
+                      "property": "data-position",
+                      "value": "{{::$ctrl.icon.position}}"
+                    }
+                  ],
+                  "classList": [],
+                  "conditionalClasses": [
+                    {
+                      "className": "opacity-0",
+                      "condition": "$ctrl.isLoading()"
+                    }
+                  ],
+                  "contentType": "text",
+                  "displayExpression": "",
+                  "events": {},
+                  "iterate": {
+                    "array": "",
+                    "variable": "",
+                    "trackByIndex": false
+                  },
+                  "styles": [],
+                  "children": [],
+                  "comments": ""
+                },
+                {
+                  "name": "span",
+                  "nodeName": "span",
+                  "elementId": "",
+                  "attributes": [
+                    {
+                      "property": "ng-if",
+                      "value": "$ctrl.icon.type === 'image-icon'"
+                    },
+                    {
+                      "property": "bln-icon",
+                      "value": ""
+                    },
+                    {
+                      "property": "icon-type",
+                      "value": "image-icon"
+                    },
+                    {
+                      "property": "icon-url",
+                      "value": "{{::$ctrl.icon.url}}"
+                    },
+                    {
+                      "property": "data-position",
+                      "value": "{{::$ctrl.icon.position}}"
+                    }
+                  ],
+                  "classList": [],
+                  "conditionalClasses": [
+                    {
+                      "className": "opacity-0",
+                      "condition": "$ctrl.isLoading()"
+                    }
+                  ],
+                  "contentType": "text",
+                  "displayExpression": "",
+                  "events": {},
+                  "iterate": {
+                    "array": "",
+                    "variable": "",
+                    "trackByIndex": false
+                  },
+                  "styles": [],
+                  "children": [],
+                  "comments": ""
+                },
+                {
+                  "name": "div",
+                  "nodeName": "div",
+                  "elementId": "",
+                  "attributes": [
+                    {
+                      "property": "ng-if",
+                      "value": "!!$ctrl.label && $ctrl.icon.position !== 'icon-only'"
+                    }
+                  ],
+                  "classList": [
+                    "label"
+                  ],
+                  "conditionalClasses": [
+                    {
+                      "className": "opacity-0",
+                      "condition": "$ctrl.isLoading()"
+                    }
+                  ],
+                  "contentType": "text",
+                  "displayExpression": "true",
+                  "events": {},
+                  "iterate": {
+                    "array": "",
+                    "variable": "",
+                    "trackByIndex": false
+                  },
+                  "styles": [],
+                  "children": [
+                    {
+                      "name": "text",
+                      "nodeName": "text",
+                      "textContent": "$ctrl.label",
+                      "evaluate": true
+                    }
+                  ],
+                  "comments": ""
+                },
+                {
+                  "name": "div",
+                  "nodeName": "div",
+                  "elementId": "",
+                  "attributes": [
+                    {
+                      "property": "ng-if",
+                      "value": "$ctrl.isLoading()"
+                    }
+                  ],
+                  "classList": [
+                    "spinner"
+                  ],
+                  "conditionalClasses": [],
+                  "contentType": "text",
+                  "displayExpression": "",
+                  "events": {},
+                  "iterate": {
+                    "array": "",
+                    "variable": "",
+                    "trackByIndex": false
+                  },
+                  "styles": [],
+                  "children": [
+                    {
+                      "name": "text",
+                      "nodeName": "text",
+                      "textContent": "",
+                      "evaluate": false
+                    },
+                    {
+                      "name": "svg",
+                      "nodeName": "svg",
+                      "elementId": "",
+                      "attributes": [
+                        {
+                          "property": "viewBox",
+                          "value": "25 25 50 50"
+                        }
+                      ],
+                      "classList": [],
+                      "conditionalClasses": [],
+                      "contentType": "text",
+                      "displayExpression": "",
+                      "events": {},
+                      "iterate": {
+                        "array": "",
+                        "variable": "",
+                        "trackByIndex": false
+                      },
+                      "styles": [],
+                      "children": [
+                        {
+                          "name": "circle",
+                          "nodeName": "circle",
+                          "elementId": "",
+                          "attributes": [
+                            {
+                              "property": "cx",
+                              "value": "50"
+                            },
+                            {
+                              "property": "cy",
+                              "value": "50"
+                            },
+                            {
+                              "property": "r",
+                              "value": "20"
+                            },
+                            {
+                              "property": "fill",
+                              "value": "none"
+                            },
+                            {
+                              "property": "stroke-width",
+                              "value": "4"
+                            },
+                            {
+                              "property": "stroke-miterlimit",
+                              "value": "10"
+                            }
+                          ],
+                          "classList": [
+                            "path"
+                          ],
+                          "conditionalClasses": [],
+                          "contentType": "text",
+                          "displayExpression": "",
+                          "events": {},
+                          "iterate": {
+                            "array": "",
+                            "variable": "",
+                            "trackByIndex": false
+                          },
+                          "styles": [],
+                          "children": [],
+                          "comments": ""
+                        }
+                      ],
+                      "comments": ""
+                    }
+                  ],
+                  "comments": ""
+                }
+              ],
+              "comments": ""
+            }
+          ],
+          "comments": "",
+          "type": "core-component",
+          "id": "button",
+          "expressions": [
+            {
+              "to": "label",
+              "expression": "'Hide Side Panel'"
+            },
+            {
+              "to": "icon",
+              "expression": "({\n  \"type\": \"font-icon\",\n  \"style\": \"solid\",\n  \"name\": \"arrow-left\",\n  \"position\": \"icon-only\"\n})"
+            },
+            {
+              "expression": "$ctrl.hide()",
+              "to": "onClick"
+            }
+          ]
+        },
+        {
+          "name": "div",
+          "nodeName": "div",
+          "elementId": "",
+          "attributes": [],
+          "classList": [],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [],
+          "children": [
+            {
+              "name": "Button",
+              "nodeName": "bln-button",
+              "elementId": "",
+              "attributes": [
+                {
+                  "property": "core",
+                  "value": ""
+                }
+              ],
+              "classList": [],
+              "conditionalClasses": [],
+              "contentType": "text",
+              "displayExpression": "",
+              "events": {},
+              "iterate": {
+                "array": "",
+                "variable": "",
+                "trackByIndex": false
+              },
+              "styles": [
+                {
+                  "property": "--bln-button-font-size",
+                  "value": "1.5rem",
+                  "enabled": true
+                },
+                {
+                  "property": "margin-left",
+                  "value": ".5rem",
+                  "enabled": true
+                },
+                {
+                  "property": "--bln-button-default-bg-color",
+                  "value": "transparent",
+                  "enabled": true
+                },
+                {
+                  "property": "--bln-button-default-hovered-bg-color",
+                  "value": "transparent",
+                  "enabled": true
+                },
+                {
+                  "property": "--bln-button-default-active-bg-color",
+                  "value": "transparent",
+                  "enabled": true
+                }
+              ],
+              "children": [],
+              "comments": "",
+              "type": "core-component",
+              "id": "button",
+              "expressions": [
+                {
+                  "expression": "({\n  \"type\": \"font-icon\",\n  \"style\": \"regular\",\n  \"name\": \"trash-alt\",\n  \"position\": \"icon-only\"\n})",
+                  "to": "icon"
+                },
+                {
+                  "expression": "$ctrl.deleteProject($ctrl.data)",
+                  "to": "onClick"
+                }
+              ]
+            }
+          ],
+          "comments": ""
+        }
+      ],
+      "comments": ""
+    },
+    {
+      "name": "div",
+      "nodeName": "div",
+      "elementId": "",
+      "attributes": [],
+      "classList": [
+        "view-overview"
+      ],
+      "conditionalClasses": [],
+      "contentType": "text",
+      "displayExpression": "",
+      "events": {},
+      "iterate": {
+        "array": "",
+        "variable": "",
+        "trackByIndex": false
+      },
+      "styles": [],
+      "children": [
+        {
+          "name": "div",
+          "nodeName": "div",
+          "elementId": "",
+          "attributes": [],
+          "classList": [],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [
+            {
+              "property": "display",
+              "value": "inline-block",
+              "enabled": true
+            }
+          ],
+          "children": [
+            {
+              "name": "span",
+              "nodeName": "span",
+              "elementId": "",
+              "attributes": [],
+              "classList": [
+                "view-title"
+              ],
+              "conditionalClasses": [],
+              "contentType": "text",
+              "displayExpression": "",
+              "events": {},
+              "iterate": {
+                "array": "",
+                "variable": "",
+                "trackByIndex": false
+              },
+              "styles": [
+                {
+                  "property": "font-weight",
+                  "value": "bold",
+                  "enabled": true
+                },
+                {
+                  "property": "font-size",
+                  "value": "2em",
+                  "enabled": true
+                }
+              ],
+              "children": [
+                {
+                  "name": "text",
+                  "nodeName": "text",
+                  "textContent": "$ctrl.data.name",
+                  "evaluate": true
+                }
+              ],
+              "comments": ""
+            },
+            {
+              "name": "div",
+              "nodeName": "div",
+              "elementId": "",
+              "attributes": [],
+              "classList": [],
+              "conditionalClasses": [],
+              "contentType": "text",
+              "displayExpression": "",
+              "events": {},
+              "iterate": {
+                "array": "",
+                "variable": "",
+                "trackByIndex": false
+              },
+              "styles": [
+                {
+                  "property": "display",
+                  "value": "inline-flex",
+                  "enabled": true
+                },
+                {
+                  "property": "vertical-align",
+                  "value": "text-bottom",
+                  "enabled": true
+                },
+                {
+                  "property": "font-weight",
+                  "value": "bold",
+                  "enabled": true
+                },
+                {
+                  "property": "font-size",
+                  "value": "1rem",
+                  "enabled": true
+                },
+                {
+                  "property": "padding-bottom",
+                  "value": ".15rem",
+                  "enabled": true
+                },
+                {
+                  "property": "margin-left",
+                  "value": ".25rem",
+                  "enabled": true
+                }
+              ],
+              "children": [
+                {
+                  "name": "text",
+                  "nodeName": "text",
+                  "textContent": "'(' + $ctrl.data.code + ')'",
+                  "evaluate": true
+                }
+              ],
+              "comments": ""
+            },
+            {
+              "name": "Badge",
+              "nodeName": "bln-badge",
+              "elementId": "",
+              "attributes": [
+                {
+                  "property": "core",
+                  "value": ""
+                }
+              ],
+              "classList": [
+                "status"
+              ],
+              "conditionalClasses": [
+                {
+                  "className": "done",
+                  "condition": "$ctrl.data.status === \"Completed\""
+                },
+                {
+                  "className": "in-progress",
+                  "condition": "$ctrl.data.status == \"In Progress\""
+                }
+              ],
+              "contentType": "text",
+              "displayExpression": "",
+              "events": {},
+              "iterate": {
+                "array": "",
+                "variable": "",
+                "trackByIndex": false
+              },
+              "styles": [
+                {
+                  "property": "--bln-badge-font-weight",
+                  "value": "bold",
+                  "enabled": true
+                },
+                {
+                  "property": "--bln-badge-padding",
+                  "value": ".25rem .5rem",
+                  "enabled": true
+                },
+                {
+                  "property": "--bln-badge-roundness",
+                  "value": ".5rem",
+                  "enabled": true
+                },
+                {
+                  "property": "--bln-badge-margin",
+                  "value": "0 .25rem",
+                  "enabled": true
+                },
+                {
+                  "property": "vertical-align",
+                  "value": "text-bottom",
+                  "enabled": true
+                }
+              ],
+              "children": [],
+              "comments": "",
+              "type": "core-component",
+              "id": "badge",
+              "expressions": [
+                {
+                  "expression": "$ctrl.data.status",
+                  "to": "text"
+                }
+              ]
+            }
+          ],
+          "comments": ""
+        },
+        {
+          "name": "p",
+          "nodeName": "p",
+          "elementId": "",
+          "attributes": [],
+          "classList": [
+            "view-description"
+          ],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [],
+          "children": [
+            {
+              "name": "text",
+              "nodeName": "text",
+              "textContent": "$ctrl.data.description",
+              "evaluate": true
+            }
+          ],
+          "comments": ""
+        },
+        {
+          "name": "div",
+          "nodeName": "div",
+          "elementId": "",
+          "attributes": [],
+          "classList": [],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [
+            {
+              "enabled": true,
+              "property": "width",
+              "value": "100% !important"
+            }
+          ],
+          "layout": {
+            "container": {
+              "type": "box",
+              "orientation": "row",
+              "crossAxisAlignment": "stretch",
+              "items": []
+            }
+          },
+          "children": [
+            {
+              "name": "div",
+              "nodeName": "div",
+              "elementId": "",
+              "attributes": [],
+              "classList": [],
+              "conditionalClasses": [],
+              "contentType": "text",
+              "displayExpression": "",
+              "events": {},
+              "iterate": {
+                "array": "",
+                "variable": "",
+                "trackByIndex": false
+              },
+              "styles": [],
+              "layout": {
+                "cell": {
+                  "type": "box-item",
+                  "growFactor": 1,
+                  "shrinkFactor": 1
+                }
+              },
+              "children": [
+                {
+                  "name": "div",
+                  "nodeName": "div",
+                  "elementId": "",
+                  "attributes": [],
+                  "classList": [
+                    "deadline"
+                  ],
+                  "conditionalClasses": [],
+                  "contentType": "text",
+                  "displayExpression": "",
+                  "events": {},
+                  "iterate": {
+                    "array": "",
+                    "variable": "",
+                    "trackByIndex": false
+                  },
+                  "styles": [],
+                  "children": [
+                    {
+                      "name": "Badge",
+                      "nodeName": "bln-badge",
+                      "elementId": "",
+                      "attributes": [
+                        {
+                          "property": "core",
+                          "value": ""
+                        }
+                      ],
+                      "classList": [],
+                      "conditionalClasses": [],
+                      "contentType": "text",
+                      "displayExpression": "",
+                      "events": {},
+                      "iterate": {
+                        "array": "",
+                        "variable": "",
+                        "trackByIndex": false
+                      },
+                      "styles": [
+                        {
+                          "property": "--bln-badge-text-color",
+                          "value": "#474747",
+                          "enabled": true
+                        },
+                        {
+                          "property": "--bln-badge-default-color",
+                          "value": "transparent",
+                          "enabled": true
+                        },
+                        {
+                          "property": "--bln-badge-padding",
+                          "value": "0%",
+                          "enabled": true
+                        },
+                        {
+                          "property": "--bln-badge-font-size",
+                          "value": "16px",
+                          "enabled": true
+                        },
+                        {
+                          "property": "--bln-badge-font-weight",
+                          "value": "bold",
+                          "enabled": true
+                        },
+                        {
+                          "property": "--bln-badge-icon-size",
+                          "value": "1rem",
+                          "enabled": true
+                        }
+                      ],
+                      "children": [],
+                      "comments": "",
+                      "type": "core-component",
+                      "id": "badge",
+                      "expressions": [
+                        {
+                          "expression": "\"Deadline: \"",
+                          "to": "text"
+                        },
+                        {
+                          "expression": "({\n  \"type\": \"font-icon\",\n  \"style\": \"regular\",\n  \"name\": \"calendar\",\n  \"position\": \"left\"\n})",
+                          "to": "icon"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "span",
+                      "nodeName": "span",
+                      "elementId": "",
+                      "attributes": [],
+                      "classList": [],
+                      "conditionalClasses": [],
+                      "contentType": "text",
+                      "displayExpression": "",
+                      "events": {},
+                      "iterate": {
+                        "array": "",
+                        "variable": "",
+                        "trackByIndex": false
+                      },
+                      "styles": [
+                        {
+                          "property": "font-size",
+                          "value": "14px",
+                          "enabled": true
+                        },
+                        {
+                          "property": "font-weight",
+                          "value": "bold",
+                          "enabled": true
+                        }
+                      ],
+                      "children": [
+                        {
+                          "name": "text",
+                          "nodeName": "text",
+                          "textContent": "$ctrl.getDeadline()",
+                          "evaluate": true
+                        }
+                      ],
+                      "comments": ""
+                    },
+                    {
+                      "name": "span",
+                      "nodeName": "span",
+                      "elementId": "",
+                      "attributes": [],
+                      "classList": [],
+                      "conditionalClasses": [],
+                      "contentType": "text",
+                      "displayExpression": "",
+                      "events": {},
+                      "iterate": {
+                        "array": "",
+                        "variable": "",
+                        "trackByIndex": false
+                      },
+                      "styles": [
+                        {
+                          "property": "font-size",
+                          "value": "12px",
+                          "enabled": true
+                        }
+                      ],
+                      "children": [
+                        {
+                          "name": "text",
+                          "nodeName": "text",
+                          "textContent": "' (' + $ctrl.projectManager.getDeadlineMessage($ctrl.data.deadLine) + ')'",
+                          "evaluate": true
+                        }
+                      ],
+                      "comments": ""
+                    }
+                  ],
+                  "comments": ""
+                }
+              ],
+              "comments": ""
+            },
+            {
+              "name": "div",
+              "nodeName": "div",
+              "elementId": "",
+              "attributes": [],
+              "classList": [],
+              "conditionalClasses": [],
+              "contentType": "text",
+              "displayExpression": "",
+              "events": {},
+              "iterate": {
+                "array": "",
+                "variable": "",
+                "trackByIndex": false
+              },
+              "styles": [
+                {
+                  "property": "text-align",
+                  "value": "right",
+                  "enabled": true
+                }
+              ],
+              "layout": {
+                "cell": {
+                  "type": "box-item"
+                }
+              },
+              "children": [
+                {
+                  "name": "Progress",
+                  "nodeName": "bln-progress",
+                  "elementId": "progress",
+                  "attributes": [
+                    {
+                      "property": "core",
+                      "value": ""
+                    }
+                  ],
+                  "classList": [],
+                  "conditionalClasses": [],
+                  "contentType": "text",
+                  "displayExpression": "",
+                  "events": {},
+                  "iterate": {
+                    "array": "",
+                    "variable": "",
+                    "trackByIndex": false
+                  },
+                  "styles": [
+                    {
+                      "property": "--bln-progress-circular-size",
+                      "value": "50px",
+                      "enabled": true
+                    },
+                    {
+                      "property": "--bln-progress-circular-thickness",
+                      "value": "5",
+                      "enabled": true
+                    },
+                    {
+                      "property": "--bln-progress-percent-font-size",
+                      "value": ".65rem",
+                      "enabled": true
+                    },
+                    {
+                      "property": "--bln-progress-fill-color",
+                      "value": "var(--secondary-color, #000)",
+                      "enabled": true
+                    }
+                  ],
+                  "layout": {},
+                  "children": [],
+                  "comments": "",
+                  "type": "core-component",
+                  "id": "progress",
+                  "expressions": [
+                    {
+                      "expression": "\"step\"",
+                      "to": "type"
+                    },
+                    {
+                      "expression": "\"circular\"",
+                      "to": "shape"
+                    },
+                    {
+                      "expression": "true",
+                      "to": "showPercent"
+                    },
+                    {
+                      "expression": "$ctrl.data.progress",
+                      "to": "step"
+                    }
+                  ]
+                }
+              ],
+              "comments": ""
+            }
+          ],
+          "comments": ""
+        }
+      ],
+      "comments": ""
+    },
+    {
+      "name": "div",
+      "nodeName": "div",
+      "elementId": "",
+      "attributes": [
+        {
+          "property": "data-id",
+          "value": "B6s4BV"
+        }
+      ],
+      "classList": [
+        "view-content"
+      ],
+      "conditionalClasses": [],
+      "contentType": "text",
+      "displayExpression": "",
+      "events": {},
+      "iterate": {
+        "array": "",
+        "variable": "",
+        "trackByIndex": false
+      },
+      "styles": [],
+      "children": [
+        {
+          "name": "div",
+          "nodeName": "div",
+          "elementId": "",
+          "attributes": [
+            {
+              "property": "data-id",
+              "value": "Q59_8F"
+            }
+          ],
+          "classList": [],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "$ctrl.data.assignedUsers.length",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [],
+          "children": [
+            {
+              "name": "h1",
+              "nodeName": "h1",
+              "elementId": "",
+              "attributes": [
+                {
+                  "property": "data-id",
+                  "value": "xyucjz"
+                }
+              ],
+              "classList": [],
+              "conditionalClasses": [],
+              "contentType": "text",
+              "displayExpression": "",
+              "events": {},
+              "iterate": {
+                "array": "",
+                "variable": "",
+                "trackByIndex": false
+              },
+              "styles": [],
+              "children": [
+                {
+                  "name": "text",
+                  "nodeName": "text",
+                  "textContent": "Team Members",
+                  "evaluate": false
+                }
+              ],
+              "comments": ""
+            },
+            {
+              "name": "user-avatars",
+              "nodeName": "user-avatars",
+              "elementId": "",
+              "attributes": [
+                {
+                  "property": "data-id",
+                  "value": "0WAwFl"
+                }
+              ],
+              "classList": [],
+              "conditionalClasses": [],
+              "contentType": "text",
+              "displayExpression": "",
+              "events": {},
+              "iterate": {
+                "array": "",
+                "variable": "",
+                "trackByIndex": false
+              },
+              "styles": [],
+              "children": [],
+              "comments": "",
+              "type": "custom-component",
+              "id": "664e645cce56869a03f07c85",
+              "expressions": [
+                {
+                  "expression": "$ctrl.data.assignedUsers",
+                  "to": "users"
+                }
+              ]
+            }
+          ],
+          "comments": ""
+        },
+        {
+          "name": "div",
+          "nodeName": "div",
+          "elementId": "",
+          "attributes": [
+            {
+              "property": "data-id",
+              "value": "3S-lWF"
+            }
+          ],
+          "classList": [
+            "tasks"
+          ],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [],
+          "children": [
+            {
+              "name": "div",
+              "nodeName": "div",
+              "elementId": "",
+              "attributes": [
+                {
+                  "property": "data-id",
+                  "value": "JwPUSP"
+                }
+              ],
+              "classList": [],
+              "conditionalClasses": [],
+              "contentType": "text",
+              "displayExpression": "",
+              "events": {},
+              "iterate": {
+                "array": "",
+                "variable": "",
+                "trackByIndex": false
+              },
+              "styles": [
+                {
+                  "property": "display",
+                  "value": "flex",
+                  "enabled": true
+                }
+              ],
+              "children": [
+                {
+                  "name": "h1",
+                  "nodeName": "h1",
+                  "elementId": "",
+                  "attributes": [
+                    {
+                      "property": "data-id",
+                      "value": "MntyqE"
+                    }
+                  ],
+                  "classList": [],
+                  "conditionalClasses": [],
+                  "contentType": "text",
+                  "displayExpression": "",
+                  "events": {},
+                  "iterate": {
+                    "array": "",
+                    "variable": "",
+                    "trackByIndex": false
+                  },
+                  "styles": [],
+                  "children": [
+                    {
+                      "name": "text",
+                      "nodeName": "text",
+                      "textContent": "Tasks",
+                      "evaluate": false
+                    }
+                  ],
+                  "comments": ""
+                },
+                {
+                  "name": "Button",
+                  "nodeName": "bln-button",
+                  "elementId": "",
+                  "attributes": [
+                    {
+                      "property": "core",
+                      "value": ""
+                    },
+                    {
+                      "property": "data-id",
+                      "value": "FyuoXo"
+                    }
+                  ],
+                  "classList": [],
+                  "conditionalClasses": [],
+                  "contentType": "text",
+                  "displayExpression": "",
+                  "events": {},
+                  "iterate": {
+                    "array": "",
+                    "variable": "",
+                    "trackByIndex": false
+                  },
+                  "styles": [
+                    {
+                      "property": "--bln-button-padding",
+                      "value": "0 .5rem",
+                      "enabled": true
+                    },
+                    {
+                      "property": "--bln-button-margin",
+                      "value": "0 .5rem",
+                      "enabled": true
+                    },
+                    {
+                      "property": "--bln-button-font-size",
+                      "value": "1.5rem",
+                      "enabled": true
+                    },
+                    {
+                      "property": "--bln-button-default-bg-color",
+                      "value": "transparent",
+                      "enabled": true
+                    },
+                    {
+                      "property": "--bln-button-default-hovered-bg-color",
+                      "value": "transparent",
+                      "enabled": true
+                    },
+                    {
+                      "property": "--bln-button-default-active-bg-color",
+                      "value": "transparent",
+                      "enabled": true
+                    },
+                    {
+                      "property": "--bln-button-default-text-color",
+                      "value": "var(--primary-color)",
+                      "enabled": true
+                    },
+                    {
+                      "property": "--bln-button-default-hovered-text-color",
+                      "value": "var(--primary-color)",
+                      "enabled": true
+                    },
+                    {
+                      "property": "--bln-button-default-active-text-color",
+                      "value": "var(--primary-color)",
+                      "enabled": true
+                    }
+                  ],
+                  "children": [],
+                  "comments": "",
+                  "type": "core-component",
+                  "id": "button",
+                  "expressions": [
+                    {
+                      "expression": "({\n  \"type\": \"font-icon\",\n  \"position\": \"icon-only\",\n  \"name\": \"plus-circle\",\n  \"style\": \"solid\"\n})",
+                      "to": "icon"
+                    },
+                    {
+                      "expression": "$ctrl.addTask()",
+                      "to": "onClick"
+                    }
+                  ]
+                }
+              ],
+              "comments": ""
+            },
+            {
+              "name": "task-card",
+              "nodeName": "task-card",
+              "elementId": "",
+              "attributes": [
+                {
+                  "property": "data-id",
+                  "value": "B6uJ9G"
+                }
+              ],
+              "classList": [],
+              "conditionalClasses": [],
+              "contentType": "text",
+              "displayExpression": "$ctrl.loaded && task",
+              "events": {
+                "click": "$ctrl.views.task.show(task)"
+              },
+              "iterate": {
+                "array": "$ctrl.views.project.tasks",
+                "variable": "task"
+              },
+              "styles": [],
+              "children": [],
+              "comments": "",
+              "type": "custom-component",
+              "id": "664e645dce56869a03f07c87",
+              "expressions": [
+                {
+                  "expression": "task",
+                  "to": "data"
+                }
+              ]
+            }
+          ],
+          "comments": ""
+        },
+        {
+          "name": "div",
+          "nodeName": "div",
+          "elementId": "",
+          "attributes": [
+            {
+              "property": "data-id",
+              "value": "7_lC9B"
+            }
+          ],
+          "classList": [],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [
+            {
+              "property": "flex",
+              "value": "1",
+              "enabled": true
+            }
+          ],
+          "children": [
+            {
+              "name": "loader",
+              "nodeName": "loader",
+              "elementId": "",
+              "attributes": [
+                {
+                  "property": "data-id",
+                  "value": "oiPmNM"
+                }
+              ],
+              "classList": [],
+              "conditionalClasses": [],
+              "contentType": "text",
+              "displayExpression": "!$ctrl.loaded",
+              "events": {},
+              "iterate": {
+                "array": "",
+                "variable": "",
+                "trackByIndex": false
+              },
+              "styles": [],
+              "children": [],
+              "comments": "",
+              "type": "custom-component",
+              "id": "66593c4d521c96e323e79252",
+              "expressions": [
+                {
+                  "expression": "'100%'",
+                  "to": "height"
+                },
+                {
+                  "expression": "'Loading tasks'",
+                  "to": "message"
+                }
+              ]
+            }
+          ],
+          "comments": ""
+        }
+      ],
+      "comments": ""
+    },
+    {
+      "name": "Button",
+      "nodeName": "bln-button",
+      "elementId": "",
+      "attributes": [
+        {
+          "property": "core",
+          "value": ""
+        }
+      ],
+      "classList": [],
+      "conditionalClasses": [],
+      "contentType": "text",
+      "displayExpression": "",
+      "events": {},
+      "iterate": {
+        "array": "",
+        "variable": "",
+        "trackByIndex": false
+      },
+      "styles": [
+        {
+          "property": "position",
+          "value": "fixed",
+          "enabled": true
+        },
+        {
+          "property": "z-index",
+          "value": "1",
+          "enabled": true
+        },
+        {
+          "property": "bottom",
+          "value": "0",
+          "enabled": true
+        },
+        {
+          "property": "right",
+          "value": "0",
+          "enabled": true
+        },
+        {
+          "property": "margin",
+          "value": "1rem",
+          "enabled": true
+        },
+        {
+          "property": "--bln-button-roundness",
+          "value": "100%",
+          "enabled": true
+        },
+        {
+          "property": "--bln-button-padding",
+          "value": "1.25rem",
+          "enabled": true
+        },
+        {
+          "property": "--bln-button-font-size",
+          "value": "1rem",
+          "enabled": true
+        }
+      ],
+      "children": [],
+      "comments": "",
+      "type": "core-component",
+      "id": "button",
+      "expressions": [
+        {
+          "expression": "\"primary\"",
+          "to": "type"
+        },
+        {
+          "expression": "({\n  \"type\": \"font-icon\",\n  \"style\": \"solid\",\n  \"name\": \"pen\",\n  \"position\": \"icon-only\"\n})",
+          "to": "icon"
+        },
+        {
+          "expression": "\"Edit\"",
+          "to": "label"
+        },
+        {
+          "expression": "$ctrl.edit()",
+          "to": "onClick"
+        }
+      ]
+    }
+  ],
+  "variables": [
+    {
+      "name": "demoTaskApi",
+      "type": "open-api",
+      "id": "66541b38761bb263eba724d5"
+    },
+    {
+      "name": "tasks",
+      "type": "property",
+      "description": "",
+      "value": ""
+    },
+    {
+      "name": "init",
+      "type": "method",
+      "description": "",
+      "body": "$ctrl.$device.onBackButton(e => {\r\n    e.preventDefault()\r\n    $ctrl.$timeout(() => {\r\n        $ctrl.hide()\r\n    })\r\n})",
+      "invokeOnLoad": true,
+      "isAsync": true,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": []
+    },
+    {
+      "name": "$timeout",
+      "type": "service"
+    },
+    {
+      "name": "fetchTasks",
+      "type": "method",
+      "description": "",
+      "body": "$ctrl.loaded = false\n$ctrl.views.project.tasks = []\n\nif (!$ctrl.data) return\n\nconst result = await $ctrl.demoTaskApi.demo_api_tasks_services_task_SelectAllTaskByProject({\n    projectCode: $ctrl.data.code,\n    limit: 1000,\n    offset: 0\n})\n\n$ctrl.$timeout(() => {\n    if (!$ctrl.data) return\n    const tasks = result.data.task\n    const users = ($ctrl.data.assignedUsers ?? [])\n\n    tasks.forEach(task => {\n        task.user = users.find(user => user.userId === task.assignedUserId)\n    })\n\n    $ctrl.loaded = true\n    $ctrl.views.project.tasks = tasks\n    $ctrl.projectManager.refreshData($ctrl.views.project)\n})",
+      "invokeOnLoad": false,
+      "isAsync": true,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": [],
+      "watch": [
+        "$ctrl.data.projectId"
+      ]
+    },
+    {
+      "name": "hide",
+      "type": "method",
+      "description": "",
+      "body": "$ctrl.views.project.hide()\n// $ctrl.views.project.tasks = []\n",
+      "invokeOnLoad": false,
+      "isAsync": false,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": []
+    },
+    {
+      "name": "getDeadline",
+      "type": "method",
+      "description": "",
+      "body": "if (!$ctrl.data) return ''\nconst deadLine = $ctrl.data.deadLine\nconst date = moment(deadLine)\nreturn date.format('MMM DD, YYYY')",
+      "invokeOnLoad": false,
+      "isAsync": false,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": []
+    },
+    {
+      "name": "$device",
+      "type": "service"
+    },
+    {
+      "name": "onUpdate",
+      "type": "method",
+      "description": "",
+      "body": "$ctrl.data = data",
+      "invokeOnLoad": false,
+      "isAsync": false,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": [
+        "data"
+      ]
+    },
+    {
+      "name": "edit",
+      "type": "method",
+      "description": "",
+      "body": "const data = angular.copy($ctrl.data)\n$ctrl.views.editProject.show(data, 'edit')",
+      "invokeOnLoad": false,
+      "isAsync": false,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": []
+    },
+    {
+      "name": "addTask",
+      "type": "method",
+      "description": "",
+      "body": "const data = {\n    projectId: $ctrl.data.projectId,\n    subject: \"\",\n    description: \"\",\n    status: \"Not Started\",\n}\n\n$ctrl.views.editTask.show(data, 'add')",
+      "invokeOnLoad": false,
+      "isAsync": false,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": []
+    },
+    {
+      "name": "deleteProject",
+      "type": "method",
+      "description": "",
+      "body": "const id = $ctrl.data.projectId\nconst index = $ctrl.views.task.notes.findIndex(data => data.taskId === id)\n\nconst actions = [{\n    name: 'yes', label: 'Yes', type: 'danger', action: async () => {\n        await $ctrl.demoTaskApi.demo_api_tasks_services_project_DeleteProject({ projectId: id })\n        await $ctrl.projectManager.refreshProjects()\n\n        if ($ctrl.search.filter) $ctrl.search.execute()\n\n        $ctrl.hide()\n    }\n}, { name: 'no', label: 'No' }]\n\n$ctrl.$modal.open('action-modal', { hideCancel: true, actions, message: \"Are you sure you want to delete this project?\" })",
+      "invokeOnLoad": false,
+      "isAsync": false,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": []
+    },
+    {
+      "name": "$modal",
+      "type": "service"
+    },
+    {
+      "name": "projectManager",
+      "type": "service",
+      "id": "66541b3a761bb263eba724f6"
+    },
+    {
+      "name": "views",
+      "type": "service",
+      "id": "66541b3a761bb263eba724f4"
+    },
+    {
+      "name": "search",
+      "type": "service",
+      "id": "66541b3a761bb263eba724f7"
+    },
+    {
+      "name": "$locale",
+      "type": "service"
+    }
+  ],
+  "bindings": [
+    {
+      "name": "data",
+      "type": "=",
+      "description": "",
+      "propertyType": "property",
+      "default": "({\n    \"projectId\": 1,\n    \"name\": \"Build product Gizmo\",\n    \"code\": \"gizmo\",\n    \"status\": \"In Progress\",\n    \"description\": \"Gizmo is the gadget that everyone is going to want.\",\n    \"deadLine\": \"2023-08-15T00:00:00+0800\",\n    \"createdDate\": \"2024-05-08T15:39:25+0800\"\n})"
+    }
+  ],
+  "modules": [],
+  "marketplaceId": null,
+  "formControl": null,
+  "transclude": null,
+  "externalScripts": [],
+  "externalStylesheets": []
+}

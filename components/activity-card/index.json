@@ -1,0 +1,403 @@
+{
+  "type": "custom-component",
+  "name": "activity-card",
+  "children": [
+    {
+      "name": "div",
+      "nodeName": "div",
+      "elementId": "",
+      "attributes": [
+        {
+          "property": "data-id",
+          "value": "zDDmt3"
+        }
+      ],
+      "classList": [],
+      "conditionalClasses": [],
+      "contentType": "text",
+      "displayExpression": "",
+      "events": {},
+      "iterate": {
+        "array": "",
+        "variable": "",
+        "trackByIndex": false
+      },
+      "styles": [
+        {
+          "property": "display",
+          "value": "flex",
+          "enabled": true
+        },
+        {
+          "property": "padding",
+          "value": ".5rem 0%",
+          "enabled": true
+        },
+        {
+          "property": "background-color",
+          "value": "#fff",
+          "enabled": true
+        }
+      ],
+      "children": [
+        {
+          "name": "div",
+          "nodeName": "div",
+          "elementId": "",
+          "attributes": [
+            {
+              "property": "data-id",
+              "value": "zl99v-"
+            }
+          ],
+          "classList": [],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [
+            {
+              "property": "padding",
+              "value": "0 .5rem",
+              "enabled": true
+            }
+          ],
+          "children": [
+            {
+              "name": "user-avatars",
+              "nodeName": "user-avatars",
+              "elementId": "",
+              "attributes": [
+                {
+                  "property": "data-id",
+                  "value": "eoIvUU"
+                }
+              ],
+              "classList": [],
+              "conditionalClasses": [],
+              "contentType": "text",
+              "displayExpression": "$ctrl.user.getUser($ctrl.data.taskId)",
+              "events": {},
+              "iterate": {
+                "array": "",
+                "variable": "",
+                "trackByIndex": false
+              },
+              "styles": [],
+              "children": [],
+              "comments": "",
+              "type": "custom-component",
+              "id": "66541b39761bb263eba724e1",
+              "expressions": [
+                {
+                  "expression": "[]",
+                  "to": "users"
+                },
+                {
+                  "expression": "'50px'",
+                  "to": "size"
+                }
+              ]
+            }
+          ],
+          "comments": ""
+        },
+        {
+          "name": "div",
+          "nodeName": "div",
+          "elementId": "",
+          "attributes": [
+            {
+              "property": "data-id",
+              "value": "wz5Elm"
+            }
+          ],
+          "classList": [],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "$ctrl.data",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [
+            {
+              "property": "display",
+              "value": "flex",
+              "enabled": true
+            },
+            {
+              "property": "justify-content",
+              "value": "center",
+              "enabled": true
+            },
+            {
+              "property": "flex-direction",
+              "value": "column",
+              "enabled": true
+            }
+          ],
+          "children": [
+            {
+              "name": "div",
+              "nodeName": "div",
+              "elementId": "",
+              "attributes": [
+                {
+                  "property": "data-id",
+                  "value": "FPkjcn"
+                }
+              ],
+              "classList": [],
+              "conditionalClasses": [],
+              "contentType": "text",
+              "displayExpression": "",
+              "events": {},
+              "iterate": {
+                "array": "",
+                "variable": "",
+                "trackByIndex": false
+              },
+              "styles": [],
+              "children": [
+                {
+                  "name": "span",
+                  "nodeName": "span",
+                  "elementId": "",
+                  "attributes": [
+                    {
+                      "property": "data-id",
+                      "value": "UUm9DD"
+                    }
+                  ],
+                  "classList": [],
+                  "conditionalClasses": [],
+                  "contentType": "text",
+                  "displayExpression": "",
+                  "events": {},
+                  "iterate": {
+                    "array": "",
+                    "variable": "",
+                    "trackByIndex": false
+                  },
+                  "styles": [
+                    {
+                      "property": "font-weight",
+                      "value": "bold",
+                      "enabled": true
+                    }
+                  ],
+                  "children": [
+                    {
+                      "name": "text",
+                      "nodeName": "text",
+                      "textContent": "$ctrl.user.getName($ctrl.data.taskId)",
+                      "evaluate": true
+                    }
+                  ],
+                  "comments": ""
+                },
+                {
+                  "name": "span",
+                  "nodeName": "span",
+                  "elementId": "",
+                  "attributes": [
+                    {
+                      "property": "data-id",
+                      "value": "O-CBFn"
+                    }
+                  ],
+                  "classList": [],
+                  "conditionalClasses": [],
+                  "contentType": "text",
+                  "displayExpression": "",
+                  "events": {},
+                  "iterate": {
+                    "array": "",
+                    "variable": "",
+                    "trackByIndex": false
+                  },
+                  "styles": [],
+                  "children": [
+                    {
+                      "name": "text",
+                      "nodeName": "text",
+                      "textContent": " added a note to ",
+                      "evaluate": false
+                    }
+                  ],
+                  "comments": ""
+                },
+                {
+                  "name": "span",
+                  "nodeName": "span",
+                  "elementId": "",
+                  "attributes": [
+                    {
+                      "property": "data-id",
+                      "value": "fE1JlO"
+                    }
+                  ],
+                  "classList": [],
+                  "conditionalClasses": [],
+                  "contentType": "text",
+                  "displayExpression": "",
+                  "events": {},
+                  "iterate": {
+                    "array": "",
+                    "variable": "",
+                    "trackByIndex": false
+                  },
+                  "styles": [
+                    {
+                      "property": "font-weight",
+                      "value": "bold",
+                      "enabled": true
+                    }
+                  ],
+                  "children": [
+                    {
+                      "name": "text",
+                      "nodeName": "text",
+                      "textContent": "$ctrl.getTaskName()",
+                      "evaluate": true
+                    }
+                  ],
+                  "comments": ""
+                }
+              ],
+              "comments": ""
+            },
+            {
+              "name": "div",
+              "nodeName": "div",
+              "elementId": "",
+              "attributes": [
+                {
+                  "property": "data-id",
+                  "value": "Yp5GH6"
+                }
+              ],
+              "classList": [],
+              "conditionalClasses": [],
+              "contentType": "text",
+              "displayExpression": "",
+              "events": {},
+              "iterate": {
+                "array": "",
+                "variable": "",
+                "trackByIndex": false
+              },
+              "styles": [
+                {
+                  "property": "color",
+                  "value": "var(--text-gray, #333)",
+                  "enabled": true
+                },
+                {
+                  "property": "font-size",
+                  "value": "12px",
+                  "enabled": true
+                }
+              ],
+              "children": [
+                {
+                  "name": "text",
+                  "nodeName": "text",
+                  "textContent": "$ctrl.getDate()",
+                  "evaluate": true
+                }
+              ],
+              "comments": ""
+            }
+          ],
+          "comments": ""
+        }
+      ],
+      "comments": ""
+    }
+  ],
+  "variables": [
+    {
+      "name": "user",
+      "type": "service",
+      "id": "66541b3a761bb263eba724f5"
+    },
+    {
+      "name": "$timeout",
+      "type": "service"
+    },
+    {
+      "name": "getDate",
+      "type": "method",
+      "description": "",
+      "body": "const date = $ctrl.data.createdDate\n\nif (!date) return 'No deadline'\n\nreturn moment(date).fromNow()",
+      "invokeOnLoad": false,
+      "isAsync": false,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": []
+    },
+    {
+      "name": "getUserName",
+      "type": "method",
+      "description": "",
+      "body": "const user = $ctrl.user.getUser($ctrl.data.userId)\nreturn user ? `${user.firstName} ${user.lastName}` : 'User'",
+      "invokeOnLoad": false,
+      "isAsync": false,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": []
+    },
+    {
+      "name": "taskManager",
+      "type": "service",
+      "id": "66580451981829037d95daa7"
+    },
+    {
+      "name": "getTaskName",
+      "type": "method",
+      "description": "",
+      "body": "const task = $ctrl.taskManager.get($ctrl.data.taskId)\r\nreturn task?.subject",
+      "invokeOnLoad": false,
+      "isAsync": false,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": []
+    },
+    {
+      "name": "init",
+      "type": "method",
+      "description": "",
+      "body": "if (!$ctrl.user.getAll().length)\r\n    await $ctrl.user.refreshUsers()\r\n\r\nif (!$ctrl.taskManager.tasks.length)\r\n    await $ctrl.taskManager.refreshTasks()",
+      "invokeOnLoad": true,
+      "isAsync": true,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": []
+    }
+  ],
+  "bindings": [
+    {
+      "name": "data",
+      "type": "<",
+      "description": "",
+      "propertyType": "property",
+      "default": "({\r\n    \"noteId\": 1,\r\n    \"description\": \"Started task\",\r\n    \"createdDate\": \"2024-05-08T15:39:25+0800\",\r\n    \"taskId\": 1,\r\n    \"userId\": 1\r\n})"
+    }
+  ],
+  "modules": [],
+  "externalScripts": [],
+  "externalStylesheets": []
+}

@@ -1,0 +1,1031 @@
+{
+  "type": "custom-component",
+  "name": "edit-task-view",
+  "nodeName": "edit-task-view",
+  "description": null,
+  "children": [
+    {
+      "name": "div",
+      "nodeName": "div",
+      "elementId": "",
+      "attributes": [],
+      "classList": [
+        "view-header"
+      ],
+      "conditionalClasses": [],
+      "contentType": "text",
+      "displayExpression": "",
+      "events": {},
+      "iterate": {
+        "array": "",
+        "variable": "",
+        "trackByIndex": false
+      },
+      "styles": [],
+      "children": [
+        {
+          "name": "div",
+          "nodeName": "div",
+          "elementId": "",
+          "attributes": [],
+          "classList": [],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [],
+          "children": [
+            {
+              "name": "Button",
+              "nodeName": "bln-button",
+              "elementId": "",
+              "attributes": [
+                {
+                  "property": "core",
+                  "value": ""
+                }
+              ],
+              "classList": [],
+              "conditionalClasses": [],
+              "contentType": "text",
+              "displayExpression": "",
+              "events": {},
+              "iterate": {
+                "array": "",
+                "variable": "",
+                "trackByIndex": false
+              },
+              "styles": [
+                {
+                  "property": "--bln-button-font-size",
+                  "value": "1.5rem",
+                  "enabled": true
+                },
+                {
+                  "property": "--bln-button-default-bg-color",
+                  "value": "transparent",
+                  "enabled": true
+                },
+                {
+                  "property": "--bln-button-default-hovered-bg-color",
+                  "value": "transparent",
+                  "enabled": true
+                },
+                {
+                  "property": "--bln-button-default-active-bg-color",
+                  "value": "transparent",
+                  "enabled": true
+                },
+                {
+                  "property": "--bln-button-margin",
+                  "value": "0",
+                  "enabled": true
+                }
+              ],
+              "children": [
+                {
+                  "name": "div",
+                  "nodeName": "div",
+                  "elementId": "",
+                  "attributes": [
+                    {
+                      "property": "title",
+                      "value": "{{ $ctrl.tooltip }}"
+                    }
+                  ],
+                  "classList": [
+                    "bln-core-component",
+                    "bln-button"
+                  ],
+                  "conditionalClasses": [
+                    {
+                      "className": "default",
+                      "condition": "$ctrl.type === 'default'"
+                    },
+                    {
+                      "className": "primary",
+                      "condition": "$ctrl.type === 'primary'"
+                    },
+                    {
+                      "className": "secondary",
+                      "condition": "$ctrl.type === 'secondary'"
+                    },
+                    {
+                      "className": "disabled",
+                      "condition": "$ctrl.isDisabled"
+                    },
+                    {
+                      "className": "isLoading",
+                      "condition": "$ctrl.isLoading()"
+                    }
+                  ],
+                  "contentType": "text",
+                  "displayExpression": "",
+                  "events": {
+                    "click": "$ctrl.handleClick($event)"
+                  },
+                  "iterate": {
+                    "array": "",
+                    "variable": "",
+                    "trackByIndex": false
+                  },
+                  "styles": [],
+                  "children": [
+                    {
+                      "name": "span",
+                      "nodeName": "span",
+                      "elementId": "",
+                      "attributes": [
+                        {
+                          "property": "ng-if",
+                          "value": "$ctrl.icon.type === 'font-icon'"
+                        },
+                        {
+                          "property": "bln-icon",
+                          "value": ""
+                        },
+                        {
+                          "property": "icon-type",
+                          "value": "font-icon"
+                        },
+                        {
+                          "property": "icon-style",
+                          "value": "{{::$ctrl.icon.style}}"
+                        },
+                        {
+                          "property": "icon-name",
+                          "value": "{{::$ctrl.icon.name}}"
+                        },
+                        {
+                          "property": "data-position",
+                          "value": "{{::$ctrl.icon.position}}"
+                        }
+                      ],
+                      "classList": [],
+                      "conditionalClasses": [
+                        {
+                          "className": "opacity-0",
+                          "condition": "$ctrl.isLoading()"
+                        }
+                      ],
+                      "contentType": "text",
+                      "displayExpression": "",
+                      "events": {},
+                      "iterate": {
+                        "array": "",
+                        "variable": "",
+                        "trackByIndex": false
+                      },
+                      "styles": [],
+                      "children": [],
+                      "comments": ""
+                    },
+                    {
+                      "name": "span",
+                      "nodeName": "span",
+                      "elementId": "",
+                      "attributes": [
+                        {
+                          "property": "ng-if",
+                          "value": "$ctrl.icon.type === 'image-icon'"
+                        },
+                        {
+                          "property": "bln-icon",
+                          "value": ""
+                        },
+                        {
+                          "property": "icon-type",
+                          "value": "image-icon"
+                        },
+                        {
+                          "property": "icon-url",
+                          "value": "{{::$ctrl.icon.url}}"
+                        },
+                        {
+                          "property": "data-position",
+                          "value": "{{::$ctrl.icon.position}}"
+                        }
+                      ],
+                      "classList": [],
+                      "conditionalClasses": [
+                        {
+                          "className": "opacity-0",
+                          "condition": "$ctrl.isLoading()"
+                        }
+                      ],
+                      "contentType": "text",
+                      "displayExpression": "",
+                      "events": {},
+                      "iterate": {
+                        "array": "",
+                        "variable": "",
+                        "trackByIndex": false
+                      },
+                      "styles": [],
+                      "children": [],
+                      "comments": ""
+                    },
+                    {
+                      "name": "div",
+                      "nodeName": "div",
+                      "elementId": "",
+                      "attributes": [
+                        {
+                          "property": "ng-if",
+                          "value": "!!$ctrl.label && $ctrl.icon.position !== 'icon-only'"
+                        }
+                      ],
+                      "classList": [
+                        "label"
+                      ],
+                      "conditionalClasses": [
+                        {
+                          "className": "opacity-0",
+                          "condition": "$ctrl.isLoading()"
+                        }
+                      ],
+                      "contentType": "text",
+                      "displayExpression": "true",
+                      "events": {},
+                      "iterate": {
+                        "array": "",
+                        "variable": "",
+                        "trackByIndex": false
+                      },
+                      "styles": [],
+                      "children": [
+                        {
+                          "name": "text",
+                          "nodeName": "text",
+                          "textContent": "$ctrl.label",
+                          "evaluate": true
+                        }
+                      ],
+                      "comments": ""
+                    },
+                    {
+                      "name": "div",
+                      "nodeName": "div",
+                      "elementId": "",
+                      "attributes": [
+                        {
+                          "property": "ng-if",
+                          "value": "$ctrl.isLoading()"
+                        }
+                      ],
+                      "classList": [
+                        "spinner"
+                      ],
+                      "conditionalClasses": [],
+                      "contentType": "text",
+                      "displayExpression": "",
+                      "events": {},
+                      "iterate": {
+                        "array": "",
+                        "variable": "",
+                        "trackByIndex": false
+                      },
+                      "styles": [],
+                      "children": [
+                        {
+                          "name": "text",
+                          "nodeName": "text",
+                          "textContent": "",
+                          "evaluate": false
+                        },
+                        {
+                          "name": "svg",
+                          "nodeName": "svg",
+                          "elementId": "",
+                          "attributes": [
+                            {
+                              "property": "viewBox",
+                              "value": "25 25 50 50"
+                            }
+                          ],
+                          "classList": [],
+                          "conditionalClasses": [],
+                          "contentType": "text",
+                          "displayExpression": "",
+                          "events": {},
+                          "iterate": {
+                            "array": "",
+                            "variable": "",
+                            "trackByIndex": false
+                          },
+                          "styles": [],
+                          "children": [
+                            {
+                              "name": "circle",
+                              "nodeName": "circle",
+                              "elementId": "",
+                              "attributes": [
+                                {
+                                  "property": "cx",
+                                  "value": "50"
+                                },
+                                {
+                                  "property": "cy",
+                                  "value": "50"
+                                },
+                                {
+                                  "property": "r",
+                                  "value": "20"
+                                },
+                                {
+                                  "property": "fill",
+                                  "value": "none"
+                                },
+                                {
+                                  "property": "stroke-width",
+                                  "value": "4"
+                                },
+                                {
+                                  "property": "stroke-miterlimit",
+                                  "value": "10"
+                                }
+                              ],
+                              "classList": [
+                                "path"
+                              ],
+                              "conditionalClasses": [],
+                              "contentType": "text",
+                              "displayExpression": "",
+                              "events": {},
+                              "iterate": {
+                                "array": "",
+                                "variable": "",
+                                "trackByIndex": false
+                              },
+                              "styles": [],
+                              "children": [],
+                              "comments": ""
+                            }
+                          ],
+                          "comments": ""
+                        }
+                      ],
+                      "comments": ""
+                    }
+                  ],
+                  "comments": ""
+                }
+              ],
+              "comments": "",
+              "type": "core-component",
+              "id": "button",
+              "expressions": [
+                {
+                  "to": "label",
+                  "expression": "'Hide Side Panel'"
+                },
+                {
+                  "to": "icon",
+                  "expression": "({\n  \"type\": \"font-icon\",\n  \"style\": \"solid\",\n  \"name\": \"arrow-left\",\n  \"position\": \"icon-only\"\n})"
+                },
+                {
+                  "expression": "$ctrl.hide()",
+                  "to": "onClick"
+                }
+              ]
+            },
+            {
+              "name": "span",
+              "nodeName": "span",
+              "elementId": "",
+              "attributes": [],
+              "classList": [],
+              "conditionalClasses": [],
+              "contentType": "text",
+              "displayExpression": "",
+              "events": {},
+              "iterate": {
+                "array": "",
+                "variable": "",
+                "trackByIndex": false
+              },
+              "styles": [
+                {
+                  "property": "font-size",
+                  "value": "1.5rem",
+                  "enabled": true
+                },
+                {
+                  "property": "font-weight",
+                  "value": "bold",
+                  "enabled": true
+                },
+                {
+                  "property": "margin-left",
+                  "value": ".5rem",
+                  "enabled": true
+                }
+              ],
+              "children": [
+                {
+                  "name": "text",
+                  "nodeName": "text",
+                  "textContent": "($ctrl.views.editTask.mode === 'add' ? 'Add' : 'Edit') + ' Task'",
+                  "evaluate": true
+                }
+              ],
+              "comments": ""
+            }
+          ],
+          "comments": ""
+        }
+      ],
+      "comments": ""
+    },
+    {
+      "name": "div",
+      "nodeName": "div",
+      "elementId": "",
+      "attributes": [],
+      "classList": [
+        "view-overview"
+      ],
+      "conditionalClasses": [],
+      "contentType": "text",
+      "displayExpression": "",
+      "events": {},
+      "iterate": {
+        "array": "",
+        "variable": "",
+        "trackByIndex": false
+      },
+      "styles": [
+        {
+          "property": "padding-top",
+          "value": "0",
+          "enabled": true
+        }
+      ],
+      "children": [
+        {
+          "name": "Dropdown",
+          "nodeName": "bln-dropdown",
+          "elementId": "",
+          "attributes": [
+            {
+              "property": "core",
+              "value": ""
+            }
+          ],
+          "classList": [],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [
+            {
+              "property": "margin-bottom",
+              "value": ".5rem",
+              "enabled": true
+            }
+          ],
+          "children": [],
+          "comments": "",
+          "type": "core-component",
+          "id": "dropdown",
+          "expressions": [
+            {
+              "expression": "\"Project\"",
+              "to": "label"
+            },
+            {
+              "expression": "$ctrl.data.projectId",
+              "to": "value"
+            },
+            {
+              "expression": "$ctrl.projectOptions",
+              "to": "values"
+            }
+          ],
+          "formControl": {
+            "modelName": "value"
+          }
+        },
+        {
+          "name": "Text Input",
+          "nodeName": "bln-text-input",
+          "elementId": "",
+          "attributes": [
+            {
+              "property": "core",
+              "value": ""
+            }
+          ],
+          "classList": [],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [
+            {
+              "property": "margin-bottom",
+              "value": ".5rem",
+              "enabled": true
+            }
+          ],
+          "children": [],
+          "comments": "",
+          "type": "core-component",
+          "id": "text-input",
+          "expressions": [
+            {
+              "expression": "\"Subject\"",
+              "to": "label"
+            },
+            {
+              "expression": "$ctrl.data.subject",
+              "to": "value"
+            }
+          ],
+          "formControl": {
+            "modelName": "value"
+          }
+        },
+        {
+          "name": "Dropdown",
+          "nodeName": "bln-dropdown",
+          "elementId": "",
+          "attributes": [
+            {
+              "property": "core",
+              "value": ""
+            }
+          ],
+          "classList": [],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "$ctrl.views.editTask.mode !== 'add'",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [
+            {
+              "property": "margin-bottom",
+              "value": ".5rem",
+              "enabled": true
+            }
+          ],
+          "children": [],
+          "comments": "",
+          "type": "core-component",
+          "id": "dropdown",
+          "expressions": [
+            {
+              "expression": "\"Status\"",
+              "to": "label"
+            },
+            {
+              "expression": "[{\n        label: \"Not Started\",\n        value: \"Not Started\"\n    },\n    {\n        label: \"In Progress\",\n        value: \"In Progress\"\n    },\n    {\n        label: \"Completed\",\n        value: \"Completed\"\n    }\n]",
+              "to": "values"
+            },
+            {
+              "expression": "$ctrl.data.status",
+              "to": "value"
+            }
+          ],
+          "formControl": {
+            "modelName": "value"
+          }
+        },
+        {
+          "name": "Dropdown",
+          "nodeName": "bln-dropdown",
+          "elementId": "",
+          "attributes": [
+            {
+              "property": "core",
+              "value": ""
+            }
+          ],
+          "classList": [],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [
+            {
+              "property": "margin-bottom",
+              "value": ".5rem",
+              "enabled": true
+            }
+          ],
+          "children": [],
+          "comments": "",
+          "type": "core-component",
+          "id": "dropdown",
+          "expressions": [
+            {
+              "expression": "\"Assigned User\"",
+              "to": "label"
+            },
+            {
+              "expression": "$ctrl.userOptions",
+              "to": "values"
+            },
+            {
+              "expression": "$ctrl.data.assignedUserId",
+              "to": "value"
+            }
+          ],
+          "formControl": {
+            "modelName": "value"
+          }
+        },
+        {
+          "name": "Text Input",
+          "nodeName": "bln-text-input",
+          "elementId": "",
+          "attributes": [
+            {
+              "property": "core",
+              "value": ""
+            }
+          ],
+          "classList": [],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [
+            {
+              "property": "margin-bottom",
+              "value": ".5rem",
+              "enabled": true
+            }
+          ],
+          "children": [],
+          "comments": "",
+          "type": "core-component",
+          "id": "text-input",
+          "expressions": [
+            {
+              "expression": "\"Description\"",
+              "to": "label"
+            },
+            {
+              "expression": "\"text-area\"",
+              "to": "type"
+            },
+            {
+              "expression": "3",
+              "to": "rows"
+            },
+            {
+              "expression": "$ctrl.data.description",
+              "to": "value"
+            }
+          ],
+          "formControl": {
+            "modelName": "value"
+          }
+        },
+        {
+          "name": "Text Input",
+          "nodeName": "bln-text-input",
+          "elementId": "",
+          "attributes": [
+            {
+              "property": "core",
+              "value": ""
+            }
+          ],
+          "classList": [],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "$ctrl.views.editTask.mode !== 'add'",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [],
+          "children": [],
+          "comments": "",
+          "type": "core-component",
+          "id": "text-input",
+          "expressions": [
+            {
+              "expression": "\"Note (Optional)\"",
+              "to": "label"
+            },
+            {
+              "expression": "\"text-area\"",
+              "to": "type"
+            },
+            {
+              "expression": "3",
+              "to": "rows"
+            },
+            {
+              "expression": "$ctrl.notes",
+              "to": "value"
+            },
+            {
+              "expression": "\"Add a note\"",
+              "to": "placeholder"
+            }
+          ],
+          "formControl": {
+            "modelName": "value"
+          }
+        }
+      ],
+      "comments": ""
+    },
+    {
+      "name": "div",
+      "nodeName": "div",
+      "elementId": "",
+      "attributes": [],
+      "classList": [
+        "view-bottom-bar"
+      ],
+      "conditionalClasses": [],
+      "contentType": "text",
+      "displayExpression": "",
+      "events": {},
+      "iterate": {
+        "array": "",
+        "variable": "",
+        "trackByIndex": false
+      },
+      "styles": [],
+      "children": [],
+      "comments": ""
+    },
+    {
+      "name": "Button",
+      "nodeName": "bln-button",
+      "elementId": "",
+      "attributes": [
+        {
+          "property": "core",
+          "value": ""
+        }
+      ],
+      "classList": [],
+      "conditionalClasses": [],
+      "contentType": "text",
+      "displayExpression": "",
+      "events": {},
+      "iterate": {
+        "array": "",
+        "variable": "",
+        "trackByIndex": false
+      },
+      "styles": [
+        {
+          "property": "position",
+          "value": "fixed",
+          "enabled": true
+        },
+        {
+          "property": "z-index",
+          "value": "1",
+          "enabled": true
+        },
+        {
+          "property": "bottom",
+          "value": "0",
+          "enabled": true
+        },
+        {
+          "property": "right",
+          "value": "0",
+          "enabled": true
+        },
+        {
+          "property": "margin",
+          "value": "1rem",
+          "enabled": true
+        },
+        {
+          "property": "--bln-button-roundness",
+          "value": "100%",
+          "enabled": true
+        },
+        {
+          "property": "--bln-button-padding",
+          "value": "1.25rem",
+          "enabled": true
+        },
+        {
+          "property": "--bln-button-font-size",
+          "value": "1rem",
+          "enabled": true
+        }
+      ],
+      "children": [],
+      "comments": "",
+      "type": "core-component",
+      "id": "button",
+      "expressions": [
+        {
+          "expression": "\"primary\"",
+          "to": "type"
+        },
+        {
+          "expression": "({\n  \"type\": \"font-icon\",\n  \"style\": \"solid\",\n  \"name\": \"save\",\n  \"position\": \"icon-only\"\n})",
+          "to": "icon"
+        },
+        {
+          "expression": "$ctrl.isSaving",
+          "to": "showLoading"
+        },
+        {
+          "expression": "!$ctrl.canSave()",
+          "to": "isDisabled"
+        },
+        {
+          "expression": "$ctrl.save()",
+          "to": "onClick"
+        }
+      ]
+    }
+  ],
+  "variables": [
+    {
+      "name": "isSaving",
+      "type": "property",
+      "description": "",
+      "value": ""
+    },
+    {
+      "name": "add",
+      "type": "method",
+      "description": "",
+      "body": "$ctrl.isSaving = true\n\nlet { projectId,description,status,subject, assignedUserId } = $ctrl.data\n\nif (!status) status = 'Not Started'\n\n$ctrl.demoTaskApi.demo_api_tasks_services_task_InsertTask({\n    body: {projectId,description,status,subject, assignedUserId}\n}).then(result => {\n    if ($ctrl.views.project.shown && $ctrl.views.project.tasks)  {\n        $ctrl.views.project.tasks.push(result.data.task)\n        $ctrl.views.project.refreshData()\n    }\n    \n    $ctrl.hide()\n}).finally(() => {\n    $ctrl.isSaving = false\n})",
+      "invokeOnLoad": false,
+      "isAsync": false,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": []
+    },
+    {
+      "name": "update",
+      "type": "method",
+      "description": "",
+      "body": "$ctrl.isSaving = true\n\nconst { taskId, subject, assignedUserId, deadline, dependencyTask, description, projectId, status } = $ctrl.data\n\n$ctrl.demoTaskApi.demo_api_tasks_services_task_UpdateTask({\n    body: {\n        taskId,\n        subject,\n        assignedUserId,\n        deadline,\n        dependencyTask,\n        description,\n        projectId,\n        status,\n    }\n}).then(async result => {\n    const data = $ctrl.data\n    const task = $ctrl.views.task\n    task.data = data\n\n    const proj = $ctrl.views.project\n\n    if (proj) {\n        const task = proj.tasks.find(t => t.taskId === data.taskId)\n\n        if (task) Object.assign(task, data)\n\n        $ctrl.views.project.refreshData()\n    }\n\n    const note = ($ctrl.notes || '').trim()\n    const currentUser = $ctrl.user.getCurrent()\n    const currentUserId = currentUser.userId;\n\n    if (task.notes && note) {\n        try {\n            const noteResult = await $ctrl.demoTaskApi.demo_api_tasks_services_note_InsertNote({\n                body: {\n                    description: note,\n                    taskId: data.taskId,\n                    userId: currentUserId,\n                }\n            })\n\n\n            $ctrl.views.task.notes.push(noteResult.data.note)\n        } catch (err) {\n            console.error(err)\n        }\n    }\n\n    $ctrl.hide()\n}).finally(() => {\n    $ctrl.isSaving = false\n})",
+      "invokeOnLoad": false,
+      "isAsync": false,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": []
+    },
+    {
+      "name": "hide",
+      "type": "method",
+      "description": "",
+      "body": "$ctrl.views.editTask.hide()\n$ctrl.isSaving = false\n$ctrl.notes = ''",
+      "invokeOnLoad": false,
+      "isAsync": false,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": []
+    },
+    {
+      "name": "demoTaskApi",
+      "type": "open-api",
+      "id": "66541b38761bb263eba724d5"
+    },
+    {
+      "name": "save",
+      "type": "method",
+      "description": "",
+      "body": "const mode = $ctrl.views.editTask.mode\n\nswitch(mode) {\n    case 'add': \n        $ctrl.add()\n    break\n\n    default: {\n        $ctrl.update()\n    }\n}",
+      "invokeOnLoad": false,
+      "isAsync": false,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": []
+    },
+    {
+      "name": "notes",
+      "type": "property",
+      "description": "",
+      "value": "''"
+    },
+    {
+      "name": "setUserOptions",
+      "type": "method",
+      "description": "",
+      "body": "const users = $ctrl.user.getAll() ?? []\n\n$ctrl.userOptions = users.map(user => ({label: `${user.firstName} ${user.lastName}`, value: user.userId}))",
+      "invokeOnLoad": false,
+      "isAsync": false,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": [],
+      "watch": [
+        "$ctrl.data.taskId"
+      ]
+    },
+    {
+      "name": "userOptions",
+      "type": "array",
+      "description": "",
+      "children": []
+    },
+    {
+      "name": "canSave",
+      "type": "method",
+      "description": "",
+      "body": "const {projectId,subject} = $ctrl.data ?? {}\n\nreturn projectId !== undefined && !!subject && !$ctrl.isSaving",
+      "invokeOnLoad": false,
+      "isAsync": false,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": []
+    },
+    {
+      "name": "setProjectOptions",
+      "type": "method",
+      "description": "",
+      "body": "const projects = $ctrl.projectManager.projects ?? []\n$ctrl.projectOptions = projects.map(proj => ({ label: proj.name, value: proj.projectId }))\n",
+      "invokeOnLoad": false,
+      "isAsync": false,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": [],
+      "watch": [
+        "$ctrl.views.editTask.shown"
+      ]
+    },
+    {
+      "name": "projectOptions",
+      "type": "array",
+      "description": "",
+      "children": []
+    },
+    {
+      "name": "projectManager",
+      "type": "service",
+      "id": "66541b3a761bb263eba724f6"
+    },
+    {
+      "name": "user",
+      "type": "service",
+      "id": "66541b3a761bb263eba724f5"
+    },
+    {
+      "name": "views",
+      "type": "service",
+      "id": "66541b3a761bb263eba724f4"
+    }
+  ],
+  "bindings": [
+    {
+      "name": "data",
+      "type": "<",
+      "description": "",
+      "propertyType": "property",
+      "default": ""
+    }
+  ],
+  "modules": [],
+  "marketplaceId": null,
+  "formControl": null,
+  "transclude": null,
+  "externalScripts": [],
+  "externalStylesheets": []
+}

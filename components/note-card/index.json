@@ -1,0 +1,216 @@
+{
+  "type": "custom-component",
+  "name": "note-card",
+  "nodeName": null,
+  "description": null,
+  "children": [
+    {
+      "name": "div",
+      "nodeName": "div",
+      "elementId": "",
+      "attributes": [],
+      "classList": [],
+      "conditionalClasses": [],
+      "contentType": "text",
+      "displayExpression": "$ctrl.data",
+      "events": {},
+      "iterate": {
+        "array": "",
+        "variable": "",
+        "trackByIndex": false
+      },
+      "styles": [],
+      "children": [
+        {
+          "name": "div",
+          "nodeName": "div",
+          "elementId": "",
+          "attributes": [],
+          "classList": [],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [
+            {
+              "property": "margin-bottom",
+              "value": "1rem",
+              "enabled": true
+            }
+          ],
+          "children": [
+            {
+              "name": "span",
+              "nodeName": "span",
+              "elementId": "",
+              "attributes": [],
+              "classList": [],
+              "conditionalClasses": [],
+              "contentType": "text",
+              "displayExpression": "",
+              "events": {},
+              "iterate": {
+                "array": "",
+                "variable": "",
+                "trackByIndex": false
+              },
+              "styles": [
+                {
+                  "property": "font-weight",
+                  "value": "bold",
+                  "enabled": true
+                }
+              ],
+              "children": [
+                {
+                  "name": "text",
+                  "nodeName": "text",
+                  "textContent": "$ctrl.getUserName()",
+                  "evaluate": true
+                }
+              ],
+              "comments": ""
+            },
+            {
+              "name": "span",
+              "nodeName": "span",
+              "elementId": "",
+              "attributes": [],
+              "classList": [],
+              "conditionalClasses": [],
+              "contentType": "text",
+              "displayExpression": "",
+              "events": {},
+              "iterate": {
+                "array": "",
+                "variable": "",
+                "trackByIndex": false
+              },
+              "styles": [],
+              "children": [
+                {
+                  "name": "text",
+                  "nodeName": "text",
+                  "textContent": " added a note ",
+                  "evaluate": false
+                }
+              ],
+              "comments": ""
+            },
+            {
+              "name": "span",
+              "nodeName": "span",
+              "elementId": "",
+              "attributes": [],
+              "classList": [],
+              "conditionalClasses": [],
+              "contentType": "text",
+              "displayExpression": "",
+              "events": {},
+              "iterate": {
+                "array": "",
+                "variable": "",
+                "trackByIndex": false
+              },
+              "styles": [],
+              "children": [
+                {
+                  "name": "text",
+                  "nodeName": "text",
+                  "textContent": "$ctrl.getDate()",
+                  "evaluate": true
+                }
+              ],
+              "comments": ""
+            }
+          ],
+          "comments": ""
+        },
+        {
+          "name": "div",
+          "nodeName": "div",
+          "elementId": "",
+          "attributes": [],
+          "classList": [],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [
+            {
+              "property": "color",
+              "value": "var(--text-gray, #333)",
+              "enabled": true
+            }
+          ],
+          "children": [
+            {
+              "name": "text",
+              "nodeName": "text",
+              "textContent": "$ctrl.data.description",
+              "evaluate": true
+            }
+          ],
+          "comments": ""
+        }
+      ],
+      "comments": ""
+    }
+  ],
+  "variables": [
+    {
+      "name": "getDate",
+      "type": "method",
+      "description": "",
+      "body": "const date = $ctrl.data.createdDate\n\nif (!date) return 'No deadline'\n\n// const now = moment().startOf('day');\n// const deadlineDate = moment(date).startOf('day');\n// const daysLeft = deadlineDate.diff(now, 'days');\n\n// let message = ''\n\n// if (daysLeft > 0) {\n//     message = `${daysLeft} days left`;\n// } else if (daysLeft === 0) {\n//     message = `today.`;\n// } else {\n//     const daysPast = Math.abs(daysLeft);\n//     message = `${daysPast} days ago`;\n// }\n\nreturn moment(date).fromNow()",
+      "invokeOnLoad": false,
+      "isAsync": false,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": []
+    },
+    {
+      "name": "getUserName",
+      "type": "method",
+      "description": "",
+      "body": "const user = $ctrl.user.getUser($ctrl.data.userId)\nreturn user ? `${user.firstName} ${user.lastName}` : 'User'",
+      "invokeOnLoad": false,
+      "isAsync": false,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": []
+    },
+    {
+      "name": "user",
+      "type": "service",
+      "id": "66541b3a761bb263eba724f5"
+    }
+  ],
+  "bindings": [
+    {
+      "name": "data",
+      "type": "=",
+      "description": "",
+      "propertyType": "property",
+      "default": "({\n    \"noteId\": 1,\n    \"description\": \"Started task\",\n    \"createdDate\": \"2024-05-08T15:39:25+0800\",\n    \"taskId\": 1,\n    \"userId\": 1\n})"
+    }
+  ],
+  "modules": [],
+  "marketplaceId": null,
+  "formControl": null,
+  "transclude": null,
+  "externalScripts": [],
+  "externalStylesheets": []
+}

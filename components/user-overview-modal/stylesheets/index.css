@@ -1,0 +1,63 @@
+user-overview-modal>.modal-body {
+  border: var(--bln-modal-body-border-style) var(--bln-modal-body-border-width) var(--bln-modal-body-border-color);
+  background-color: var(--bln-modal-body-background-color, #fff);
+  min-width: 100px;
+  min-height: 159px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 1rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+user-overview-modal>.modal-body,
+user-overview-modal>.modal-footer {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  padding: 0 !important;
+}
+
+user-overview-modal .message {
+  padding: 1rem;
+}
+
+user-overview-modal .action {
+  border-top: 1px solid var(--light-gray, #ccc);
+}
+
+user-overview-modal .action:first-of-type {
+  border-right: 1px solid var(--light-gray, #ccc);
+}
+
+user-overview-modal textarea {
+  border-radius: .5rem !important;
+}
+
+user-overview-modal .action.danger {
+  --bln-button-default-text-color: var(--danger-color, red);
+  --bln-button-default-hovered-text-color: var(--danger-color, red);
+  --bln-button-default-active-text-color: var(--danger-color, red);
+}
+
+user-overview-modal bln-button {
+  width: 100%;
+  display: block;
+  position: relative;
+}
+
+user-overview-modal>.modal-body .actions {
+  display: flex;
+  flex: 1;
+  width: 100%;
+}
+
+user-overview-modal .label-container {
+  display: none !important;
+}
+
+user-overview-modal>.modal-footer {
+  background-color: transparent !important;
+  flex-direction: column;
+}

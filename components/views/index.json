@@ -1,0 +1,313 @@
+{
+  "type": "custom-component",
+  "name": "views",
+  "nodeName": null,
+  "description": null,
+  "children": [
+    {
+      "name": "div",
+      "nodeName": "div",
+      "elementId": "search-panel",
+      "attributes": [],
+      "classList": [],
+      "conditionalClasses": [],
+      "contentType": "text",
+      "displayExpression": "",
+      "events": {},
+      "iterate": {
+        "array": "",
+        "variable": "",
+        "trackByIndex": false
+      },
+      "styles": [],
+      "layout": {
+        "container": {
+          "type": "side-panel",
+          "visible": "$ctrl.views.search.shown",
+          "position": "right",
+          "zIndex": 1000,
+          "width": "100%",
+          "items": []
+        }
+      },
+      "children": [
+        {
+          "name": "search-view",
+          "nodeName": "search-view",
+          "elementId": "",
+          "attributes": [],
+          "classList": [],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [],
+          "layout": {},
+          "children": [],
+          "comments": "",
+          "type": "custom-component",
+          "id": "66541b39761bb263eba724e9",
+          "expressions": []
+        }
+      ],
+      "comments": ""
+    },
+    {
+      "name": "div",
+      "nodeName": "div",
+      "elementId": "project-panel",
+      "attributes": [],
+      "classList": [],
+      "conditionalClasses": [],
+      "contentType": "text",
+      "displayExpression": "",
+      "events": {},
+      "iterate": {
+        "array": "",
+        "variable": "",
+        "trackByIndex": false
+      },
+      "styles": [],
+      "layout": {
+        "container": {
+          "type": "side-panel",
+          "visible": "$ctrl.views.project.shown",
+          "position": "right",
+          "zIndex": 1000,
+          "width": "100%",
+          "items": []
+        }
+      },
+      "children": [
+        {
+          "name": "project-view",
+          "nodeName": "project-view",
+          "elementId": "",
+          "attributes": [],
+          "classList": [],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [
+            {
+              "property": "position",
+              "value": "absolute",
+              "enabled": true
+            }
+          ],
+          "layout": {},
+          "children": [],
+          "comments": "",
+          "type": "custom-component",
+          "id": "66541b38761bb263eba724de",
+          "expressions": [
+            {
+              "expression": "$ctrl.views.project.data",
+              "to": "data"
+            }
+          ]
+        }
+      ],
+      "comments": ""
+    },
+    {
+      "name": "div",
+      "nodeName": "div",
+      "elementId": "task-view-panel",
+      "attributes": [],
+      "classList": [],
+      "conditionalClasses": [],
+      "contentType": "text",
+      "displayExpression": "",
+      "events": {},
+      "iterate": {
+        "array": "",
+        "variable": "",
+        "trackByIndex": false
+      },
+      "styles": [],
+      "layout": {
+        "container": {
+          "type": "side-panel",
+          "visible": "$ctrl.views.task.shown",
+          "position": "right",
+          "zIndex": 1000,
+          "width": "100%",
+          "items": []
+        }
+      },
+      "children": [
+        {
+          "name": "task-view",
+          "nodeName": "task-view",
+          "elementId": "",
+          "attributes": [],
+          "classList": [],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [],
+          "layout": {},
+          "children": [],
+          "comments": "",
+          "type": "custom-component",
+          "id": "66541b39761bb263eba724e5",
+          "expressions": [
+            {
+              "expression": "$ctrl.views.task.data",
+              "to": "data"
+            }
+          ]
+        }
+      ],
+      "comments": ""
+    },
+    {
+      "name": "div",
+      "nodeName": "div",
+      "elementId": "edit-project-panel",
+      "attributes": [],
+      "classList": [],
+      "conditionalClasses": [],
+      "contentType": "text",
+      "displayExpression": "",
+      "events": {},
+      "iterate": {
+        "array": "",
+        "variable": "",
+        "trackByIndex": false
+      },
+      "styles": [],
+      "layout": {
+        "container": {
+          "type": "side-panel",
+          "visible": "$ctrl.views.editProject.shown",
+          "position": "right",
+          "zIndex": 1000,
+          "width": "100%",
+          "items": []
+        }
+      },
+      "children": [
+        {
+          "name": "edit-project-view",
+          "nodeName": "edit-project-view",
+          "elementId": "",
+          "attributes": [],
+          "classList": [],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [],
+          "layout": {},
+          "children": [],
+          "comments": "",
+          "type": "custom-component",
+          "id": "66541b39761bb263eba724e7",
+          "expressions": [
+            {
+              "expression": "$ctrl.views.editProject.data",
+              "to": "data"
+            }
+          ]
+        }
+      ],
+      "comments": ""
+    },
+    {
+      "name": "div",
+      "nodeName": "div",
+      "elementId": "edit-task-panel",
+      "attributes": [],
+      "classList": [],
+      "conditionalClasses": [],
+      "contentType": "text",
+      "displayExpression": "",
+      "events": {},
+      "iterate": {
+        "array": "",
+        "variable": "",
+        "trackByIndex": false
+      },
+      "styles": [],
+      "layout": {
+        "container": {
+          "type": "side-panel",
+          "visible": "$ctrl.views.editTask.shown",
+          "position": "right",
+          "width": "100%",
+          "items": [],
+          "zIndex": 1000
+        }
+      },
+      "children": [
+        {
+          "name": "edit-task-view",
+          "nodeName": "edit-task-view",
+          "elementId": "",
+          "attributes": [],
+          "classList": [],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [],
+          "layout": {},
+          "children": [],
+          "comments": "",
+          "type": "custom-component",
+          "id": "66541b39761bb263eba724e8",
+          "expressions": [
+            {
+              "expression": "$ctrl.views.editTask.data",
+              "to": "data"
+            }
+          ]
+        }
+      ],
+      "comments": ""
+    }
+  ],
+  "variables": [
+    {
+      "name": "views",
+      "type": "service",
+      "id": "66541b3a761bb263eba724f4"
+    }
+  ],
+  "bindings": [],
+  "modules": [],
+  "marketplaceId": null,
+  "formControl": null,
+  "transclude": null,
+  "externalScripts": [],
+  "externalStylesheets": []
+}

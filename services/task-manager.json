@@ -1,0 +1,50 @@
+{
+  "type": "app-service",
+  "name": "task-manager",
+  "description": "",
+  "singleton": true,
+  "variables": [
+    {
+      "name": "demoTaskApi",
+      "type": "open-api",
+      "id": "66541b38761bb263eba724d5"
+    },
+    {
+      "name": "tasks",
+      "type": "array",
+      "description": "",
+      "children": []
+    },
+    {
+      "name": "get",
+      "type": "method",
+      "description": "",
+      "body": "return this.tasks.find(t => t.taskId === taskId)",
+      "invokeOnLoad": false,
+      "isAsync": false,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": [
+        "taskId"
+      ]
+    },
+    {
+      "name": "refreshTasks",
+      "type": "method",
+      "description": "",
+      "body": "return this.demoTaskApi.demo_api_tasks_services_task_SelectAllTask({limit: 1000, offset: 0}).then(res => {\n    this.tasks = res.data.task\n})",
+      "invokeOnLoad": false,
+      "isAsync": false,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": []
+    }
+  ],
+  "visible": [
+    "tasks",
+    "get",
+    "refreshTasks"
+  ]
+}

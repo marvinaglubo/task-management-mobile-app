@@ -1,0 +1,777 @@
+{
+  "name": "dashboard",
+  "type": "page",
+  "url": "/home",
+  "params": {},
+  "variables": [
+    {
+      "name": "demoTaskApi",
+      "type": "open-api",
+      "id": "66541b38761bb263eba724d5"
+    },
+    {
+      "name": "filter",
+      "type": "property",
+      "description": "",
+      "value": "\"All Projects\""
+    },
+    {
+      "name": "$timeout",
+      "type": "service"
+    },
+    {
+      "name": "projects",
+      "type": "array",
+      "description": "",
+      "children": []
+    },
+    {
+      "name": "ongoingProjects",
+      "type": "array",
+      "description": "",
+      "children": []
+    },
+    {
+      "name": "charts",
+      "type": "object",
+      "description": "",
+      "properties": [
+        {
+          "name": "overall",
+          "type": "object",
+          "description": "",
+          "properties": [
+            {
+              "name": "data",
+              "type": "property",
+              "description": "",
+              "value": "[10]"
+            },
+            {
+              "name": "colors",
+              "type": "property",
+              "description": "",
+              "value": ""
+            },
+            {
+              "name": "legends",
+              "type": "property",
+              "description": "",
+              "value": ""
+            },
+            {
+              "name": "count",
+              "type": "property",
+              "description": "",
+              "value": ""
+            },
+            {
+              "name": "countLabel",
+              "type": "property",
+              "description": "",
+              "value": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "onFilterChange",
+      "type": "method",
+      "description": "",
+      "body": "if (item instanceof Event && item.target instanceof HTMLElement) {\r\n    const target = item.target\r\n    const label = target.closest('.menu-item')?.querySelector('.menu-label')?.textContent\r\n\r\n    if (label) {\r\n        $ctrl.filter = label\r\n    }\r\n}\r\n",
+      "invokeOnLoad": false,
+      "isAsync": false,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": [
+        "item"
+      ]
+    },
+    {
+      "name": "page",
+      "type": "service",
+      "id": "6659a0cea90f89de79772ca8"
+    },
+    {
+      "name": "$notificationManager",
+      "type": "service"
+    },
+    {
+      "name": "views",
+      "type": "service",
+      "id": "6659a0cea90f89de79772ca9"
+    },
+    {
+      "name": "$device",
+      "type": "service"
+    },
+    {
+      "name": "user",
+      "type": "service",
+      "id": "6659a0cea90f89de79772caa"
+    },
+    {
+      "name": "refreshData",
+      "type": "method",
+      "description": "",
+      "body": "$ctrl.loaded = false\nawait $ctrl.projectManager.refreshProjects()\nconst {doneProjects, toDoProjects, ongoingProjects, percentage, projects} = $ctrl.projectManager\n\n$ctrl.charts.overall = {\n    data: [doneProjects.length, toDoProjects.length, ongoingProjects.length],\n    colors: ['#F68059', '#FFBF3A', '#4E3EC8'],\n    legends: [\n        { label: 'Done', value: percentage.done },\n        { label: 'To Do', value: percentage.todo },\n        { label: 'Ongoing', value: percentage.ongoing }\n    ],\n    count: projects.length,\n    countLabel: 'Total Projects'\n}\n\n$ctrl.$timeout(async () => {\n    $ctrl.loaded = true\n    $ctrl.ongoingProjects = ongoingProjects.filter((_, i) => i < 2)\n\n    for (const project of $ctrl.ongoingProjects) {\n        await $ctrl.projectManager.refreshData({...project, data: project, tasks: []}, true)\n    }\n})\n",
+      "invokeOnLoad": false,
+      "isAsync": true,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": []
+    },
+    {
+      "name": "init",
+      "type": "method",
+      "description": "",
+      "body": "$ctrl.$device.onBackButton(e => {\r\n    e.preventDefault()\r\n})\r\n\r\n$ctrl.refreshData()",
+      "invokeOnLoad": true,
+      "isAsync": true,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": []
+    },
+    {
+      "name": "projectManager",
+      "type": "service",
+      "id": "6659a0cea90f89de79772cab"
+    },
+    {
+      "name": "onProjectClick",
+      "type": "method",
+      "description": "",
+      "body": "if (event.target?.closest('.avatar')) {\r\n    return\r\n}\r\n\r\n$ctrl.views.project.show(project)",
+      "invokeOnLoad": false,
+      "isAsync": false,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": [
+        "event",
+        "project"
+      ]
+    },
+    {
+      "name": "$state",
+      "type": "service"
+    },
+    {
+      "name": "$stateParams",
+      "type": "service"
+    },
+    {
+      "name": "taskManager",
+      "type": "service",
+      "id": "6659a0cea90f89de79772cad"
+    }
+  ],
+  "children": [
+    {
+      "name": "main",
+      "nodeName": "main",
+      "elementId": "",
+      "attributes": [
+        {
+          "property": "data-id",
+          "value": "rggedG"
+        }
+      ],
+      "classList": [],
+      "conditionalClasses": [],
+      "contentType": "text",
+      "displayExpression": "",
+      "events": {},
+      "iterate": {
+        "array": "",
+        "variable": "",
+        "trackByIndex": false
+      },
+      "styles": [
+        {
+          "property": "flex",
+          "value": "1",
+          "enabled": true
+        }
+      ],
+      "children": [
+        {
+          "name": "div",
+          "nodeName": "div",
+          "elementId": "",
+          "attributes": [
+            {
+              "property": "data-id",
+              "value": "nM6oB5"
+            }
+          ],
+          "classList": [
+            "content-header"
+          ],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [],
+          "children": [
+            {
+              "name": "div",
+              "nodeName": "div",
+              "elementId": "",
+              "attributes": [
+                {
+                  "property": "data-id",
+                  "value": "gRGsQf"
+                }
+              ],
+              "classList": [
+                "content-title"
+              ],
+              "conditionalClasses": [],
+              "contentType": "text",
+              "displayExpression": "",
+              "events": {},
+              "iterate": {
+                "array": "",
+                "variable": "",
+                "trackByIndex": false
+              },
+              "styles": [],
+              "children": [
+                {
+                  "name": "h1",
+                  "nodeName": "h1",
+                  "elementId": "",
+                  "attributes": [
+                    {
+                      "property": "data-id",
+                      "value": "cZx3ZA"
+                    }
+                  ],
+                  "classList": [],
+                  "conditionalClasses": [],
+                  "contentType": "text",
+                  "displayExpression": "",
+                  "events": {},
+                  "iterate": {
+                    "array": "",
+                    "variable": "",
+                    "trackByIndex": false
+                  },
+                  "styles": [],
+                  "children": [
+                    {
+                      "name": "text",
+                      "nodeName": "text",
+                      "textContent": "Dashboard",
+                      "evaluate": false
+                    }
+                  ],
+                  "comments": ""
+                },
+                {
+                  "name": "Dropdown Menu",
+                  "nodeName": "bln-dropdown-menu",
+                  "elementId": "",
+                  "attributes": [
+                    {
+                      "property": "core",
+                      "value": ""
+                    },
+                    {
+                      "property": "data-id",
+                      "value": "eOc1BH"
+                    }
+                  ],
+                  "classList": [],
+                  "conditionalClasses": [],
+                  "contentType": "text",
+                  "displayExpression": "",
+                  "events": {},
+                  "iterate": {
+                    "array": "",
+                    "variable": "",
+                    "trackByIndex": false
+                  },
+                  "styles": [
+                    {
+                      "property": "--bln-dropdown-menu-button-bg-color",
+                      "value": "#e8e8e8",
+                      "enabled": true
+                    },
+                    {
+                      "property": "--bln-dropdown-menu-button-hovered-bg-color",
+                      "value": "#bababa",
+                      "enabled": true
+                    },
+                    {
+                      "property": "--bln-dropdown-menu-button-active-bg-color",
+                      "value": "#a2a2a2",
+                      "enabled": true
+                    },
+                    {
+                      "property": "--bln-dropdown-menu-font-weight",
+                      "value": "bold",
+                      "enabled": true
+                    },
+                    {
+                      "property": "--bln-dropdown-menu-button-margin",
+                      "value": "0",
+                      "enabled": true
+                    }
+                  ],
+                  "children": [],
+                  "comments": "",
+                  "type": "core-component",
+                  "id": "dropdown-menu",
+                  "expressions": [
+                    {
+                      "expression": "[{\n        label: \"All Projects\",\n        onClick: \"function\",\n        function: $ctrl.onFilterChange,\n        hideWhen: $ctrl.filter === \"All Projects\"\n    },\n    {\n        label: \"My Projects\",\n        onClick: \"function\",\n        function: $ctrl.onFilterChange,\n        hideWhen: $ctrl.filter === \"My Projects\"\n    },\n    {\n        label: \"Tasks\",\n        onClick: \"function\",\n        function: $ctrl.onFilterChange,\n        hideWhen: $ctrl.filter === \"Tasks\"\n    }\n]",
+                      "to": "menuItems"
+                    },
+                    {
+                      "expression": "$ctrl.filter",
+                      "to": "label"
+                    }
+                  ]
+                }
+              ],
+              "comments": ""
+            }
+          ],
+          "comments": ""
+        },
+        {
+          "name": "div",
+          "nodeName": "div",
+          "elementId": "",
+          "attributes": [
+            {
+              "property": "data-id",
+              "value": "IgV8iY"
+            }
+          ],
+          "classList": [],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [
+            {
+              "property": "background-color",
+              "value": "#fff",
+              "enabled": true
+            },
+            {
+              "property": "padding-bottom",
+              "value": "1rem",
+              "enabled": true
+            }
+          ],
+          "children": [
+            {
+              "name": "doughnut-chart",
+              "nodeName": "doughnut-chart",
+              "elementId": "",
+              "attributes": [
+                {
+                  "property": "data-id",
+                  "value": "CH_kUM"
+                }
+              ],
+              "classList": [],
+              "conditionalClasses": [],
+              "contentType": "text",
+              "displayExpression": "",
+              "events": {},
+              "iterate": {
+                "array": "",
+                "variable": "",
+                "trackByIndex": false
+              },
+              "styles": [],
+              "children": [],
+              "comments": "",
+              "type": "custom-component",
+              "id": "6659a0cea90f89de79772caf",
+              "expressions": [
+                {
+                  "expression": "$ctrl.charts.overall.data",
+                  "to": "data"
+                },
+                {
+                  "expression": "$ctrl.charts.overall.colors",
+                  "to": "colors"
+                },
+                {
+                  "expression": "$ctrl.charts.overall.legends",
+                  "to": "legends"
+                },
+                {
+                  "expression": "$ctrl.charts.overall.count",
+                  "to": "count"
+                },
+                {
+                  "expression": "$ctrl.charts.overall.countLabel",
+                  "to": "countLabel"
+                }
+              ]
+            }
+          ],
+          "comments": ""
+        },
+        {
+          "name": "div",
+          "nodeName": "div",
+          "elementId": "",
+          "attributes": [
+            {
+              "property": "data-id",
+              "value": "06UDN6"
+            }
+          ],
+          "classList": [
+            "content-body"
+          ],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [],
+          "children": [
+            {
+              "name": "div",
+              "nodeName": "div",
+              "elementId": "",
+              "attributes": [
+                {
+                  "property": "data-id",
+                  "value": "uuMrLu"
+                }
+              ],
+              "classList": [
+                "content-title"
+              ],
+              "conditionalClasses": [],
+              "contentType": "text",
+              "displayExpression": "",
+              "events": {},
+              "iterate": {
+                "array": "",
+                "variable": "",
+                "trackByIndex": false
+              },
+              "styles": [],
+              "children": [
+                {
+                  "name": "h2",
+                  "nodeName": "h2",
+                  "elementId": "",
+                  "attributes": [
+                    {
+                      "property": "data-id",
+                      "value": "ab7gLi"
+                    }
+                  ],
+                  "classList": [],
+                  "conditionalClasses": [],
+                  "contentType": "text",
+                  "displayExpression": "",
+                  "events": {},
+                  "iterate": {
+                    "array": "",
+                    "variable": "",
+                    "trackByIndex": false
+                  },
+                  "styles": [],
+                  "children": [
+                    {
+                      "name": "text",
+                      "nodeName": "text",
+                      "textContent": "Ongoing Projects",
+                      "evaluate": false
+                    }
+                  ],
+                  "comments": ""
+                },
+                {
+                  "name": "Button",
+                  "nodeName": "bln-button",
+                  "elementId": "",
+                  "attributes": [
+                    {
+                      "property": "core",
+                      "value": ""
+                    },
+                    {
+                      "property": "data-id",
+                      "value": "3mcj0T"
+                    }
+                  ],
+                  "classList": [],
+                  "conditionalClasses": [],
+                  "contentType": "text",
+                  "displayExpression": "",
+                  "events": {},
+                  "iterate": {
+                    "array": "",
+                    "variable": "",
+                    "trackByIndex": false
+                  },
+                  "styles": [
+                    {
+                      "property": "--bln-button-default-bg-color",
+                      "value": "transparent",
+                      "enabled": true
+                    },
+                    {
+                      "property": "--bln-button-default-hovered-bg-color",
+                      "value": "transparent",
+                      "enabled": true
+                    },
+                    {
+                      "property": "--bln-button-default-active-bg-color",
+                      "value": "transparent",
+                      "enabled": true
+                    },
+                    {
+                      "property": "--bln-button-font-weight",
+                      "value": "bold",
+                      "enabled": true
+                    },
+                    {
+                      "property": "text-decoration",
+                      "value": "underline var(--light-gray, #000)",
+                      "enabled": true
+                    },
+                    {
+                      "property": "--bln-button-default-text-color",
+                      "value": "var(--text-gray, #000)",
+                      "enabled": true
+                    },
+                    {
+                      "property": "--bln-button-default-hovered-text-color",
+                      "value": "var(--text-gray, #000)",
+                      "enabled": true
+                    },
+                    {
+                      "property": "--bln-button-default-active-text-color",
+                      "value": "var(--text-gray, #000)",
+                      "enabled": true
+                    }
+                  ],
+                  "children": [],
+                  "comments": "",
+                  "type": "core-component",
+                  "id": "button",
+                  "expressions": [
+                    {
+                      "expression": "\"View All\"",
+                      "to": "label"
+                    },
+                    {
+                      "expression": "$ctrl.page.go('projects')",
+                      "to": "onClick"
+                    }
+                  ]
+                }
+              ],
+              "comments": ""
+            },
+            {
+              "name": "div",
+              "nodeName": "div",
+              "elementId": "",
+              "attributes": [
+                {
+                  "property": "data-id",
+                  "value": "0SVAsL"
+                }
+              ],
+              "classList": [
+                "in-progress-projects"
+              ],
+              "conditionalClasses": [],
+              "contentType": "text",
+              "displayExpression": "",
+              "events": {},
+              "iterate": {
+                "array": "",
+                "variable": "",
+                "trackByIndex": false
+              },
+              "styles": [],
+              "children": [
+                {
+                  "name": "project-card",
+                  "nodeName": "project-card",
+                  "elementId": "",
+                  "attributes": [
+                    {
+                      "property": "data-id",
+                      "value": "WGyRf7"
+                    }
+                  ],
+                  "classList": [],
+                  "conditionalClasses": [],
+                  "contentType": "text",
+                  "displayExpression": "",
+                  "events": {
+                    "click": "$ctrl.onProjectClick($event, project)"
+                  },
+                  "iterate": {
+                    "array": "$ctrl.ongoingProjects",
+                    "variable": "project"
+                  },
+                  "styles": [],
+                  "children": [],
+                  "comments": "",
+                  "type": "custom-component",
+                  "id": "6659a0cea90f89de79772cb0",
+                  "expressions": [
+                    {
+                      "expression": "project.description",
+                      "to": "description"
+                    },
+                    {
+                      "expression": "project.name",
+                      "to": "name"
+                    },
+                    {
+                      "expression": "project.progress",
+                      "to": "progress"
+                    },
+                    {
+                      "expression": "project.deadLine",
+                      "to": "deadline"
+                    },
+                    {
+                      "expression": "project.assignedUsers",
+                      "to": "assignedUsers"
+                    },
+                    {
+                      "expression": "project.code",
+                      "to": "code"
+                    }
+                  ]
+                }
+              ],
+              "comments": ""
+            },
+            {
+              "name": "loader",
+              "nodeName": "loader",
+              "elementId": "",
+              "attributes": [
+                {
+                  "property": "data-id",
+                  "value": "svl6C7"
+                }
+              ],
+              "classList": [],
+              "conditionalClasses": [],
+              "contentType": "text",
+              "displayExpression": "!$ctrl.loaded",
+              "events": {},
+              "iterate": {
+                "array": "",
+                "variable": "",
+                "trackByIndex": false
+              },
+              "styles": [],
+              "children": [],
+              "comments": "",
+              "type": "custom-component",
+              "id": "6659a0cea90f89de79772cbc",
+              "expressions": [
+                {
+                  "expression": "'100%'",
+                  "to": "height"
+                },
+                {
+                  "expression": "\"Loading projects\"",
+                  "to": "message"
+                }
+              ]
+            }
+          ],
+          "comments": ""
+        }
+      ],
+      "comments": ""
+    },
+    {
+      "name": "bottom-bar",
+      "nodeName": "bottom-bar",
+      "elementId": "",
+      "attributes": [
+        {
+          "property": "data-id",
+          "value": "rjmnxB"
+        }
+      ],
+      "classList": [],
+      "conditionalClasses": [],
+      "contentType": "text",
+      "displayExpression": "",
+      "events": {},
+      "iterate": {
+        "array": "",
+        "variable": "",
+        "trackByIndex": false
+      },
+      "styles": [],
+      "children": [],
+      "comments": "",
+      "type": "custom-component",
+      "id": "6659a0cea90f89de79772cae",
+      "expressions": []
+    },
+    {
+      "name": "views",
+      "nodeName": "views",
+      "elementId": "",
+      "attributes": [
+        {
+          "property": "data-id",
+          "value": "DsQo14"
+        }
+      ],
+      "classList": [],
+      "conditionalClasses": [],
+      "contentType": "text",
+      "displayExpression": "$ctrl.loaded",
+      "events": {},
+      "iterate": {
+        "array": "",
+        "variable": "",
+        "trackByIndex": false
+      },
+      "styles": [],
+      "children": [],
+      "comments": "",
+      "type": "custom-component",
+      "id": "6659a0cea90f89de79772cb9",
+      "expressions": []
+    }
+  ]
+}

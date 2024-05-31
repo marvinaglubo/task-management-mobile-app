@@ -1,0 +1,401 @@
+{
+  "type": "app-service",
+  "name": "views",
+  "description": "",
+  "singleton": true,
+  "variables": [
+    {
+      "name": "project",
+      "type": "object",
+      "description": "",
+      "properties": [
+        {
+          "name": "data",
+          "type": "property",
+          "description": "",
+          "value": ""
+        },
+        {
+          "name": "tasks",
+          "type": "array",
+          "description": "",
+          "children": []
+        },
+        {
+          "name": "shown",
+          "type": "property",
+          "description": "",
+          "value": ""
+        },
+        {
+          "name": "show",
+          "type": "method",
+          "description": "",
+          "body": "this.project.data = data\nthis.project.shown = true",
+          "invokeOnLoad": false,
+          "isAsync": false,
+          "returnType": {
+            "name": "any"
+          },
+          "parameters": [
+            "data"
+          ]
+        },
+        {
+          "name": "hide",
+          "type": "method",
+          "description": "",
+          "body": "this.project.data = undefined\nthis.project.shown = false",
+          "invokeOnLoad": false,
+          "isAsync": false,
+          "returnType": {
+            "name": "any"
+          },
+          "parameters": []
+        },
+        {
+          "name": "refreshData",
+          "type": "method",
+          "description": "",
+          "body": "// const proj = this.project\n\n// const tasks = proj.tasks\n// const done = proj.tasks.filter(task => task.status === \"Completed\")\n\n// proj.data.progress = this.getPercentage(tasks.length, done.length) ?? 0\n\n// const usersSet = new Set()\n\n// tasks.forEach(task => {\n//     usersSet.add(task.assignedUserId)\n// })\n\n// proj.data.assignedUsers = Array.from(usersSet).map(id => {\n//     const user = this.user.getAll().find(user => user.userId === id)\n//     return user\n// }).filter(Boolean)\n\nthis.projectManager.refreshData(this.project)",
+          "invokeOnLoad": false,
+          "isAsync": false,
+          "returnType": {
+            "name": "any"
+          },
+          "parameters": []
+        }
+      ]
+    },
+    {
+      "name": "task",
+      "type": "object",
+      "description": "",
+      "properties": [
+        {
+          "name": "data",
+          "type": "property",
+          "description": "",
+          "value": ""
+        },
+        {
+          "name": "notes",
+          "type": "array",
+          "description": "",
+          "children": []
+        },
+        {
+          "name": "shown",
+          "type": "property",
+          "description": "",
+          "value": ""
+        },
+        {
+          "name": "show",
+          "type": "method",
+          "description": "",
+          "body": "this.task.data = data\nthis.task.shown = true",
+          "invokeOnLoad": false,
+          "isAsync": false,
+          "returnType": {
+            "name": "any"
+          },
+          "parameters": [
+            "data"
+          ]
+        },
+        {
+          "name": "hide",
+          "type": "method",
+          "description": "",
+          "body": "this.task.data = undefined\nthis.task.shown = false",
+          "invokeOnLoad": false,
+          "isAsync": false,
+          "returnType": {
+            "name": "any"
+          },
+          "parameters": []
+        }
+      ]
+    },
+    {
+      "name": "note",
+      "type": "object",
+      "description": "",
+      "properties": [
+        {
+          "name": "data",
+          "type": "property",
+          "description": "",
+          "value": ""
+        },
+        {
+          "name": "shown",
+          "type": "property",
+          "description": "",
+          "value": ""
+        },
+        {
+          "name": "show",
+          "type": "method",
+          "description": "",
+          "body": "this.note.data = data\nthis.note.shown = true",
+          "invokeOnLoad": false,
+          "isAsync": false,
+          "returnType": {
+            "name": "any"
+          },
+          "parameters": [
+            "data"
+          ]
+        },
+        {
+          "name": "hide",
+          "type": "method",
+          "description": "",
+          "body": "this.note.data = undefined\nthis.note.shown = false",
+          "invokeOnLoad": false,
+          "isAsync": false,
+          "returnType": {
+            "name": "any"
+          },
+          "parameters": []
+        }
+      ]
+    },
+    {
+      "name": "editProject",
+      "type": "object",
+      "description": "",
+      "properties": [
+        {
+          "name": "data",
+          "type": "property",
+          "description": "",
+          "value": ""
+        },
+        {
+          "name": "mode",
+          "type": "property",
+          "description": "",
+          "value": ""
+        },
+        {
+          "name": "shown",
+          "type": "property",
+          "description": "",
+          "value": ""
+        },
+        {
+          "name": "show",
+          "type": "method",
+          "description": "",
+          "body": "this.editProject.data = data\nthis.editProject.mode = mode\nthis.editProject.shown = true",
+          "invokeOnLoad": false,
+          "isAsync": false,
+          "returnType": {
+            "name": "any"
+          },
+          "parameters": [
+            "data",
+            "mode"
+          ]
+        },
+        {
+          "name": "hide",
+          "type": "method",
+          "description": "",
+          "body": "this.editProject.data = undefined\nthis.editProject.shown = false",
+          "invokeOnLoad": false,
+          "isAsync": false,
+          "returnType": {
+            "name": "any"
+          },
+          "parameters": []
+        }
+      ]
+    },
+    {
+      "name": "editTask",
+      "type": "object",
+      "description": "",
+      "properties": [
+        {
+          "name": "data",
+          "type": "property",
+          "description": "",
+          "value": ""
+        },
+        {
+          "name": "mode",
+          "type": "property",
+          "description": "",
+          "value": ""
+        },
+        {
+          "name": "shown",
+          "type": "property",
+          "description": "",
+          "value": ""
+        },
+        {
+          "name": "show",
+          "type": "method",
+          "description": "",
+          "body": "this.editTask.data = data\nthis.editTask.mode = mode\nthis.editTask.shown = true",
+          "invokeOnLoad": false,
+          "isAsync": false,
+          "returnType": {
+            "name": "any"
+          },
+          "parameters": [
+            "data",
+            "mode"
+          ]
+        },
+        {
+          "name": "hide",
+          "type": "method",
+          "description": "",
+          "body": "this.editTask.data = undefined\nthis.editTask.shown = false",
+          "invokeOnLoad": false,
+          "isAsync": false,
+          "returnType": {
+            "name": "any"
+          },
+          "parameters": []
+        }
+      ]
+    },
+    {
+      "name": "editNote",
+      "type": "object",
+      "description": "",
+      "properties": [
+        {
+          "name": "data",
+          "type": "property",
+          "description": "",
+          "value": ""
+        },
+        {
+          "name": "mode",
+          "type": "property",
+          "description": "",
+          "value": ""
+        },
+        {
+          "name": "shown",
+          "type": "property",
+          "description": "",
+          "value": ""
+        },
+        {
+          "name": "show",
+          "type": "method",
+          "description": "",
+          "body": "this.editNote.data = data\nthis.editNote.mode = mode\nthis.editNote.shown = true",
+          "invokeOnLoad": false,
+          "isAsync": false,
+          "returnType": {
+            "name": "any"
+          },
+          "parameters": [
+            "data",
+            "mode"
+          ]
+        },
+        {
+          "name": "hide",
+          "type": "method",
+          "description": "",
+          "body": "// this.editNote.data = undefined\nthis.editNote.shown = false",
+          "invokeOnLoad": false,
+          "isAsync": false,
+          "returnType": {
+            "name": "any"
+          },
+          "parameters": []
+        }
+      ]
+    },
+    {
+      "name": "search",
+      "type": "object",
+      "description": "",
+      "properties": [
+        {
+          "name": "shown",
+          "type": "property",
+          "description": "",
+          "value": ""
+        },
+        {
+          "name": "show",
+          "type": "method",
+          "description": "",
+          "body": "this.search.shown = true",
+          "invokeOnLoad": false,
+          "isAsync": false,
+          "returnType": {
+            "name": "any"
+          },
+          "parameters": []
+        },
+        {
+          "name": "hide",
+          "type": "method",
+          "description": "",
+          "body": "this.search.shown = false",
+          "invokeOnLoad": false,
+          "isAsync": false,
+          "returnType": {
+            "name": "any"
+          },
+          "parameters": []
+        }
+      ]
+    },
+    {
+      "name": "getPercentage",
+      "type": "method",
+      "description": "",
+      "body": "if (value === undefined || total === 0) return 0\nconst percent = (value / total) * 100\nreturn Math.round(percent)",
+      "invokeOnLoad": false,
+      "isAsync": false,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": [
+        "total",
+        "value"
+      ]
+    },
+    {
+      "name": "projectManager",
+      "type": "service",
+      "id": "66541b3a761bb263eba724f6"
+    },
+    {
+      "name": "user",
+      "type": "service",
+      "id": "66541b3a761bb263eba724f5"
+    }
+  ],
+  "visible": [
+    "views",
+    "project",
+    "task",
+    "setProject",
+    "showTask",
+    "showProject",
+    "editProject",
+    "addProject",
+    "addTask",
+    "editTask",
+    "addNote",
+    "editNote",
+    "note",
+    "search"
+  ]
+}

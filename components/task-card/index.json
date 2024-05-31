@@ -1,0 +1,418 @@
+{
+  "type": "custom-component",
+  "name": "task-card",
+  "nodeName": null,
+  "description": null,
+  "children": [
+    {
+      "name": "div",
+      "nodeName": "div",
+      "elementId": "",
+      "attributes": [],
+      "classList": [
+        "status-label"
+      ],
+      "conditionalClasses": [],
+      "contentType": "text",
+      "displayExpression": "",
+      "events": {},
+      "iterate": {
+        "array": "",
+        "variable": "",
+        "trackByIndex": false
+      },
+      "styles": [],
+      "children": [
+        {
+          "name": "Badge",
+          "nodeName": "bln-badge",
+          "elementId": "",
+          "attributes": [
+            {
+              "property": "core",
+              "value": ""
+            }
+          ],
+          "classList": [
+            "status-icon"
+          ],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "$ctrl.data.status === 'Not Started'",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [
+            {
+              "property": "--bln-badge-font-size",
+              "value": "30px",
+              "enabled": true
+            },
+            {
+              "property": "--bln-badge-padding",
+              "value": "0",
+              "enabled": true
+            },
+            {
+              "property": "--bln-badge-icon-size",
+              "value": "30px",
+              "enabled": true
+            }
+          ],
+          "children": [],
+          "comments": "",
+          "type": "core-component",
+          "id": "badge",
+          "expressions": [
+            {
+              "expression": "({\n  \"type\": \"font-icon\",\n  \"style\": \"solid\",\n  \"name\": \"minus-circle\",\n  \"position\": \"icon-only\"\n})",
+              "to": "icon"
+            },
+            {
+              "expression": "\"outline\"",
+              "to": "type"
+            }
+          ]
+        },
+        {
+          "name": "Badge",
+          "nodeName": "bln-badge",
+          "elementId": "",
+          "attributes": [
+            {
+              "property": "core",
+              "value": ""
+            }
+          ],
+          "classList": [
+            "status-icon"
+          ],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "$ctrl.data.status === 'In Progress'",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [
+            {
+              "property": "--bln-badge-font-size",
+              "value": "30px",
+              "enabled": true
+            },
+            {
+              "property": "--bln-badge-padding",
+              "value": "0",
+              "enabled": true
+            },
+            {
+              "property": "--bln-badge-default-color",
+              "value": "var(--warning-color, #000)",
+              "enabled": true
+            },
+            {
+              "property": "--bln-badge-icon-size",
+              "value": "30px",
+              "enabled": true
+            }
+          ],
+          "children": [],
+          "comments": "",
+          "type": "core-component",
+          "id": "badge",
+          "expressions": [
+            {
+              "expression": "({\n  \"type\": \"font-icon\",\n  \"style\": \"solid\",\n  \"name\": \"sync-alt\",\n  \"position\": \"icon-only\"\n})",
+              "to": "icon"
+            },
+            {
+              "expression": "\"outline\"",
+              "to": "type"
+            }
+          ]
+        },
+        {
+          "name": "Badge",
+          "nodeName": "bln-badge",
+          "elementId": "",
+          "attributes": [
+            {
+              "property": "core",
+              "value": ""
+            }
+          ],
+          "classList": [
+            "status-icon"
+          ],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "$ctrl.data.status === 'Completed'",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [
+            {
+              "property": "--bln-badge-font-size",
+              "value": "30px",
+              "enabled": true
+            },
+            {
+              "property": "--bln-badge-padding",
+              "value": "0",
+              "enabled": true
+            },
+            {
+              "property": "--bln-badge-default-color",
+              "value": "var(--success-color, #000)",
+              "enabled": true
+            },
+            {
+              "property": "--bln-badge-icon-size",
+              "value": "30px",
+              "enabled": true
+            }
+          ],
+          "children": [],
+          "comments": "",
+          "type": "core-component",
+          "id": "badge",
+          "expressions": [
+            {
+              "expression": "({\n  \"type\": \"font-icon\",\n  \"style\": \"regular\",\n  \"name\": \"check-circle\",\n  \"position\": \"icon-only\"\n})",
+              "to": "icon"
+            },
+            {
+              "expression": "\"outline\"",
+              "to": "type"
+            }
+          ]
+        },
+        {
+          "name": "span",
+          "nodeName": "span",
+          "elementId": "",
+          "attributes": [],
+          "classList": [],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [
+            {
+              "property": "font-size",
+              "value": "9px",
+              "enabled": true
+            }
+          ],
+          "children": [
+            {
+              "name": "text",
+              "nodeName": "text",
+              "textContent": "$ctrl.data.status",
+              "evaluate": true
+            }
+          ],
+          "comments": ""
+        }
+      ],
+      "comments": ""
+    },
+    {
+      "name": "div",
+      "nodeName": "div",
+      "elementId": "",
+      "attributes": [],
+      "classList": [
+        "task-data"
+      ],
+      "conditionalClasses": [],
+      "contentType": "text",
+      "displayExpression": "",
+      "events": {},
+      "iterate": {
+        "array": "",
+        "variable": "",
+        "trackByIndex": false
+      },
+      "styles": [],
+      "children": [
+        {
+          "name": "span",
+          "nodeName": "span",
+          "elementId": "",
+          "attributes": [],
+          "classList": [
+            "task-title"
+          ],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [],
+          "children": [
+            {
+              "name": "text",
+              "nodeName": "text",
+              "textContent": "$ctrl.data.subject",
+              "evaluate": true
+            }
+          ],
+          "comments": ""
+        },
+        {
+          "name": "div",
+          "nodeName": "div",
+          "elementId": "",
+          "attributes": [],
+          "classList": [
+            "task-user"
+          ],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "$ctrl.user.getUser($ctrl.data.assignedUserId)",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [],
+          "children": [
+            {
+              "name": "span",
+              "nodeName": "span",
+              "elementId": "",
+              "attributes": [],
+              "classList": [],
+              "conditionalClasses": [],
+              "contentType": "text",
+              "displayExpression": "",
+              "events": {},
+              "iterate": {
+                "array": "",
+                "variable": "",
+                "trackByIndex": false
+              },
+              "styles": [
+                {
+                  "property": "margin-right",
+                  "value": ".25rem",
+                  "enabled": true
+                }
+              ],
+              "children": [
+                {
+                  "name": "text",
+                  "nodeName": "text",
+                  "textContent": "Assigned User:",
+                  "evaluate": false
+                }
+              ],
+              "comments": ""
+            },
+            {
+              "name": "span",
+              "nodeName": "span",
+              "elementId": "",
+              "attributes": [],
+              "classList": [
+                "user"
+              ],
+              "conditionalClasses": [],
+              "contentType": "text",
+              "displayExpression": "",
+              "events": {},
+              "iterate": {
+                "array": "",
+                "variable": "",
+                "trackByIndex": false
+              },
+              "styles": [
+                {
+                  "property": "font-weight",
+                  "value": "bold",
+                  "enabled": true
+                }
+              ],
+              "children": [
+                {
+                  "name": "text",
+                  "nodeName": "text",
+                  "textContent": "$ctrl.user.getName($ctrl.data.assignedUserId)",
+                  "evaluate": true
+                }
+              ],
+              "comments": ""
+            }
+          ],
+          "comments": ""
+        }
+      ],
+      "comments": ""
+    }
+  ],
+  "variables": [
+    {
+      "name": "getStatusLabel",
+      "type": "method",
+      "description": "",
+      "body": "const status = $ctrl.data?.status\n\nswitch(status) {\n    case 'Completed': return 'Done'\n    case 'In Progress': return 'In Progress'\n    case 'Not Started': return 'Not Started'\n}",
+      "invokeOnLoad": false,
+      "isAsync": false,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": []
+    },
+    {
+      "name": "getUserFullName",
+      "type": "method",
+      "description": "",
+      "body": "const user = $ctrl.user.getUser($ctrl.data.assignedUserId)\n\nreturn user ? user.firstName + \" \" + user.lastName : \"\"",
+      "invokeOnLoad": false,
+      "isAsync": false,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": []
+    },
+    {
+      "name": "user",
+      "type": "service",
+      "id": "66541b3a761bb263eba724f5"
+    }
+  ],
+  "bindings": [
+    {
+      "name": "data",
+      "type": "<",
+      "description": "",
+      "propertyType": "property",
+      "default": "({\n    \"taskId\": 1,\n    \"subject\": \"Mock user interface\",\n    \"status\": \"In Progress\",\n    \"description\": \"Mock the user interface using vector-based user experience design tool\",\n    \"createdDate\": \"2024-05-08T15:39:25+0800\",\n    \"projectId\": 1,\n    \"assignedUserId\": 1,\n    \"user\": {\n        firstName: \"John\",\n        lastName: \"Doe\"\n    }\n})"
+    }
+  ],
+  "modules": [],
+  "marketplaceId": null,
+  "formControl": null,
+  "transclude": null,
+  "externalScripts": [],
+  "externalStylesheets": []
+}

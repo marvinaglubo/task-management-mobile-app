@@ -1,0 +1,1016 @@
+{
+  "name": "user-info",
+  "type": "page",
+  "url": "/user-info",
+  "params": {
+    "user": ""
+  },
+  "variables": [
+    {
+      "name": "$stateParams",
+      "type": "service"
+    },
+    {
+      "name": "init",
+      "type": "method",
+      "description": "",
+      "body": "// console.log($ctrl.$stateParams)\r\n\r\n$ctrl.loaded  = false\r\n\r\nconst user = $ctrl.$stateParams.user\r\nconst userId = user.userId\r\n$ctrl.info = user\r\n\r\nif (userId === undefined) {\r\n    $ctrl.loaded = true\r\n    return\r\n    }\r\n\r\n$ctrl.demoTaskApi.demo_api_tasks_services_task_SelectAllTaskByUser({assignedUserId: userId}).then(res => {\r\n    $ctrl.tasks = res.data.task\r\n    $ctrl.loaded  = true\r\n})",
+      "invokeOnLoad": true,
+      "isAsync": true,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": []
+    },
+    {
+      "name": "tasks",
+      "type": "array",
+      "description": "",
+      "children": []
+    },
+    {
+      "name": "demoTaskApi",
+      "type": "open-api",
+      "id": "66541b38761bb263eba724d5"
+    },
+    {
+      "name": "page",
+      "type": "service",
+      "id": "6659a0cea90f89de79772ca8"
+    },
+    {
+      "name": "taskManager",
+      "type": "service",
+      "id": "6659a0cea90f89de79772cad"
+    },
+    {
+      "name": "projectManager",
+      "type": "service",
+      "id": "6659a0cea90f89de79772cab"
+    },
+    {
+      "name": "views",
+      "type": "service",
+      "id": "6659a0cea90f89de79772ca9"
+    }
+  ],
+  "children": [
+    {
+      "name": "div",
+      "nodeName": "div",
+      "elementId": "",
+      "attributes": [
+        {
+          "property": "data-id",
+          "value": "PMD2PT"
+        }
+      ],
+      "classList": [
+        "view-header"
+      ],
+      "conditionalClasses": [],
+      "contentType": "text",
+      "displayExpression": "",
+      "events": {},
+      "iterate": {
+        "array": "",
+        "variable": "",
+        "trackByIndex": false
+      },
+      "styles": [],
+      "children": [
+        {
+          "name": "Button",
+          "nodeName": "bln-button",
+          "elementId": "",
+          "attributes": [
+            {
+              "property": "core",
+              "value": ""
+            },
+            {
+              "property": "data-id",
+              "value": "K1t9i9"
+            }
+          ],
+          "classList": [],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [
+            {
+              "property": "--bln-button-font-size",
+              "value": "1.5rem",
+              "enabled": true
+            },
+            {
+              "property": "--bln-button-default-bg-color",
+              "value": "transparent",
+              "enabled": true
+            },
+            {
+              "property": "--bln-button-default-hovered-bg-color",
+              "value": "transparent",
+              "enabled": true
+            },
+            {
+              "property": "--bln-button-default-active-bg-color",
+              "value": "transparent",
+              "enabled": true
+            },
+            {
+              "property": "--bln-button-margin",
+              "value": "0",
+              "enabled": true
+            }
+          ],
+          "children": [
+            {
+              "name": "div",
+              "nodeName": "div",
+              "elementId": "",
+              "attributes": [
+                {
+                  "property": "title",
+                  "value": "{{ $ctrl.tooltip }}"
+                },
+                {
+                  "property": "data-id",
+                  "value": "UV6gG6"
+                }
+              ],
+              "classList": [
+                "bln-core-component",
+                "bln-button"
+              ],
+              "conditionalClasses": [
+                {
+                  "className": "default",
+                  "condition": "$ctrl.type === 'default'"
+                },
+                {
+                  "className": "primary",
+                  "condition": "$ctrl.type === 'primary'"
+                },
+                {
+                  "className": "secondary",
+                  "condition": "$ctrl.type === 'secondary'"
+                },
+                {
+                  "className": "disabled",
+                  "condition": "$ctrl.isDisabled"
+                },
+                {
+                  "className": "isLoading",
+                  "condition": "$ctrl.isLoading()"
+                }
+              ],
+              "contentType": "text",
+              "displayExpression": "",
+              "events": {
+                "click": "$ctrl.handleClick($event)"
+              },
+              "iterate": {
+                "array": "",
+                "variable": "",
+                "trackByIndex": false
+              },
+              "styles": [],
+              "children": [
+                {
+                  "name": "span",
+                  "nodeName": "span",
+                  "elementId": "",
+                  "attributes": [
+                    {
+                      "property": "ng-if",
+                      "value": "$ctrl.icon.type === 'font-icon'"
+                    },
+                    {
+                      "property": "bln-icon",
+                      "value": ""
+                    },
+                    {
+                      "property": "icon-type",
+                      "value": "font-icon"
+                    },
+                    {
+                      "property": "icon-style",
+                      "value": "{{::$ctrl.icon.style}}"
+                    },
+                    {
+                      "property": "icon-name",
+                      "value": "{{::$ctrl.icon.name}}"
+                    },
+                    {
+                      "property": "data-position",
+                      "value": "{{::$ctrl.icon.position}}"
+                    },
+                    {
+                      "property": "data-id",
+                      "value": "HwN4Dd"
+                    }
+                  ],
+                  "classList": [],
+                  "conditionalClasses": [
+                    {
+                      "className": "opacity-0",
+                      "condition": "$ctrl.isLoading()"
+                    }
+                  ],
+                  "contentType": "text",
+                  "displayExpression": "",
+                  "events": {},
+                  "iterate": {
+                    "array": "",
+                    "variable": "",
+                    "trackByIndex": false
+                  },
+                  "styles": [],
+                  "children": [],
+                  "comments": ""
+                },
+                {
+                  "name": "span",
+                  "nodeName": "span",
+                  "elementId": "",
+                  "attributes": [
+                    {
+                      "property": "ng-if",
+                      "value": "$ctrl.icon.type === 'image-icon'"
+                    },
+                    {
+                      "property": "bln-icon",
+                      "value": ""
+                    },
+                    {
+                      "property": "icon-type",
+                      "value": "image-icon"
+                    },
+                    {
+                      "property": "icon-url",
+                      "value": "{{::$ctrl.icon.url}}"
+                    },
+                    {
+                      "property": "data-position",
+                      "value": "{{::$ctrl.icon.position}}"
+                    },
+                    {
+                      "property": "data-id",
+                      "value": "REainv"
+                    }
+                  ],
+                  "classList": [],
+                  "conditionalClasses": [
+                    {
+                      "className": "opacity-0",
+                      "condition": "$ctrl.isLoading()"
+                    }
+                  ],
+                  "contentType": "text",
+                  "displayExpression": "",
+                  "events": {},
+                  "iterate": {
+                    "array": "",
+                    "variable": "",
+                    "trackByIndex": false
+                  },
+                  "styles": [],
+                  "children": [],
+                  "comments": ""
+                },
+                {
+                  "name": "div",
+                  "nodeName": "div",
+                  "elementId": "",
+                  "attributes": [
+                    {
+                      "property": "ng-if",
+                      "value": "!!$ctrl.label && $ctrl.icon.position !== 'icon-only'"
+                    },
+                    {
+                      "property": "data-id",
+                      "value": "z8Q5XZ"
+                    }
+                  ],
+                  "classList": [
+                    "label"
+                  ],
+                  "conditionalClasses": [
+                    {
+                      "className": "opacity-0",
+                      "condition": "$ctrl.isLoading()"
+                    }
+                  ],
+                  "contentType": "text",
+                  "displayExpression": "true",
+                  "events": {},
+                  "iterate": {
+                    "array": "",
+                    "variable": "",
+                    "trackByIndex": false
+                  },
+                  "styles": [],
+                  "children": [
+                    {
+                      "name": "text",
+                      "nodeName": "text",
+                      "textContent": "$ctrl.label",
+                      "evaluate": true
+                    }
+                  ],
+                  "comments": ""
+                },
+                {
+                  "name": "div",
+                  "nodeName": "div",
+                  "elementId": "",
+                  "attributes": [
+                    {
+                      "property": "ng-if",
+                      "value": "$ctrl.isLoading()"
+                    },
+                    {
+                      "property": "data-id",
+                      "value": "M2BUrK"
+                    }
+                  ],
+                  "classList": [
+                    "spinner"
+                  ],
+                  "conditionalClasses": [],
+                  "contentType": "text",
+                  "displayExpression": "",
+                  "events": {},
+                  "iterate": {
+                    "array": "",
+                    "variable": "",
+                    "trackByIndex": false
+                  },
+                  "styles": [],
+                  "children": [
+                    {
+                      "name": "text",
+                      "nodeName": "text",
+                      "textContent": "",
+                      "evaluate": false
+                    },
+                    {
+                      "name": "svg",
+                      "nodeName": "svg",
+                      "elementId": "",
+                      "attributes": [
+                        {
+                          "property": "viewBox",
+                          "value": "25 25 50 50"
+                        },
+                        {
+                          "property": "data-id",
+                          "value": "MlqzFS"
+                        }
+                      ],
+                      "classList": [],
+                      "conditionalClasses": [],
+                      "contentType": "text",
+                      "displayExpression": "",
+                      "events": {},
+                      "iterate": {
+                        "array": "",
+                        "variable": "",
+                        "trackByIndex": false
+                      },
+                      "styles": [],
+                      "children": [
+                        {
+                          "name": "circle",
+                          "nodeName": "circle",
+                          "elementId": "",
+                          "attributes": [
+                            {
+                              "property": "cx",
+                              "value": "50"
+                            },
+                            {
+                              "property": "cy",
+                              "value": "50"
+                            },
+                            {
+                              "property": "r",
+                              "value": "20"
+                            },
+                            {
+                              "property": "fill",
+                              "value": "none"
+                            },
+                            {
+                              "property": "stroke-width",
+                              "value": "4"
+                            },
+                            {
+                              "property": "stroke-miterlimit",
+                              "value": "10"
+                            },
+                            {
+                              "property": "data-id",
+                              "value": "6wG30e"
+                            }
+                          ],
+                          "classList": [
+                            "path"
+                          ],
+                          "conditionalClasses": [],
+                          "contentType": "text",
+                          "displayExpression": "",
+                          "events": {},
+                          "iterate": {
+                            "array": "",
+                            "variable": "",
+                            "trackByIndex": false
+                          },
+                          "styles": [],
+                          "children": [],
+                          "comments": ""
+                        }
+                      ],
+                      "comments": ""
+                    }
+                  ],
+                  "comments": ""
+                }
+              ],
+              "comments": ""
+            }
+          ],
+          "comments": "",
+          "type": "core-component",
+          "id": "button",
+          "expressions": [
+            {
+              "to": "label",
+              "expression": "'Hide Side Panel'"
+            },
+            {
+              "to": "icon",
+              "expression": "({\n  \"type\": \"font-icon\",\n  \"style\": \"solid\",\n  \"name\": \"arrow-left\",\n  \"position\": \"icon-only\"\n})"
+            },
+            {
+              "expression": "$ctrl.page.go('dashboard')",
+              "to": "onClick"
+            }
+          ]
+        }
+      ],
+      "comments": ""
+    },
+    {
+      "name": "main",
+      "nodeName": "main",
+      "elementId": "",
+      "attributes": [
+        {
+          "property": "data-id",
+          "value": "g_-FPS"
+        }
+      ],
+      "classList": [],
+      "conditionalClasses": [],
+      "contentType": "text",
+      "displayExpression": "",
+      "events": {},
+      "iterate": {
+        "array": "",
+        "variable": "",
+        "trackByIndex": false
+      },
+      "styles": [],
+      "children": [
+        {
+          "name": "div",
+          "nodeName": "div",
+          "elementId": "",
+          "attributes": [
+            {
+              "property": "data-id",
+              "value": "ddUBZt"
+            }
+          ],
+          "classList": [
+            "content-header"
+          ],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [],
+          "children": [
+            {
+              "name": "div",
+              "nodeName": "div",
+              "elementId": "",
+              "attributes": [
+                {
+                  "property": "data-id",
+                  "value": "e_mS2V"
+                }
+              ],
+              "classList": [
+                "user-info"
+              ],
+              "conditionalClasses": [],
+              "contentType": "text",
+              "displayExpression": "",
+              "events": {},
+              "iterate": {
+                "array": "",
+                "variable": "",
+                "trackByIndex": false
+              },
+              "styles": [
+                {
+                  "property": "display",
+                  "value": "flex",
+                  "enabled": true
+                },
+                {
+                  "property": "flex-direction",
+                  "value": "column",
+                  "enabled": true
+                },
+                {
+                  "property": "justify-content",
+                  "value": "center",
+                  "enabled": true
+                },
+                {
+                  "property": "align-items",
+                  "value": "center",
+                  "enabled": true
+                }
+              ],
+              "children": [
+                {
+                  "name": "user-avatars",
+                  "nodeName": "user-avatars",
+                  "elementId": "",
+                  "attributes": [
+                    {
+                      "property": "data-id",
+                      "value": "byiGwG"
+                    }
+                  ],
+                  "classList": [],
+                  "conditionalClasses": [],
+                  "contentType": "text",
+                  "displayExpression": "$ctrl.info",
+                  "events": {},
+                  "iterate": {
+                    "array": "",
+                    "variable": "",
+                    "trackByIndex": false
+                  },
+                  "styles": [],
+                  "children": [],
+                  "comments": "",
+                  "type": "custom-component",
+                  "id": "6659a0cea90f89de79772cb2",
+                  "expressions": [
+                    {
+                      "expression": "[$ctrl.info]",
+                      "to": "users"
+                    },
+                    {
+                      "expression": "false",
+                      "to": "viewOnClick"
+                    }
+                  ]
+                },
+                {
+                  "name": "span",
+                  "nodeName": "span",
+                  "elementId": "",
+                  "attributes": [
+                    {
+                      "property": "data-id",
+                      "value": "6Wt0mj"
+                    }
+                  ],
+                  "classList": [],
+                  "conditionalClasses": [],
+                  "contentType": "text",
+                  "displayExpression": "",
+                  "events": {},
+                  "iterate": {
+                    "array": "",
+                    "variable": "",
+                    "trackByIndex": false
+                  },
+                  "styles": [
+                    {
+                      "property": "font-weight",
+                      "value": "bold",
+                      "enabled": true
+                    },
+                    {
+                      "property": "font-size",
+                      "value": "18px",
+                      "enabled": true
+                    },
+                    {
+                      "property": "margin-top",
+                      "value": "1rem",
+                      "enabled": true
+                    },
+                    {
+                      "property": "margin-bottom",
+                      "value": ".5rem",
+                      "enabled": true
+                    }
+                  ],
+                  "children": [
+                    {
+                      "name": "text",
+                      "nodeName": "text",
+                      "textContent": "$ctrl.info.firstName + ' ' + $ctrl.info.lastName",
+                      "evaluate": true
+                    }
+                  ],
+                  "comments": ""
+                },
+                {
+                  "name": "span",
+                  "nodeName": "span",
+                  "elementId": "",
+                  "attributes": [
+                    {
+                      "property": "data-id",
+                      "value": "TBPHYL"
+                    }
+                  ],
+                  "classList": [],
+                  "conditionalClasses": [],
+                  "contentType": "text",
+                  "displayExpression": "",
+                  "events": {},
+                  "iterate": {
+                    "array": "",
+                    "variable": "",
+                    "trackByIndex": false
+                  },
+                  "styles": [],
+                  "children": [
+                    {
+                      "name": "text",
+                      "nodeName": "text",
+                      "textContent": "$ctrl.info.email",
+                      "evaluate": true
+                    }
+                  ],
+                  "comments": ""
+                }
+              ],
+              "comments": ""
+            }
+          ],
+          "comments": ""
+        },
+        {
+          "name": "div",
+          "nodeName": "div",
+          "elementId": "",
+          "attributes": [
+            {
+              "property": "data-id",
+              "value": "RW_1kM"
+            }
+          ],
+          "classList": [
+            "content-body"
+          ],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [],
+          "children": [
+            {
+              "name": "div",
+              "nodeName": "div",
+              "elementId": "",
+              "attributes": [
+                {
+                  "property": "data-id",
+                  "value": "MQB1UT"
+                }
+              ],
+              "classList": [
+                "view-content"
+              ],
+              "conditionalClasses": [],
+              "contentType": "text",
+              "displayExpression": "",
+              "events": {},
+              "iterate": {
+                "array": "",
+                "variable": "",
+                "trackByIndex": false
+              },
+              "styles": [],
+              "children": [
+                {
+                  "name": "div",
+                  "nodeName": "div",
+                  "elementId": "",
+                  "attributes": [
+                    {
+                      "property": "data-id",
+                      "value": "yeSJhV"
+                    }
+                  ],
+                  "classList": [
+                    "tasks"
+                  ],
+                  "conditionalClasses": [],
+                  "contentType": "text",
+                  "displayExpression": "",
+                  "events": {},
+                  "iterate": {
+                    "array": "",
+                    "variable": "",
+                    "trackByIndex": false
+                  },
+                  "styles": [],
+                  "children": [
+                    {
+                      "name": "div",
+                      "nodeName": "div",
+                      "elementId": "",
+                      "attributes": [
+                        {
+                          "property": "data-id",
+                          "value": "kTSlih"
+                        }
+                      ],
+                      "classList": [],
+                      "conditionalClasses": [],
+                      "contentType": "text",
+                      "displayExpression": "",
+                      "events": {},
+                      "iterate": {
+                        "array": "",
+                        "variable": "",
+                        "trackByIndex": false
+                      },
+                      "styles": [
+                        {
+                          "property": "display",
+                          "value": "flex",
+                          "enabled": true
+                        }
+                      ],
+                      "children": [
+                        {
+                          "name": "h1",
+                          "nodeName": "h1",
+                          "elementId": "",
+                          "attributes": [
+                            {
+                              "property": "data-id",
+                              "value": "-sWqg5"
+                            }
+                          ],
+                          "classList": [],
+                          "conditionalClasses": [],
+                          "contentType": "text",
+                          "displayExpression": "",
+                          "events": {},
+                          "iterate": {
+                            "array": "",
+                            "variable": "",
+                            "trackByIndex": false
+                          },
+                          "styles": [],
+                          "children": [
+                            {
+                              "name": "text",
+                              "nodeName": "text",
+                              "textContent": "Tasks",
+                              "evaluate": false
+                            }
+                          ],
+                          "comments": ""
+                        },
+                        {
+                          "name": "Button",
+                          "nodeName": "bln-button",
+                          "elementId": "",
+                          "attributes": [
+                            {
+                              "property": "core",
+                              "value": ""
+                            },
+                            {
+                              "property": "data-id",
+                              "value": "Js0qrJ"
+                            }
+                          ],
+                          "classList": [],
+                          "conditionalClasses": [],
+                          "contentType": "text",
+                          "displayExpression": "",
+                          "events": {},
+                          "iterate": {
+                            "array": "",
+                            "variable": "",
+                            "trackByIndex": false
+                          },
+                          "styles": [
+                            {
+                              "property": "--bln-button-padding",
+                              "value": "0 .5rem",
+                              "enabled": true
+                            },
+                            {
+                              "property": "--bln-button-margin",
+                              "value": "0 .5rem",
+                              "enabled": true
+                            },
+                            {
+                              "property": "--bln-button-font-size",
+                              "value": "1.5rem",
+                              "enabled": true
+                            },
+                            {
+                              "property": "--bln-button-default-bg-color",
+                              "value": "transparent",
+                              "enabled": true
+                            },
+                            {
+                              "property": "--bln-button-default-hovered-bg-color",
+                              "value": "transparent",
+                              "enabled": true
+                            },
+                            {
+                              "property": "--bln-button-default-active-bg-color",
+                              "value": "transparent",
+                              "enabled": true
+                            },
+                            {
+                              "property": "--bln-button-default-text-color",
+                              "value": "var(--primary-color)",
+                              "enabled": true
+                            },
+                            {
+                              "property": "--bln-button-default-hovered-text-color",
+                              "value": "var(--primary-color)",
+                              "enabled": true
+                            },
+                            {
+                              "property": "--bln-button-default-active-text-color",
+                              "value": "var(--primary-color)",
+                              "enabled": true
+                            }
+                          ],
+                          "children": [],
+                          "comments": "",
+                          "type": "core-component",
+                          "id": "button",
+                          "expressions": [
+                            {
+                              "expression": "({\n  \"type\": \"font-icon\",\n  \"position\": \"icon-only\",\n  \"name\": \"plus-circle\",\n  \"style\": \"solid\"\n})",
+                              "to": "icon"
+                            },
+                            {
+                              "expression": "$ctrl.addTask()",
+                              "to": "onClick"
+                            }
+                          ]
+                        }
+                      ],
+                      "comments": ""
+                    },
+                    {
+                      "name": "task-card",
+                      "nodeName": "task-card",
+                      "elementId": "",
+                      "attributes": [
+                        {
+                          "property": "data-id",
+                          "value": "hQpYg3"
+                        }
+                      ],
+                      "classList": [],
+                      "conditionalClasses": [],
+                      "contentType": "text",
+                      "displayExpression": "$ctrl.loaded",
+                      "events": {
+                        "click": "$ctrl.views.task.show(task)"
+                      },
+                      "iterate": {
+                        "array": "$ctrl.tasks",
+                        "variable": "task"
+                      },
+                      "styles": [],
+                      "children": [],
+                      "comments": "",
+                      "type": "custom-component",
+                      "id": "664e645dce56869a03f07c87",
+                      "expressions": [
+                        {
+                          "expression": "task",
+                          "to": "data"
+                        }
+                      ]
+                    }
+                  ],
+                  "comments": ""
+                },
+                {
+                  "name": "loader",
+                  "nodeName": "loader",
+                  "elementId": "",
+                  "attributes": [
+                    {
+                      "property": "data-id",
+                      "value": "MJLY86"
+                    }
+                  ],
+                  "classList": [],
+                  "conditionalClasses": [],
+                  "contentType": "text",
+                  "displayExpression": "!$ctrl.loaded",
+                  "events": {},
+                  "iterate": {
+                    "array": "",
+                    "variable": "",
+                    "trackByIndex": false
+                  },
+                  "styles": [],
+                  "children": [],
+                  "comments": "",
+                  "type": "custom-component",
+                  "id": "6659a0cea90f89de79772cbc",
+                  "expressions": [
+                    {
+                      "expression": "'150px'",
+                      "to": "height"
+                    },
+                    {
+                      "expression": "'Loading tasks'",
+                      "to": "message"
+                    }
+                  ]
+                }
+              ],
+              "comments": ""
+            }
+          ],
+          "comments": ""
+        }
+      ],
+      "comments": ""
+    },
+    {
+      "name": "views",
+      "nodeName": "views",
+      "elementId": "",
+      "attributes": [
+        {
+          "property": "data-id",
+          "value": "aOhH76"
+        }
+      ],
+      "classList": [],
+      "conditionalClasses": [],
+      "contentType": "text",
+      "displayExpression": "$ctrl.loaded",
+      "events": {},
+      "iterate": {
+        "array": "",
+        "variable": "",
+        "trackByIndex": false
+      },
+      "styles": [],
+      "children": [],
+      "comments": "",
+      "type": "custom-component",
+      "id": "6659a0cea90f89de79772cb9",
+      "expressions": []
+    }
+  ]
+}

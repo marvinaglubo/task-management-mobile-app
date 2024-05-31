@@ -1,0 +1,75 @@
+{
+  "type": "app-service",
+  "name": "search",
+  "description": "",
+  "singleton": false,
+  "variables": [
+    {
+      "name": "result",
+      "type": "object",
+      "description": "",
+      "properties": [
+        {
+          "name": "projects",
+          "type": "array",
+          "description": "",
+          "children": []
+        },
+        {
+          "name": "tasks",
+          "type": "array",
+          "description": "",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "execute",
+      "type": "method",
+      "description": "",
+      "body": "this.filter = this.input\n\nconst search = this.filter\nconst limit = 1000\nconst offset = 0\nconst headers = { 'ngrok-skip-browser-warning': true }\nconst projRes = await this.demoTaskApi.demo_api_tasks_services_project_SelectAllProject({ search, limit, offset }, {headers})\nconst taskRes = await this.demoTaskApi.demo_api_tasks_services_task_SelectAllTask({ search, limit, offset }, {headers})\nthis.result.projects = projRes.data.project\nthis.result.tasks = taskRes.data.task\nthis.searching = false\n",
+      "invokeOnLoad": false,
+      "isAsync": true,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": []
+    },
+    {
+      "name": "filter",
+      "type": "property",
+      "description": "",
+      "value": ""
+    },
+    {
+      "name": "input",
+      "type": "property",
+      "description": "",
+      "value": ""
+    },
+    {
+      "name": "searching",
+      "type": "property",
+      "description": "",
+      "value": ""
+    },
+    {
+      "name": "$timeout",
+      "type": "service"
+    },
+    {
+      "name": "demoTaskApi",
+      "type": "open-api",
+      "id": "66541b38761bb263eba724d5"
+    }
+  ],
+  "visible": [
+    "result",
+    "find",
+    "refresh",
+    "execute",
+    "filter",
+    "input",
+    "searching"
+  ]
+}

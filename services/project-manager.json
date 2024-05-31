@@ -1,0 +1,138 @@
+{
+  "type": "app-service",
+  "name": "project-manager",
+  "description": "",
+  "singleton": true,
+  "variables": [
+    {
+      "name": "getPercentage",
+      "type": "method",
+      "description": "",
+      "body": "if (value === undefined || total === 0) return 0\nconst percent = (value / total) * 100\nreturn Math.round(percent)",
+      "invokeOnLoad": false,
+      "isAsync": false,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": [
+        "total",
+        "value"
+      ]
+    },
+    {
+      "name": "refreshData",
+      "type": "method",
+      "description": "",
+      "body": "let tasks = []\n\nif (load) {\n    const headers = { 'ngrok-skip-browser-warning': \"true\" }\n    const res = await this.demoTaskApi.demo_api_tasks_services_task_SelectAllTaskByProject({projectCode: project.code, limit: 1000, offset: 0}, {headers})\n    tasks = res.data.task\n} else {\n    tasks = project.tasks\n}\n\nconst done = tasks.filter(task => task.status === \"Completed\")\n\nconst usersSet = new Set()\n\ntasks.forEach(task => {\n    usersSet.add(task.assignedUserId)\n})\n\nif (project.data) {\n    project.data.progress = this.getPercentage(tasks.length, done.length) ?? 0\n    project.data.assignedUsers = Array.from(usersSet).map(id => {\n        const user = this.user.getAll().find(user => user.userId === id)\n        return user\n    }).filter(Boolean)\n}\n\n",
+      "invokeOnLoad": false,
+      "isAsync": true,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": [
+        "project",
+        "load"
+      ]
+    },
+    {
+      "name": "refreshProjects",
+      "type": "method",
+      "description": "",
+      "body": "const headers = { 'ngrok-skip-browser-warning': \"true\" }\n\nreturn this.demoTaskApi.demo_api_tasks_services_project_SelectAllProject({ limit: 1000, offset: 0, search: search ?? null }, {headers}).then(res => {\n    const projects = res.data.project\n    this.projects = projects\n\n    const total = projects.length\n\n    const doneProjects = projects.filter(project => project.status === \"Completed\")\n    const toDoProjects = projects.filter(project => project.status === \"Not Started\")\n    const ongoingProjects = projects.filter(project => project.status === \"In Progress\")\n\n    const donePercentage = `${this.getPercentage(total, doneProjects.length)}%`\n    const toDoPercentage = `${this.getPercentage(total, toDoProjects.length)}%`\n    const onGoingPercentage = `${this.getPercentage(total, ongoingProjects.length)}%`\n\n\n    this.doneProjects = ongoingProjects\n    this.toDoProjects = toDoProjects\n    this.ongoingProjects = ongoingProjects\n    this.percentage = {done: donePercentage, todo: toDoPercentage, ongoing: onGoingPercentage}\n})\n\n\n",
+      "invokeOnLoad": false,
+      "isAsync": false,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": [
+        "search"
+      ]
+    },
+    {
+      "name": "projects",
+      "type": "array",
+      "description": "",
+      "children": []
+    },
+    {
+      "name": "ongoingProjects",
+      "type": "array",
+      "description": "",
+      "children": []
+    },
+    {
+      "name": "doneProjects",
+      "type": "array",
+      "description": "",
+      "children": []
+    },
+    {
+      "name": "toDoProjects",
+      "type": "array",
+      "description": "",
+      "children": []
+    },
+    {
+      "name": "percentage",
+      "type": "object",
+      "description": "",
+      "properties": [
+        {
+          "name": "done",
+          "type": "property",
+          "description": "",
+          "value": ""
+        },
+        {
+          "name": "todo",
+          "type": "property",
+          "description": "",
+          "value": ""
+        },
+        {
+          "name": "ongoing",
+          "type": "property",
+          "description": "",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "name": "getDeadlineMessage",
+      "type": "method",
+      "description": "",
+      "body": "if (!deadline) return 'No deadline'\n\nconst now = moment().startOf('day');\nconst deadlineDate = moment(deadline).startOf('day');\nconst daysLeft = deadlineDate.diff(now, 'days');\n\nlet message = ''\n\nif (daysLeft > 0) {\n    message = `${daysLeft} days left`;\n} else if (daysLeft === 0) {\n    message = `today.`;\n} else {\n    const daysPast = Math.abs(daysLeft);\n    message = `${daysPast} days ago`;\n}\n\nreturn message",
+      "invokeOnLoad": false,
+      "isAsync": false,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": [
+        "deadline"
+      ]
+    },
+    {
+      "name": "user",
+      "type": "service",
+      "id": "66541b3a761bb263eba724f5"
+    },
+    {
+      "name": "demoTaskApi",
+      "type": "open-api",
+      "id": "66541b38761bb263eba724d5"
+    }
+  ],
+  "visible": [
+    "getData",
+    "refreshData",
+    "getAll",
+    "refreshProjects",
+    "onGoingProjects",
+    "doneProjects",
+    "toDoProjects",
+    "ongoingProjects",
+    "percentage",
+    "getDeadlineMessage",
+    "projects"
+  ]
+}

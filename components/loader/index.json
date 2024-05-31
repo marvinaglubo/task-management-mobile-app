@@ -1,0 +1,157 @@
+{
+  "type": "custom-component",
+  "name": "loader",
+  "children": [
+    {
+      "name": "div",
+      "nodeName": "div",
+      "elementId": "",
+      "attributes": [
+        {
+          "property": "data-id",
+          "value": "HTXa4_"
+        },
+        {
+          "property": "ng-style",
+          "value": "{ 'height': $ctrl.height || 'auto' }"
+        }
+      ],
+      "classList": [],
+      "conditionalClasses": [],
+      "contentType": "text",
+      "displayExpression": "",
+      "events": {},
+      "iterate": {
+        "array": "",
+        "variable": "",
+        "trackByIndex": false
+      },
+      "styles": [
+        {
+          "property": "display",
+          "value": "flex",
+          "enabled": true
+        },
+        {
+          "property": "flex-direction",
+          "value": "column",
+          "enabled": true
+        },
+        {
+          "property": "align-items",
+          "value": "center",
+          "enabled": true
+        },
+        {
+          "property": "justify-content",
+          "value": "center",
+          "enabled": true
+        }
+      ],
+      "children": [
+        {
+          "name": "Spinner",
+          "nodeName": "bln-spinner",
+          "elementId": "",
+          "attributes": [
+            {
+              "property": "data-id",
+              "value": "6sHPGQ"
+            },
+            {
+              "property": "core",
+              "value": ""
+            }
+          ],
+          "classList": [],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [
+            {
+              "property": "--bln-spinner-thickness",
+              "value": "5",
+              "enabled": true
+            }
+          ],
+          "layout": {},
+          "children": [],
+          "comments": "",
+          "type": "core-component",
+          "id": "spinner",
+          "expressions": [
+            {
+              "expression": "\"60px\"",
+              "to": "size"
+            }
+          ]
+        },
+        {
+          "name": "span",
+          "nodeName": "span",
+          "elementId": "",
+          "attributes": [
+            {
+              "property": "data-id",
+              "value": "-53Dkf"
+            }
+          ],
+          "classList": [],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [
+            {
+              "property": "margin-top",
+              "value": "1rem",
+              "enabled": true
+            }
+          ],
+          "layout": {},
+          "children": [
+            {
+              "name": "text",
+              "nodeName": "text",
+              "textContent": "$ctrl.message",
+              "evaluate": true
+            }
+          ],
+          "comments": ""
+        }
+      ],
+      "comments": ""
+    }
+  ],
+  "variables": [],
+  "bindings": [
+    {
+      "name": "message",
+      "type": "<",
+      "description": "",
+      "propertyType": "property",
+      "default": "\"Loading\""
+    },
+    {
+      "name": "height",
+      "type": "<",
+      "description": "",
+      "propertyType": "property",
+      "default": "'auto'"
+    }
+  ],
+  "modules": [],
+  "externalScripts": [],
+  "externalStylesheets": []
+}

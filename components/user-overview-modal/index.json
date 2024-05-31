@@ -1,0 +1,386 @@
+{
+  "type": "custom-component",
+  "name": "user-overview-modal",
+  "children": [
+    {
+      "name": "div",
+      "nodeName": "div",
+      "elementId": "",
+      "attributes": [
+        {
+          "property": "data-id",
+          "value": "273YH0"
+        }
+      ],
+      "classList": [
+        "modal-body"
+      ],
+      "conditionalClasses": [],
+      "contentType": "text",
+      "displayExpression": "",
+      "events": {},
+      "iterate": {
+        "array": "",
+        "variable": "",
+        "trackByIndex": false
+      },
+      "styles": [],
+      "children": [
+        {
+          "name": "div",
+          "nodeName": "div",
+          "elementId": "",
+          "attributes": [
+            {
+              "property": "data-id",
+              "value": "b0K2jU"
+            }
+          ],
+          "classList": [],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [
+            {
+              "property": "display",
+              "value": "flex",
+              "enabled": true
+            },
+            {
+              "property": "flex-direction",
+              "value": "column",
+              "enabled": true
+            },
+            {
+              "property": "justify-content",
+              "value": "center",
+              "enabled": true
+            },
+            {
+              "property": "align-items",
+              "value": "center",
+              "enabled": true
+            },
+            {
+              "property": "padding",
+              "value": "1.5rem",
+              "enabled": true
+            }
+          ],
+          "children": [
+            {
+              "name": "user-avatars",
+              "nodeName": "user-avatars",
+              "elementId": "",
+              "attributes": [
+                {
+                  "property": "data-id",
+                  "value": "qDhun4"
+                }
+              ],
+              "classList": [],
+              "conditionalClasses": [],
+              "contentType": "text",
+              "displayExpression": "$ctrl.info",
+              "events": {},
+              "iterate": {
+                "array": "",
+                "variable": "",
+                "trackByIndex": false
+              },
+              "styles": [],
+              "children": [],
+              "comments": "",
+              "type": "custom-component",
+              "id": "66541b39761bb263eba724e1",
+              "expressions": [
+                {
+                  "expression": "[$ctrl.info]",
+                  "to": "users"
+                },
+                {
+                  "expression": "'135px'",
+                  "to": "size"
+                },
+                {
+                  "expression": "false",
+                  "to": "viewOnClick"
+                }
+              ]
+            },
+            {
+              "name": "span",
+              "nodeName": "span",
+              "elementId": "",
+              "attributes": [
+                {
+                  "property": "data-id",
+                  "value": "-G3doP"
+                }
+              ],
+              "classList": [],
+              "conditionalClasses": [],
+              "contentType": "text",
+              "displayExpression": "",
+              "events": {},
+              "iterate": {
+                "array": "",
+                "variable": "",
+                "trackByIndex": false
+              },
+              "styles": [
+                {
+                  "property": "font-weight",
+                  "value": "bold",
+                  "enabled": true
+                },
+                {
+                  "property": "font-size",
+                  "value": "18px",
+                  "enabled": true
+                },
+                {
+                  "property": "margin-top",
+                  "value": "1rem",
+                  "enabled": true
+                },
+                {
+                  "property": "margin-bottom",
+                  "value": ".5rem",
+                  "enabled": true
+                }
+              ],
+              "children": [
+                {
+                  "name": "text",
+                  "nodeName": "text",
+                  "textContent": "$ctrl.info.firstName + ' ' + $ctrl.info.lastName",
+                  "evaluate": true
+                }
+              ],
+              "comments": ""
+            },
+            {
+              "name": "span",
+              "nodeName": "span",
+              "elementId": "",
+              "attributes": [
+                {
+                  "property": "data-id",
+                  "value": "eO5_Ki"
+                }
+              ],
+              "classList": [],
+              "conditionalClasses": [],
+              "contentType": "text",
+              "displayExpression": "",
+              "events": {},
+              "iterate": {
+                "array": "",
+                "variable": "",
+                "trackByIndex": false
+              },
+              "styles": [],
+              "children": [
+                {
+                  "name": "text",
+                  "nodeName": "text",
+                  "textContent": "$ctrl.info.email",
+                  "evaluate": true
+                }
+              ],
+              "comments": ""
+            }
+          ],
+          "comments": ""
+        },
+        {
+          "name": "div",
+          "nodeName": "div",
+          "elementId": "",
+          "attributes": [
+            {
+              "property": "data-id",
+              "value": "vw0sv8"
+            }
+          ],
+          "classList": [
+            "actions"
+          ],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [],
+          "children": [
+            {
+              "name": "Button",
+              "nodeName": "bln-button",
+              "elementId": "",
+              "attributes": [
+                {
+                  "property": "core",
+                  "value": ""
+                },
+                {
+                  "property": "data-id",
+                  "value": "3q5MCr"
+                }
+              ],
+              "classList": [
+                "action"
+              ],
+              "conditionalClasses": [],
+              "contentType": "text",
+              "displayExpression": "",
+              "events": {},
+              "iterate": {
+                "array": "",
+                "variable": "",
+                "trackByIndex": false
+              },
+              "styles": [
+                {
+                  "property": "--bln-button-font-size",
+                  "value": "1rem",
+                  "enabled": true
+                },
+                {
+                  "property": "--bln-button-padding",
+                  "value": "1rem",
+                  "enabled": true
+                },
+                {
+                  "property": "--bln-button-roundness",
+                  "value": "0%",
+                  "enabled": true
+                },
+                {
+                  "property": "--bln-button-margin",
+                  "value": "0%",
+                  "enabled": true
+                },
+                {
+                  "property": "--bln-button-font-weight",
+                  "value": "bold",
+                  "enabled": true
+                }
+              ],
+              "children": [],
+              "comments": "",
+              "type": "core-component",
+              "id": "button",
+              "expressions": [
+                {
+                  "expression": "\"primary\"",
+                  "to": "type"
+                },
+                {
+                  "expression": "\"View More\"",
+                  "to": "label"
+                },
+                {
+                  "expression": "$ctrl.isSaving",
+                  "to": "tooltip"
+                },
+                {
+                  "expression": "$ctrl.onOkClick()",
+                  "to": "onClick"
+                },
+                {
+                  "expression": "$ctrl.isSaving",
+                  "to": "isDisabled"
+                }
+              ]
+            }
+          ],
+          "comments": ""
+        }
+      ],
+      "comments": ""
+    }
+  ],
+  "variables": [
+    {
+      "name": "onOkClick",
+      "type": "method",
+      "description": "This function is called when OK button is clicked.",
+      "body": "$ctrl.result = 'ok'\n$ctrl.onClose()\n\n$ctrl.page.go('user-info', {user: $ctrl.info})",
+      "invokeOnLoad": false,
+      "isAsync": false,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": []
+    },
+    {
+      "type": "method",
+      "name": "onCancelClick",
+      "description": "This function is called when Cancel button is clicked.",
+      "body": "$ctrl.result = 'cancel'\n$ctrl.onClose()",
+      "parameters": []
+    },
+    {
+      "name": "page",
+      "type": "service",
+      "id": "66541b39761bb263eba724f3"
+    },
+    {
+      "name": "init",
+      "type": "method",
+      "description": "",
+      "body": "const modal = $ctrl.$element[0]?.closest('.bln-modal')\r\nconst backdrop = modal?.querySelector('.bln-modal-backdrop')\r\n\r\nif (backdrop) {\r\n    backdrop.addEventListener('click', () => {\r\n        $ctrl.onCancelClick()\r\n    })\r\n}",
+      "invokeOnLoad": true,
+      "isAsync": false,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": []
+    }
+  ],
+  "bindings": [
+    {
+      "type": "<",
+      "name": "onClose",
+      "description": "This function should be called to close the modal.",
+      "default": "() => {}",
+      "propertyType": "method"
+    },
+    {
+      "type": "<",
+      "name": "result",
+      "description": "The result of the modal that is returned after the modal is closed.",
+      "default": "",
+      "propertyType": "enum",
+      "enumOptions": [
+        {
+          "value": "ok"
+        },
+        {
+          "value": "cancel"
+        }
+      ]
+    },
+    {
+      "name": "info",
+      "type": "<",
+      "description": "",
+      "propertyType": "property",
+      "default": "({\r\n    firstName: \"John\",\r\n    lastName: \"Doe\",\r\n    email: \"john.doe@gmail.com\"\r\n})"
+    }
+  ],
+  "modules": [],
+  "externalScripts": [],
+  "externalStylesheets": []
+}

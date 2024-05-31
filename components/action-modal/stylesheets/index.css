@@ -1,0 +1,47 @@
+action-modal>.modal-body {
+  border: var(--bln-modal-body-border-style) var(--bln-modal-body-border-width) var(--bln-modal-body-border-color);
+  background-color: var(--bln-modal-body-background-color, #fff);
+  min-width: 100px;
+  min-height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+action-modal>.modal-body,
+action-modal>.modal-footer {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  padding: 0 !important;
+}
+
+action-modal .message {
+  padding: 1rem;
+}
+
+action-modal .action {
+  border-top: 1px solid var(--light-gray, #ccc);
+}
+
+action-modal .action.danger {
+  --bln-button-default-text-color: var(--danger-color, red);
+  --bln-button-default-hovered-text-color: var(--danger-color, red);
+  --bln-button-default-active-text-color: var(--danger-color, red);
+}
+
+action-modal bln-button {
+  width: 100%;
+  display: block;
+  position: relative;
+}
+
+action-modal>.modal-body .actions {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  width: 100%;
+}

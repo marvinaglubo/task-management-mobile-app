@@ -1,0 +1,387 @@
+{
+  "name": "activities",
+  "type": "page",
+  "url": "/calendar",
+  "params": {},
+  "variables": [
+    {
+      "name": "notes",
+      "type": "array",
+      "description": "",
+      "children": []
+    },
+    {
+      "name": "fetchNotes",
+      "type": "method",
+      "description": "",
+      "body": "$ctrl.loaded = false\r\n\r\n$ctrl.demoTaskApi.demo_api_tasks_services_note_SelectAllNote({\r\n    limit: 1000,\r\n    offset: 0.\r\n}).then(result => {\r\n    $ctrl.loaded = true\r\n    $ctrl.notes = result.data.note\r\n})",
+      "invokeOnLoad": false,
+      "isAsync": false,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": []
+    },
+    {
+      "name": "demoTaskApi",
+      "type": "open-api",
+      "id": "66541b38761bb263eba724d5"
+    },
+    {
+      "name": "init",
+      "type": "method",
+      "description": "",
+      "body": "$ctrl.loaded = false\r\nawait $ctrl.taskManager.refreshTasks()\r\nawait $ctrl.projectManager.refreshProjects()\r\nawait $ctrl.user.refreshUsers()\r\nawait $ctrl.fetchNotes()\r\n$ctrl.loaded = true",
+      "invokeOnLoad": true,
+      "isAsync": true,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": []
+    },
+    {
+      "name": "onNoteClick",
+      "type": "method",
+      "description": "",
+      "body": "const task = $ctrl.taskManager.get(note.taskId)\r\nif (task) $ctrl.views.task.show(task)",
+      "invokeOnLoad": false,
+      "isAsync": true,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": [
+        "note"
+      ]
+    },
+    {
+      "name": "user",
+      "type": "service",
+      "id": "6659a0cea90f89de79772caa"
+    },
+    {
+      "name": "projectManager",
+      "type": "service",
+      "id": "6659a0cea90f89de79772cab"
+    },
+    {
+      "name": "$modal",
+      "type": "service"
+    },
+    {
+      "name": "views",
+      "type": "service",
+      "id": "6659a0cea90f89de79772ca9"
+    },
+    {
+      "name": "taskManager",
+      "type": "service",
+      "id": "6659a0cea90f89de79772cad"
+    }
+  ],
+  "children": [
+    {
+      "name": "main",
+      "nodeName": "main",
+      "elementId": "",
+      "attributes": [
+        {
+          "property": "data-id",
+          "value": "wj825Q"
+        }
+      ],
+      "classList": [],
+      "conditionalClasses": [],
+      "contentType": "text",
+      "displayExpression": "",
+      "events": {},
+      "iterate": {
+        "array": "",
+        "variable": "",
+        "trackByIndex": false
+      },
+      "styles": [],
+      "children": [
+        {
+          "name": "div",
+          "nodeName": "div",
+          "elementId": "",
+          "attributes": [
+            {
+              "property": "data-id",
+              "value": "2BtQKF"
+            }
+          ],
+          "classList": [
+            "content-header"
+          ],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [
+            {
+              "property": "position",
+              "value": "sticky",
+              "enabled": true
+            },
+            {
+              "property": "top",
+              "value": "0",
+              "enabled": true
+            },
+            {
+              "property": "z-index",
+              "value": "1",
+              "enabled": true
+            },
+            {
+              "property": "border-bottom",
+              "value": "1px solid #ccc",
+              "enabled": true
+            }
+          ],
+          "children": [
+            {
+              "name": "div",
+              "nodeName": "div",
+              "elementId": "",
+              "attributes": [
+                {
+                  "property": "data-id",
+                  "value": "5ZCEah"
+                }
+              ],
+              "classList": [
+                "content-title"
+              ],
+              "conditionalClasses": [],
+              "contentType": "text",
+              "displayExpression": "",
+              "events": {},
+              "iterate": {
+                "array": "",
+                "variable": "",
+                "trackByIndex": false
+              },
+              "styles": [],
+              "children": [
+                {
+                  "name": "h1",
+                  "nodeName": "h1",
+                  "elementId": "",
+                  "attributes": [
+                    {
+                      "property": "data-id",
+                      "value": "TLZj4o"
+                    }
+                  ],
+                  "classList": [],
+                  "conditionalClasses": [],
+                  "contentType": "text",
+                  "displayExpression": "",
+                  "events": {},
+                  "iterate": {
+                    "array": "",
+                    "variable": "",
+                    "trackByIndex": false
+                  },
+                  "styles": [],
+                  "children": [
+                    {
+                      "name": "text",
+                      "nodeName": "text",
+                      "textContent": "Activities",
+                      "evaluate": false
+                    }
+                  ],
+                  "comments": ""
+                }
+              ],
+              "comments": ""
+            }
+          ],
+          "comments": ""
+        },
+        {
+          "name": "div",
+          "nodeName": "div",
+          "elementId": "",
+          "attributes": [
+            {
+              "property": "data-id",
+              "value": "0Z1IAK"
+            }
+          ],
+          "classList": [
+            "content-body"
+          ],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [
+            {
+              "property": "padding",
+              "value": "0%",
+              "enabled": true
+            },
+            {
+              "property": "z-index",
+              "value": "0",
+              "enabled": true
+            },
+            {
+              "property": "background-color",
+              "value": "#fff",
+              "enabled": true
+            }
+          ],
+          "children": [
+            {
+              "name": "activity-card",
+              "nodeName": "activity-card",
+              "elementId": "",
+              "attributes": [
+                {
+                  "property": "data-id",
+                  "value": "JCfhZS"
+                }
+              ],
+              "classList": [],
+              "conditionalClasses": [],
+              "contentType": "text",
+              "displayExpression": "$ctrl.loaded && $ctrl.notes",
+              "events": {
+                "click": "$ctrl.onNoteClick(note)"
+              },
+              "iterate": {
+                "array": "$ctrl.notes",
+                "variable": "note",
+                "trackByIndex": true
+              },
+              "styles": [],
+              "children": [],
+              "comments": "",
+              "type": "custom-component",
+              "id": "6659a0cea90f89de79772cbe",
+              "expressions": [
+                {
+                  "expression": "note",
+                  "to": "data"
+                }
+              ]
+            },
+            {
+              "name": "loader",
+              "nodeName": "loader",
+              "elementId": "",
+              "attributes": [
+                {
+                  "property": "data-id",
+                  "value": "tyE0p0"
+                }
+              ],
+              "classList": [],
+              "conditionalClasses": [],
+              "contentType": "text",
+              "displayExpression": "!$ctrl.loaded",
+              "events": {},
+              "iterate": {
+                "array": "",
+                "variable": "",
+                "trackByIndex": false
+              },
+              "styles": [],
+              "children": [],
+              "comments": "",
+              "type": "custom-component",
+              "id": "6659a0cea90f89de79772cbc",
+              "expressions": [
+                {
+                  "expression": "'100%'",
+                  "to": "height"
+                },
+                {
+                  "expression": "'Loading activities'",
+                  "to": "message"
+                }
+              ]
+            }
+          ],
+          "comments": ""
+        }
+      ],
+      "comments": ""
+    },
+    {
+      "name": "bottom-bar",
+      "nodeName": "bottom-bar",
+      "elementId": "",
+      "attributes": [
+        {
+          "property": "data-id",
+          "value": "GnMLh0"
+        }
+      ],
+      "classList": [],
+      "conditionalClasses": [],
+      "contentType": "text",
+      "displayExpression": "",
+      "events": {},
+      "iterate": {
+        "array": "",
+        "variable": "",
+        "trackByIndex": false
+      },
+      "styles": [
+        {
+          "property": "border-top",
+          "value": "1px solid #ccc",
+          "enabled": true
+        }
+      ],
+      "children": [],
+      "comments": "",
+      "type": "custom-component",
+      "id": "6659a0cea90f89de79772cae",
+      "expressions": []
+    },
+    {
+      "name": "views",
+      "nodeName": "views",
+      "elementId": "",
+      "attributes": [
+        {
+          "property": "data-id",
+          "value": "a0Dhy5"
+        }
+      ],
+      "classList": [],
+      "conditionalClasses": [],
+      "contentType": "text",
+      "displayExpression": "$ctrl.loaded",
+      "events": {},
+      "iterate": {
+        "array": "",
+        "variable": "",
+        "trackByIndex": false
+      },
+      "styles": [],
+      "children": [],
+      "comments": "",
+      "type": "custom-component",
+      "id": "6659a0cea90f89de79772cb9",
+      "expressions": []
+    }
+  ]
+}

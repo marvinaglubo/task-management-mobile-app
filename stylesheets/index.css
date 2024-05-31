@@ -1,0 +1,151 @@
+body,
+ui-view {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+    background-color: var(--bg-gray);
+}
+
+h1, h2 {
+    margin: 0;
+
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+
+.content-header {
+    background-color: #fff;
+}
+
+.content-header, .content-body {
+    position: relative;
+    padding: 1.5rem 0;   
+}
+
+.content-body {
+    flex: 1;
+}
+
+.content-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.content-title + * {
+    margin-top: 1rem;
+}
+
+.content-title h1 {
+    flex-basis: 70%;
+}
+
+.content-header bln-dropdown-menu .label {
+    white-space: nowrap;
+}
+
+.content-header bln-dropdown-menu .bln-dropdown-menu {
+    min-width: 105px;
+}
+
+.in-progress-projects, .projects {
+    display: flex;
+    padding: 0 1rem;
+    gap: 1rem;
+}
+
+.in-progress-projects project-card {
+    flex-basis: calc(50% - 1.5rem);
+}
+
+.projects {
+    flex-wrap: wrap;
+}
+
+.projects project-card {
+    flex-basis: 100%;
+}
+
+bln-tab-bar .tab-item {
+    flex: 1;
+    justify-content: center;
+}
+
+bln-badge.status.done {
+    --bln-badge-default-color: var(--success-color, #000);
+}
+
+bln-badge.status.in-progress {
+    --bln-badge-default-color: var(--warning-color, #000);
+}
+
+
+.view-header {
+    background-color: #fff;
+    padding: 1.5rem 1rem;
+    display: flex;    
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.view-overview {
+    padding: 1rem 1rem;
+    z-index: 0;
+}
+
+.view-description {
+    font-size: 16px;
+    color: #545454;
+    margin-bottom: 2rem;
+}
+
+.view-content {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1rem;
+    background-color: var(--bg-gray);
+    flex: 1;
+}
+
+.bln-modal {
+  align-items: flex-end;
+}
+
+.modal-content {
+  background-color: transparent !important;
+  width: 100%  !important;
+  padding: 0 1rem !important;
+  margin: 0  !important;
+}
+
+.modal-body, .modal-footer {
+    background-color: #fff !important;
+}
+
+* {
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+}
+
+*::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
+
+user-overview-modal .avatar,
+.account-info .avatar,
+.user-info .avatar {
+    height: 100px;
+    width: 100px;
+    font-size: calc(100px * .45);
+}

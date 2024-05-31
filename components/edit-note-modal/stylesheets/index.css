@@ -1,0 +1,63 @@
+edit-note-modal>.modal-body {
+  border: var(--bln-modal-body-border-style) var(--bln-modal-body-border-width) var(--bln-modal-body-border-color);
+  background-color: var(--bln-modal-body-background-color, #fff);
+  min-width: 100px;
+  min-height: 159px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 1rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+edit-note-modal>.modal-body,
+edit-note-modal>.modal-footer {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  padding: 0 !important;
+}
+
+edit-note-modal .message {
+  padding: 1rem;
+}
+
+edit-note-modal .action {
+  border-top: 1px solid var(--light-gray, #ccc);
+}
+
+edit-note-modal .action:first-of-type {
+  border-right: 1px solid var(--light-gray, #ccc);
+}
+
+edit-note-modal textarea {
+  border-radius: .5rem !important;
+}
+
+edit-note-modal .action.danger {
+  --bln-button-default-text-color: var(--danger-color, red);
+  --bln-button-default-hovered-text-color: var(--danger-color, red);
+  --bln-button-default-active-text-color: var(--danger-color, red);
+}
+
+edit-note-modal bln-button {
+  width: 100%;
+  display: block;
+  position: relative;
+}
+
+edit-note-modal>.modal-body .actions {
+  display: flex;
+  flex: 1;
+  width: 100%;
+}
+
+edit-note-modal .label-container {
+  display: none !important;
+}
+
+edit-note-modal>.modal-footer {
+  background-color: transparent !important;
+  flex-direction: column;
+}

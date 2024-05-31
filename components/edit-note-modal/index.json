@@ -1,0 +1,468 @@
+{
+  "type": "custom-component",
+  "name": "edit-note-modal",
+  "nodeName": null,
+  "description": null,
+  "children": [
+    {
+      "name": "div",
+      "nodeName": "div",
+      "elementId": "",
+      "attributes": [],
+      "classList": [
+        "modal-body"
+      ],
+      "conditionalClasses": [],
+      "contentType": "text",
+      "displayExpression": "",
+      "events": {},
+      "iterate": {
+        "array": "",
+        "variable": "",
+        "trackByIndex": false
+      },
+      "styles": [],
+      "children": [
+        {
+          "name": "div",
+          "nodeName": "div",
+          "elementId": "",
+          "attributes": [],
+          "classList": [],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [
+            {
+              "property": "display",
+              "value": "block",
+              "enabled": true
+            },
+            {
+              "property": "padding",
+              "value": ".5rem",
+              "enabled": true
+            }
+          ],
+          "children": [
+            {
+              "name": "Text Input",
+              "nodeName": "bln-text-input",
+              "elementId": "",
+              "attributes": [
+                {
+                  "property": "core",
+                  "value": ""
+                }
+              ],
+              "classList": [],
+              "conditionalClasses": [],
+              "contentType": "text",
+              "displayExpression": "",
+              "events": {},
+              "iterate": {
+                "array": "",
+                "variable": "",
+                "trackByIndex": false
+              },
+              "styles": [
+                {
+                  "property": "--bln-text-input-font-size",
+                  "value": "1rem",
+                  "enabled": true
+                }
+              ],
+              "children": [],
+              "comments": "",
+              "type": "core-component",
+              "id": "text-input",
+              "expressions": [
+                {
+                  "expression": "\"\"",
+                  "to": "label"
+                },
+                {
+                  "expression": "\"text-area\"",
+                  "to": "type"
+                },
+                {
+                  "expression": "3",
+                  "to": "rows"
+                },
+                {
+                  "expression": "'Write a note...'",
+                  "to": "placeholder"
+                },
+                {
+                  "expression": "$ctrl.isSaving",
+                  "to": "disabled"
+                },
+                {
+                  "expression": "$ctrl.data.description",
+                  "to": "value"
+                }
+              ],
+              "formControl": {
+                "modelName": "value"
+              }
+            }
+          ],
+          "comments": ""
+        },
+        {
+          "name": "div",
+          "nodeName": "div",
+          "elementId": "",
+          "attributes": [],
+          "classList": [
+            "actions"
+          ],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [],
+          "children": [
+            {
+              "name": "Button",
+              "nodeName": "bln-button",
+              "elementId": "",
+              "attributes": [
+                {
+                  "property": "core",
+                  "value": ""
+                }
+              ],
+              "classList": [
+                "action"
+              ],
+              "conditionalClasses": [],
+              "contentType": "text",
+              "displayExpression": "",
+              "events": {},
+              "iterate": {
+                "array": "",
+                "variable": "",
+                "trackByIndex": false
+              },
+              "styles": [
+                {
+                  "property": "--bln-button-font-size",
+                  "value": "1rem",
+                  "enabled": true
+                },
+                {
+                  "property": "--bln-button-padding",
+                  "value": "1rem",
+                  "enabled": true
+                },
+                {
+                  "property": "--bln-button-roundness",
+                  "value": "0%",
+                  "enabled": true
+                },
+                {
+                  "property": "--bln-button-margin",
+                  "value": "0%",
+                  "enabled": true
+                },
+                {
+                  "property": "--bln-button-font-weight",
+                  "value": "bold",
+                  "enabled": true
+                }
+              ],
+              "children": [],
+              "comments": "",
+              "type": "core-component",
+              "id": "button",
+              "expressions": [
+                {
+                  "expression": "\"default\"",
+                  "to": "type"
+                },
+                {
+                  "expression": "\"Cancel\"",
+                  "to": "label"
+                },
+                {
+                  "expression": "$ctrl.isSaving",
+                  "to": "tooltip"
+                },
+                {
+                  "expression": "$ctrl.hide()",
+                  "to": "onClick"
+                },
+                {
+                  "expression": "$ctrl.isSaving",
+                  "to": "isDisabled"
+                }
+              ]
+            },
+            {
+              "name": "Button",
+              "nodeName": "bln-button",
+              "elementId": "",
+              "attributes": [
+                {
+                  "property": "core",
+                  "value": ""
+                }
+              ],
+              "classList": [
+                "action"
+              ],
+              "conditionalClasses": [],
+              "contentType": "text",
+              "displayExpression": "",
+              "events": {},
+              "iterate": {
+                "array": "",
+                "variable": "",
+                "trackByIndex": false
+              },
+              "styles": [
+                {
+                  "property": "--bln-button-font-size",
+                  "value": "1rem",
+                  "enabled": true
+                },
+                {
+                  "property": "--bln-button-padding",
+                  "value": "1rem",
+                  "enabled": true
+                },
+                {
+                  "property": "--bln-button-roundness",
+                  "value": "0%",
+                  "enabled": true
+                },
+                {
+                  "property": "--bln-button-margin",
+                  "value": "0%",
+                  "enabled": true
+                },
+                {
+                  "property": "--bln-button-default-text-color",
+                  "value": "var(--primary-color, #000)",
+                  "enabled": true
+                },
+                {
+                  "property": "--bln-button-default-hovered-text-color",
+                  "value": "var(--primary-color, #000)",
+                  "enabled": true
+                },
+                {
+                  "property": "--bln-button-default-active-text-color",
+                  "value": "var(--primary-color, #000)",
+                  "enabled": true
+                },
+                {
+                  "property": "--bln-button-font-weight",
+                  "value": "bold",
+                  "enabled": true
+                }
+              ],
+              "children": [],
+              "comments": "",
+              "type": "core-component",
+              "id": "button",
+              "expressions": [
+                {
+                  "expression": "\"default\"",
+                  "to": "type"
+                },
+                {
+                  "expression": "$ctrl.getActionLabel()",
+                  "to": "label"
+                },
+                {
+                  "expression": "$ctrl.isSaving",
+                  "to": "showLoading"
+                },
+                {
+                  "expression": "!$ctrl.canSave()",
+                  "to": "isDisabled"
+                },
+                {
+                  "expression": "$ctrl.save()",
+                  "to": "onClick"
+                }
+              ]
+            }
+          ],
+          "comments": ""
+        }
+      ],
+      "comments": ""
+    }
+  ],
+  "variables": [
+    {
+      "name": "onActionClick",
+      "type": "method",
+      "description": "This function is called when OK button is clicked.",
+      "body": "$ctrl.result = action\n\n\n\n$ctrl.onClose()",
+      "invokeOnLoad": false,
+      "isAsync": false,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": [
+        "action"
+      ]
+    },
+    {
+      "name": "demoTaskApi",
+      "type": "open-api",
+      "id": "66541b38761bb263eba724d5"
+    },
+    {
+      "name": "$timeout",
+      "type": "service"
+    },
+    {
+      "name": "isSaving",
+      "type": "property",
+      "description": "",
+      "value": ""
+    },
+    {
+      "name": "add",
+      "type": "method",
+      "description": "",
+      "body": "$ctrl.isSaving = true\n\nconst { userId, description, taskId } = $ctrl.data\n\nreturn $ctrl.demoTaskApi.demo_api_tasks_services_note_InsertNote({\n    body: { userId, taskId, description }\n}).then(result => {\n    const data = result.data.note\n\n    if ($ctrl.views.task.shown && $ctrl.views.task.notes) {\n        $ctrl.views.task.notes.push({...data, userId})\n    }\n\n    $ctrl.hide()\n}).finally(() => {\n    $ctrl.isSaving = false\n})",
+      "invokeOnLoad": false,
+      "isAsync": false,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": []
+    },
+    {
+      "name": "update",
+      "type": "method",
+      "description": "",
+      "body": "$ctrl.isSaving = true\n\nconst { userId, description, taskId, noteId } = $ctrl.data\n\nreturn $ctrl.demoTaskApi.demo_api_tasks_services_note_UpdateNote({\n    body: { noteId, userId, taskId, description }\n}).then(() => {\n    const note = $ctrl.views.task.notes.find(n => n.noteId === $ctrl.data.noteId)\n\n    if (note) {\n        Object.assign(note, { description: description })\n    }\n\n    $ctrl.hide()\n}).finally(() => {\n    $ctrl.isSaving = false\n})",
+      "invokeOnLoad": false,
+      "isAsync": false,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": []
+    },
+    {
+      "name": "hide",
+      "type": "method",
+      "description": "",
+      "body": "$ctrl.views.editNote.hide()\n$ctrl.isSaving = false\n$ctrl.result = 'cancel'\n$ctrl.onClose()",
+      "invokeOnLoad": false,
+      "isAsync": false,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": []
+    },
+    {
+      "name": "save",
+      "type": "method",
+      "description": "",
+      "body": "const mode = $ctrl.mode\n\nswitch(mode) {\n    case 'add': \n       await  $ctrl.add()\n    break\n\n    default: {\n       await $ctrl.update()\n    }\n}\n\n$ctrl.onClose()",
+      "invokeOnLoad": false,
+      "isAsync": true,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": []
+    },
+    {
+      "name": "getActionLabel",
+      "type": "method",
+      "description": "",
+      "body": "const mode = $ctrl.mode ?? \"edit\"\n\nswitch (mode) {\n    case 'add': return 'Add';\n    default: return 'Update'\n}\n",
+      "invokeOnLoad": false,
+      "isAsync": false,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": []
+    },
+    {
+      "name": "canSave",
+      "type": "method",
+      "description": "",
+      "body": "const {userId, taskId, description} = $ctrl.data ?? {}\n\nreturn userId !== undefined && taskId !== undefined && description?.length && !$ctrl.isSaving",
+      "invokeOnLoad": false,
+      "isAsync": false,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": []
+    },
+    {
+      "name": "init",
+      "type": "method",
+      "description": "",
+      "body": "const backdrop = document.querySelector('.bln-modal-backdrop')\n\nif (backdrop) {\n    backdrop.addEventListener('click', () => {\n        $ctrl.onActionClick('cancel')\n    })\n}",
+      "invokeOnLoad": true,
+      "isAsync": false,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": []
+    },
+    {
+      "name": "views",
+      "type": "service",
+      "id": "66541b3a761bb263eba724f4"
+    }
+  ],
+  "bindings": [
+    {
+      "type": "<",
+      "name": "onClose",
+      "description": "This function should be called to close the modal.",
+      "default": "() => {}",
+      "propertyType": "method"
+    },
+    {
+      "name": "result",
+      "type": "<",
+      "description": "The result of the modal that is returned after the modal is closed.",
+      "propertyType": "text",
+      "default": "",
+      "autocomplete": []
+    },
+    {
+      "name": "data",
+      "type": "<",
+      "description": "",
+      "propertyType": "property",
+      "default": ""
+    },
+    {
+      "name": "mode",
+      "type": "<",
+      "description": "",
+      "propertyType": "property",
+      "default": ""
+    }
+  ],
+  "modules": [],
+  "marketplaceId": null,
+  "formControl": null,
+  "transclude": null,
+  "externalScripts": [],
+  "externalStylesheets": []
+}

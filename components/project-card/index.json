@@ -1,0 +1,381 @@
+{
+  "type": "custom-component",
+  "name": "project-card",
+  "nodeName": "project-card",
+  "description": null,
+  "children": [
+    {
+      "name": "h1",
+      "nodeName": "h1",
+      "elementId": "",
+      "attributes": [],
+      "classList": [
+        "title"
+      ],
+      "conditionalClasses": [],
+      "contentType": "text",
+      "displayExpression": "",
+      "events": {},
+      "iterate": {
+        "array": "",
+        "variable": "",
+        "trackByIndex": false
+      },
+      "styles": [],
+      "children": [
+        {
+          "name": "text",
+          "nodeName": "text",
+          "textContent": "$ctrl.name",
+          "evaluate": true
+        },
+        {
+          "name": "span",
+          "nodeName": "span",
+          "elementId": "",
+          "attributes": [],
+          "classList": [],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "$ctrl.code",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [
+            {
+              "property": "font-size",
+              "value": "12px",
+              "enabled": true
+            },
+            {
+              "property": "vertical-align",
+              "value": "middle",
+              "enabled": true
+            }
+          ],
+          "children": [
+            {
+              "name": "text",
+              "nodeName": "text",
+              "textContent": "' (' +  $ctrl.code + ')'",
+              "evaluate": true
+            }
+          ],
+          "comments": ""
+        }
+      ],
+      "comments": ""
+    },
+    {
+      "name": "p",
+      "nodeName": "p",
+      "elementId": "",
+      "attributes": [],
+      "classList": [
+        "description"
+      ],
+      "conditionalClasses": [],
+      "contentType": "text",
+      "displayExpression": "",
+      "events": {},
+      "iterate": {
+        "array": "",
+        "variable": "",
+        "trackByIndex": false
+      },
+      "styles": [],
+      "children": [
+        {
+          "name": "text",
+          "nodeName": "text",
+          "textContent": "$ctrl.description",
+          "evaluate": true
+        }
+      ],
+      "comments": ""
+    },
+    {
+      "name": "div",
+      "nodeName": "div",
+      "elementId": "",
+      "attributes": [],
+      "classList": [
+        "bottom-container"
+      ],
+      "conditionalClasses": [],
+      "contentType": "text",
+      "displayExpression": "",
+      "events": {},
+      "iterate": {
+        "array": "",
+        "variable": "",
+        "trackByIndex": false
+      },
+      "styles": [],
+      "children": [
+        {
+          "name": "div",
+          "nodeName": "div",
+          "elementId": "",
+          "attributes": [],
+          "classList": [],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [],
+          "children": [
+            {
+              "name": "div",
+              "nodeName": "div",
+              "elementId": "",
+              "attributes": [],
+              "classList": [
+                "deadline"
+              ],
+              "conditionalClasses": [],
+              "contentType": "text",
+              "displayExpression": "",
+              "events": {},
+              "iterate": {
+                "array": "",
+                "variable": "",
+                "trackByIndex": false
+              },
+              "styles": [],
+              "children": [
+                {
+                  "name": "text",
+                  "nodeName": "text",
+                  "textContent": "$ctrl.projectManager.getDeadlineMessage($ctrl.deadline)",
+                  "evaluate": true
+                }
+              ],
+              "comments": ""
+            },
+            {
+              "name": "user-avatars",
+              "nodeName": "user-avatars",
+              "elementId": "",
+              "attributes": [],
+              "classList": [],
+              "conditionalClasses": [],
+              "contentType": "text",
+              "displayExpression": "$ctrl.assignedUsers !== undefined && !$ctrl.mini",
+              "events": {},
+              "iterate": {
+                "array": "",
+                "variable": "",
+                "trackByIndex": false
+              },
+              "styles": [],
+              "children": [],
+              "comments": "",
+              "type": "custom-component",
+              "id": "664e645cce56869a03f07c85",
+              "expressions": [
+                {
+                  "expression": "$ctrl.assignedUsers",
+                  "to": "users"
+                }
+              ]
+            }
+          ],
+          "comments": ""
+        },
+        {
+          "name": "div",
+          "nodeName": "div",
+          "elementId": "",
+          "attributes": [],
+          "classList": [],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "!$ctrl.mini",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [],
+          "children": [
+            {
+              "name": "Progress",
+              "nodeName": "bln-progress",
+              "elementId": "progress",
+              "attributes": [
+                {
+                  "property": "core",
+                  "value": ""
+                }
+              ],
+              "classList": [],
+              "conditionalClasses": [],
+              "contentType": "text",
+              "displayExpression": "$ctrl.progress !== undefined",
+              "events": {},
+              "iterate": {
+                "array": "",
+                "variable": "",
+                "trackByIndex": false
+              },
+              "styles": [
+                {
+                  "property": "--bln-progress-circular-size",
+                  "value": "50px",
+                  "enabled": true
+                },
+                {
+                  "property": "--bln-progress-circular-thickness",
+                  "value": "5",
+                  "enabled": true
+                },
+                {
+                  "property": "--bln-progress-percent-font-size",
+                  "value": ".65rem",
+                  "enabled": true
+                },
+                {
+                  "property": "--bln-progress-fill-color",
+                  "value": "var(--secondary-color, #000)",
+                  "enabled": true
+                }
+              ],
+              "children": [],
+              "comments": "",
+              "type": "core-component",
+              "id": "progress",
+              "expressions": [
+                {
+                  "expression": "\"step\"",
+                  "to": "type"
+                },
+                {
+                  "expression": "\"circular\"",
+                  "to": "shape"
+                },
+                {
+                  "expression": "true",
+                  "to": "showPercent"
+                },
+                {
+                  "expression": "$ctrl.progress",
+                  "to": "step"
+                }
+              ]
+            }
+          ],
+          "comments": ""
+        }
+      ],
+      "comments": ""
+    }
+  ],
+  "variables": [
+    {
+      "name": "demoTaskApi",
+      "type": "open-api",
+      "id": "66541b38761bb263eba724d5"
+    },
+    {
+      "name": "init",
+      "type": "method",
+      "description": "",
+      "body": "",
+      "invokeOnLoad": true,
+      "isAsync": false,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": []
+    },
+    {
+      "name": "getInitials",
+      "type": "method",
+      "description": "",
+      "body": "return `${fname.substring(0, 1).toUpperCase()}${lname.substring(0, 1).toUpperCase()}`",
+      "invokeOnLoad": false,
+      "isAsync": false,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": [
+        "fname",
+        "lname"
+      ]
+    },
+    {
+      "name": "projectManager",
+      "type": "service",
+      "id": "66541b3a761bb263eba724f6"
+    }
+  ],
+  "bindings": [
+    {
+      "name": "name",
+      "type": "<",
+      "description": "",
+      "propertyType": "text",
+      "default": "'Title'",
+      "autocomplete": []
+    },
+    {
+      "name": "description",
+      "type": "<",
+      "description": "",
+      "propertyType": "text",
+      "default": "'Description'",
+      "autocomplete": []
+    },
+    {
+      "name": "deadline",
+      "type": "<",
+      "description": "",
+      "propertyType": "property",
+      "default": ""
+    },
+    {
+      "name": "progress",
+      "type": "<",
+      "description": "",
+      "propertyType": "number",
+      "default": "0"
+    },
+    {
+      "name": "assignedUsers",
+      "type": "<",
+      "description": "",
+      "propertyType": "property",
+      "default": "[]"
+    },
+    {
+      "name": "mini",
+      "type": "<",
+      "description": "",
+      "propertyType": "boolean",
+      "default": ""
+    },
+    {
+      "name": "code",
+      "type": "<",
+      "description": "",
+      "propertyType": "property",
+      "default": ""
+    }
+  ],
+  "modules": [],
+  "marketplaceId": null,
+  "formControl": null,
+  "transclude": null,
+  "externalScripts": [],
+  "externalStylesheets": []
+}

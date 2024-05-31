@@ -1,0 +1,452 @@
+{
+  "type": "custom-component",
+  "name": "bottom-bar",
+  "nodeName": null,
+  "description": null,
+  "children": [
+    {
+      "name": "div",
+      "nodeName": "div",
+      "elementId": "",
+      "attributes": [],
+      "classList": [
+        "bottom-bar-container"
+      ],
+      "conditionalClasses": [],
+      "contentType": "text",
+      "displayExpression": "",
+      "events": {},
+      "iterate": {
+        "array": "",
+        "variable": "",
+        "trackByIndex": false
+      },
+      "styles": [
+        {
+          "property": "display",
+          "value": "flex",
+          "enabled": true
+        },
+        {
+          "property": "justify-content",
+          "value": "center",
+          "enabled": true
+        }
+      ],
+      "children": [
+        {
+          "name": "Button",
+          "nodeName": "bln-button",
+          "elementId": "",
+          "attributes": [
+            {
+              "property": "core",
+              "value": ""
+            }
+          ],
+          "classList": [],
+          "conditionalClasses": [
+            {
+              "className": "active",
+              "condition": "$ctrl.page.name === 'dashboard'"
+            }
+          ],
+          "contentType": "text",
+          "displayExpression": "",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [
+            {
+              "property": "flex",
+              "value": "1",
+              "enabled": true
+            },
+            {
+              "property": "--bln-button-width",
+              "value": "100%",
+              "enabled": true
+            },
+            {
+              "property": "--bln-button-default-hovered-bg-color",
+              "value": "var(--bln-button-default-bg-color)",
+              "enabled": true
+            },
+            {
+              "property": "--bln-button-default-active-bg-color",
+              "value": "var(--bln-button-default-bg-color)",
+              "enabled": true
+            },
+            {
+              "property": "--bln-button-default-bg-color",
+              "value": "#ffff",
+              "enabled": true
+            }
+          ],
+          "children": [],
+          "comments": "",
+          "type": "core-component",
+          "id": "button",
+          "expressions": [
+            {
+              "expression": "({\n  \"type\": \"font-icon\",\n  \"style\": \"solid\",\n  \"name\": \"home\",\n  \"position\": \"icon-only\"\n})",
+              "to": "icon"
+            },
+            {
+              "expression": "\"Home\"",
+              "to": "label"
+            },
+            {
+              "expression": "\"default\"",
+              "to": "type"
+            },
+            {
+              "expression": "$ctrl.page.go('dashboard')",
+              "to": "onClick"
+            }
+          ]
+        },
+        {
+          "name": "Button",
+          "nodeName": "bln-button",
+          "elementId": "",
+          "attributes": [
+            {
+              "property": "core",
+              "value": ""
+            }
+          ],
+          "classList": [],
+          "conditionalClasses": [
+            {
+              "className": "active",
+              "condition": "$ctrl.page.name === 'projects'"
+            }
+          ],
+          "contentType": "text",
+          "displayExpression": "",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [
+            {
+              "property": "flex",
+              "value": "1",
+              "enabled": true
+            },
+            {
+              "property": "--bln-button-width",
+              "value": "100%",
+              "enabled": true
+            },
+            {
+              "property": "--bln-button-default-hovered-bg-color",
+              "value": "var(--bln-button-default-bg-color)",
+              "enabled": true
+            },
+            {
+              "property": "--bln-button-default-active-bg-color",
+              "value": "var(--bln-button-default-bg-color)",
+              "enabled": true
+            }
+          ],
+          "children": [],
+          "comments": "",
+          "type": "core-component",
+          "id": "button",
+          "expressions": [
+            {
+              "expression": "\"Projects\"",
+              "to": "label"
+            },
+            {
+              "expression": "({\n  \"type\": \"font-icon\",\n  \"style\": \"solid\",\n  \"name\": \"file-alt\",\n  \"position\": \"icon-only\"\n})",
+              "to": "icon"
+            },
+            {
+              "expression": "$ctrl.page.go('projects')",
+              "to": "onClick"
+            }
+          ]
+        },
+        {
+          "name": "Button",
+          "nodeName": "bln-button",
+          "elementId": "",
+          "attributes": [
+            {
+              "property": "core",
+              "value": ""
+            }
+          ],
+          "classList": [],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [
+            {
+              "property": "--bln-button-roundness",
+              "value": "10px",
+              "enabled": true
+            },
+            {
+              "property": "--bln-button-height",
+              "value": "30px",
+              "enabled": true
+            },
+            {
+              "property": "--bln-button-width",
+              "value": "25px",
+              "enabled": true
+            },
+            {
+              "property": "flex",
+              "value": "1",
+              "enabled": true
+            },
+            {
+              "property": "justify-content",
+              "value": "center",
+              "enabled": true
+            },
+            {
+              "property": "--bln-button-primary-bg-color",
+              "value": "var(--primary-color, #000)",
+              "enabled": true
+            },
+            {
+              "property": "--bln-button-primary-hovered-bg-color",
+              "value": "var(--primary-color, #000)",
+              "enabled": true
+            },
+            {
+              "property": "--bln-button-primary-active-bg-color",
+              "value": "var(--primary-color, #000)",
+              "enabled": true
+            }
+          ],
+          "children": [],
+          "comments": "",
+          "type": "core-component",
+          "id": "button",
+          "expressions": [
+            {
+              "expression": "\"primary\"",
+              "to": "type"
+            },
+            {
+              "expression": "\"Add\"",
+              "to": "label"
+            },
+            {
+              "expression": "({\n  \"type\": \"font-icon\",\n  \"style\": \"solid\",\n  \"name\": \"plus\",\n  \"position\": \"icon-only\"\n})",
+              "to": "icon"
+            },
+            {
+              "expression": "$ctrl.onAddClick()",
+              "to": "onClick"
+            }
+          ]
+        },
+        {
+          "name": "Button",
+          "nodeName": "bln-button",
+          "elementId": "",
+          "attributes": [
+            {
+              "property": "core",
+              "value": ""
+            }
+          ],
+          "classList": [],
+          "conditionalClasses": [
+            {
+              "className": "active",
+              "condition": "$ctrl.page.name === 'activities'"
+            }
+          ],
+          "contentType": "text",
+          "displayExpression": "",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [
+            {
+              "property": "flex",
+              "value": "1",
+              "enabled": true
+            },
+            {
+              "property": "--bln-button-width",
+              "value": "100%",
+              "enabled": true
+            },
+            {
+              "property": "--bln-button-default-hovered-bg-color",
+              "value": "var(--bln-button-default-bg-color)",
+              "enabled": true
+            },
+            {
+              "property": "--bln-button-default-active-bg-color",
+              "value": "var(--bln-button-default-bg-color)",
+              "enabled": true
+            }
+          ],
+          "children": [],
+          "comments": "",
+          "type": "core-component",
+          "id": "button",
+          "expressions": [
+            {
+              "expression": "\"Timeline\"",
+              "to": "label"
+            },
+            {
+              "expression": "({\n  \"type\": \"font-icon\",\n  \"style\": \"solid\",\n  \"name\": \"clipboard-list\",\n  \"position\": \"icon-only\"\n})",
+              "to": "icon"
+            },
+            {
+              "expression": "$ctrl.page.go('activities')",
+              "to": "onClick"
+            }
+          ]
+        },
+        {
+          "name": "Button",
+          "nodeName": "bln-button",
+          "elementId": "",
+          "attributes": [
+            {
+              "property": "core",
+              "value": ""
+            }
+          ],
+          "classList": [],
+          "conditionalClasses": [
+            {
+              "className": "active",
+              "condition": "$ctrl.page.name === 'account'"
+            }
+          ],
+          "contentType": "text",
+          "displayExpression": "",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [
+            {
+              "property": "flex",
+              "value": "1",
+              "enabled": true
+            },
+            {
+              "property": "--bln-button-width",
+              "value": "100%",
+              "enabled": true
+            },
+            {
+              "property": "--bln-button-default-hovered-bg-color",
+              "value": "var(--bln-button-default-bg-color)",
+              "enabled": true
+            },
+            {
+              "property": "--bln-button-default-active-bg-color",
+              "value": "var(--bln-button-default-bg-color)",
+              "enabled": true
+            }
+          ],
+          "children": [],
+          "comments": "",
+          "type": "core-component",
+          "id": "button",
+          "expressions": [
+            {
+              "expression": "\"Account\"",
+              "to": "label"
+            },
+            {
+              "expression": "({\n  \"type\": \"font-icon\",\n  \"style\": \"solid\",\n  \"name\": \"user\",\n  \"position\": \"icon-only\"\n})",
+              "to": "icon"
+            },
+            {
+              "expression": "$ctrl.page.go('account')",
+              "to": "onClick"
+            }
+          ]
+        }
+      ],
+      "comments": ""
+    }
+  ],
+  "variables": [
+    {
+      "name": "isActive",
+      "type": "method",
+      "description": "",
+      "body": "return $ctrl.$state.current.name === name",
+      "invokeOnLoad": false,
+      "isAsync": false,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": [
+        "name"
+      ]
+    },
+    {
+      "name": "page",
+      "type": "service",
+      "id": "6640c1c4846eaebfd2dde213"
+    },
+    {
+      "name": "$contextMenu",
+      "type": "service"
+    },
+    {
+      "name": "onAddClick",
+      "type": "method",
+      "description": "",
+      "body": "const actions = [\n    {\n        name: 'project', label: 'Project', action: async () => {\n            $ctrl.views.editProject.show({}, 'add')\n        }\n    },\n    {\n        name: 'task', label: 'Task', action: async () => {\n            $ctrl.views.editTask.show({}, 'add')\n        }\n    },    \n]\n\n$ctrl.$modal.open('action-modal', { actions, message: \"What you want to add?\" })",
+      "invokeOnLoad": false,
+      "isAsync": false,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": []
+    },
+    {
+      "name": "$modal",
+      "type": "service"
+    },
+    {
+      "name": "views",
+      "type": "service",
+      "id": "66541b3a761bb263eba724f4"
+    }
+  ],
+  "bindings": [],
+  "modules": [],
+  "marketplaceId": null,
+  "formControl": null,
+  "transclude": null,
+  "externalScripts": [],
+  "externalStylesheets": []
+}

@@ -1,0 +1,29 @@
+bottom-bar bln-button {
+    position: relative;
+}
+
+bottom-bar bln-button {
+    --bln-button-font-size: 20px;
+}
+
+bottom-bar bln-button.active {
+    --bln-button-default-text-color: var(--primary-color, #000) !important;
+    --bln-button-default-hovered-text-color: var(--primary-color, #000) !important;
+    --bln-button-default-active-text-color: var(--primary-color, #000) !important;
+} 
+
+bottom-bar bln-button.active::after {
+    content: '';
+    height: 5px;
+    width: 5px;
+    background-color: var(--primary-color, #000);
+    position: absolute;
+    left: calc(50% - 2.5px);
+    bottom: 7px;
+    border-radius: 5px;
+}
+
+bottom-bar .bottom-bar-container {
+    background-color: #fff;
+    padding: .5rem 0;
+}

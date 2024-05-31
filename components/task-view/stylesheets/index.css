@@ -1,0 +1,38 @@
+task-view {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+task-view .view-header {
+    background-color: #fff;
+    padding: 1.5rem 1rem;
+    display: flex;    
+    align-items: center;
+    justify-content: space-between;
+}
+
+task-view .overview {
+    padding: 1rem 1rem;
+}
+
+task-view .content {
+    padding: 1rem 1rem;
+    background-color: var(--bg-gray);
+    flex: 1;
+}
+
+task-view .tasks {
+    margin-top: 1rem;
+}
+
+task-view .description {
+    font-size: 16px;
+    color: #545454;
+    margin-bottom: 2rem;
+}
+
+task-view .avatar { 
+    background-color: var(--secondary-color, #000) !important;
+}

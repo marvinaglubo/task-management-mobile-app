@@ -1,0 +1,68 @@
+{
+  "type": "app-service",
+  "name": "page",
+  "description": "",
+  "singleton": false,
+  "variables": [
+    {
+      "name": "name",
+      "type": "property",
+      "description": "",
+      "value": "this.$state.current.name"
+    },
+    {
+      "name": "$state",
+      "type": "service"
+    },
+    {
+      "name": "go",
+      "type": "method",
+      "description": "",
+      "body": "this.$state.go(name, params, options)",
+      "invokeOnLoad": false,
+      "isAsync": false,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": [
+        "name",
+        "params",
+        "options"
+      ]
+    },
+    {
+      "name": "init",
+      "type": "method",
+      "description": "",
+      "body": "this.$rootScope.$on('$stateChangeStart', function (event, toState, toStateParams, fromState, fromParams) {\n   $rootScope.previousState = fromState;\n   $rootScope.previousStateParams = fromParams;\n});",
+      "invokeOnLoad": false,
+      "isAsync": false,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": []
+    },
+    {
+      "name": "$rootScope",
+      "type": "service"
+    },
+    {
+      "name": "back",
+      "type": "method",
+      "description": "",
+      "body": "if (this.$rootScope.previousState) {\n    this.go(this.$rootScope.previousState, $rootScope.previousStateParams)\n}\n",
+      "invokeOnLoad": false,
+      "isAsync": false,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": []
+    }
+  ],
+  "visible": [
+    "active",
+    "name",
+    "go",
+    "back"
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "type": "app-service",
+  "name": "user",
+  "description": "",
+  "singleton": true,
+  "variables": [
+    {
+      "name": "users",
+      "type": "array",
+      "description": "",
+      "children": []
+    },
+    {
+      "name": "refreshUsers",
+      "type": "method",
+      "description": "",
+      "body": "try {\n    const headers = { 'ngrok-skip-browser-warning': \"true\" }\n    const result = await this.demoTaskApi.demo_api_tasks_services_user_SelectAllUser({\n        limit: 1000,\n        offset: 0,\n    }, {headers})\n\n    this.users = result.data.user\n} catch {\n    // Noop\n}\n",
+      "invokeOnLoad": true,
+      "isAsync": true,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": []
+    },
+    {
+      "name": "getUser",
+      "type": "method",
+      "description": "",
+      "body": "return this.users.find(user => user.userId === id)",
+      "invokeOnLoad": false,
+      "isAsync": false,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": [
+        "id"
+      ]
+    },
+    {
+      "name": "getAll",
+      "type": "method",
+      "description": "",
+      "body": "return this.users",
+      "invokeOnLoad": false,
+      "isAsync": false,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": []
+    },
+    {
+      "name": "getName",
+      "type": "method",
+      "description": "",
+      "body": "const user = this.users.find(u => u.userId === id)\nreturn user ? `${user.firstName} ${user.lastName}` : 'Unknown User'",
+      "invokeOnLoad": false,
+      "isAsync": false,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": [
+        "id"
+      ]
+    },
+    {
+      "name": "getCurrent",
+      "type": "method",
+      "description": "",
+      "body": "return this.users[0]",
+      "invokeOnLoad": false,
+      "isAsync": false,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": []
+    },
+    {
+      "name": "demoTaskApi",
+      "type": "open-api",
+      "id": "66541b38761bb263eba724d5"
+    }
+  ],
+  "visible": [
+    "refreshUsers",
+    "getUser",
+    "getAll",
+    "getName",
+    "getCurrent",
+    "current"
+  ]
+}

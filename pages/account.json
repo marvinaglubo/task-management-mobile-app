@@ -1,0 +1,519 @@
+{
+  "name": "account",
+  "type": "page",
+  "url": "/test",
+  "params": {},
+  "variables": [
+    {
+      "name": "info",
+      "type": "property",
+      "description": "",
+      "value": ""
+    },
+    {
+      "name": "init",
+      "type": "method",
+      "description": "",
+      "body": "const info = $ctrl.user.getCurrent()\n$ctrl.info = info",
+      "invokeOnLoad": true,
+      "isAsync": true,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": []
+    },
+    {
+      "name": "user",
+      "type": "service",
+      "id": "6659a0cea90f89de79772caa"
+    }
+  ],
+  "children": [
+    {
+      "name": "main",
+      "nodeName": "main",
+      "elementId": "",
+      "attributes": [
+        {
+          "property": "data-id",
+          "value": "2FVy_T"
+        }
+      ],
+      "classList": [],
+      "conditionalClasses": [],
+      "contentType": "text",
+      "displayExpression": "",
+      "events": {},
+      "iterate": {
+        "array": "",
+        "variable": "",
+        "trackByIndex": false
+      },
+      "styles": [],
+      "children": [
+        {
+          "name": "div",
+          "nodeName": "div",
+          "elementId": "",
+          "attributes": [
+            {
+              "property": "data-id",
+              "value": "tAMVOc"
+            }
+          ],
+          "classList": [
+            "content-header"
+          ],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [],
+          "children": [
+            {
+              "name": "div",
+              "nodeName": "div",
+              "elementId": "",
+              "attributes": [
+                {
+                  "property": "data-id",
+                  "value": "6Az1s2"
+                }
+              ],
+              "classList": [
+                "content-title"
+              ],
+              "conditionalClasses": [],
+              "contentType": "text",
+              "displayExpression": "",
+              "events": {},
+              "iterate": {
+                "array": "",
+                "variable": "",
+                "trackByIndex": false
+              },
+              "styles": [],
+              "children": [
+                {
+                  "name": "h1",
+                  "nodeName": "h1",
+                  "elementId": "",
+                  "attributes": [
+                    {
+                      "property": "data-id",
+                      "value": "BDQb_x"
+                    }
+                  ],
+                  "classList": [],
+                  "conditionalClasses": [],
+                  "contentType": "text",
+                  "displayExpression": "",
+                  "events": {},
+                  "iterate": {
+                    "array": "",
+                    "variable": "",
+                    "trackByIndex": false
+                  },
+                  "styles": [],
+                  "children": [
+                    {
+                      "name": "text",
+                      "nodeName": "text",
+                      "textContent": "Account",
+                      "evaluate": false
+                    }
+                  ],
+                  "comments": ""
+                }
+              ],
+              "comments": ""
+            }
+          ],
+          "comments": ""
+        },
+        {
+          "name": "div",
+          "nodeName": "div",
+          "elementId": "",
+          "attributes": [
+            {
+              "property": "data-id",
+              "value": "e6qx8_"
+            }
+          ],
+          "classList": [
+            "content-header"
+          ],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [],
+          "children": [
+            {
+              "name": "div",
+              "nodeName": "div",
+              "elementId": "",
+              "attributes": [
+                {
+                  "property": "data-id",
+                  "value": "EaNvc_"
+                }
+              ],
+              "classList": [
+                "account-info"
+              ],
+              "conditionalClasses": [],
+              "contentType": "text",
+              "displayExpression": "",
+              "events": {},
+              "iterate": {
+                "array": "",
+                "variable": "",
+                "trackByIndex": false
+              },
+              "styles": [
+                {
+                  "property": "display",
+                  "value": "flex",
+                  "enabled": true
+                },
+                {
+                  "property": "flex-direction",
+                  "value": "column",
+                  "enabled": true
+                },
+                {
+                  "property": "justify-content",
+                  "value": "center",
+                  "enabled": true
+                },
+                {
+                  "property": "align-items",
+                  "value": "center",
+                  "enabled": true
+                }
+              ],
+              "children": [
+                {
+                  "name": "user-avatars",
+                  "nodeName": "user-avatars",
+                  "elementId": "",
+                  "attributes": [
+                    {
+                      "property": "data-id",
+                      "value": "mWSa-o"
+                    }
+                  ],
+                  "classList": [],
+                  "conditionalClasses": [],
+                  "contentType": "text",
+                  "displayExpression": "$ctrl.info",
+                  "events": {},
+                  "iterate": {
+                    "array": "",
+                    "variable": "",
+                    "trackByIndex": false
+                  },
+                  "styles": [],
+                  "children": [],
+                  "comments": "",
+                  "type": "custom-component",
+                  "id": "6659a0cea90f89de79772cb2",
+                  "expressions": [
+                    {
+                      "expression": "[$ctrl.info]",
+                      "to": "users"
+                    }
+                  ]
+                },
+                {
+                  "name": "span",
+                  "nodeName": "span",
+                  "elementId": "",
+                  "attributes": [
+                    {
+                      "property": "data-id",
+                      "value": "RYlrYQ"
+                    }
+                  ],
+                  "classList": [],
+                  "conditionalClasses": [],
+                  "contentType": "text",
+                  "displayExpression": "",
+                  "events": {},
+                  "iterate": {
+                    "array": "",
+                    "variable": "",
+                    "trackByIndex": false
+                  },
+                  "styles": [
+                    {
+                      "property": "font-weight",
+                      "value": "bold",
+                      "enabled": true
+                    },
+                    {
+                      "property": "font-size",
+                      "value": "18px",
+                      "enabled": true
+                    },
+                    {
+                      "property": "margin-top",
+                      "value": "1rem",
+                      "enabled": true
+                    },
+                    {
+                      "property": "margin-bottom",
+                      "value": ".5rem",
+                      "enabled": true
+                    }
+                  ],
+                  "children": [
+                    {
+                      "name": "text",
+                      "nodeName": "text",
+                      "textContent": "$ctrl.info.firstName + ' ' + $ctrl.info.lastName",
+                      "evaluate": true
+                    }
+                  ],
+                  "comments": ""
+                },
+                {
+                  "name": "span",
+                  "nodeName": "span",
+                  "elementId": "",
+                  "attributes": [
+                    {
+                      "property": "data-id",
+                      "value": "H0UKJo"
+                    }
+                  ],
+                  "classList": [],
+                  "conditionalClasses": [],
+                  "contentType": "text",
+                  "displayExpression": "",
+                  "events": {},
+                  "iterate": {
+                    "array": "",
+                    "variable": "",
+                    "trackByIndex": false
+                  },
+                  "styles": [],
+                  "children": [
+                    {
+                      "name": "text",
+                      "nodeName": "text",
+                      "textContent": "$ctrl.info.email",
+                      "evaluate": true
+                    }
+                  ],
+                  "comments": ""
+                }
+              ],
+              "comments": ""
+            }
+          ],
+          "comments": ""
+        },
+        {
+          "name": "div",
+          "nodeName": "div",
+          "elementId": "",
+          "attributes": [
+            {
+              "property": "data-id",
+              "value": "jBao-x"
+            }
+          ],
+          "classList": [
+            "content-body"
+          ],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [],
+          "children": [
+            {
+              "name": "div",
+              "nodeName": "div",
+              "elementId": "",
+              "attributes": [
+                {
+                  "property": "data-id",
+                  "value": "aUFqi3"
+                }
+              ],
+              "classList": [],
+              "conditionalClasses": [],
+              "contentType": "text",
+              "displayExpression": "",
+              "events": {},
+              "iterate": {
+                "array": "",
+                "variable": "",
+                "trackByIndex": false
+              },
+              "styles": [
+                {
+                  "property": "display",
+                  "value": "flex",
+                  "enabled": true
+                },
+                {
+                  "property": "align-items",
+                  "value": "center",
+                  "enabled": true
+                },
+                {
+                  "property": "justify-content",
+                  "value": "center",
+                  "enabled": true
+                }
+              ],
+              "children": [
+                {
+                  "name": "Button",
+                  "nodeName": "bln-button",
+                  "elementId": "",
+                  "attributes": [
+                    {
+                      "property": "core",
+                      "value": ""
+                    },
+                    {
+                      "property": "data-id",
+                      "value": "XPZLOX"
+                    }
+                  ],
+                  "classList": [],
+                  "conditionalClasses": [],
+                  "contentType": "text",
+                  "displayExpression": "",
+                  "events": {},
+                  "iterate": {
+                    "array": "",
+                    "variable": "",
+                    "trackByIndex": false
+                  },
+                  "styles": [
+                    {
+                      "property": "--bln-button-default-bg-color",
+                      "value": "transparent",
+                      "enabled": true
+                    },
+                    {
+                      "property": "--bln-button-default-hovered-bg-color",
+                      "value": "transparent",
+                      "enabled": true
+                    },
+                    {
+                      "property": "--bln-button-default-active-bg-color",
+                      "value": "transparent",
+                      "enabled": true
+                    },
+                    {
+                      "property": "--bln-button-default-text-color",
+                      "value": "var(--gray-color, #000)",
+                      "enabled": true
+                    },
+                    {
+                      "property": "--bln-button-default-hovered-text-color",
+                      "value": "var(--gray-color, #000)",
+                      "enabled": true
+                    },
+                    {
+                      "property": "--bln-button-default-active-text-color",
+                      "value": "var(--gray-color, #000)",
+                      "enabled": true
+                    },
+                    {
+                      "property": "--bln-button-font-weight",
+                      "value": "bold",
+                      "enabled": true
+                    },
+                    {
+                      "property": "--bln-button-width",
+                      "value": "100%",
+                      "enabled": true
+                    },
+                    {
+                      "property": "display",
+                      "value": "flex",
+                      "enabled": true
+                    },
+                    {
+                      "property": "width",
+                      "value": "100%",
+                      "enabled": true
+                    }
+                  ],
+                  "children": [],
+                  "comments": "",
+                  "type": "core-component",
+                  "id": "button",
+                  "expressions": [
+                    {
+                      "expression": "\"Logout\"",
+                      "to": "label"
+                    },
+                    {
+                      "expression": "$ctrl.$auth.logout()",
+                      "to": "onClick"
+                    }
+                  ]
+                }
+              ],
+              "comments": ""
+            }
+          ],
+          "comments": ""
+        }
+      ],
+      "comments": ""
+    },
+    {
+      "name": "bottom-bar",
+      "nodeName": "bottom-bar",
+      "elementId": "",
+      "attributes": [
+        {
+          "property": "data-id",
+          "value": "POhTw3"
+        }
+      ],
+      "classList": [],
+      "conditionalClasses": [],
+      "contentType": "text",
+      "displayExpression": "",
+      "events": {},
+      "iterate": {
+        "array": "",
+        "variable": "",
+        "trackByIndex": false
+      },
+      "styles": [],
+      "children": [],
+      "comments": "",
+      "type": "custom-component",
+      "id": "6659a0cea90f89de79772cae",
+      "expressions": []
+    }
+  ]
+}

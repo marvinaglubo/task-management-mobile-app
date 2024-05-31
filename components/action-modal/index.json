@@ -1,0 +1,532 @@
+{
+  "type": "custom-component",
+  "name": "action-modal",
+  "nodeName": "action-modal",
+  "description": null,
+  "children": [
+    {
+      "name": "div",
+      "nodeName": "div",
+      "elementId": "",
+      "attributes": [
+        {
+          "property": "data-id",
+          "value": "7dqY4v"
+        }
+      ],
+      "classList": [
+        "modal-body"
+      ],
+      "conditionalClasses": [],
+      "contentType": "text",
+      "displayExpression": "$ctrl.actions",
+      "events": {},
+      "iterate": {
+        "array": "",
+        "variable": "",
+        "trackByIndex": false
+      },
+      "styles": [],
+      "children": [
+        {
+          "name": "div",
+          "nodeName": "div",
+          "elementId": "",
+          "attributes": [
+            {
+              "property": "data-id",
+              "value": "JFV_T9"
+            }
+          ],
+          "classList": [
+            "message"
+          ],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [
+            {
+              "property": "opacity",
+              "value": ".5",
+              "enabled": true
+            },
+            {
+              "property": "font-weight",
+              "value": "bold",
+              "enabled": true
+            },
+            {
+              "property": "user-select",
+              "value": "none",
+              "enabled": true
+            }
+          ],
+          "children": [
+            {
+              "name": "text",
+              "nodeName": "text",
+              "textContent": "$ctrl.message",
+              "evaluate": true
+            }
+          ],
+          "comments": ""
+        },
+        {
+          "name": "div",
+          "nodeName": "div",
+          "elementId": "",
+          "attributes": [
+            {
+              "property": "data-id",
+              "value": "W1WHEj"
+            }
+          ],
+          "classList": [
+            "actions"
+          ],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [],
+          "children": [
+            {
+              "name": "Button",
+              "nodeName": "bln-button",
+              "elementId": "",
+              "attributes": [
+                {
+                  "property": "core",
+                  "value": ""
+                },
+                {
+                  "property": "data-id",
+                  "value": "cIg8ir"
+                }
+              ],
+              "classList": [
+                "action"
+              ],
+              "conditionalClasses": [
+                {
+                  "className": "danger",
+                  "condition": "action.type === 'danger'"
+                }
+              ],
+              "contentType": "text",
+              "displayExpression": "",
+              "events": {},
+              "iterate": {
+                "array": "$ctrl.actions",
+                "variable": "action",
+                "trackByIndex": true
+              },
+              "styles": [
+                {
+                  "property": "--bln-button-primary-bg-color",
+                  "value": "var(--bln-modal-primary-button-bg-color)"
+                },
+                {
+                  "property": "--bln-button-primary-hovered-bg-color",
+                  "value": "var(--bln-modal-primary-button-hovered-bg-color)"
+                },
+                {
+                  "property": "--bln-button-primary-active-bg-color",
+                  "value": "var(--bln-modal-primary-button-active-bg-color)"
+                },
+                {
+                  "property": "--bln-button-primary-text-color",
+                  "value": "var(--bln-modal-primary-button-text-color)"
+                },
+                {
+                  "property": "--bln-button-primary-hovered-text-color",
+                  "value": "var(--bln-modal-primary-button-hovered-text-color)"
+                },
+                {
+                  "property": "--bln-button-primary-active-text-color",
+                  "value": "var(--bln-modal-primary-active-hovered-text-color)"
+                },
+                {
+                  "property": "--bln-button-font-family",
+                  "value": "var(--bln-modal-button-font-family)"
+                },
+                {
+                  "property": "--bln-button-font-size",
+                  "value": "1rem"
+                },
+                {
+                  "property": " --bln-button-font-weight",
+                  "value": "var(--bln-modal-button-font-weight)"
+                },
+                {
+                  "property": " --bln-button-padding",
+                  "value": "var(--bln-modal-button-padding)"
+                },
+                {
+                  "property": " --bln-button-margin",
+                  "value": "var(--bln-modal-button-margin)"
+                },
+                {
+                  "property": " --bln-button-roundness",
+                  "value": "var(--bln-modal-button-roundness)"
+                },
+                {
+                  "property": " --bln-button-width",
+                  "value": "var(--bln-modal-button-width)"
+                },
+                {
+                  "property": " --bln-button-min-width",
+                  "value": "var(--bln-modal-button-min-width)",
+                  "enabled": false
+                },
+                {
+                  "property": " --bln-button-max-width",
+                  "value": "var(--bln-modal-button-max-width)"
+                },
+                {
+                  "property": " --bln-button-height",
+                  "value": "var(--bln-modal-button-height)"
+                },
+                {
+                  "property": " --bln-button-min-height",
+                  "value": "var(--bln-modal-button-min-height)"
+                },
+                {
+                  "property": " --bln-button-max-height",
+                  "value": "var(--bln-modal-button-max-height)"
+                },
+                {
+                  "property": "--bln-button-margin",
+                  "value": "0%",
+                  "enabled": true
+                },
+                {
+                  "property": "--bln-button-width",
+                  "value": "100%",
+                  "enabled": true
+                },
+                {
+                  "property": "--bln-button-roundness",
+                  "value": "0%",
+                  "enabled": true
+                },
+                {
+                  "property": "--bln-button-padding",
+                  "value": "1rem 0%",
+                  "enabled": true
+                },
+                {
+                  "property": "--bln-button-font-weight",
+                  "value": "bold",
+                  "enabled": true
+                },
+                {
+                  "property": "--bln-button-default-hovered-bg-color",
+                  "value": "#fff",
+                  "enabled": true
+                }
+              ],
+              "children": [],
+              "comments": "",
+              "type": "core-component",
+              "id": "button",
+              "expressions": [
+                {
+                  "expression": "\"default\"",
+                  "to": "type"
+                },
+                {
+                  "expression": "action.label",
+                  "to": "label"
+                },
+                {
+                  "expression": "$ctrl.onActionClick(action.name, action.action)",
+                  "to": "onClick"
+                }
+              ]
+            }
+          ],
+          "comments": ""
+        }
+      ],
+      "comments": ""
+    },
+    {
+      "name": "div",
+      "nodeName": "div",
+      "elementId": "",
+      "attributes": [
+        {
+          "property": "data-id",
+          "value": "jrr7LA"
+        }
+      ],
+      "classList": [
+        "modal-footer"
+      ],
+      "conditionalClasses": [],
+      "contentType": "text",
+      "displayExpression": "!$ctrl.hideCancel",
+      "events": {},
+      "iterate": {
+        "array": "",
+        "variable": "",
+        "trackByIndex": false
+      },
+      "styles": [
+        {
+          "property": "margin-top",
+          "value": "1rem",
+          "enabled": true
+        },
+        {
+          "property": "margin-bottom",
+          "value": "1rem",
+          "enabled": true
+        }
+      ],
+      "children": [
+        {
+          "name": "Button",
+          "nodeName": "bln-button",
+          "elementId": "",
+          "attributes": [
+            {
+              "property": "core",
+              "value": ""
+            },
+            {
+              "property": "data-id",
+              "value": "ZSXFoK"
+            }
+          ],
+          "classList": [],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [
+            {
+              "property": "--bln-button-primary-bg-color",
+              "value": "var(--bln-modal-primary-button-bg-color)"
+            },
+            {
+              "property": "--bln-button-primary-hovered-bg-color",
+              "value": "var(--bln-modal-primary-button-hovered-bg-color)"
+            },
+            {
+              "property": "--bln-button-primary-active-bg-color",
+              "value": "var(--bln-modal-primary-button-active-bg-color)"
+            },
+            {
+              "property": "--bln-button-primary-text-color",
+              "value": "var(--bln-modal-primary-button-text-color)"
+            },
+            {
+              "property": "--bln-button-primary-hovered-text-color",
+              "value": "var(--bln-modal-primary-button-hovered-text-color)"
+            },
+            {
+              "property": "--bln-button-primary-active-text-color",
+              "value": "var(--bln-modal-primary-active-hovered-text-color)"
+            },
+            {
+              "property": "--bln-button-font-family",
+              "value": "var(--bln-modal-button-font-family)"
+            },
+            {
+              "property": "--bln-button-font-size",
+              "value": "1rem"
+            },
+            {
+              "property": " --bln-button-font-weight",
+              "value": "var(--bln-modal-button-font-weight)"
+            },
+            {
+              "property": " --bln-button-padding",
+              "value": "var(--bln-modal-button-padding)"
+            },
+            {
+              "property": " --bln-button-margin",
+              "value": "var(--bln-modal-button-margin)"
+            },
+            {
+              "property": " --bln-button-roundness",
+              "value": "var(--bln-modal-button-roundness)"
+            },
+            {
+              "property": " --bln-button-width",
+              "value": "var(--bln-modal-button-width)"
+            },
+            {
+              "property": " --bln-button-min-width",
+              "value": "var(--bln-modal-button-min-width)",
+              "enabled": false
+            },
+            {
+              "property": " --bln-button-max-width",
+              "value": "var(--bln-modal-button-max-width)"
+            },
+            {
+              "property": " --bln-button-height",
+              "value": "var(--bln-modal-button-height)"
+            },
+            {
+              "property": " --bln-button-min-height",
+              "value": "var(--bln-modal-button-min-height)"
+            },
+            {
+              "property": " --bln-button-max-height",
+              "value": "var(--bln-modal-button-max-height)"
+            },
+            {
+              "property": "--bln-button-margin",
+              "value": "0%",
+              "enabled": true
+            },
+            {
+              "property": "--bln-button-width",
+              "value": "100%",
+              "enabled": true
+            },
+            {
+              "property": "--bln-button-roundness",
+              "value": "0%",
+              "enabled": true
+            },
+            {
+              "property": "--bln-button-padding",
+              "value": "1rem 0%",
+              "enabled": true
+            },
+            {
+              "property": "--bln-button-font-weight",
+              "value": "bold",
+              "enabled": true
+            },
+            {
+              "property": "--bln-button-default-hovered-bg-color",
+              "value": "#fff",
+              "enabled": true
+            }
+          ],
+          "children": [],
+          "comments": "",
+          "type": "core-component",
+          "id": "button",
+          "expressions": [
+            {
+              "expression": "\"default\"",
+              "to": "type"
+            },
+            {
+              "expression": "\"Cancel\"",
+              "to": "label"
+            },
+            {
+              "expression": "$ctrl.onActionClick('cancel')",
+              "to": "onClick"
+            }
+          ]
+        }
+      ],
+      "comments": ""
+    }
+  ],
+  "variables": [
+    {
+      "name": "onActionClick",
+      "type": "method",
+      "description": "This function is called when OK button is clicked.",
+      "body": "if (typeof fn === 'function') {\n    await fn()\n}\n\n$ctrl.result = action\n$ctrl.onClose()\n",
+      "invokeOnLoad": false,
+      "isAsync": true,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": [
+        "action",
+        "fn"
+      ]
+    },
+    {
+      "name": "init",
+      "type": "method",
+      "description": "",
+      "body": "const backdrop = document.querySelector('.bln-modal-backdrop')\n\nif (backdrop) {\n    backdrop.addEventListener('click', () => {\n        $ctrl.onActionClick('cancel')\n    })\n}",
+      "invokeOnLoad": true,
+      "isAsync": false,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": []
+    }
+  ],
+  "bindings": [
+    {
+      "type": "<",
+      "name": "onClose",
+      "description": "This function should be called to close the modal.",
+      "default": "() => {}",
+      "propertyType": "method"
+    },
+    {
+      "name": "result",
+      "type": "<",
+      "description": "The result of the modal that is returned after the modal is closed.",
+      "propertyType": "text",
+      "default": "",
+      "autocomplete": []
+    },
+    {
+      "name": "message",
+      "type": "<",
+      "description": "",
+      "propertyType": "property",
+      "default": "'Are you sure you want to delete this task?'"
+    },
+    {
+      "name": "actions",
+      "type": "<",
+      "description": "",
+      "propertyType": "array",
+      "default": "[\n    {\n        name: \"edit\",\n        label: \"Edit\",\n    },\n    {\n        name: \"delete\",\n        label: \"Delete\",\n        type: \"danger\",\n    }\n]"
+    },
+    {
+      "name": "context",
+      "type": "<",
+      "description": "",
+      "propertyType": "property",
+      "default": ""
+    },
+    {
+      "name": "hideCancel",
+      "type": "<",
+      "description": "",
+      "propertyType": "property",
+      "default": ""
+    }
+  ],
+  "modules": [],
+  "marketplaceId": null,
+  "formControl": null,
+  "transclude": null,
+  "externalScripts": [],
+  "externalStylesheets": []
+}

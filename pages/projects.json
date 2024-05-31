@@ -1,0 +1,649 @@
+{
+  "name": "projects",
+  "type": "page",
+  "url": "/projects",
+  "params": {},
+  "variables": [
+    {
+      "name": "demoTaskApi",
+      "type": "open-api",
+      "id": "66541b38761bb263eba724d5"
+    },
+    {
+      "name": "init",
+      "type": "method",
+      "description": "",
+      "body": "$ctrl.projectManager.refreshProjects()",
+      "invokeOnLoad": true,
+      "isAsync": true,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": []
+    },
+    {
+      "name": "views",
+      "type": "service",
+      "id": "6659a0cea90f89de79772ca9"
+    },
+    {
+      "name": "user",
+      "type": "service",
+      "id": "6659a0cea90f89de79772caa"
+    },
+    {
+      "name": "projectManager",
+      "type": "service",
+      "id": "6659a0cea90f89de79772cab"
+    }
+  ],
+  "children": [
+    {
+      "name": "main",
+      "nodeName": "main",
+      "elementId": "",
+      "attributes": [
+        {
+          "property": "data-id",
+          "value": "1sdqpp"
+        }
+      ],
+      "classList": [],
+      "conditionalClasses": [],
+      "contentType": "text",
+      "displayExpression": "",
+      "events": {},
+      "iterate": {
+        "array": "",
+        "variable": "",
+        "trackByIndex": false
+      },
+      "styles": [],
+      "children": [
+        {
+          "name": "div",
+          "nodeName": "div",
+          "elementId": "",
+          "attributes": [
+            {
+              "property": "data-id",
+              "value": "vrxm6S"
+            }
+          ],
+          "classList": [
+            "content-header"
+          ],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [
+            {
+              "property": "position",
+              "value": "sticky",
+              "enabled": true
+            },
+            {
+              "property": "top",
+              "value": "0",
+              "enabled": true
+            },
+            {
+              "property": "z-index",
+              "value": "1",
+              "enabled": true
+            }
+          ],
+          "children": [
+            {
+              "name": "div",
+              "nodeName": "div",
+              "elementId": "",
+              "attributes": [
+                {
+                  "property": "data-id",
+                  "value": "Yc9CPV"
+                }
+              ],
+              "classList": [
+                "content-title"
+              ],
+              "conditionalClasses": [],
+              "contentType": "text",
+              "displayExpression": "",
+              "events": {},
+              "iterate": {
+                "array": "",
+                "variable": "",
+                "trackByIndex": false
+              },
+              "styles": [],
+              "children": [
+                {
+                  "name": "h1",
+                  "nodeName": "h1",
+                  "elementId": "",
+                  "attributes": [
+                    {
+                      "property": "data-id",
+                      "value": "3xOdB7"
+                    }
+                  ],
+                  "classList": [],
+                  "conditionalClasses": [],
+                  "contentType": "text",
+                  "displayExpression": "",
+                  "events": {},
+                  "iterate": {
+                    "array": "",
+                    "variable": "",
+                    "trackByIndex": false
+                  },
+                  "styles": [],
+                  "children": [
+                    {
+                      "name": "text",
+                      "nodeName": "text",
+                      "textContent": "Projects",
+                      "evaluate": false
+                    }
+                  ],
+                  "comments": ""
+                },
+                {
+                  "name": "Button",
+                  "nodeName": "bln-button",
+                  "elementId": "",
+                  "attributes": [
+                    {
+                      "property": "core",
+                      "value": ""
+                    },
+                    {
+                      "property": "data-id",
+                      "value": "YcR9PU"
+                    }
+                  ],
+                  "classList": [],
+                  "conditionalClasses": [],
+                  "contentType": "text",
+                  "displayExpression": "",
+                  "events": {},
+                  "iterate": {
+                    "array": "",
+                    "variable": "",
+                    "trackByIndex": false
+                  },
+                  "styles": [
+                    {
+                      "property": "--bln-button-default-bg-color",
+                      "value": "transparent",
+                      "enabled": true
+                    },
+                    {
+                      "property": "--bln-button-default-hovered-bg-color",
+                      "value": "transparent",
+                      "enabled": true
+                    },
+                    {
+                      "property": "--bln-button-default-active-bg-color",
+                      "value": "transparent",
+                      "enabled": true
+                    },
+                    {
+                      "property": "--bln-button-font-size",
+                      "value": "1.5rem",
+                      "enabled": true
+                    },
+                    {
+                      "property": "--bln-button-padding",
+                      "value": "0rem .5rem",
+                      "enabled": true
+                    },
+                    {
+                      "property": "--bln-button-margin",
+                      "value": "0%",
+                      "enabled": true
+                    }
+                  ],
+                  "children": [],
+                  "comments": "",
+                  "type": "core-component",
+                  "id": "button",
+                  "expressions": [
+                    {
+                      "expression": "({\n  \"type\": \"font-icon\",\n  \"style\": \"solid\",\n  \"name\": \"search\",\n  \"position\": \"icon-only\"\n})",
+                      "to": "icon"
+                    },
+                    {
+                      "expression": "\"Search\"",
+                      "to": "label"
+                    },
+                    {
+                      "expression": "$ctrl.views.search.show()",
+                      "to": "onClick"
+                    }
+                  ]
+                }
+              ],
+              "comments": ""
+            }
+          ],
+          "comments": ""
+        },
+        {
+          "name": "div",
+          "nodeName": "div",
+          "elementId": "",
+          "attributes": [
+            {
+              "property": "data-id",
+              "value": "qCMH1V"
+            }
+          ],
+          "classList": [
+            "content-body"
+          ],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [],
+          "children": [
+            {
+              "name": "div",
+              "nodeName": "div",
+              "elementId": "tab",
+              "attributes": [
+                {
+                  "property": "data-id",
+                  "value": "QrT8WA"
+                }
+              ],
+              "classList": [],
+              "conditionalClasses": [],
+              "contentType": "text",
+              "displayExpression": "false",
+              "events": {},
+              "iterate": {
+                "array": "",
+                "variable": "",
+                "trackByIndex": false
+              },
+              "styles": [
+                {
+                  "property": "display",
+                  "value": "flex",
+                  "enabled": true
+                },
+                {
+                  "property": "align-items",
+                  "value": "center",
+                  "enabled": true
+                },
+                {
+                  "property": "justify-content",
+                  "value": "center",
+                  "enabled": true
+                }
+              ],
+              "children": [
+                {
+                  "name": "Tab Bar",
+                  "nodeName": "bln-tab-bar",
+                  "elementId": "",
+                  "attributes": [
+                    {
+                      "property": "core",
+                      "value": ""
+                    },
+                    {
+                      "property": "data-id",
+                      "value": "rbs4bC"
+                    }
+                  ],
+                  "classList": [],
+                  "conditionalClasses": [],
+                  "contentType": "text",
+                  "displayExpression": "",
+                  "events": {},
+                  "iterate": {
+                    "array": "",
+                    "variable": "",
+                    "trackByIndex": false
+                  },
+                  "styles": [
+                    {
+                      "property": "width",
+                      "value": "350px",
+                      "enabled": true
+                    },
+                    {
+                      "property": "--bln-tab-bar-bg-color",
+                      "value": "transparent",
+                      "enabled": true
+                    },
+                    {
+                      "property": "--bln-tab-bar-hovered-bg-color",
+                      "value": "transparent",
+                      "enabled": true
+                    },
+                    {
+                      "property": "--bln-tab-bar-border-style",
+                      "value": "none",
+                      "enabled": true
+                    }
+                  ],
+                  "children": [],
+                  "comments": "",
+                  "type": "core-component",
+                  "id": "tab-bar",
+                  "expressions": [
+                    {
+                      "expression": "\"center\"",
+                      "to": "alignment"
+                    },
+                    {
+                      "expression": "\"top\"",
+                      "to": "position"
+                    },
+                    {
+                      "expression": "[{\n        label: \"All\",\n        closable: false\n    },\n    {\n        label: \"Ongoing\",\n        closable: false\n    },\n    {\n        label: \"Completed\",\n        closable: false\n    }\n]",
+                      "to": "tabItems"
+                    }
+                  ]
+                }
+              ],
+              "comments": ""
+            },
+            {
+              "name": "div",
+              "nodeName": "div",
+              "elementId": "",
+              "attributes": [
+                {
+                  "property": "data-id",
+                  "value": "77iIIL"
+                }
+              ],
+              "classList": [
+                "projects"
+              ],
+              "conditionalClasses": [],
+              "contentType": "text",
+              "displayExpression": "",
+              "events": {},
+              "iterate": {
+                "array": "",
+                "variable": "",
+                "trackByIndex": false
+              },
+              "styles": [
+                {
+                  "property": "display",
+                  "value": "flex",
+                  "enabled": true
+                },
+                {
+                  "property": "align-items",
+                  "value": "center",
+                  "enabled": true
+                },
+                {
+                  "property": "justify-content",
+                  "value": "center",
+                  "enabled": true
+                }
+              ],
+              "children": [
+                {
+                  "name": "project-card",
+                  "nodeName": "project-card",
+                  "elementId": "",
+                  "attributes": [
+                    {
+                      "property": "data-id",
+                      "value": "-3vUfq"
+                    }
+                  ],
+                  "classList": [],
+                  "conditionalClasses": [],
+                  "contentType": "text",
+                  "displayExpression": "",
+                  "events": {
+                    "contextmenu": "",
+                    "click": "$ctrl.views.project.show(project)"
+                  },
+                  "iterate": {
+                    "array": "$ctrl.projectManager.projects",
+                    "variable": "project"
+                  },
+                  "styles": [],
+                  "children": [],
+                  "comments": "",
+                  "type": "custom-component",
+                  "id": "6659a0cea90f89de79772cb0",
+                  "expressions": [
+                    {
+                      "expression": "project.name",
+                      "to": "name"
+                    },
+                    {
+                      "expression": "project.description",
+                      "to": "description"
+                    },
+                    {
+                      "expression": "project.deadLine",
+                      "to": "deadline"
+                    },
+                    {
+                      "expression": "project.progress",
+                      "to": "progress"
+                    },
+                    {
+                      "expression": "project.assignedUsers",
+                      "to": "assignedUsers"
+                    },
+                    {
+                      "expression": "true",
+                      "to": "mini"
+                    },
+                    {
+                      "expression": "project.code",
+                      "to": "code"
+                    }
+                  ]
+                }
+              ],
+              "comments": ""
+            },
+            {
+              "name": "div",
+              "nodeName": "div",
+              "elementId": "",
+              "attributes": [
+                {
+                  "property": "data-id",
+                  "value": "RckHkg"
+                }
+              ],
+              "classList": [],
+              "conditionalClasses": [],
+              "contentType": "text",
+              "displayExpression": "",
+              "events": {},
+              "iterate": {
+                "array": "",
+                "variable": "",
+                "trackByIndex": false
+              },
+              "styles": [
+                {
+                  "property": "height",
+                  "value": "100%",
+                  "enabled": true
+                },
+                {
+                  "property": "display",
+                  "value": "flex",
+                  "enabled": true
+                },
+                {
+                  "property": "justify-content",
+                  "value": "center",
+                  "enabled": true
+                },
+                {
+                  "property": "align-items",
+                  "value": "center",
+                  "enabled": true
+                },
+                {
+                  "property": "position",
+                  "value": "absolute",
+                  "enabled": true
+                },
+                {
+                  "property": "top",
+                  "value": "0",
+                  "enabled": true
+                },
+                {
+                  "property": "z-index",
+                  "value": "-1",
+                  "enabled": true
+                },
+                {
+                  "property": "width",
+                  "value": "100%",
+                  "enabled": true
+                }
+              ],
+              "children": [
+                {
+                  "name": "Badge",
+                  "nodeName": "bln-badge",
+                  "elementId": "",
+                  "attributes": [
+                    {
+                      "property": "core",
+                      "value": ""
+                    },
+                    {
+                      "property": "data-id",
+                      "value": "myr4oX"
+                    }
+                  ],
+                  "classList": [],
+                  "conditionalClasses": [],
+                  "contentType": "text",
+                  "displayExpression": "",
+                  "events": {},
+                  "iterate": {
+                    "array": "",
+                    "variable": "",
+                    "trackByIndex": false
+                  },
+                  "styles": [
+                    {
+                      "property": "--bln-badge-default-color",
+                      "value": "transparent",
+                      "enabled": true
+                    },
+                    {
+                      "property": "--bln-badge-text-color",
+                      "value": "#ccc",
+                      "enabled": true
+                    },
+                    {
+                      "property": "--bln-badge-icon-size",
+                      "value": "100px",
+                      "enabled": true
+                    }
+                  ],
+                  "children": [],
+                  "comments": "",
+                  "type": "core-component",
+                  "id": "badge",
+                  "expressions": [
+                    {
+                      "expression": "({\n  \"type\": \"font-icon\",\n  \"style\": \"solid\",\n  \"name\": \"file-alt\",\n  \"position\": \"icon-only\"\n})",
+                      "to": "icon"
+                    }
+                  ]
+                }
+              ],
+              "comments": ""
+            }
+          ],
+          "comments": ""
+        }
+      ],
+      "comments": ""
+    },
+    {
+      "name": "bottom-bar",
+      "nodeName": "bottom-bar",
+      "elementId": "",
+      "attributes": [
+        {
+          "property": "data-id",
+          "value": "_UdORR"
+        }
+      ],
+      "classList": [],
+      "conditionalClasses": [],
+      "contentType": "text",
+      "displayExpression": "",
+      "events": {},
+      "iterate": {
+        "array": "",
+        "variable": "",
+        "trackByIndex": false
+      },
+      "styles": [],
+      "children": [],
+      "comments": "",
+      "type": "custom-component",
+      "id": "6659a0cea90f89de79772cae",
+      "expressions": []
+    },
+    {
+      "name": "views",
+      "nodeName": "views",
+      "elementId": "",
+      "attributes": [
+        {
+          "property": "data-id",
+          "value": "ZpmF00"
+        }
+      ],
+      "classList": [],
+      "conditionalClasses": [],
+      "contentType": "text",
+      "displayExpression": "",
+      "events": {},
+      "iterate": {
+        "array": "",
+        "variable": "",
+        "trackByIndex": false
+      },
+      "styles": [],
+      "children": [],
+      "comments": "",
+      "type": "custom-component",
+      "id": "6659a0cea90f89de79772cb9",
+      "expressions": []
+    }
+  ]
+}
