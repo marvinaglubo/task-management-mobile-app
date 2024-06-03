@@ -8,6 +8,7 @@ angular.module('pullToRefresh', []).directive('pullToRefresh', function ($compil
             let touchstartY = 0;
             let refreshPos = 0
             const defaultPos = -50
+            const maxPos = 50
 
             const $ctrl = { touchstartY, refreshPos }
             refreshScope.$ctrl = $ctrl
@@ -48,7 +49,7 @@ angular.module('pullToRefresh', []).directive('pullToRefresh', function ($compil
                 const diff = touchY - $ctrl.touchstartY
 
                 let newPos = defaultPos + diff
-                if (newPos > 100) newPos = 100
+                if (newPos > maxPos) newPos = maxPos
 
                 setPosition(newPos)
             });
