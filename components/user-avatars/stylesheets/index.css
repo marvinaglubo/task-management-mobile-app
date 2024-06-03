@@ -19,10 +19,15 @@ user-avatars .avatar {
 }
 
 user-avatars .avatar:not(:first-of-type) {
-    margin-left: -10px;
+    /* margin-left: -10px; */
 }
 
-user-avatars .avatar:nth-of-type(1) {
+user-avatars .avatar:not(:last-of-type) {
+    /* margin-left: -10px; */
+    margin-right: 2px;
+}
+
+/* user-avatars .avatar:nth-of-type(1) {
     z-index: 3;
     background-color: #F68059;
 }
@@ -35,4 +40,4 @@ user-avatars .avatar:nth-of-type(2) {
 user-avatars .avatar:nth-of-type(3) {
     z-index: 1;
     background-color: #4E3EC8;
-}
+} */

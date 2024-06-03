@@ -172,6 +172,157 @@
   ],
   "children": [
     {
+      "name": "div",
+      "nodeName": "div",
+      "elementId": "",
+      "attributes": [
+        {
+          "property": "data-id",
+          "value": "nM6oB5"
+        }
+      ],
+      "classList": [
+        "content-header"
+      ],
+      "conditionalClasses": [],
+      "contentType": "text",
+      "displayExpression": "",
+      "events": {},
+      "iterate": {
+        "array": "",
+        "variable": "",
+        "trackByIndex": false
+      },
+      "styles": [],
+      "children": [
+        {
+          "name": "div",
+          "nodeName": "div",
+          "elementId": "",
+          "attributes": [
+            {
+              "property": "data-id",
+              "value": "gRGsQf"
+            }
+          ],
+          "classList": [
+            "content-title"
+          ],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [],
+          "children": [
+            {
+              "name": "h1",
+              "nodeName": "h1",
+              "elementId": "",
+              "attributes": [
+                {
+                  "property": "data-id",
+                  "value": "cZx3ZA"
+                }
+              ],
+              "classList": [],
+              "conditionalClasses": [],
+              "contentType": "text",
+              "displayExpression": "",
+              "events": {},
+              "iterate": {
+                "array": "",
+                "variable": "",
+                "trackByIndex": false
+              },
+              "styles": [],
+              "children": [
+                {
+                  "name": "text",
+                  "nodeName": "text",
+                  "textContent": "Dashboard",
+                  "evaluate": false
+                }
+              ],
+              "comments": ""
+            },
+            {
+              "name": "Dropdown Menu",
+              "nodeName": "bln-dropdown-menu",
+              "elementId": "",
+              "attributes": [
+                {
+                  "property": "core",
+                  "value": ""
+                },
+                {
+                  "property": "data-id",
+                  "value": "eOc1BH"
+                }
+              ],
+              "classList": [],
+              "conditionalClasses": [],
+              "contentType": "text",
+              "displayExpression": "",
+              "events": {},
+              "iterate": {
+                "array": "",
+                "variable": "",
+                "trackByIndex": false
+              },
+              "styles": [
+                {
+                  "property": "--bln-dropdown-menu-button-bg-color",
+                  "value": "#e8e8e8",
+                  "enabled": true
+                },
+                {
+                  "property": "--bln-dropdown-menu-button-hovered-bg-color",
+                  "value": "#bababa",
+                  "enabled": true
+                },
+                {
+                  "property": "--bln-dropdown-menu-button-active-bg-color",
+                  "value": "#a2a2a2",
+                  "enabled": true
+                },
+                {
+                  "property": "--bln-dropdown-menu-font-weight",
+                  "value": "bold",
+                  "enabled": true
+                },
+                {
+                  "property": "--bln-dropdown-menu-button-margin",
+                  "value": "0",
+                  "enabled": true
+                }
+              ],
+              "children": [],
+              "comments": "",
+              "type": "core-component",
+              "id": "dropdown-menu",
+              "expressions": [
+                {
+                  "expression": "[{\n        label: \"All Projects\",\n        onClick: \"function\",\n        function: $ctrl.onFilterChange,\n        hideWhen: $ctrl.filter === \"All Projects\"\n    },\n    {\n        label: \"My Projects\",\n        onClick: \"function\",\n        function: $ctrl.onFilterChange,\n        hideWhen: $ctrl.filter === \"My Projects\"\n    },\n    {\n        label: \"Tasks\",\n        onClick: \"function\",\n        function: $ctrl.onFilterChange,\n        hideWhen: $ctrl.filter === \"Tasks\"\n    }\n]",
+                  "to": "menuItems"
+                },
+                {
+                  "expression": "$ctrl.filter",
+                  "to": "label"
+                }
+              ]
+            }
+          ],
+          "comments": ""
+        }
+      ],
+      "comments": ""
+    },
+    {
       "name": "main",
       "nodeName": "main",
       "elementId": "",
@@ -179,6 +330,9 @@
         {
           "property": "data-id",
           "value": "rggedG"
+        },
+        {
+          "property": "pull-to-refresh"
         }
       ],
       "classList": [],
@@ -199,157 +353,6 @@
         }
       ],
       "children": [
-        {
-          "name": "div",
-          "nodeName": "div",
-          "elementId": "",
-          "attributes": [
-            {
-              "property": "data-id",
-              "value": "nM6oB5"
-            }
-          ],
-          "classList": [
-            "content-header"
-          ],
-          "conditionalClasses": [],
-          "contentType": "text",
-          "displayExpression": "",
-          "events": {},
-          "iterate": {
-            "array": "",
-            "variable": "",
-            "trackByIndex": false
-          },
-          "styles": [],
-          "children": [
-            {
-              "name": "div",
-              "nodeName": "div",
-              "elementId": "",
-              "attributes": [
-                {
-                  "property": "data-id",
-                  "value": "gRGsQf"
-                }
-              ],
-              "classList": [
-                "content-title"
-              ],
-              "conditionalClasses": [],
-              "contentType": "text",
-              "displayExpression": "",
-              "events": {},
-              "iterate": {
-                "array": "",
-                "variable": "",
-                "trackByIndex": false
-              },
-              "styles": [],
-              "children": [
-                {
-                  "name": "h1",
-                  "nodeName": "h1",
-                  "elementId": "",
-                  "attributes": [
-                    {
-                      "property": "data-id",
-                      "value": "cZx3ZA"
-                    }
-                  ],
-                  "classList": [],
-                  "conditionalClasses": [],
-                  "contentType": "text",
-                  "displayExpression": "",
-                  "events": {},
-                  "iterate": {
-                    "array": "",
-                    "variable": "",
-                    "trackByIndex": false
-                  },
-                  "styles": [],
-                  "children": [
-                    {
-                      "name": "text",
-                      "nodeName": "text",
-                      "textContent": "Dashboard",
-                      "evaluate": false
-                    }
-                  ],
-                  "comments": ""
-                },
-                {
-                  "name": "Dropdown Menu",
-                  "nodeName": "bln-dropdown-menu",
-                  "elementId": "",
-                  "attributes": [
-                    {
-                      "property": "core",
-                      "value": ""
-                    },
-                    {
-                      "property": "data-id",
-                      "value": "eOc1BH"
-                    }
-                  ],
-                  "classList": [],
-                  "conditionalClasses": [],
-                  "contentType": "text",
-                  "displayExpression": "",
-                  "events": {},
-                  "iterate": {
-                    "array": "",
-                    "variable": "",
-                    "trackByIndex": false
-                  },
-                  "styles": [
-                    {
-                      "property": "--bln-dropdown-menu-button-bg-color",
-                      "value": "#e8e8e8",
-                      "enabled": true
-                    },
-                    {
-                      "property": "--bln-dropdown-menu-button-hovered-bg-color",
-                      "value": "#bababa",
-                      "enabled": true
-                    },
-                    {
-                      "property": "--bln-dropdown-menu-button-active-bg-color",
-                      "value": "#a2a2a2",
-                      "enabled": true
-                    },
-                    {
-                      "property": "--bln-dropdown-menu-font-weight",
-                      "value": "bold",
-                      "enabled": true
-                    },
-                    {
-                      "property": "--bln-dropdown-menu-button-margin",
-                      "value": "0",
-                      "enabled": true
-                    }
-                  ],
-                  "children": [],
-                  "comments": "",
-                  "type": "core-component",
-                  "id": "dropdown-menu",
-                  "expressions": [
-                    {
-                      "expression": "[{\n        label: \"All Projects\",\n        onClick: \"function\",\n        function: $ctrl.onFilterChange,\n        hideWhen: $ctrl.filter === \"All Projects\"\n    },\n    {\n        label: \"My Projects\",\n        onClick: \"function\",\n        function: $ctrl.onFilterChange,\n        hideWhen: $ctrl.filter === \"My Projects\"\n    },\n    {\n        label: \"Tasks\",\n        onClick: \"function\",\n        function: $ctrl.onFilterChange,\n        hideWhen: $ctrl.filter === \"Tasks\"\n    }\n]",
-                      "to": "menuItems"
-                    },
-                    {
-                      "expression": "$ctrl.filter",
-                      "to": "label"
-                    }
-                  ]
-                }
-              ],
-              "comments": ""
-            }
-          ],
-          "comments": ""
-        },
         {
           "name": "div",
           "nodeName": "div",
