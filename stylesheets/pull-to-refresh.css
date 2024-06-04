@@ -14,7 +14,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 3px;
+    padding: 5px;
     border-radius: 100%;
     background-color: #fff;
     box-shadow: 0 0 0 1px #ccc;
@@ -24,5 +24,10 @@
 .pull-to-refresh bln-spinner {
     position: absolute;
     z-index: 1;
+}
+
+.pull-to-refresh bln-spinner,
+.pull-to-refresh bln-badge {
+    transition: opacity .2s linear;
 }
 

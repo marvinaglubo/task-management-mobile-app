@@ -2,12 +2,12 @@ angular.module('pullToRefresh', []).directive('pullToRefresh', function ($compil
     return {
         restrict: 'A',
         link: function (scope, element, attrs, controllers) {
-            const id = scope.id
             const refreshScope = scope.$new(true);
 
             let touchstartY = 0;
             let refreshPos = 0
             const defaultPos = -50
+            const canRefreshPos = 25
             const maxPos = 50
 
             const $ctrl = { touchstartY, refreshPos }
@@ -15,28 +15,66 @@ angular.module('pullToRefresh', []).directive('pullToRefresh', function ($compil
 
             const refreshContainer = $compile(`<div class="pull-to-refresh-container">
                 <div class="pull-to-refresh">
-                    <bln-spinner core style="--bln-spinner-size:30px;--bln-spinner-thickness:8"></bln-spinner>
-                    <bln-progress core 
-                        style="--bln-progress-circular-size: 30px; --bln-progress-circular-thickness: 8; --bln-progress-percent: 0;"
-                        shape="&quot;circular&quot;" 
-                        step="$ctrl.step" 
-                        binding-step="$ctrl.step"
-                        data-type="step" 
-                        data-shape="circular">
-                    </bln-spinner>
+                    <bln-badge core 
+                        style="--bln-badge-icon-size:30px;--bln-badge-default-color:transparent;--bln-badge-text-color:var(--primary-color, #000);--bln-badge-padding:0%;--bln-badge-margin:0%; width: 34px; display: flex; justify-content: center; align-items: center; margin-top: 4px; margin-left: 1.5px" 
+                        icon="({
+                            &quot;type&quot;: &quot;font-icon&quot;,
+                            &quot;style&quot;: &quot;solid&quot;,
+                            &quot;name&quot;: &quot;redo-alt&quot;,
+                            &quot;position&quot;: &quot;icon-only&quot;
+                        })">
+                    </bln-badge>
+                    <bln-spinner core style="--bln-spinner-size:30px;--bln-spinner-thickness:8; --bln-spinner-color: var(--primary-color, #000)"></bln-spinner>
                 </div>
             </div>`)(refreshScope)
 
+            /** @type {HTMLElement} */
             const refreshEl = refreshContainer[0].querySelector('.pull-to-refresh')
+            /** @type {HTMLElement} */
+            const spinner = refreshContainer[0].querySelector('bln-spinner')
+            /** @type {HTMLElement} */
+            const reload = refreshContainer[0].querySelector('bln-badge')
+
+            if (!refreshEl || !spinner || !reload) return
+
+            /** @param state {'default' | 'can-reload' | 'hidden'}  */
+            const setReloadIcon = (state) => {
+                switch (state) {
+                    case 'can-reload':
+                        reload.style.opacity = '1'
+                        break;
+
+                    case 'default':
+                        reload.style.opacity = '.35'
+                        break;
+
+                    case 'hidden':
+                        reload.style.opacity = '0'
+                        break;
+                }
+            }
+
+            const setSpinner = (isReloading) => {
+                if (isReloading) {
+                    spinner.style.opacity = '1'
+                } else {
+                    spinner.style.opacity = '0'
+                }
+            }
 
             const setPosition = (pos) => {
                 if (!refreshEl) return
                 $ctrl.refreshPos = pos
                 refreshEl.style.transform = 'translateY(' + pos + 'px)'
-
             }
 
-            setPosition(defaultPos)
+            const resetToDefault = () => {
+                setPosition(defaultPos)
+                setSpinner(false)
+                setReloadIcon('default')
+            }
+
+            resetToDefault()
 
             element.prepend(refreshContainer)
 
@@ -51,16 +89,26 @@ angular.module('pullToRefresh', []).directive('pullToRefresh', function ($compil
                 let newPos = defaultPos + diff
                 if (newPos > maxPos) newPos = maxPos
 
+                setReloadIcon(newPos > canRefreshPos ? 'can-reload' : 'default')
                 setPosition(newPos)
             });
 
             element[0].addEventListener('touchend', e => {
-                setPosition(10)
+                const canRefresh = $ctrl.refreshPos > canRefreshPos
 
-                setTimeout(() => {
+                if (canRefresh) {
+                    setPosition(10)
+                    setSpinner(true)
+                    setReloadIcon('hidden')
 
-                    setPosition(defaultPos)
-                }, 3000)
+                    setTimeout(() => {
+                        resetToDefault()
+                    }, 3000)
+                } else {
+                    resetToDefault()
+                }
+
+
             });
         }
     }
