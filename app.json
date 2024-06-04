@@ -9,9 +9,7 @@
       ],
       "script": "if ($httpProvider.defaults?.headers?.common) $httpProvider.defaults.headers.common['ngrok-skip-browser-warning'] = 'true'"
     },
-    "modules": [
-      "pullToRefresh"
-    ],
+    "modules": [],
     "properties": {
       "version": "1.0.0-SNAPSHOT"
     },

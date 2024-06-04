@@ -128,7 +128,7 @@
       "name": "init",
       "type": "method",
       "description": "",
-      "body": "$ctrl.$device.onBackButton(e => {\r\n    e.preventDefault()\r\n})\r\n\r\n$ctrl.refreshData()",
+      "body": "$ctrl.$device.onBackButton(e => {\r\n    e.preventDefault()\r\n})\r\n\r\n$ctrl.refreshData()\r\n$ctrl.pullToRefresh.register('main', () => {\r\n    $ctrl.refreshData()\r\n})\r\nconst el  = document.querySelector('main') \r\nconsole.log(el instanceof Element, el, window, document)",
       "invokeOnLoad": true,
       "isAsync": true,
       "returnType": {
@@ -168,6 +168,11 @@
       "name": "taskManager",
       "type": "service",
       "id": "6659a0cea90f89de79772cad"
+    },
+    {
+      "name": "pullToRefresh",
+      "type": "service",
+      "id": "665eb6f12304cf7bff0ba367"
     }
   ],
   "children": [

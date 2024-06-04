@@ -26,6 +26,11 @@
       "name": "user",
       "type": "service",
       "id": "6659a0cea90f89de79772caa"
+    },
+    {
+      "name": "pullToRefresh",
+      "type": "service",
+      "id": "665eb6f12304cf7bff0ba367"
     }
   ],
   "children": [

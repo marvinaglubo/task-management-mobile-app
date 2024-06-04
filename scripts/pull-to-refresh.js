@@ -1,4 +1,4 @@
-angular.module('pullToRefresh', []).directive('pullToRefresh', function ($compile, $progress) {
+angular.module('pullToRefresh', []).directive('pullToRefreshss', function ($compile) {
     return {
         restrict: 'A',
         link: function (scope, element, attrs, controllers) {
@@ -16,7 +16,7 @@ angular.module('pullToRefresh', []).directive('pullToRefresh', function ($compil
             const refreshContainer = $compile(`<div class="pull-to-refresh-container">
                 <div class="pull-to-refresh">
                     <bln-badge core 
-                        style="--bln-badge-icon-size:30px;--bln-badge-default-color:transparent;--bln-badge-text-color:var(--primary-color, #000);--bln-badge-padding:0%;--bln-badge-margin:0%; width: 34px; display: flex; justify-content: center; align-items: center; margin-top: 4px; margin-left: 1.5px" 
+                        style="--bln-badge-icon-size:30px;--bln-badge-default-color:transparent;--bln-badge-text-color:var(--primary-color, #000);--bln-badge-padding:0%;--bln-badge-margin:0%; width: 34px; display: flex; justify-content: center; align-items: center; padding-top: 4px; padding-top: 1.5px" 
                         icon="({
                             &quot;type&quot;: &quot;font-icon&quot;,
                             &quot;style&quot;: &quot;solid&quot;,
@@ -62,42 +62,54 @@ angular.module('pullToRefresh', []).directive('pullToRefresh', function ($compil
                 }
             }
 
-            const setPosition = (pos) => {
+            const setPosition = (pos, deg) => {
                 if (!refreshEl) return
                 $ctrl.refreshPos = pos
                 refreshEl.style.transform = 'translateY(' + pos + 'px)'
+                reload.style.transform = 'rotate(' + deg + 'deg)'
             }
 
             const resetToDefault = () => {
-                setPosition(defaultPos)
+                setPosition(defaultPos, 0)
                 setSpinner(false)
                 setReloadIcon('default')
             }
+
+   
 
             resetToDefault()
 
             element.prepend(refreshContainer)
 
             element[0].addEventListener('touchstart', e => {
+                if (element.scrollTop !== 0) return
                 $ctrl.touchstartY = e.touches[0].clientY;
+
+                const canRefresh = $ctrl.refreshPos > canRefreshPos
+                setReloadIcon(canRefresh ? 'can-reload' : 'default')
+                setSpinner(false)
             });
 
             element[0].addEventListener('touchmove', e => {
+                if (element.scrollTop !== 0) return
                 const touchY = e.touches[0].clientY;
                 const diff = touchY - $ctrl.touchstartY
 
                 let newPos = defaultPos + diff
                 if (newPos > maxPos) newPos = maxPos
 
-                setReloadIcon(newPos > canRefreshPos ? 'can-reload' : 'default')
-                setPosition(newPos)
+                setPosition(newPos, newPos * 3.6)
+
+                const canRefresh = $ctrl.refreshPos > canRefreshPos
+                setReloadIcon(canRefresh ? 'can-reload' : 'default')
             });
 
             element[0].addEventListener('touchend', e => {
+                if (element.scrollTop !== 0) return
                 const canRefresh = $ctrl.refreshPos > canRefreshPos
 
                 if (canRefresh) {
-                    setPosition(10)
+                    setPosition(10, 0)
                     setSpinner(true)
                     setReloadIcon('hidden')
 
