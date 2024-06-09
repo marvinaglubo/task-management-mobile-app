@@ -8,7 +8,12 @@
       "name": "div",
       "nodeName": "div",
       "elementId": "",
-      "attributes": [],
+      "attributes": [
+        {
+          "property": "data-id",
+          "value": "JX3O3t"
+        }
+      ],
       "classList": [
         "bottom-bar-container"
       ],
@@ -42,6 +47,10 @@
             {
               "property": "core",
               "value": ""
+            },
+            {
+              "property": "data-id",
+              "value": "2q8eG0"
             }
           ],
           "classList": [],
@@ -117,6 +126,10 @@
             {
               "property": "core",
               "value": ""
+            },
+            {
+              "property": "data-id",
+              "value": "dN5wND"
             }
           ],
           "classList": [],
@@ -183,6 +196,10 @@
             {
               "property": "core",
               "value": ""
+            },
+            {
+              "property": "data-id",
+              "value": "HCWU9-"
             }
           ],
           "classList": [],
@@ -268,6 +285,10 @@
             {
               "property": "core",
               "value": ""
+            },
+            {
+              "property": "data-id",
+              "value": "sMs74Q"
             }
           ],
           "classList": [],
@@ -313,7 +334,7 @@
           "id": "button",
           "expressions": [
             {
-              "expression": "\"Timeline\"",
+              "expression": "\"Activities\"",
               "to": "label"
             },
             {
@@ -334,6 +355,10 @@
             {
               "property": "core",
               "value": ""
+            },
+            {
+              "property": "data-id",
+              "value": "WonG0r"
             }
           ],
           "classList": [],

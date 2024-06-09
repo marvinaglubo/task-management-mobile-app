@@ -14,7 +14,7 @@
       "name": "init",
       "type": "method",
       "description": "",
-      "body": "// console.log($ctrl.$stateParams)\r\n\r\n$ctrl.loaded  = false\r\n\r\nconst user = $ctrl.$stateParams.user\r\nconst userId = user.userId\r\n$ctrl.info = user\r\n\r\nif (userId === undefined) {\r\n    $ctrl.loaded = true\r\n    return\r\n    }\r\n\r\n$ctrl.demoTaskApi.demo_api_tasks_services_task_SelectAllTaskByUser({assignedUserId: userId}).then(res => {\r\n    $ctrl.tasks = res.data.task\r\n    $ctrl.loaded  = true\r\n})",
+      "body": "// console.log($ctrl.$stateParams)\r\n\r\n$ctrl.loaded = false\r\n\r\nconst user = $ctrl.$stateParams.user\r\nconst userId = user.userId\r\n$ctrl.info = user\r\n\r\nif (userId === undefined) {\r\n    $ctrl.loaded = true\r\n    return\r\n}\r\n\r\n$ctrl.demoTaskApi.demo_api_tasks_services_task_SelectAllTaskByUser({ assignedUserId: userId }).then(res => {\r\n    $ctrl.tasks = res.data.task\r\n    $ctrl.loaded = true\r\n})",
       "invokeOnLoad": true,
       "isAsync": true,
       "returnType": {
@@ -52,6 +52,12 @@
       "name": "views",
       "type": "service",
       "id": "6659a0cea90f89de79772ca9"
+    },
+    {
+      "name": "projects",
+      "type": "array",
+      "description": "",
+      "children": []
     }
   ],
   "children": [

@@ -8,13 +8,18 @@
       "name": "div",
       "nodeName": "div",
       "elementId": "",
-      "attributes": [],
+      "attributes": [
+        {
+          "property": "data-id",
+          "value": "kPLFil"
+        }
+      ],
       "classList": [
         "status-label"
       ],
       "conditionalClasses": [],
       "contentType": "text",
-      "displayExpression": "",
+      "displayExpression": "false",
       "events": {},
       "iterate": {
         "array": "",
@@ -31,6 +36,10 @@
             {
               "property": "core",
               "value": ""
+            },
+            {
+              "property": "data-id",
+              "value": "IPm1FY"
             }
           ],
           "classList": [
@@ -58,7 +67,12 @@
             },
             {
               "property": "--bln-badge-icon-size",
-              "value": "30px",
+              "value": "40px",
+              "enabled": true
+            },
+            {
+              "property": "--bln-badge-default-color",
+              "value": "var(--secondary-color, #000)",
               "enabled": true
             }
           ],
@@ -85,6 +99,10 @@
             {
               "property": "core",
               "value": ""
+            },
+            {
+              "property": "data-id",
+              "value": "rBIW3-"
             }
           ],
           "classList": [
@@ -112,12 +130,12 @@
             },
             {
               "property": "--bln-badge-default-color",
-              "value": "var(--warning-color, #000)",
+              "value": "var(--secondary-color, #000)",
               "enabled": true
             },
             {
               "property": "--bln-badge-icon-size",
-              "value": "30px",
+              "value": "40px",
               "enabled": true
             }
           ],
@@ -144,6 +162,10 @@
             {
               "property": "core",
               "value": ""
+            },
+            {
+              "property": "data-id",
+              "value": "CjDXV9"
             }
           ],
           "classList": [
@@ -171,12 +193,12 @@
             },
             {
               "property": "--bln-badge-default-color",
-              "value": "var(--success-color, #000)",
+              "value": "var(--secondary-color, #000)",
               "enabled": true
             },
             {
               "property": "--bln-badge-icon-size",
-              "value": "30px",
+              "value": "40px",
               "enabled": true
             }
           ],
@@ -194,38 +216,6 @@
               "to": "type"
             }
           ]
-        },
-        {
-          "name": "span",
-          "nodeName": "span",
-          "elementId": "",
-          "attributes": [],
-          "classList": [],
-          "conditionalClasses": [],
-          "contentType": "text",
-          "displayExpression": "",
-          "events": {},
-          "iterate": {
-            "array": "",
-            "variable": "",
-            "trackByIndex": false
-          },
-          "styles": [
-            {
-              "property": "font-size",
-              "value": "9px",
-              "enabled": true
-            }
-          ],
-          "children": [
-            {
-              "name": "text",
-              "nodeName": "text",
-              "textContent": "$ctrl.data.status",
-              "evaluate": true
-            }
-          ],
-          "comments": ""
         }
       ],
       "comments": ""
@@ -234,7 +224,12 @@
       "name": "div",
       "nodeName": "div",
       "elementId": "",
-      "attributes": [],
+      "attributes": [
+        {
+          "property": "data-id",
+          "value": "wDSohz"
+        }
+      ],
       "classList": [
         "task-data"
       ],
@@ -253,7 +248,12 @@
           "name": "span",
           "nodeName": "span",
           "elementId": "",
-          "attributes": [],
+          "attributes": [
+            {
+              "property": "data-id",
+              "value": "mWD_zS"
+            }
+          ],
           "classList": [
             "task-title"
           ],
@@ -273,97 +273,162 @@
               "nodeName": "text",
               "textContent": "$ctrl.data.subject",
               "evaluate": true
+            },
+            {
+              "name": "Badge",
+              "nodeName": "bln-badge",
+              "elementId": "",
+              "attributes": [
+                {
+                  "property": "core",
+                  "value": ""
+                },
+                {
+                  "property": "data-id",
+                  "value": "uFJ4cy"
+                }
+              ],
+              "classList": [
+                "status"
+              ],
+              "conditionalClasses": [
+                {
+                  "className": "done",
+                  "condition": "$ctrl.data.status === \"Completed\""
+                },
+                {
+                  "className": "in-progress",
+                  "condition": "$ctrl.data.status == \"In Progress\""
+                }
+              ],
+              "contentType": "text",
+              "displayExpression": "",
+              "events": {},
+              "iterate": {
+                "array": "",
+                "variable": "",
+                "trackByIndex": false
+              },
+              "styles": [
+                {
+                  "property": "--bln-badge-font-weight",
+                  "value": "bold",
+                  "enabled": true
+                },
+                {
+                  "property": "--bln-badge-padding",
+                  "value": ".25rem .5rem",
+                  "enabled": true
+                },
+                {
+                  "property": "--bln-badge-roundness",
+                  "value": ".5rem",
+                  "enabled": true
+                },
+                {
+                  "property": "--bln-badge-margin",
+                  "value": "0 .25rem",
+                  "enabled": true
+                },
+                {
+                  "property": "vertical-align",
+                  "value": "text-bottom",
+                  "enabled": true
+                },
+                {
+                  "property": "--bln-badge-font-size",
+                  "value": ".625rem",
+                  "enabled": true
+                }
+              ],
+              "children": [],
+              "comments": "",
+              "type": "core-component",
+              "id": "badge",
+              "expressions": [
+                {
+                  "expression": "$ctrl.data.status",
+                  "to": "text"
+                }
+              ]
             }
           ],
           "comments": ""
         },
         {
-          "name": "div",
-          "nodeName": "div",
+          "name": "span",
+          "nodeName": "span",
           "elementId": "",
-          "attributes": [],
-          "classList": [
-            "task-user"
+          "attributes": [
+            {
+              "property": "data-id",
+              "value": "wBgbs1"
+            }
           ],
+          "classList": [],
           "conditionalClasses": [],
           "contentType": "text",
-          "displayExpression": "$ctrl.user.getUser($ctrl.data.assignedUserId)",
+          "displayExpression": "",
           "events": {},
           "iterate": {
             "array": "",
             "variable": "",
             "trackByIndex": false
           },
-          "styles": [],
+          "styles": [
+            {
+              "property": "color",
+              "value": "var(--text-gray, #000)",
+              "enabled": true
+            }
+          ],
           "children": [
             {
-              "name": "span",
-              "nodeName": "span",
-              "elementId": "",
-              "attributes": [],
-              "classList": [],
-              "conditionalClasses": [],
-              "contentType": "text",
-              "displayExpression": "",
-              "events": {},
-              "iterate": {
-                "array": "",
-                "variable": "",
-                "trackByIndex": false
-              },
-              "styles": [
-                {
-                  "property": "margin-right",
-                  "value": ".25rem",
-                  "enabled": true
-                }
-              ],
-              "children": [
-                {
-                  "name": "text",
-                  "nodeName": "text",
-                  "textContent": "Assigned User:",
-                  "evaluate": false
-                }
-              ],
-              "comments": ""
-            },
-            {
-              "name": "span",
-              "nodeName": "span",
-              "elementId": "",
-              "attributes": [],
-              "classList": [
-                "user"
-              ],
-              "conditionalClasses": [],
-              "contentType": "text",
-              "displayExpression": "",
-              "events": {},
-              "iterate": {
-                "array": "",
-                "variable": "",
-                "trackByIndex": false
-              },
-              "styles": [
-                {
-                  "property": "font-weight",
-                  "value": "bold",
-                  "enabled": true
-                }
-              ],
-              "children": [
-                {
-                  "name": "text",
-                  "nodeName": "text",
-                  "textContent": "$ctrl.user.getName($ctrl.data.assignedUserId)",
-                  "evaluate": true
-                }
-              ],
-              "comments": ""
+              "name": "text",
+              "nodeName": "text",
+              "textContent": "$ctrl.data.description",
+              "evaluate": true
             }
           ],
           "comments": ""
+        },
+        {
+          "name": "avatar",
+          "nodeName": "avatar",
+          "elementId": "",
+          "attributes": [
+            {
+              "property": "data-id",
+              "value": "ehIkYq"
+            }
+          ],
+          "classList": [],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [
+            {
+              "property": "margin-top",
+              "value": "1rem",
+              "enabled": true
+            }
+          ],
+          "children": [],
+          "comments": "",
+          "type": "custom-component",
+          "id": "666595642268f76de4f7861c",
+          "expressions": [
+            {
+              "expression": "$ctrl.data.user",
+              "to": "user"
+            }
+          ]
         }
       ],
       "comments": ""

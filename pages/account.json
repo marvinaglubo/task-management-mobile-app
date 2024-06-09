@@ -1,7 +1,7 @@
 {
   "name": "account",
   "type": "page",
-  "url": "/test",
+  "url": "/account",
   "params": {},
   "variables": [
     {
@@ -31,6 +31,10 @@
       "name": "pullToRefresh",
       "type": "service",
       "id": "665eb6f12304cf7bff0ba367"
+    },
+    {
+      "name": "$timeout",
+      "type": "service"
     }
   ],
   "children": [

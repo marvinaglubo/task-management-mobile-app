@@ -43,13 +43,14 @@
           ],
           "conditionalClasses": [],
           "contentType": "text",
-          "displayExpression": "user && $ctrl.style",
+          "displayExpression": "user && $ctrl.style && ($ctrl.limit > 0 ? $index < $ctrl.limit : true)",
           "events": {
             "click": "$ctrl.viewOnClick ? $ctrl.$modal.open(\"user-overview-modal\", {info: user}) : null"
           },
           "iterate": {
             "array": "$ctrl.users",
-            "variable": "user"
+            "variable": "user",
+            "trackByIndex": true
           },
           "styles": [],
           "children": [
@@ -57,6 +58,39 @@
               "name": "text",
               "nodeName": "text",
               "textContent": "user.firstName.substring(0, 1) + user.lastName.substring(0, 1)",
+              "evaluate": true
+            }
+          ],
+          "comments": ""
+        },
+        {
+          "name": "span",
+          "nodeName": "span",
+          "elementId": "",
+          "attributes": [
+            {
+              "property": "data-id",
+              "value": "aoRZow"
+            }
+          ],
+          "classList": [
+            "hidden-count"
+          ],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "$ctrl.limit && $ctrl.limit < $ctrl.users.length",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [],
+          "children": [
+            {
+              "name": "text",
+              "nodeName": "text",
+              "textContent": "$ctrl.limit && $ctrl.limit < $ctrl.users.length ? '+' + ($ctrl.users.length - $ctrl.limit) : ''",
               "evaluate": true
             }
           ],
@@ -84,7 +118,7 @@
       "type": "<",
       "description": "",
       "propertyType": "array",
-      "default": "[{\r\n    firstName: \"John\",\r\n    lastName: \"Doe\",\r\n    email: \"john.doe@gmail.com\"\r\n}]"
+      "default": "[]"
     },
     {
       "name": "viewOnClick",
@@ -92,6 +126,13 @@
       "description": "",
       "propertyType": "boolean",
       "default": "true"
+    },
+    {
+      "name": "limit",
+      "type": "<",
+      "description": "",
+      "propertyType": "number",
+      "default": ""
     }
   ],
   "modules": [],

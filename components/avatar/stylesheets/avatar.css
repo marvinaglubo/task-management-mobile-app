@@ -1,0 +1,13 @@
+avatar {
+    display: block;
+}
+
+task-card avatar .avatars {
+    padding: 0 !important;
+}
+
+task-card avatar .avatars .avatar {
+    height: 30px;
+    width: 30px;
+    font-size: 10px;
+}

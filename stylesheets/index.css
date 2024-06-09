@@ -8,7 +8,6 @@ ui-view {
 
 h1, h2 {
     margin: 0;
-
 }
 
 main {
@@ -20,7 +19,8 @@ main {
 
 
 .content-header {
-    background-color: #fff;
+    background-color: var(--background);
+    color: var(--foreground);
 }
 
 .content-header, .content-body {
@@ -78,17 +78,21 @@ bln-tab-bar .tab-item {
     justify-content: center;
 }
 
+
 bln-badge.status.done {
-    --bln-badge-default-color: var(--success-color, #000);
+    --bln-badge-default-color: var(--color-1, #000);
+}
+
+bln-badge.status {
+    --bln-badge-default-color: var(--color-2, #000);
 }
 
 bln-badge.status.in-progress {
-    --bln-badge-default-color: var(--warning-color, #000);
+    --bln-badge-default-color: var(--color-3, #000);
 }
 
-
 .view-header {
-    background-color: #fff;
+    background-color: var(--background);
     padding: 1.5rem 1rem;
     display: flex;    
     align-items: center;
@@ -96,12 +100,13 @@ bln-badge.status.in-progress {
     position: sticky;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 2;
 }
 
 .view-overview {
     padding: 1rem 1rem;
-    z-index: 0;
+    z-index: 1;
+    background-color: var(--background);
 }
 
 .view-description {
@@ -116,6 +121,7 @@ bln-badge.status.in-progress {
     padding: 1rem 1rem;
     background-color: var(--bg-gray);
     flex: 1;
+    overflow: auto;
 }
 
 .bln-modal {
@@ -130,7 +136,7 @@ bln-badge.status.in-progress {
 }
 
 .modal-body, .modal-footer {
-    background-color: #fff !important;
+    background-color: var(--background) !important;
 }
 
 * {

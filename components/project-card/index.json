@@ -101,7 +101,12 @@
       "name": "div",
       "nodeName": "div",
       "elementId": "",
-      "attributes": [],
+      "attributes": [
+        {
+          "property": "data-id",
+          "value": "7N9EXV"
+        }
+      ],
       "classList": [
         "bottom-container"
       ],
@@ -120,7 +125,12 @@
           "name": "div",
           "nodeName": "div",
           "elementId": "",
-          "attributes": [],
+          "attributes": [
+            {
+              "property": "data-id",
+              "value": "uQBJSV"
+            }
+          ],
           "classList": [],
           "conditionalClasses": [],
           "contentType": "text",
@@ -137,7 +147,12 @@
               "name": "div",
               "nodeName": "div",
               "elementId": "",
-              "attributes": [],
+              "attributes": [
+                {
+                  "property": "data-id",
+                  "value": "UYGYNG"
+                }
+              ],
               "classList": [
                 "deadline"
               ],
@@ -165,7 +180,12 @@
               "name": "user-avatars",
               "nodeName": "user-avatars",
               "elementId": "",
-              "attributes": [],
+              "attributes": [
+                {
+                  "property": "data-id",
+                  "value": "aYavFN"
+                }
+              ],
               "classList": [],
               "conditionalClasses": [],
               "contentType": "text",
@@ -180,11 +200,15 @@
               "children": [],
               "comments": "",
               "type": "custom-component",
-              "id": "664e645cce56869a03f07c85",
+              "id": "665d63b54d6ac1fe2ed29ebc",
               "expressions": [
                 {
                   "expression": "$ctrl.assignedUsers",
                   "to": "users"
+                },
+                {
+                  "expression": "2",
+                  "to": "limit"
                 }
               ]
             }
@@ -195,7 +219,12 @@
           "name": "div",
           "nodeName": "div",
           "elementId": "",
-          "attributes": [],
+          "attributes": [
+            {
+              "property": "data-id",
+              "value": "SOpJ8x"
+            }
+          ],
           "classList": [],
           "conditionalClasses": [],
           "contentType": "text",
@@ -216,6 +245,10 @@
                 {
                   "property": "core",
                   "value": ""
+                },
+                {
+                  "property": "data-id",
+                  "value": "VqlmZ4"
                 }
               ],
               "classList": [],
@@ -246,7 +279,22 @@
                 },
                 {
                   "property": "--bln-progress-fill-color",
-                  "value": "var(--secondary-color, #000)",
+                  "value": "var(--primary-color, #000)",
+                  "enabled": true
+                },
+                {
+                  "property": "--bln-progress-background-color",
+                  "value": "var(--light-gray, #ccc)",
+                  "enabled": true
+                },
+                {
+                  "property": "--bln-progress-message-font-weight",
+                  "value": "bold",
+                  "enabled": true
+                },
+                {
+                  "property": "--bln-progress-percent-font-weight",
+                  "value": "bold",
                   "enabled": true
                 }
               ],

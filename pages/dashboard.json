@@ -116,7 +116,7 @@
       "name": "refreshData",
       "type": "method",
       "description": "",
-      "body": "$ctrl.loaded = false\nawait $ctrl.projectManager.refreshProjects()\nconst {doneProjects, toDoProjects, ongoingProjects, percentage, projects} = $ctrl.projectManager\n\n$ctrl.charts.overall = {\n    data: [doneProjects.length, toDoProjects.length, ongoingProjects.length],\n    colors: ['#F68059', '#FFBF3A', '#4E3EC8'],\n    legends: [\n        { label: 'Done', value: percentage.done },\n        { label: 'To Do', value: percentage.todo },\n        { label: 'Ongoing', value: percentage.ongoing }\n    ],\n    count: projects.length,\n    countLabel: 'Total Projects'\n}\n\n$ctrl.$timeout(async () => {\n    $ctrl.loaded = true\n    $ctrl.ongoingProjects = ongoingProjects.filter((_, i) => i < 2)\n\n    for (const project of $ctrl.ongoingProjects) {\n        await $ctrl.projectManager.refreshData({...project, data: project, tasks: []}, true)\n    }\n})\n",
+      "body": "$ctrl.loaded = false\n\nawait $ctrl.projectManager.refreshProjects()\nconst { doneProjects, toDoProjects, ongoingProjects, percentage, projects } = $ctrl.projectManager\n\nconst getColors = () => {\n    try {\n        return [\n            getComputedStyle(document.body).getPropertyValue('--color-1'),\n            getComputedStyle(document.body).getPropertyValue('--color-2'),\n            getComputedStyle(document.body).getPropertyValue('--color-3')\n        ]\n    } catch {\n        return ['#F68059', '#FFBF3A', '#4E3EC8']\n    }\n}\n\n$ctrl.charts.overall = {\n    data: [doneProjects.length, toDoProjects.length, ongoingProjects.length],\n    colors: getColors(),\n    legends: [\n        { label: 'Done', value: percentage.done },\n        { label: 'To Do', value: percentage.todo },\n        { label: 'Ongoing', value: percentage.ongoing }\n    ],\n    count: projects.length,\n    countLabel: 'Total Projects'\n}\n\n$ctrl.$timeout(async () => {\n    $ctrl.loaded = true\n    $ctrl.ongoingProjects = ongoingProjects.filter((_, i) => i < 2)\n\n    for (const project of $ctrl.ongoingProjects) {\n        await $ctrl.projectManager.refreshData({ ...project, data: project, tasks: [] }, true)\n    }\n})\n",
       "invokeOnLoad": false,
       "isAsync": true,
       "returnType": {
@@ -128,7 +128,7 @@
       "name": "init",
       "type": "method",
       "description": "",
-      "body": "$ctrl.$device.onBackButton(e => {\r\n    e.preventDefault()\r\n})\r\n\r\n$ctrl.refreshData()\r\n$ctrl.pullToRefresh.register('main', () => {\r\n    $ctrl.refreshData()\r\n})\r\nconst el  = document.querySelector('main') \r\nconsole.log(el instanceof Element, el, window, document)",
+      "body": "$ctrl.$device.onBackButton(e => {\r\n    e.preventDefault()\r\n})\r\n\r\n$ctrl.refreshData()\r\n$ctrl.pullToRefresh.register('main', () => {\r\n    return $ctrl.refreshData()\r\n})",
       "invokeOnLoad": true,
       "isAsync": true,
       "returnType": {
@@ -328,16 +328,97 @@
       "comments": ""
     },
     {
+      "name": "div",
+      "nodeName": "div",
+      "elementId": "",
+      "attributes": [
+        {
+          "property": "data-id",
+          "value": "IgV8iY"
+        }
+      ],
+      "classList": [],
+      "conditionalClasses": [],
+      "contentType": "text",
+      "displayExpression": "",
+      "events": {},
+      "iterate": {
+        "array": "",
+        "variable": "",
+        "trackByIndex": false
+      },
+      "styles": [
+        {
+          "property": "background-color",
+          "value": "#fff",
+          "enabled": true
+        },
+        {
+          "property": "padding-bottom",
+          "value": "1rem",
+          "enabled": true
+        }
+      ],
+      "children": [
+        {
+          "name": "doughnut-chart",
+          "nodeName": "doughnut-chart",
+          "elementId": "",
+          "attributes": [
+            {
+              "property": "data-id",
+              "value": "CH_kUM"
+            }
+          ],
+          "classList": [],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [],
+          "children": [],
+          "comments": "",
+          "type": "custom-component",
+          "id": "6659a0cea90f89de79772caf",
+          "expressions": [
+            {
+              "expression": "$ctrl.charts.overall.data",
+              "to": "data"
+            },
+            {
+              "expression": "$ctrl.charts.overall.colors",
+              "to": "colors"
+            },
+            {
+              "expression": "$ctrl.charts.overall.legends",
+              "to": "legends"
+            },
+            {
+              "expression": "$ctrl.charts.overall.count",
+              "to": "count"
+            },
+            {
+              "expression": "$ctrl.charts.overall.countLabel",
+              "to": "countLabel"
+            }
+          ]
+        }
+      ],
+      "comments": ""
+    },
+    {
       "name": "main",
       "nodeName": "main",
       "elementId": "",
       "attributes": [
         {
           "property": "data-id",
-          "value": "rggedG"
-        },
-        {
-          "property": "pull-to-refresh"
+          "value": "wOVlYw"
         }
       ],
       "classList": [],
@@ -358,90 +439,6 @@
         }
       ],
       "children": [
-        {
-          "name": "div",
-          "nodeName": "div",
-          "elementId": "",
-          "attributes": [
-            {
-              "property": "data-id",
-              "value": "IgV8iY"
-            }
-          ],
-          "classList": [],
-          "conditionalClasses": [],
-          "contentType": "text",
-          "displayExpression": "",
-          "events": {},
-          "iterate": {
-            "array": "",
-            "variable": "",
-            "trackByIndex": false
-          },
-          "styles": [
-            {
-              "property": "background-color",
-              "value": "#fff",
-              "enabled": true
-            },
-            {
-              "property": "padding-bottom",
-              "value": "1rem",
-              "enabled": true
-            }
-          ],
-          "children": [
-            {
-              "name": "doughnut-chart",
-              "nodeName": "doughnut-chart",
-              "elementId": "",
-              "attributes": [
-                {
-                  "property": "data-id",
-                  "value": "CH_kUM"
-                }
-              ],
-              "classList": [],
-              "conditionalClasses": [],
-              "contentType": "text",
-              "displayExpression": "",
-              "events": {},
-              "iterate": {
-                "array": "",
-                "variable": "",
-                "trackByIndex": false
-              },
-              "styles": [],
-              "children": [],
-              "comments": "",
-              "type": "custom-component",
-              "id": "6659a0cea90f89de79772caf",
-              "expressions": [
-                {
-                  "expression": "$ctrl.charts.overall.data",
-                  "to": "data"
-                },
-                {
-                  "expression": "$ctrl.charts.overall.colors",
-                  "to": "colors"
-                },
-                {
-                  "expression": "$ctrl.charts.overall.legends",
-                  "to": "legends"
-                },
-                {
-                  "expression": "$ctrl.charts.overall.count",
-                  "to": "count"
-                },
-                {
-                  "expression": "$ctrl.charts.overall.countLabel",
-                  "to": "countLabel"
-                }
-              ]
-            }
-          ],
-          "comments": ""
-        },
         {
           "name": "div",
           "nodeName": "div",
@@ -620,7 +617,7 @@
               ],
               "conditionalClasses": [],
               "contentType": "text",
-              "displayExpression": "",
+              "displayExpression": "$ctrl.loaded",
               "events": {},
               "iterate": {
                 "array": "",
@@ -686,13 +683,13 @@
               "comments": ""
             },
             {
-              "name": "loader",
-              "nodeName": "loader",
+              "name": "skeleton-loader",
+              "nodeName": "skeleton-loader",
               "elementId": "",
               "attributes": [
                 {
                   "property": "data-id",
-                  "value": "svl6C7"
+                  "value": "aaxEA-"
                 }
               ],
               "classList": [],
@@ -709,15 +706,11 @@
               "children": [],
               "comments": "",
               "type": "custom-component",
-              "id": "6659a0cea90f89de79772cbc",
+              "id": "6665b50a2268f76de4f7861e",
               "expressions": [
                 {
-                  "expression": "'100%'",
-                  "to": "height"
-                },
-                {
-                  "expression": "\"Loading projects\"",
-                  "to": "message"
+                  "expression": "\"dashboard-projects\"",
+                  "to": "type"
                 }
               ]
             }

@@ -1,0 +1,166 @@
+{
+  "type": "custom-component",
+  "name": "avatar",
+  "children": [
+    {
+      "name": "div",
+      "nodeName": "div",
+      "elementId": "",
+      "attributes": [
+        {
+          "property": "data-id",
+          "value": "-H4IH-"
+        }
+      ],
+      "classList": [],
+      "conditionalClasses": [],
+      "contentType": "text",
+      "displayExpression": "$ctrl.user",
+      "events": {
+        "click": "$ctrl.onClick()"
+      },
+      "iterate": {
+        "array": "",
+        "variable": "",
+        "trackByIndex": false
+      },
+      "styles": [
+        {
+          "property": "display",
+          "value": "flex",
+          "enabled": true
+        },
+        {
+          "property": "align-items",
+          "value": "center",
+          "enabled": true
+        }
+      ],
+      "children": [
+        {
+          "name": "user-avatars",
+          "nodeName": "user-avatars",
+          "elementId": "",
+          "attributes": [
+            {
+              "property": "data-id",
+              "value": "lxFqeR"
+            }
+          ],
+          "classList": [],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [],
+          "children": [],
+          "comments": "",
+          "type": "custom-component",
+          "id": "665d63b54d6ac1fe2ed29ebc",
+          "expressions": [
+            {
+              "expression": "[$ctrl.user]",
+              "to": "users"
+            },
+            {
+              "expression": "false",
+              "to": "viewOnClick"
+            }
+          ]
+        },
+        {
+          "name": "span",
+          "nodeName": "span",
+          "elementId": "",
+          "attributes": [
+            {
+              "property": "data-id",
+              "value": "sEiTIY"
+            }
+          ],
+          "classList": [],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "$ctrl.displayName",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [
+            {
+              "property": "margin-left",
+              "value": ".5rem",
+              "enabled": true
+            },
+            {
+              "property": "font-weight",
+              "value": "bold",
+              "enabled": true
+            }
+          ],
+          "children": [
+            {
+              "name": "text",
+              "nodeName": "text",
+              "textContent": "$ctrl.user.firstName + ' ' + $ctrl.user.lastName",
+              "evaluate": true
+            }
+          ],
+          "comments": ""
+        }
+      ],
+      "comments": ""
+    }
+  ],
+  "variables": [
+    {
+      "name": "$modal",
+      "type": "service"
+    },
+    {
+      "name": "onClick",
+      "type": "method",
+      "description": "",
+      "body": "if (!$ctrl.openOnClick) return\n$ctrl.$modal.open(\"user-overview-modal\", {info: $ctrl.user})",
+      "invokeOnLoad": false,
+      "isAsync": false,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": []
+    }
+  ],
+  "bindings": [
+    {
+      "name": "user",
+      "type": "<",
+      "description": "",
+      "propertyType": "property",
+      "default": "({\n    firstName: \"John\",\n    lastName: \"Doe\",\n    email: \"john.doe@gmail.com\"\n})"
+    },
+    {
+      "name": "openOnClick",
+      "type": "<",
+      "description": "",
+      "propertyType": "boolean",
+      "default": "false"
+    },
+    {
+      "name": "displayName",
+      "type": "<",
+      "description": "",
+      "propertyType": "boolean",
+      "default": "true"
+    }
+  ],
+  "modules": [],
+  "externalScripts": [],
+  "externalStylesheets": []
+}

@@ -466,7 +466,12 @@
       "name": "div",
       "nodeName": "div",
       "elementId": "",
-      "attributes": [],
+      "attributes": [
+        {
+          "property": "data-id",
+          "value": "2rZCAU"
+        }
+      ],
       "classList": [
         "view-overview"
       ],
@@ -485,7 +490,12 @@
           "name": "div",
           "nodeName": "div",
           "elementId": "",
-          "attributes": [],
+          "attributes": [
+            {
+              "property": "data-id",
+              "value": "nDbgXk"
+            }
+          ],
           "classList": [],
           "conditionalClasses": [],
           "contentType": "text",
@@ -502,7 +512,12 @@
               "name": "span",
               "nodeName": "span",
               "elementId": "",
-              "attributes": [],
+              "attributes": [
+                {
+                  "property": "data-id",
+                  "value": "y_wlWI"
+                }
+              ],
               "classList": [
                 "view-title"
               ],
@@ -545,6 +560,10 @@
                 {
                   "property": "core",
                   "value": ""
+                },
+                {
+                  "property": "data-id",
+                  "value": "qmSPyE"
                 }
               ],
               "classList": [
@@ -613,7 +632,12 @@
           "name": "p",
           "nodeName": "p",
           "elementId": "",
-          "attributes": [],
+          "attributes": [
+            {
+              "property": "data-id",
+              "value": "mAYDqL"
+            }
+          ],
           "classList": [
             "view-description"
           ],
@@ -641,7 +665,12 @@
           "name": "div",
           "nodeName": "div",
           "elementId": "",
-          "attributes": [],
+          "attributes": [
+            {
+              "property": "data-id",
+              "value": "fvhTIA"
+            }
+          ],
           "classList": [],
           "conditionalClasses": [],
           "contentType": "text",
@@ -658,7 +687,12 @@
               "name": "span",
               "nodeName": "span",
               "elementId": "",
-              "attributes": [],
+              "attributes": [
+                {
+                  "property": "data-id",
+                  "value": "h2acEH"
+                }
+              ],
               "classList": [],
               "conditionalClasses": [],
               "contentType": "text",
@@ -674,6 +708,11 @@
                   "property": "font-weight",
                   "value": "bold",
                   "enabled": true
+                },
+                {
+                  "property": "margin-bottom",
+                  "value": ".5rem",
+                  "enabled": true
                 }
               ],
               "children": [
@@ -687,10 +726,15 @@
               "comments": ""
             },
             {
-              "name": "div",
-              "nodeName": "div",
+              "name": "avatar",
+              "nodeName": "avatar",
               "elementId": "",
-              "attributes": [],
+              "attributes": [
+                {
+                  "property": "data-id",
+                  "value": "2zVH7i"
+                }
+              ],
               "classList": [],
               "conditionalClasses": [],
               "contentType": "text",
@@ -702,74 +746,20 @@
                 "trackByIndex": false
               },
               "styles": [],
-              "children": [
+              "children": [],
+              "comments": "",
+              "type": "custom-component",
+              "id": "666595642268f76de4f7861c",
+              "expressions": [
                 {
-                  "name": "user-avatars",
-                  "nodeName": "user-avatars",
-                  "elementId": "",
-                  "attributes": [],
-                  "classList": [],
-                  "conditionalClasses": [],
-                  "contentType": "text",
-                  "displayExpression": "",
-                  "events": {},
-                  "iterate": {
-                    "array": "",
-                    "variable": "",
-                    "trackByIndex": false
-                  },
-                  "styles": [
-                    {
-                      "property": "display",
-                      "value": "inline-flex",
-                      "enabled": true
-                    }
-                  ],
-                  "children": [],
-                  "comments": "",
-                  "type": "custom-component",
-                  "id": "66541b39761bb263eba724e1",
-                  "expressions": [
-                    {
-                      "expression": "[$ctrl.userData]",
-                      "to": "users"
-                    }
-                  ]
+                  "expression": "$ctrl.userData",
+                  "to": "user"
                 },
                 {
-                  "name": "span",
-                  "nodeName": "span",
-                  "elementId": "",
-                  "attributes": [],
-                  "classList": [],
-                  "conditionalClasses": [],
-                  "contentType": "text",
-                  "displayExpression": "",
-                  "events": {},
-                  "iterate": {
-                    "array": "",
-                    "variable": "",
-                    "trackByIndex": false
-                  },
-                  "styles": [
-                    {
-                      "property": "margin-left",
-                      "value": ".5rem",
-                      "enabled": true
-                    }
-                  ],
-                  "children": [
-                    {
-                      "name": "text",
-                      "nodeName": "text",
-                      "textContent": "$ctrl.user.getName($ctrl.data.assignedUserId)",
-                      "evaluate": true
-                    }
-                  ],
-                  "comments": ""
+                  "expression": "true",
+                  "to": "openOnClick"
                 }
-              ],
-              "comments": ""
+              ]
             }
           ],
           "comments": ""
@@ -780,7 +770,7 @@
     {
       "name": "div",
       "nodeName": "div",
-      "elementId": "",
+      "elementId": "task-view-content",
       "attributes": [
         {
           "property": "data-id",
@@ -1014,13 +1004,13 @@
           "attributes": [
             {
               "property": "data-id",
-              "value": "gPNQK6"
+              "value": "ZGSy7P"
             }
           ],
           "classList": [],
           "conditionalClasses": [],
           "contentType": "text",
-          "displayExpression": "",
+          "displayExpression": "!$ctrl.loaded",
           "events": {},
           "iterate": {
             "array": "",
@@ -1029,26 +1019,41 @@
           },
           "styles": [
             {
-              "property": "flex",
-              "value": "1",
+              "property": "display",
+              "value": "flex",
+              "enabled": true
+            },
+            {
+              "property": "flex-direction",
+              "value": "column",
+              "enabled": true
+            },
+            {
+              "property": "gap",
+              "value": ".5rem",
+              "enabled": true
+            },
+            {
+              "property": "margin-top",
+              "value": ".5rem",
               "enabled": true
             }
           ],
           "children": [
             {
-              "name": "loader",
-              "nodeName": "loader",
+              "name": "skeleton-loader",
+              "nodeName": "skeleton-loader",
               "elementId": "",
               "attributes": [
                 {
                   "property": "data-id",
-                  "value": "c8CKhl"
+                  "value": "HrjL3-"
                 }
               ],
               "classList": [],
               "conditionalClasses": [],
               "contentType": "text",
-              "displayExpression": "!$ctrl.loaded",
+              "displayExpression": "",
               "events": {},
               "iterate": {
                 "array": "",
@@ -1059,15 +1064,43 @@
               "children": [],
               "comments": "",
               "type": "custom-component",
-              "id": "66593c4d521c96e323e79252",
+              "id": "6665b50a2268f76de4f7861e",
               "expressions": [
                 {
-                  "expression": "'100%'",
-                  "to": "height"
-                },
+                  "expression": "\"note-card\"",
+                  "to": "type"
+                }
+              ]
+            },
+            {
+              "name": "skeleton-loader",
+              "nodeName": "skeleton-loader",
+              "elementId": "",
+              "attributes": [
                 {
-                  "expression": "'Loading notes'",
-                  "to": "message"
+                  "property": "data-id",
+                  "value": "_5KIfj"
+                }
+              ],
+              "classList": [],
+              "conditionalClasses": [],
+              "contentType": "text",
+              "displayExpression": "",
+              "events": {},
+              "iterate": {
+                "array": "",
+                "variable": "",
+                "trackByIndex": false
+              },
+              "styles": [],
+              "children": [],
+              "comments": "",
+              "type": "custom-component",
+              "id": "6665b50a2268f76de4f7861e",
+              "expressions": [
+                {
+                  "expression": "\"note-card\"",
+                  "to": "type"
                 }
               ]
             }
@@ -1185,7 +1218,7 @@
       "name": "init",
       "type": "method",
       "description": "",
-      "body": "$ctrl.$device.onBackButton(e => {\n    e.preventDefault()\n    $ctrl.$timeout(() => {\n        $ctrl.hide()\n    })\n})",
+      "body": "$ctrl.$device.onBackButton(e => {\n    e.preventDefault()\n    $ctrl.$timeout(() => {\n        $ctrl.hide()\n    })\n})\n\n$ctrl.pullToRefresh.register('#task-view-content', () => $ctrl.fetchNotes())",
       "invokeOnLoad": true,
       "isAsync": true,
       "returnType": {
@@ -1213,7 +1246,7 @@
       "name": "fetchNotes",
       "type": "method",
       "description": "",
-      "body": "$ctrl.loaded = false\n\nconst taskId = $ctrl.data?.taskId\n\nif (taskId === undefined) return\n\n$ctrl.demoTaskApi.demo_api_tasks_services_task_SelectTaskNotes({\n    taskId: taskId,\n    limit: 1000,\n    offset: 0.\n}).then(result => {\n    $ctrl.loaded = true\n    $ctrl.views.task.notes = result.data.note\n})",
+      "body": "$ctrl.loaded = false\n\nconst taskId = $ctrl.data?.taskId\n\nif (taskId === undefined) return\n\nreturn $ctrl.demoTaskApi.demo_api_tasks_services_task_SelectTaskNotes({\n    taskId: taskId,\n    limit: 1000,\n    offset: 0.\n}).then(result => {\n    $ctrl.loaded = true\n    $ctrl.views.task.notes = result.data.note\n})",
       "invokeOnLoad": false,
       "isAsync": false,
       "returnType": {
@@ -1324,6 +1357,11 @@
       "name": "views",
       "type": "service",
       "id": "66541b3a761bb263eba724f4"
+    },
+    {
+      "name": "pullToRefresh",
+      "type": "service",
+      "id": "665eb6f12304cf7bff0ba367"
     }
   ],
   "bindings": [

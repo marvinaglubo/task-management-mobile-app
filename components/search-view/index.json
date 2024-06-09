@@ -8,7 +8,12 @@
       "name": "div",
       "nodeName": "div",
       "elementId": "",
-      "attributes": [],
+      "attributes": [
+        {
+          "property": "data-id",
+          "value": "GDJo-M"
+        }
+      ],
       "classList": [
         "view-header"
       ],
@@ -31,6 +36,10 @@
             {
               "property": "core",
               "value": ""
+            },
+            {
+              "property": "data-id",
+              "value": "vSHNcl"
             }
           ],
           "classList": [],
@@ -79,6 +88,10 @@
                 {
                   "property": "title",
                   "value": "{{ $ctrl.tooltip }}"
+                },
+                {
+                  "property": "data-id",
+                  "value": "4Pet8U"
                 }
               ],
               "classList": [
@@ -147,6 +160,10 @@
                     {
                       "property": "data-position",
                       "value": "{{::$ctrl.icon.position}}"
+                    },
+                    {
+                      "property": "data-id",
+                      "value": "T6uyC6"
                     }
                   ],
                   "classList": [],
@@ -192,6 +209,10 @@
                     {
                       "property": "data-position",
                       "value": "{{::$ctrl.icon.position}}"
+                    },
+                    {
+                      "property": "data-id",
+                      "value": "ecjeDG"
                     }
                   ],
                   "classList": [],
@@ -221,6 +242,10 @@
                     {
                       "property": "ng-if",
                       "value": "!!$ctrl.label && $ctrl.icon.position !== 'icon-only'"
+                    },
+                    {
+                      "property": "data-id",
+                      "value": "dUAsxO"
                     }
                   ],
                   "classList": [
@@ -259,6 +284,10 @@
                     {
                       "property": "ng-if",
                       "value": "$ctrl.isLoading()"
+                    },
+                    {
+                      "property": "data-id",
+                      "value": "K-O5ib"
                     }
                   ],
                   "classList": [
@@ -289,6 +318,10 @@
                         {
                           "property": "viewBox",
                           "value": "25 25 50 50"
+                        },
+                        {
+                          "property": "data-id",
+                          "value": "JnLGy0"
                         }
                       ],
                       "classList": [],
@@ -331,6 +364,10 @@
                             {
                               "property": "stroke-miterlimit",
                               "value": "10"
+                            },
+                            {
+                              "property": "data-id",
+                              "value": "tOJK4A"
                             }
                           ],
                           "classList": [
@@ -385,6 +422,10 @@
             {
               "property": "core",
               "value": ""
+            },
+            {
+              "property": "data-id",
+              "value": "3TFQNa"
             }
           ],
           "classList": [],
@@ -438,6 +479,10 @@
             {
               "property": "core",
               "value": ""
+            },
+            {
+              "property": "data-id",
+              "value": "z9Zotq"
             }
           ],
           "classList": [],
@@ -482,7 +527,7 @@
               "to": "label"
             },
             {
-              "expression": "$ctrl.search.execute()",
+              "expression": "$ctrl.submitSearch()",
               "to": "onClick"
             }
           ]
@@ -494,7 +539,12 @@
       "name": "div",
       "nodeName": "div",
       "elementId": "",
-      "attributes": [],
+      "attributes": [
+        {
+          "property": "data-id",
+          "value": "n4oMdX"
+        }
+      ],
       "classList": [],
       "conditionalClasses": [],
       "contentType": "text",
@@ -515,12 +565,16 @@
             {
               "property": "core",
               "value": ""
+            },
+            {
+              "property": "data-id",
+              "value": "JvP9t_"
             }
           ],
           "classList": [],
           "conditionalClasses": [],
           "contentType": "text",
-          "displayExpression": "",
+          "displayExpression": "$ctrl.tabs",
           "events": {},
           "iterate": {
             "array": "",
@@ -550,7 +604,7 @@
           "id": "tab-bar",
           "expressions": [
             {
-              "expression": "[{\n        label: \"Projects\",\n        closable: false\n    },\n    {\n        label: \"Tasks\",\n        closable: false\n    }\n]",
+              "expression": "$ctrl.tabs",
               "to": "tabItems"
             },
             {
@@ -566,7 +620,12 @@
       "name": "div",
       "nodeName": "div",
       "elementId": "",
-      "attributes": [],
+      "attributes": [
+        {
+          "property": "data-id",
+          "value": "KLizAb"
+        }
+      ],
       "classList": [
         "view-content"
       ],
@@ -584,11 +643,6 @@
           "property": "overflow",
           "value": "auto",
           "enabled": true
-        },
-        {
-          "property": "padding",
-          "value": "0 1rem",
-          "enabled": true
         }
       ],
       "children": [
@@ -596,11 +650,16 @@
           "name": "div",
           "nodeName": "div",
           "elementId": "",
-          "attributes": [],
+          "attributes": [
+            {
+              "property": "data-id",
+              "value": "oBK87X"
+            }
+          ],
           "classList": [],
           "conditionalClasses": [],
           "contentType": "text",
-          "displayExpression": "$ctrl.activeTab === 1 && $ctrl.search.result.projects.length && !$ctrl.search.searching",
+          "displayExpression": "!$ctrl.search.searching && $ctrl.search.result.projects.length && $ctrl.activeTab === 1",
           "events": {},
           "iterate": {
             "array": "",
@@ -613,7 +672,12 @@
               "name": "project-card",
               "nodeName": "project-card",
               "elementId": "",
-              "attributes": [],
+              "attributes": [
+                {
+                  "property": "data-id",
+                  "value": "pD2Txx"
+                }
+              ],
               "classList": [],
               "conditionalClasses": [],
               "contentType": "text",
@@ -666,11 +730,16 @@
           "name": "div",
           "nodeName": "div",
           "elementId": "",
-          "attributes": [],
+          "attributes": [
+            {
+              "property": "data-id",
+              "value": "LzqrYW"
+            }
+          ],
           "classList": [],
           "conditionalClasses": [],
           "contentType": "text",
-          "displayExpression": "$ctrl.activeTab === 2 && $ctrl.search.result.tasks.length && !$ctrl.search.searching",
+          "displayExpression": "!$ctrl.search.searching && $ctrl.search.result.tasks.length && $ctrl.activeTab === 2",
           "events": {},
           "iterate": {
             "array": "",
@@ -683,7 +752,12 @@
               "name": "task-card",
               "nodeName": "task-card",
               "elementId": "",
-              "attributes": [],
+              "attributes": [
+                {
+                  "property": "data-id",
+                  "value": "lCjSOh"
+                }
+              ],
               "classList": [],
               "conditionalClasses": [],
               "contentType": "text",
@@ -714,11 +788,16 @@
           "name": "div",
           "nodeName": "div",
           "elementId": "",
-          "attributes": [],
+          "attributes": [
+            {
+              "property": "data-id",
+              "value": "Y9wHzf"
+            }
+          ],
           "classList": [],
           "conditionalClasses": [],
           "contentType": "text",
-          "displayExpression": "($ctrl.activeTab === 1 ? !$ctrl.search.result.projects.length : !$ctrl.search.result.tasks.length) || $ctrl.search.searching",
+          "displayExpression": "$ctrl.search.searching || ($ctrl.activeTab === 1 ? !$ctrl.search.result.projects.length : !$ctrl.search.result.tasks.length)",
           "events": {},
           "iterate": {
             "array": "",
@@ -761,6 +840,10 @@
                 {
                   "property": "core",
                   "value": ""
+                },
+                {
+                  "property": "data-id",
+                  "value": "1VxIJN"
                 }
               ],
               "classList": [],
@@ -800,7 +883,12 @@
               "name": "div",
               "nodeName": "div",
               "elementId": "",
-              "attributes": [],
+              "attributes": [
+                {
+                  "property": "data-id",
+                  "value": "VEL4jy"
+                }
+              ],
               "classList": [],
               "conditionalClasses": [],
               "contentType": "text",
@@ -817,7 +905,12 @@
                   "name": "span",
                   "nodeName": "span",
                   "elementId": "",
-                  "attributes": [],
+                  "attributes": [
+                    {
+                      "property": "data-id",
+                      "value": "fUCLbg"
+                    }
+                  ],
                   "classList": [],
                   "conditionalClasses": [],
                   "contentType": "text",
@@ -883,7 +976,25 @@
     {
       "name": "search",
       "type": "service",
-      "id": "66541b3a761bb263eba724f7"
+      "id": "665d63b34d6ac1fe2ed29eb6"
+    },
+    {
+      "name": "tabs",
+      "type": "property",
+      "description": "",
+      "value": "[\n    {\n        label: \"Projects\",\n        closable: false\n    },\n    {\n        label: \"Tasks\",\n        closable: false\n    }\n]"
+    },
+    {
+      "name": "submitSearch",
+      "type": "method",
+      "description": "",
+      "body": "await $ctrl.search.execute()\n\n$ctrl.$timeout(() => {\n    $ctrl.tabs[0].label = `Projects (${$ctrl.search.result.projects.length})`\n    $ctrl.tabs[1].label = `Tasks  (${$ctrl.search.result.tasks.length})`\n})\n",
+      "invokeOnLoad": false,
+      "isAsync": true,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": []
     }
   ],
   "bindings": [],

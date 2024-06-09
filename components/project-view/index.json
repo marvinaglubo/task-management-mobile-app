@@ -8,7 +8,12 @@
       "name": "div",
       "nodeName": "div",
       "elementId": "",
-      "attributes": [],
+      "attributes": [
+        {
+          "property": "data-id",
+          "value": "5CM4Ca"
+        }
+      ],
       "classList": [
         "view-header"
       ],
@@ -31,6 +36,10 @@
             {
               "property": "core",
               "value": ""
+            },
+            {
+              "property": "data-id",
+              "value": "1L7YXp"
             }
           ],
           "classList": [],
@@ -79,6 +88,10 @@
                 {
                   "property": "title",
                   "value": "{{ $ctrl.tooltip }}"
+                },
+                {
+                  "property": "data-id",
+                  "value": "rSx4m8"
                 }
               ],
               "classList": [
@@ -147,6 +160,10 @@
                     {
                       "property": "data-position",
                       "value": "{{::$ctrl.icon.position}}"
+                    },
+                    {
+                      "property": "data-id",
+                      "value": "jH5nij"
                     }
                   ],
                   "classList": [],
@@ -192,6 +209,10 @@
                     {
                       "property": "data-position",
                       "value": "{{::$ctrl.icon.position}}"
+                    },
+                    {
+                      "property": "data-id",
+                      "value": "7yMmPy"
                     }
                   ],
                   "classList": [],
@@ -221,6 +242,10 @@
                     {
                       "property": "ng-if",
                       "value": "!!$ctrl.label && $ctrl.icon.position !== 'icon-only'"
+                    },
+                    {
+                      "property": "data-id",
+                      "value": "8c01G9"
                     }
                   ],
                   "classList": [
@@ -259,6 +284,10 @@
                     {
                       "property": "ng-if",
                       "value": "$ctrl.isLoading()"
+                    },
+                    {
+                      "property": "data-id",
+                      "value": "d3Lo7N"
                     }
                   ],
                   "classList": [
@@ -289,6 +318,10 @@
                         {
                           "property": "viewBox",
                           "value": "25 25 50 50"
+                        },
+                        {
+                          "property": "data-id",
+                          "value": "LKXEnD"
                         }
                       ],
                       "classList": [],
@@ -331,6 +364,10 @@
                             {
                               "property": "stroke-miterlimit",
                               "value": "10"
+                            },
+                            {
+                              "property": "data-id",
+                              "value": "QxjCv9"
                             }
                           ],
                           "classList": [
@@ -381,7 +418,12 @@
           "name": "div",
           "nodeName": "div",
           "elementId": "",
-          "attributes": [],
+          "attributes": [
+            {
+              "property": "data-id",
+              "value": "3uRrQw"
+            }
+          ],
           "classList": [],
           "conditionalClasses": [],
           "contentType": "text",
@@ -402,6 +444,10 @@
                 {
                   "property": "core",
                   "value": ""
+                },
+                {
+                  "property": "data-id",
+                  "value": "f2Jo50"
                 }
               ],
               "classList": [],
@@ -466,7 +512,12 @@
       "name": "div",
       "nodeName": "div",
       "elementId": "",
-      "attributes": [],
+      "attributes": [
+        {
+          "property": "data-id",
+          "value": "yj0A7n"
+        }
+      ],
       "classList": [
         "view-overview"
       ],
@@ -485,7 +536,12 @@
           "name": "div",
           "nodeName": "div",
           "elementId": "",
-          "attributes": [],
+          "attributes": [
+            {
+              "property": "data-id",
+              "value": "964xEY"
+            }
+          ],
           "classList": [],
           "conditionalClasses": [],
           "contentType": "text",
@@ -508,7 +564,12 @@
               "name": "span",
               "nodeName": "span",
               "elementId": "",
-              "attributes": [],
+              "attributes": [
+                {
+                  "property": "data-id",
+                  "value": "10R6ex"
+                }
+              ],
               "classList": [
                 "view-title"
               ],
@@ -547,7 +608,12 @@
               "name": "div",
               "nodeName": "div",
               "elementId": "",
-              "attributes": [],
+              "attributes": [
+                {
+                  "property": "data-id",
+                  "value": "3P21aA"
+                }
+              ],
               "classList": [],
               "conditionalClasses": [],
               "contentType": "text",
@@ -608,6 +674,10 @@
                 {
                   "property": "core",
                   "value": ""
+                },
+                {
+                  "property": "data-id",
+                  "value": "zMD71m"
                 }
               ],
               "classList": [
@@ -676,7 +746,12 @@
           "name": "p",
           "nodeName": "p",
           "elementId": "",
-          "attributes": [],
+          "attributes": [
+            {
+              "property": "data-id",
+              "value": "_5wV6t"
+            }
+          ],
           "classList": [
             "view-description"
           ],
@@ -704,7 +779,12 @@
           "name": "div",
           "nodeName": "div",
           "elementId": "",
-          "attributes": [],
+          "attributes": [
+            {
+              "property": "data-id",
+              "value": "hnW_25"
+            }
+          ],
           "classList": [],
           "conditionalClasses": [],
           "contentType": "text",
@@ -735,7 +815,12 @@
               "name": "div",
               "nodeName": "div",
               "elementId": "",
-              "attributes": [],
+              "attributes": [
+                {
+                  "property": "data-id",
+                  "value": "tlNZRx"
+                }
+              ],
               "classList": [],
               "conditionalClasses": [],
               "contentType": "text",
@@ -759,7 +844,12 @@
                   "name": "div",
                   "nodeName": "div",
                   "elementId": "",
-                  "attributes": [],
+                  "attributes": [
+                    {
+                      "property": "data-id",
+                      "value": "8yddOT"
+                    }
+                  ],
                   "classList": [
                     "deadline"
                   ],
@@ -782,6 +872,10 @@
                         {
                           "property": "core",
                           "value": ""
+                        },
+                        {
+                          "property": "data-id",
+                          "value": "kJLzMH"
                         }
                       ],
                       "classList": [],
@@ -845,7 +939,12 @@
                       "name": "span",
                       "nodeName": "span",
                       "elementId": "",
-                      "attributes": [],
+                      "attributes": [
+                        {
+                          "property": "data-id",
+                          "value": "MgPD2E"
+                        }
+                      ],
                       "classList": [],
                       "conditionalClasses": [],
                       "contentType": "text",
@@ -882,7 +981,12 @@
                       "name": "span",
                       "nodeName": "span",
                       "elementId": "",
-                      "attributes": [],
+                      "attributes": [
+                        {
+                          "property": "data-id",
+                          "value": "4LhEWw"
+                        }
+                      ],
                       "classList": [],
                       "conditionalClasses": [],
                       "contentType": "text",
@@ -920,7 +1024,12 @@
               "name": "div",
               "nodeName": "div",
               "elementId": "",
-              "attributes": [],
+              "attributes": [
+                {
+                  "property": "data-id",
+                  "value": "a1pYxM"
+                }
+              ],
               "classList": [],
               "conditionalClasses": [],
               "contentType": "text",
@@ -952,6 +1061,10 @@
                     {
                       "property": "core",
                       "value": ""
+                    },
+                    {
+                      "property": "data-id",
+                      "value": "m8Lzic"
                     }
                   ],
                   "classList": [],
@@ -982,7 +1095,22 @@
                     },
                     {
                       "property": "--bln-progress-fill-color",
-                      "value": "var(--secondary-color, #000)",
+                      "value": "var(--primary-color, #000)",
+                      "enabled": true
+                    },
+                    {
+                      "property": "--bln-progress-background-color",
+                      "value": "var(--light-gray, #ccc)",
+                      "enabled": true
+                    },
+                    {
+                      "property": "--bln-progress-message-font-weight",
+                      "value": "bold",
+                      "enabled": true
+                    },
+                    {
+                      "property": "--bln-progress-percent-font-weight",
+                      "value": "bold",
                       "enabled": true
                     }
                   ],
@@ -1022,7 +1150,7 @@
     {
       "name": "div",
       "nodeName": "div",
-      "elementId": "",
+      "elementId": "project-view-content",
       "attributes": [
         {
           "property": "data-id",
@@ -1346,13 +1474,13 @@
           "attributes": [
             {
               "property": "data-id",
-              "value": "7_lC9B"
+              "value": "v3Yw6A"
             }
           ],
           "classList": [],
           "conditionalClasses": [],
           "contentType": "text",
-          "displayExpression": "",
+          "displayExpression": "!$ctrl.loaded",
           "events": {},
           "iterate": {
             "array": "",
@@ -1361,26 +1489,41 @@
           },
           "styles": [
             {
-              "property": "flex",
-              "value": "1",
+              "property": "display",
+              "value": "flex",
+              "enabled": true
+            },
+            {
+              "property": "flex-direction",
+              "value": "column",
+              "enabled": true
+            },
+            {
+              "property": "gap",
+              "value": ".5rem",
+              "enabled": true
+            },
+            {
+              "property": "margin-top",
+              "value": ".5rem",
               "enabled": true
             }
           ],
           "children": [
             {
-              "name": "loader",
-              "nodeName": "loader",
+              "name": "skeleton-loader",
+              "nodeName": "skeleton-loader",
               "elementId": "",
               "attributes": [
                 {
                   "property": "data-id",
-                  "value": "oiPmNM"
+                  "value": "q8zhjt"
                 }
               ],
               "classList": [],
               "conditionalClasses": [],
               "contentType": "text",
-              "displayExpression": "!$ctrl.loaded",
+              "displayExpression": "",
               "events": {},
               "iterate": {
                 "array": "",
@@ -1391,15 +1534,43 @@
               "children": [],
               "comments": "",
               "type": "custom-component",
-              "id": "66593c4d521c96e323e79252",
+              "id": "6665b50a2268f76de4f7861e",
               "expressions": [
                 {
-                  "expression": "'100%'",
-                  "to": "height"
-                },
+                  "expression": "\"task-card\"",
+                  "to": "type"
+                }
+              ]
+            },
+            {
+              "name": "skeleton-loader",
+              "nodeName": "skeleton-loader",
+              "elementId": "",
+              "attributes": [
                 {
-                  "expression": "'Loading tasks'",
-                  "to": "message"
+                  "property": "data-id",
+                  "value": "3oIivl"
+                }
+              ],
+              "classList": [],
+              "conditionalClasses": [],
+              "contentType": "text",
+              "displayExpression": "",
+              "events": {},
+              "iterate": {
+                "array": "",
+                "variable": "",
+                "trackByIndex": false
+              },
+              "styles": [],
+              "children": [],
+              "comments": "",
+              "type": "custom-component",
+              "id": "6665b50a2268f76de4f7861e",
+              "expressions": [
+                {
+                  "expression": "\"task-card\"",
+                  "to": "type"
                 }
               ]
             }
@@ -1511,7 +1682,7 @@
       "name": "init",
       "type": "method",
       "description": "",
-      "body": "$ctrl.$device.onBackButton(e => {\r\n    e.preventDefault()\r\n    $ctrl.$timeout(() => {\r\n        $ctrl.hide()\r\n    })\r\n})",
+      "body": "$ctrl.$device.onBackButton(e => {\r\n    e.preventDefault()\r\n    $ctrl.$timeout(() => {\r\n        $ctrl.hide()\r\n    })\r\n})\r\n\r\n$ctrl.pullToRefresh.register('#project-view-content', () => $ctrl.fetchTasks())",
       "invokeOnLoad": true,
       "isAsync": true,
       "returnType": {
@@ -1638,6 +1809,11 @@
     {
       "name": "$locale",
       "type": "service"
+    },
+    {
+      "name": "pullToRefresh",
+      "type": "service",
+      "id": "665eb6f12304cf7bff0ba367"
     }
   ],
   "bindings": [

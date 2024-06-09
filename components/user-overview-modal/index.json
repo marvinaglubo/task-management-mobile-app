@@ -275,6 +275,21 @@
                   "property": "--bln-button-font-weight",
                   "value": "bold",
                   "enabled": true
+                },
+                {
+                  "property": "--bln-button-primary-bg-color",
+                  "value": "var(--primary-color, #000)",
+                  "enabled": true
+                },
+                {
+                  "property": "--bln-button-primary-hovered-bg-color",
+                  "value": "var(--primary-color, #000)",
+                  "enabled": true
+                },
+                {
+                  "property": "--bln-button-primary-active-bg-color",
+                  "value": "var(--primary-color, #000)",
+                  "enabled": true
                 }
               ],
               "children": [],
@@ -316,7 +331,7 @@
       "name": "onOkClick",
       "type": "method",
       "description": "This function is called when OK button is clicked.",
-      "body": "$ctrl.result = 'ok'\n$ctrl.onClose()\n\n$ctrl.page.go('user-info', {user: $ctrl.info})",
+      "body": "$ctrl.result = 'ok'\n$ctrl.onClose()\n\n$ctrl.views.reset()\n$ctrl.page.go('user-info', {user: $ctrl.info})\n",
       "invokeOnLoad": false,
       "isAsync": false,
       "returnType": {
@@ -347,6 +362,15 @@
         "name": "any"
       },
       "parameters": []
+    },
+    {
+      "name": "views",
+      "type": "service",
+      "id": "665d63b34d6ac1fe2ed29eb8"
+    },
+    {
+      "name": "$timeout",
+      "type": "service"
     }
   ],
   "bindings": [

@@ -69,19 +69,19 @@
           ],
           "children": [
             {
-              "name": "user-avatars",
-              "nodeName": "user-avatars",
+              "name": "avatar",
+              "nodeName": "avatar",
               "elementId": "",
               "attributes": [
                 {
                   "property": "data-id",
-                  "value": "eoIvUU"
+                  "value": "X3EyYj"
                 }
               ],
               "classList": [],
               "conditionalClasses": [],
               "contentType": "text",
-              "displayExpression": "$ctrl.user.getUser($ctrl.data.taskId)",
+              "displayExpression": "!!$ctrl.user.getUser($ctrl.data.userId)",
               "events": {},
               "iterate": {
                 "array": "",
@@ -92,15 +92,15 @@
               "children": [],
               "comments": "",
               "type": "custom-component",
-              "id": "66541b39761bb263eba724e1",
+              "id": "666595642268f76de4f7861c",
               "expressions": [
                 {
-                  "expression": "[]",
-                  "to": "users"
+                  "expression": "$ctrl.user.getUser($ctrl.data.userId)",
+                  "to": "user"
                 },
                 {
-                  "expression": "'50px'",
-                  "to": "size"
+                  "expression": "false",
+                  "to": "displayName"
                 }
               ]
             }
@@ -198,7 +198,7 @@
                     {
                       "name": "text",
                       "nodeName": "text",
-                      "textContent": "$ctrl.user.getName($ctrl.data.taskId)",
+                      "textContent": "$ctrl.user.getName($ctrl.data.userId)",
                       "evaluate": true
                     }
                   ],
@@ -305,6 +305,11 @@
                   "property": "font-size",
                   "value": "12px",
                   "enabled": true
+                },
+                {
+                  "property": "margin-top",
+                  "value": ".5rem",
+                  "enabled": true
                 }
               ],
               "children": [
@@ -325,11 +330,6 @@
     }
   ],
   "variables": [
-    {
-      "name": "user",
-      "type": "service",
-      "id": "66541b3a761bb263eba724f5"
-    },
     {
       "name": "$timeout",
       "type": "service"
@@ -386,6 +386,11 @@
         "name": "any"
       },
       "parameters": []
+    },
+    {
+      "name": "user",
+      "type": "service",
+      "id": "665d63b34d6ac1fe2ed29eb5"
     }
   ],
   "bindings": [

@@ -18,12 +18,12 @@ task-card .status-label {
     width: 55px;
     text-align: center;
     font-weight: bold;
+    justify-content: center;
 }
 
 task-card .task-data {
     display: flex;
     flex-direction: column;    
-    margin-left: 1rem;
     min-height: 100%;
     justify-content: space-between;
     padding-top: .5rem;

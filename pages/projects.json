@@ -13,7 +13,7 @@
       "name": "init",
       "type": "method",
       "description": "",
-      "body": "$ctrl.projectManager.refreshProjects()",
+      "body": "$ctrl.refresh()\n\n$ctrl.pullToRefresh.register('main', () => $ctrl.refresh(), {zIndex: '2'})",
       "invokeOnLoad": true,
       "isAsync": true,
       "returnType": {
@@ -35,9 +35,202 @@
       "name": "projectManager",
       "type": "service",
       "id": "6659a0cea90f89de79772cab"
+    },
+    {
+      "name": "refresh",
+      "type": "method",
+      "description": "",
+      "body": "$ctrl.loaded = false\nawait $ctrl.projectManager.refreshProjects()\n$ctrl.loaded = true",
+      "invokeOnLoad": false,
+      "isAsync": true,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": []
+    },
+    {
+      "name": "pullToRefresh",
+      "type": "service",
+      "id": "665eb6f12304cf7bff0ba367"
     }
   ],
   "children": [
+    {
+      "name": "div",
+      "nodeName": "div",
+      "elementId": "",
+      "attributes": [
+        {
+          "property": "data-id",
+          "value": "vrxm6S"
+        }
+      ],
+      "classList": [
+        "content-header"
+      ],
+      "conditionalClasses": [],
+      "contentType": "text",
+      "displayExpression": "",
+      "events": {},
+      "iterate": {
+        "array": "",
+        "variable": "",
+        "trackByIndex": false
+      },
+      "styles": [
+        {
+          "property": "position",
+          "value": "sticky",
+          "enabled": true
+        },
+        {
+          "property": "top",
+          "value": "0",
+          "enabled": true
+        },
+        {
+          "property": "z-index",
+          "value": "1",
+          "enabled": true
+        }
+      ],
+      "children": [
+        {
+          "name": "div",
+          "nodeName": "div",
+          "elementId": "",
+          "attributes": [
+            {
+              "property": "data-id",
+              "value": "Yc9CPV"
+            }
+          ],
+          "classList": [
+            "content-title"
+          ],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [],
+          "children": [
+            {
+              "name": "h1",
+              "nodeName": "h1",
+              "elementId": "",
+              "attributes": [
+                {
+                  "property": "data-id",
+                  "value": "3xOdB7"
+                }
+              ],
+              "classList": [],
+              "conditionalClasses": [],
+              "contentType": "text",
+              "displayExpression": "",
+              "events": {},
+              "iterate": {
+                "array": "",
+                "variable": "",
+                "trackByIndex": false
+              },
+              "styles": [],
+              "children": [
+                {
+                  "name": "text",
+                  "nodeName": "text",
+                  "textContent": "Projects",
+                  "evaluate": false
+                }
+              ],
+              "comments": ""
+            },
+            {
+              "name": "Button",
+              "nodeName": "bln-button",
+              "elementId": "",
+              "attributes": [
+                {
+                  "property": "core",
+                  "value": ""
+                },
+                {
+                  "property": "data-id",
+                  "value": "YcR9PU"
+                }
+              ],
+              "classList": [],
+              "conditionalClasses": [],
+              "contentType": "text",
+              "displayExpression": "",
+              "events": {},
+              "iterate": {
+                "array": "",
+                "variable": "",
+                "trackByIndex": false
+              },
+              "styles": [
+                {
+                  "property": "--bln-button-default-bg-color",
+                  "value": "transparent",
+                  "enabled": true
+                },
+                {
+                  "property": "--bln-button-default-hovered-bg-color",
+                  "value": "transparent",
+                  "enabled": true
+                },
+                {
+                  "property": "--bln-button-default-active-bg-color",
+                  "value": "transparent",
+                  "enabled": true
+                },
+                {
+                  "property": "--bln-button-font-size",
+                  "value": "1.5rem",
+                  "enabled": true
+                },
+                {
+                  "property": "--bln-button-padding",
+                  "value": "0rem .5rem",
+                  "enabled": true
+                },
+                {
+                  "property": "--bln-button-margin",
+                  "value": "0%",
+                  "enabled": true
+                }
+              ],
+              "children": [],
+              "comments": "",
+              "type": "core-component",
+              "id": "button",
+              "expressions": [
+                {
+                  "expression": "({\n  \"type\": \"font-icon\",\n  \"style\": \"solid\",\n  \"name\": \"search\",\n  \"position\": \"icon-only\"\n})",
+                  "to": "icon"
+                },
+                {
+                  "expression": "\"Search\"",
+                  "to": "label"
+                },
+                {
+                  "expression": "$ctrl.views.search.show()",
+                  "to": "onClick"
+                }
+              ]
+            }
+          ],
+          "comments": ""
+        }
+      ],
+      "comments": ""
+    },
     {
       "name": "main",
       "nodeName": "main",
@@ -67,15 +260,15 @@
           "attributes": [
             {
               "property": "data-id",
-              "value": "vrxm6S"
+              "value": "77iIIL"
             }
           ],
           "classList": [
-            "content-header"
+            "projects"
           ],
           "conditionalClasses": [],
           "contentType": "text",
-          "displayExpression": "",
+          "displayExpression": "$ctrl.loaded",
           "events": {},
           "iterate": {
             "array": "",
@@ -84,154 +277,84 @@
           },
           "styles": [
             {
-              "property": "position",
-              "value": "sticky",
+              "property": "display",
+              "value": "flex",
               "enabled": true
             },
             {
-              "property": "top",
-              "value": "0",
+              "property": "align-items",
+              "value": "center",
               "enabled": true
             },
             {
-              "property": "z-index",
-              "value": "1",
+              "property": "justify-content",
+              "value": "center",
+              "enabled": true
+            },
+            {
+              "property": "padding-top",
+              "value": "1rem",
               "enabled": true
             }
           ],
           "children": [
             {
-              "name": "div",
-              "nodeName": "div",
+              "name": "project-card",
+              "nodeName": "project-card",
               "elementId": "",
               "attributes": [
                 {
                   "property": "data-id",
-                  "value": "Yc9CPV"
+                  "value": "-3vUfq"
                 }
               ],
-              "classList": [
-                "content-title"
-              ],
+              "classList": [],
               "conditionalClasses": [],
               "contentType": "text",
               "displayExpression": "",
-              "events": {},
+              "events": {
+                "contextmenu": "",
+                "click": "$ctrl.views.project.show(project)"
+              },
               "iterate": {
-                "array": "",
-                "variable": "",
-                "trackByIndex": false
+                "array": "$ctrl.projectManager.projects",
+                "variable": "project"
               },
               "styles": [],
-              "children": [
+              "children": [],
+              "comments": "",
+              "type": "custom-component",
+              "id": "6659a0cea90f89de79772cb0",
+              "expressions": [
                 {
-                  "name": "h1",
-                  "nodeName": "h1",
-                  "elementId": "",
-                  "attributes": [
-                    {
-                      "property": "data-id",
-                      "value": "3xOdB7"
-                    }
-                  ],
-                  "classList": [],
-                  "conditionalClasses": [],
-                  "contentType": "text",
-                  "displayExpression": "",
-                  "events": {},
-                  "iterate": {
-                    "array": "",
-                    "variable": "",
-                    "trackByIndex": false
-                  },
-                  "styles": [],
-                  "children": [
-                    {
-                      "name": "text",
-                      "nodeName": "text",
-                      "textContent": "Projects",
-                      "evaluate": false
-                    }
-                  ],
-                  "comments": ""
+                  "expression": "project.name",
+                  "to": "name"
                 },
                 {
-                  "name": "Button",
-                  "nodeName": "bln-button",
-                  "elementId": "",
-                  "attributes": [
-                    {
-                      "property": "core",
-                      "value": ""
-                    },
-                    {
-                      "property": "data-id",
-                      "value": "YcR9PU"
-                    }
-                  ],
-                  "classList": [],
-                  "conditionalClasses": [],
-                  "contentType": "text",
-                  "displayExpression": "",
-                  "events": {},
-                  "iterate": {
-                    "array": "",
-                    "variable": "",
-                    "trackByIndex": false
-                  },
-                  "styles": [
-                    {
-                      "property": "--bln-button-default-bg-color",
-                      "value": "transparent",
-                      "enabled": true
-                    },
-                    {
-                      "property": "--bln-button-default-hovered-bg-color",
-                      "value": "transparent",
-                      "enabled": true
-                    },
-                    {
-                      "property": "--bln-button-default-active-bg-color",
-                      "value": "transparent",
-                      "enabled": true
-                    },
-                    {
-                      "property": "--bln-button-font-size",
-                      "value": "1.5rem",
-                      "enabled": true
-                    },
-                    {
-                      "property": "--bln-button-padding",
-                      "value": "0rem .5rem",
-                      "enabled": true
-                    },
-                    {
-                      "property": "--bln-button-margin",
-                      "value": "0%",
-                      "enabled": true
-                    }
-                  ],
-                  "children": [],
-                  "comments": "",
-                  "type": "core-component",
-                  "id": "button",
-                  "expressions": [
-                    {
-                      "expression": "({\n  \"type\": \"font-icon\",\n  \"style\": \"solid\",\n  \"name\": \"search\",\n  \"position\": \"icon-only\"\n})",
-                      "to": "icon"
-                    },
-                    {
-                      "expression": "\"Search\"",
-                      "to": "label"
-                    },
-                    {
-                      "expression": "$ctrl.views.search.show()",
-                      "to": "onClick"
-                    }
-                  ]
+                  "expression": "project.description",
+                  "to": "description"
+                },
+                {
+                  "expression": "project.deadLine",
+                  "to": "deadline"
+                },
+                {
+                  "expression": "project.progress",
+                  "to": "progress"
+                },
+                {
+                  "expression": "project.assignedUsers",
+                  "to": "assignedUsers"
+                },
+                {
+                  "expression": "true",
+                  "to": "mini"
+                },
+                {
+                  "expression": "project.code",
+                  "to": "code"
                 }
-              ],
-              "comments": ""
+              ]
             }
           ],
           "comments": ""
@@ -243,238 +366,55 @@
           "attributes": [
             {
               "property": "data-id",
-              "value": "qCMH1V"
+              "value": "SAvcsf"
             }
           ],
-          "classList": [
-            "content-body"
-          ],
+          "classList": [],
           "conditionalClasses": [],
           "contentType": "text",
-          "displayExpression": "",
+          "displayExpression": "!$ctrl.loaded",
           "events": {},
           "iterate": {
             "array": "",
             "variable": "",
             "trackByIndex": false
           },
-          "styles": [],
+          "styles": [
+            {
+              "property": "display",
+              "value": "flex",
+              "enabled": true
+            },
+            {
+              "property": "flex-direction",
+              "value": "column",
+              "enabled": true
+            },
+            {
+              "property": "gap",
+              "value": ".5rem",
+              "enabled": true
+            },
+            {
+              "property": "margin-top",
+              "value": ".5rem",
+              "enabled": true
+            },
+            {
+              "property": "padding",
+              "value": "0 1rem",
+              "enabled": true
+            }
+          ],
           "children": [
             {
-              "name": "div",
-              "nodeName": "div",
-              "elementId": "tab",
-              "attributes": [
-                {
-                  "property": "data-id",
-                  "value": "QrT8WA"
-                }
-              ],
-              "classList": [],
-              "conditionalClasses": [],
-              "contentType": "text",
-              "displayExpression": "false",
-              "events": {},
-              "iterate": {
-                "array": "",
-                "variable": "",
-                "trackByIndex": false
-              },
-              "styles": [
-                {
-                  "property": "display",
-                  "value": "flex",
-                  "enabled": true
-                },
-                {
-                  "property": "align-items",
-                  "value": "center",
-                  "enabled": true
-                },
-                {
-                  "property": "justify-content",
-                  "value": "center",
-                  "enabled": true
-                }
-              ],
-              "children": [
-                {
-                  "name": "Tab Bar",
-                  "nodeName": "bln-tab-bar",
-                  "elementId": "",
-                  "attributes": [
-                    {
-                      "property": "core",
-                      "value": ""
-                    },
-                    {
-                      "property": "data-id",
-                      "value": "rbs4bC"
-                    }
-                  ],
-                  "classList": [],
-                  "conditionalClasses": [],
-                  "contentType": "text",
-                  "displayExpression": "",
-                  "events": {},
-                  "iterate": {
-                    "array": "",
-                    "variable": "",
-                    "trackByIndex": false
-                  },
-                  "styles": [
-                    {
-                      "property": "width",
-                      "value": "350px",
-                      "enabled": true
-                    },
-                    {
-                      "property": "--bln-tab-bar-bg-color",
-                      "value": "transparent",
-                      "enabled": true
-                    },
-                    {
-                      "property": "--bln-tab-bar-hovered-bg-color",
-                      "value": "transparent",
-                      "enabled": true
-                    },
-                    {
-                      "property": "--bln-tab-bar-border-style",
-                      "value": "none",
-                      "enabled": true
-                    }
-                  ],
-                  "children": [],
-                  "comments": "",
-                  "type": "core-component",
-                  "id": "tab-bar",
-                  "expressions": [
-                    {
-                      "expression": "\"center\"",
-                      "to": "alignment"
-                    },
-                    {
-                      "expression": "\"top\"",
-                      "to": "position"
-                    },
-                    {
-                      "expression": "[{\n        label: \"All\",\n        closable: false\n    },\n    {\n        label: \"Ongoing\",\n        closable: false\n    },\n    {\n        label: \"Completed\",\n        closable: false\n    }\n]",
-                      "to": "tabItems"
-                    }
-                  ]
-                }
-              ],
-              "comments": ""
-            },
-            {
-              "name": "div",
-              "nodeName": "div",
+              "name": "skeleton-loader",
+              "nodeName": "skeleton-loader",
               "elementId": "",
               "attributes": [
                 {
                   "property": "data-id",
-                  "value": "77iIIL"
-                }
-              ],
-              "classList": [
-                "projects"
-              ],
-              "conditionalClasses": [],
-              "contentType": "text",
-              "displayExpression": "",
-              "events": {},
-              "iterate": {
-                "array": "",
-                "variable": "",
-                "trackByIndex": false
-              },
-              "styles": [
-                {
-                  "property": "display",
-                  "value": "flex",
-                  "enabled": true
-                },
-                {
-                  "property": "align-items",
-                  "value": "center",
-                  "enabled": true
-                },
-                {
-                  "property": "justify-content",
-                  "value": "center",
-                  "enabled": true
-                }
-              ],
-              "children": [
-                {
-                  "name": "project-card",
-                  "nodeName": "project-card",
-                  "elementId": "",
-                  "attributes": [
-                    {
-                      "property": "data-id",
-                      "value": "-3vUfq"
-                    }
-                  ],
-                  "classList": [],
-                  "conditionalClasses": [],
-                  "contentType": "text",
-                  "displayExpression": "",
-                  "events": {
-                    "contextmenu": "",
-                    "click": "$ctrl.views.project.show(project)"
-                  },
-                  "iterate": {
-                    "array": "$ctrl.projectManager.projects",
-                    "variable": "project"
-                  },
-                  "styles": [],
-                  "children": [],
-                  "comments": "",
-                  "type": "custom-component",
-                  "id": "6659a0cea90f89de79772cb0",
-                  "expressions": [
-                    {
-                      "expression": "project.name",
-                      "to": "name"
-                    },
-                    {
-                      "expression": "project.description",
-                      "to": "description"
-                    },
-                    {
-                      "expression": "project.deadLine",
-                      "to": "deadline"
-                    },
-                    {
-                      "expression": "project.progress",
-                      "to": "progress"
-                    },
-                    {
-                      "expression": "project.assignedUsers",
-                      "to": "assignedUsers"
-                    },
-                    {
-                      "expression": "true",
-                      "to": "mini"
-                    },
-                    {
-                      "expression": "project.code",
-                      "to": "code"
-                    }
-                  ]
-                }
-              ],
-              "comments": ""
-            },
-            {
-              "name": "div",
-              "nodeName": "div",
-              "elementId": "",
-              "attributes": [
-                {
-                  "property": "data-id",
-                  "value": "RckHkg"
+                  "value": "KhZpWL"
                 }
               ],
               "classList": [],
@@ -487,103 +427,49 @@
                 "variable": "",
                 "trackByIndex": false
               },
-              "styles": [
+              "styles": [],
+              "children": [],
+              "comments": "",
+              "type": "custom-component",
+              "id": "6665b50a2268f76de4f7861e",
+              "expressions": [
                 {
-                  "property": "height",
-                  "value": "100%",
-                  "enabled": true
-                },
+                  "expression": "\"project-card\"",
+                  "to": "type"
+                }
+              ]
+            },
+            {
+              "name": "skeleton-loader",
+              "nodeName": "skeleton-loader",
+              "elementId": "",
+              "attributes": [
                 {
-                  "property": "display",
-                  "value": "flex",
-                  "enabled": true
-                },
-                {
-                  "property": "justify-content",
-                  "value": "center",
-                  "enabled": true
-                },
-                {
-                  "property": "align-items",
-                  "value": "center",
-                  "enabled": true
-                },
-                {
-                  "property": "position",
-                  "value": "absolute",
-                  "enabled": true
-                },
-                {
-                  "property": "top",
-                  "value": "0",
-                  "enabled": true
-                },
-                {
-                  "property": "z-index",
-                  "value": "-1",
-                  "enabled": true
-                },
-                {
-                  "property": "width",
-                  "value": "100%",
-                  "enabled": true
+                  "property": "data-id",
+                  "value": "i8nxzf"
                 }
               ],
-              "children": [
+              "classList": [],
+              "conditionalClasses": [],
+              "contentType": "text",
+              "displayExpression": "",
+              "events": {},
+              "iterate": {
+                "array": "",
+                "variable": "",
+                "trackByIndex": false
+              },
+              "styles": [],
+              "children": [],
+              "comments": "",
+              "type": "custom-component",
+              "id": "6665b50a2268f76de4f7861e",
+              "expressions": [
                 {
-                  "name": "Badge",
-                  "nodeName": "bln-badge",
-                  "elementId": "",
-                  "attributes": [
-                    {
-                      "property": "core",
-                      "value": ""
-                    },
-                    {
-                      "property": "data-id",
-                      "value": "myr4oX"
-                    }
-                  ],
-                  "classList": [],
-                  "conditionalClasses": [],
-                  "contentType": "text",
-                  "displayExpression": "",
-                  "events": {},
-                  "iterate": {
-                    "array": "",
-                    "variable": "",
-                    "trackByIndex": false
-                  },
-                  "styles": [
-                    {
-                      "property": "--bln-badge-default-color",
-                      "value": "transparent",
-                      "enabled": true
-                    },
-                    {
-                      "property": "--bln-badge-text-color",
-                      "value": "#ccc",
-                      "enabled": true
-                    },
-                    {
-                      "property": "--bln-badge-icon-size",
-                      "value": "100px",
-                      "enabled": true
-                    }
-                  ],
-                  "children": [],
-                  "comments": "",
-                  "type": "core-component",
-                  "id": "badge",
-                  "expressions": [
-                    {
-                      "expression": "({\n  \"type\": \"font-icon\",\n  \"style\": \"solid\",\n  \"name\": \"file-alt\",\n  \"position\": \"icon-only\"\n})",
-                      "to": "icon"
-                    }
-                  ]
+                  "expression": "\"project-card\"",
+                  "to": "type"
                 }
-              ],
-              "comments": ""
+              ]
             }
           ],
           "comments": ""
