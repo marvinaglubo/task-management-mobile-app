@@ -8,12 +8,7 @@
       "name": "div",
       "nodeName": "div",
       "elementId": "",
-      "attributes": [
-        {
-          "property": "data-id",
-          "value": "GDJo-M"
-        }
-      ],
+      "attributes": [],
       "classList": [
         "view-header"
       ],
@@ -36,10 +31,6 @@
             {
               "property": "core",
               "value": ""
-            },
-            {
-              "property": "data-id",
-              "value": "vSHNcl"
             }
           ],
           "classList": [],
@@ -88,10 +79,6 @@
                 {
                   "property": "title",
                   "value": "{{ $ctrl.tooltip }}"
-                },
-                {
-                  "property": "data-id",
-                  "value": "4Pet8U"
                 }
               ],
               "classList": [
@@ -160,10 +147,6 @@
                     {
                       "property": "data-position",
                       "value": "{{::$ctrl.icon.position}}"
-                    },
-                    {
-                      "property": "data-id",
-                      "value": "T6uyC6"
                     }
                   ],
                   "classList": [],
@@ -209,10 +192,6 @@
                     {
                       "property": "data-position",
                       "value": "{{::$ctrl.icon.position}}"
-                    },
-                    {
-                      "property": "data-id",
-                      "value": "ecjeDG"
                     }
                   ],
                   "classList": [],
@@ -242,10 +221,6 @@
                     {
                       "property": "ng-if",
                       "value": "!!$ctrl.label && $ctrl.icon.position !== 'icon-only'"
-                    },
-                    {
-                      "property": "data-id",
-                      "value": "dUAsxO"
                     }
                   ],
                   "classList": [
@@ -284,10 +259,6 @@
                     {
                       "property": "ng-if",
                       "value": "$ctrl.isLoading()"
-                    },
-                    {
-                      "property": "data-id",
-                      "value": "K-O5ib"
                     }
                   ],
                   "classList": [
@@ -318,10 +289,6 @@
                         {
                           "property": "viewBox",
                           "value": "25 25 50 50"
-                        },
-                        {
-                          "property": "data-id",
-                          "value": "JnLGy0"
                         }
                       ],
                       "classList": [],
@@ -364,10 +331,6 @@
                             {
                               "property": "stroke-miterlimit",
                               "value": "10"
-                            },
-                            {
-                              "property": "data-id",
-                              "value": "tOJK4A"
                             }
                           ],
                           "classList": [
@@ -422,10 +385,6 @@
             {
               "property": "core",
               "value": ""
-            },
-            {
-              "property": "data-id",
-              "value": "3TFQNa"
             }
           ],
           "classList": [],
@@ -479,10 +438,6 @@
             {
               "property": "core",
               "value": ""
-            },
-            {
-              "property": "data-id",
-              "value": "z9Zotq"
             }
           ],
           "classList": [],
@@ -539,12 +494,7 @@
       "name": "div",
       "nodeName": "div",
       "elementId": "",
-      "attributes": [
-        {
-          "property": "data-id",
-          "value": "n4oMdX"
-        }
-      ],
+      "attributes": [],
       "classList": [],
       "conditionalClasses": [],
       "contentType": "text",
@@ -565,10 +515,6 @@
             {
               "property": "core",
               "value": ""
-            },
-            {
-              "property": "data-id",
-              "value": "JvP9t_"
             }
           ],
           "classList": [],
@@ -620,12 +566,7 @@
       "name": "div",
       "nodeName": "div",
       "elementId": "",
-      "attributes": [
-        {
-          "property": "data-id",
-          "value": "KLizAb"
-        }
-      ],
+      "attributes": [],
       "classList": [
         "view-content"
       ],
@@ -650,12 +591,7 @@
           "name": "div",
           "nodeName": "div",
           "elementId": "",
-          "attributes": [
-            {
-              "property": "data-id",
-              "value": "oBK87X"
-            }
-          ],
+          "attributes": [],
           "classList": [],
           "conditionalClasses": [],
           "contentType": "text",
@@ -672,12 +608,7 @@
               "name": "project-card",
               "nodeName": "project-card",
               "elementId": "",
-              "attributes": [
-                {
-                  "property": "data-id",
-                  "value": "pD2Txx"
-                }
-              ],
+              "attributes": [],
               "classList": [],
               "conditionalClasses": [],
               "contentType": "text",
@@ -699,7 +630,7 @@
               "children": [],
               "comments": "",
               "type": "custom-component",
-              "id": "66541b38761bb263eba724dc",
+              "id": "665d63b54d6ac1fe2ed29eba",
               "expressions": [
                 {
                   "expression": "true",
@@ -730,12 +661,7 @@
           "name": "div",
           "nodeName": "div",
           "elementId": "",
-          "attributes": [
-            {
-              "property": "data-id",
-              "value": "LzqrYW"
-            }
-          ],
+          "attributes": [],
           "classList": [],
           "conditionalClasses": [],
           "contentType": "text",
@@ -752,12 +678,7 @@
               "name": "task-card",
               "nodeName": "task-card",
               "elementId": "",
-              "attributes": [
-                {
-                  "property": "data-id",
-                  "value": "lCjSOh"
-                }
-              ],
+              "attributes": [],
               "classList": [],
               "conditionalClasses": [],
               "contentType": "text",
@@ -773,7 +694,7 @@
               "children": [],
               "comments": "",
               "type": "custom-component",
-              "id": "66541b39761bb263eba724e3",
+              "id": "665d63b54d6ac1fe2ed29ec6",
               "expressions": [
                 {
                   "expression": "task",
@@ -788,12 +709,7 @@
           "name": "div",
           "nodeName": "div",
           "elementId": "",
-          "attributes": [
-            {
-              "property": "data-id",
-              "value": "Y9wHzf"
-            }
-          ],
+          "attributes": [],
           "classList": [],
           "conditionalClasses": [],
           "contentType": "text",
@@ -840,10 +756,6 @@
                 {
                   "property": "core",
                   "value": ""
-                },
-                {
-                  "property": "data-id",
-                  "value": "1VxIJN"
                 }
               ],
               "classList": [],
@@ -883,12 +795,7 @@
               "name": "div",
               "nodeName": "div",
               "elementId": "",
-              "attributes": [
-                {
-                  "property": "data-id",
-                  "value": "VEL4jy"
-                }
-              ],
+              "attributes": [],
               "classList": [],
               "conditionalClasses": [],
               "contentType": "text",
@@ -905,12 +812,7 @@
                   "name": "span",
                   "nodeName": "span",
                   "elementId": "",
-                  "attributes": [
-                    {
-                      "property": "data-id",
-                      "value": "fUCLbg"
-                    }
-                  ],
+                  "attributes": [],
                   "classList": [],
                   "conditionalClasses": [],
                   "contentType": "text",

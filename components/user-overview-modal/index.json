@@ -1,17 +1,14 @@
 {
   "type": "custom-component",
   "name": "user-overview-modal",
+  "nodeName": null,
+  "description": null,
   "children": [
     {
       "name": "div",
       "nodeName": "div",
       "elementId": "",
-      "attributes": [
-        {
-          "property": "data-id",
-          "value": "273YH0"
-        }
-      ],
+      "attributes": [],
       "classList": [
         "modal-body"
       ],
@@ -30,12 +27,7 @@
           "name": "div",
           "nodeName": "div",
           "elementId": "",
-          "attributes": [
-            {
-              "property": "data-id",
-              "value": "b0K2jU"
-            }
-          ],
+          "attributes": [],
           "classList": [],
           "conditionalClasses": [],
           "contentType": "text",
@@ -78,12 +70,7 @@
               "name": "user-avatars",
               "nodeName": "user-avatars",
               "elementId": "",
-              "attributes": [
-                {
-                  "property": "data-id",
-                  "value": "qDhun4"
-                }
-              ],
+              "attributes": [],
               "classList": [],
               "conditionalClasses": [],
               "contentType": "text",
@@ -98,7 +85,7 @@
               "children": [],
               "comments": "",
               "type": "custom-component",
-              "id": "66541b39761bb263eba724e1",
+              "id": "665d63b54d6ac1fe2ed29ebc",
               "expressions": [
                 {
                   "expression": "[$ctrl.info]",
@@ -118,12 +105,7 @@
               "name": "span",
               "nodeName": "span",
               "elementId": "",
-              "attributes": [
-                {
-                  "property": "data-id",
-                  "value": "-G3doP"
-                }
-              ],
+              "attributes": [],
               "classList": [],
               "conditionalClasses": [],
               "contentType": "text",
@@ -170,12 +152,7 @@
               "name": "span",
               "nodeName": "span",
               "elementId": "",
-              "attributes": [
-                {
-                  "property": "data-id",
-                  "value": "eO5_Ki"
-                }
-              ],
+              "attributes": [],
               "classList": [],
               "conditionalClasses": [],
               "contentType": "text",
@@ -204,12 +181,7 @@
           "name": "div",
           "nodeName": "div",
           "elementId": "",
-          "attributes": [
-            {
-              "property": "data-id",
-              "value": "vw0sv8"
-            }
-          ],
+          "attributes": [],
           "classList": [
             "actions"
           ],
@@ -232,10 +204,6 @@
                 {
                   "property": "core",
                   "value": ""
-                },
-                {
-                  "property": "data-id",
-                  "value": "3q5MCr"
                 }
               ],
               "classList": [
@@ -405,6 +373,9 @@
     }
   ],
   "modules": [],
+  "marketplaceId": null,
+  "formControl": null,
+  "transclude": null,
   "externalScripts": [],
   "externalStylesheets": []
 }

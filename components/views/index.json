@@ -51,7 +51,7 @@
           "children": [],
           "comments": "",
           "type": "custom-component",
-          "id": "66541b39761bb263eba724e9",
+          "id": "665d63b54d6ac1fe2ed29ec8",
           "expressions": []
         }
       ],
@@ -110,7 +110,7 @@
           "children": [],
           "comments": "",
           "type": "custom-component",
-          "id": "66541b38761bb263eba724de",
+          "id": "665d63b54d6ac1fe2ed29ec7",
           "expressions": [
             {
               "expression": "$ctrl.views.project.data",
@@ -168,7 +168,7 @@
           "children": [],
           "comments": "",
           "type": "custom-component",
-          "id": "66541b39761bb263eba724e5",
+          "id": "665d63b54d6ac1fe2ed29ec9",
           "expressions": [
             {
               "expression": "$ctrl.views.task.data",
@@ -226,7 +226,7 @@
           "children": [],
           "comments": "",
           "type": "custom-component",
-          "id": "66541b39761bb263eba724e7",
+          "id": "665d63b54d6ac1fe2ed29ec2",
           "expressions": [
             {
               "expression": "$ctrl.views.editProject.data",
@@ -284,7 +284,7 @@
           "children": [],
           "comments": "",
           "type": "custom-component",
-          "id": "66541b39761bb263eba724e8",
+          "id": "665d63b54d6ac1fe2ed29eca",
           "expressions": [
             {
               "expression": "$ctrl.views.editTask.data",

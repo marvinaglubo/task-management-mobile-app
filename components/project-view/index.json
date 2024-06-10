@@ -8,12 +8,7 @@
       "name": "div",
       "nodeName": "div",
       "elementId": "",
-      "attributes": [
-        {
-          "property": "data-id",
-          "value": "5CM4Ca"
-        }
-      ],
+      "attributes": [],
       "classList": [
         "view-header"
       ],
@@ -36,10 +31,6 @@
             {
               "property": "core",
               "value": ""
-            },
-            {
-              "property": "data-id",
-              "value": "1L7YXp"
             }
           ],
           "classList": [],
@@ -88,10 +79,6 @@
                 {
                   "property": "title",
                   "value": "{{ $ctrl.tooltip }}"
-                },
-                {
-                  "property": "data-id",
-                  "value": "rSx4m8"
                 }
               ],
               "classList": [
@@ -160,10 +147,6 @@
                     {
                       "property": "data-position",
                       "value": "{{::$ctrl.icon.position}}"
-                    },
-                    {
-                      "property": "data-id",
-                      "value": "jH5nij"
                     }
                   ],
                   "classList": [],
@@ -209,10 +192,6 @@
                     {
                       "property": "data-position",
                       "value": "{{::$ctrl.icon.position}}"
-                    },
-                    {
-                      "property": "data-id",
-                      "value": "7yMmPy"
                     }
                   ],
                   "classList": [],
@@ -242,10 +221,6 @@
                     {
                       "property": "ng-if",
                       "value": "!!$ctrl.label && $ctrl.icon.position !== 'icon-only'"
-                    },
-                    {
-                      "property": "data-id",
-                      "value": "8c01G9"
                     }
                   ],
                   "classList": [
@@ -284,10 +259,6 @@
                     {
                       "property": "ng-if",
                       "value": "$ctrl.isLoading()"
-                    },
-                    {
-                      "property": "data-id",
-                      "value": "d3Lo7N"
                     }
                   ],
                   "classList": [
@@ -318,10 +289,6 @@
                         {
                           "property": "viewBox",
                           "value": "25 25 50 50"
-                        },
-                        {
-                          "property": "data-id",
-                          "value": "LKXEnD"
                         }
                       ],
                       "classList": [],
@@ -364,10 +331,6 @@
                             {
                               "property": "stroke-miterlimit",
                               "value": "10"
-                            },
-                            {
-                              "property": "data-id",
-                              "value": "QxjCv9"
                             }
                           ],
                           "classList": [
@@ -418,12 +381,7 @@
           "name": "div",
           "nodeName": "div",
           "elementId": "",
-          "attributes": [
-            {
-              "property": "data-id",
-              "value": "3uRrQw"
-            }
-          ],
+          "attributes": [],
           "classList": [],
           "conditionalClasses": [],
           "contentType": "text",
@@ -444,10 +402,6 @@
                 {
                   "property": "core",
                   "value": ""
-                },
-                {
-                  "property": "data-id",
-                  "value": "f2Jo50"
                 }
               ],
               "classList": [],
@@ -512,12 +466,7 @@
       "name": "div",
       "nodeName": "div",
       "elementId": "",
-      "attributes": [
-        {
-          "property": "data-id",
-          "value": "yj0A7n"
-        }
-      ],
+      "attributes": [],
       "classList": [
         "view-overview"
       ],
@@ -536,12 +485,7 @@
           "name": "div",
           "nodeName": "div",
           "elementId": "",
-          "attributes": [
-            {
-              "property": "data-id",
-              "value": "964xEY"
-            }
-          ],
+          "attributes": [],
           "classList": [],
           "conditionalClasses": [],
           "contentType": "text",
@@ -564,12 +508,7 @@
               "name": "span",
               "nodeName": "span",
               "elementId": "",
-              "attributes": [
-                {
-                  "property": "data-id",
-                  "value": "10R6ex"
-                }
-              ],
+              "attributes": [],
               "classList": [
                 "view-title"
               ],
@@ -608,12 +547,7 @@
               "name": "div",
               "nodeName": "div",
               "elementId": "",
-              "attributes": [
-                {
-                  "property": "data-id",
-                  "value": "3P21aA"
-                }
-              ],
+              "attributes": [],
               "classList": [],
               "conditionalClasses": [],
               "contentType": "text",
@@ -674,10 +608,6 @@
                 {
                   "property": "core",
                   "value": ""
-                },
-                {
-                  "property": "data-id",
-                  "value": "zMD71m"
                 }
               ],
               "classList": [
@@ -746,12 +676,7 @@
           "name": "p",
           "nodeName": "p",
           "elementId": "",
-          "attributes": [
-            {
-              "property": "data-id",
-              "value": "_5wV6t"
-            }
-          ],
+          "attributes": [],
           "classList": [
             "view-description"
           ],
@@ -779,12 +704,7 @@
           "name": "div",
           "nodeName": "div",
           "elementId": "",
-          "attributes": [
-            {
-              "property": "data-id",
-              "value": "hnW_25"
-            }
-          ],
+          "attributes": [],
           "classList": [],
           "conditionalClasses": [],
           "contentType": "text",
@@ -815,12 +735,7 @@
               "name": "div",
               "nodeName": "div",
               "elementId": "",
-              "attributes": [
-                {
-                  "property": "data-id",
-                  "value": "tlNZRx"
-                }
-              ],
+              "attributes": [],
               "classList": [],
               "conditionalClasses": [],
               "contentType": "text",
@@ -844,12 +759,7 @@
                   "name": "div",
                   "nodeName": "div",
                   "elementId": "",
-                  "attributes": [
-                    {
-                      "property": "data-id",
-                      "value": "8yddOT"
-                    }
-                  ],
+                  "attributes": [],
                   "classList": [
                     "deadline"
                   ],
@@ -872,10 +782,6 @@
                         {
                           "property": "core",
                           "value": ""
-                        },
-                        {
-                          "property": "data-id",
-                          "value": "kJLzMH"
                         }
                       ],
                       "classList": [],
@@ -939,12 +845,7 @@
                       "name": "span",
                       "nodeName": "span",
                       "elementId": "",
-                      "attributes": [
-                        {
-                          "property": "data-id",
-                          "value": "MgPD2E"
-                        }
-                      ],
+                      "attributes": [],
                       "classList": [],
                       "conditionalClasses": [],
                       "contentType": "text",
@@ -981,12 +882,7 @@
                       "name": "span",
                       "nodeName": "span",
                       "elementId": "",
-                      "attributes": [
-                        {
-                          "property": "data-id",
-                          "value": "4LhEWw"
-                        }
-                      ],
+                      "attributes": [],
                       "classList": [],
                       "conditionalClasses": [],
                       "contentType": "text",
@@ -1024,12 +920,7 @@
               "name": "div",
               "nodeName": "div",
               "elementId": "",
-              "attributes": [
-                {
-                  "property": "data-id",
-                  "value": "a1pYxM"
-                }
-              ],
+              "attributes": [],
               "classList": [],
               "conditionalClasses": [],
               "contentType": "text",
@@ -1061,10 +952,6 @@
                     {
                       "property": "core",
                       "value": ""
-                    },
-                    {
-                      "property": "data-id",
-                      "value": "m8Lzic"
                     }
                   ],
                   "classList": [],
@@ -1151,12 +1038,7 @@
       "name": "div",
       "nodeName": "div",
       "elementId": "project-view-content",
-      "attributes": [
-        {
-          "property": "data-id",
-          "value": "B6s4BV"
-        }
-      ],
+      "attributes": [],
       "classList": [
         "view-content"
       ],
@@ -1175,12 +1057,7 @@
           "name": "div",
           "nodeName": "div",
           "elementId": "",
-          "attributes": [
-            {
-              "property": "data-id",
-              "value": "Q59_8F"
-            }
-          ],
+          "attributes": [],
           "classList": [],
           "conditionalClasses": [],
           "contentType": "text",
@@ -1197,12 +1074,7 @@
               "name": "h1",
               "nodeName": "h1",
               "elementId": "",
-              "attributes": [
-                {
-                  "property": "data-id",
-                  "value": "xyucjz"
-                }
-              ],
+              "attributes": [],
               "classList": [],
               "conditionalClasses": [],
               "contentType": "text",
@@ -1228,12 +1100,7 @@
               "name": "user-avatars",
               "nodeName": "user-avatars",
               "elementId": "",
-              "attributes": [
-                {
-                  "property": "data-id",
-                  "value": "0WAwFl"
-                }
-              ],
+              "attributes": [],
               "classList": [],
               "conditionalClasses": [],
               "contentType": "text",
@@ -1248,7 +1115,7 @@
               "children": [],
               "comments": "",
               "type": "custom-component",
-              "id": "664e645cce56869a03f07c85",
+              "id": "665d63b54d6ac1fe2ed29ebc",
               "expressions": [
                 {
                   "expression": "$ctrl.data.assignedUsers",
@@ -1263,12 +1130,7 @@
           "name": "div",
           "nodeName": "div",
           "elementId": "",
-          "attributes": [
-            {
-              "property": "data-id",
-              "value": "3S-lWF"
-            }
-          ],
+          "attributes": [],
           "classList": [
             "tasks"
           ],
@@ -1287,12 +1149,7 @@
               "name": "div",
               "nodeName": "div",
               "elementId": "",
-              "attributes": [
-                {
-                  "property": "data-id",
-                  "value": "JwPUSP"
-                }
-              ],
+              "attributes": [],
               "classList": [],
               "conditionalClasses": [],
               "contentType": "text",
@@ -1315,12 +1172,7 @@
                   "name": "h1",
                   "nodeName": "h1",
                   "elementId": "",
-                  "attributes": [
-                    {
-                      "property": "data-id",
-                      "value": "MntyqE"
-                    }
-                  ],
+                  "attributes": [],
                   "classList": [],
                   "conditionalClasses": [],
                   "contentType": "text",
@@ -1350,10 +1202,6 @@
                     {
                       "property": "core",
                       "value": ""
-                    },
-                    {
-                      "property": "data-id",
-                      "value": "FyuoXo"
                     }
                   ],
                   "classList": [],
@@ -1435,12 +1283,7 @@
               "name": "task-card",
               "nodeName": "task-card",
               "elementId": "",
-              "attributes": [
-                {
-                  "property": "data-id",
-                  "value": "B6uJ9G"
-                }
-              ],
+              "attributes": [],
               "classList": [],
               "conditionalClasses": [],
               "contentType": "text",
@@ -1456,7 +1299,7 @@
               "children": [],
               "comments": "",
               "type": "custom-component",
-              "id": "664e645dce56869a03f07c87",
+              "id": "665d63b54d6ac1fe2ed29ec6",
               "expressions": [
                 {
                   "expression": "task",
@@ -1471,12 +1314,7 @@
           "name": "div",
           "nodeName": "div",
           "elementId": "",
-          "attributes": [
-            {
-              "property": "data-id",
-              "value": "v3Yw6A"
-            }
-          ],
+          "attributes": [],
           "classList": [],
           "conditionalClasses": [],
           "contentType": "text",
@@ -1514,12 +1352,7 @@
               "name": "skeleton-loader",
               "nodeName": "skeleton-loader",
               "elementId": "",
-              "attributes": [
-                {
-                  "property": "data-id",
-                  "value": "q8zhjt"
-                }
-              ],
+              "attributes": [],
               "classList": [],
               "conditionalClasses": [],
               "contentType": "text",
@@ -1546,12 +1379,7 @@
               "name": "skeleton-loader",
               "nodeName": "skeleton-loader",
               "elementId": "",
-              "attributes": [
-                {
-                  "property": "data-id",
-                  "value": "3oIivl"
-                }
-              ],
+              "attributes": [],
               "classList": [],
               "conditionalClasses": [],
               "contentType": "text",

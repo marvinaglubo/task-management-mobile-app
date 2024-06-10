@@ -466,12 +466,7 @@
       "name": "div",
       "nodeName": "div",
       "elementId": "",
-      "attributes": [
-        {
-          "property": "data-id",
-          "value": "2rZCAU"
-        }
-      ],
+      "attributes": [],
       "classList": [
         "view-overview"
       ],
@@ -490,12 +485,7 @@
           "name": "div",
           "nodeName": "div",
           "elementId": "",
-          "attributes": [
-            {
-              "property": "data-id",
-              "value": "nDbgXk"
-            }
-          ],
+          "attributes": [],
           "classList": [],
           "conditionalClasses": [],
           "contentType": "text",
@@ -512,12 +502,7 @@
               "name": "span",
               "nodeName": "span",
               "elementId": "",
-              "attributes": [
-                {
-                  "property": "data-id",
-                  "value": "y_wlWI"
-                }
-              ],
+              "attributes": [],
               "classList": [
                 "view-title"
               ],
@@ -560,10 +545,6 @@
                 {
                   "property": "core",
                   "value": ""
-                },
-                {
-                  "property": "data-id",
-                  "value": "qmSPyE"
                 }
               ],
               "classList": [
@@ -632,12 +613,7 @@
           "name": "p",
           "nodeName": "p",
           "elementId": "",
-          "attributes": [
-            {
-              "property": "data-id",
-              "value": "mAYDqL"
-            }
-          ],
+          "attributes": [],
           "classList": [
             "view-description"
           ],
@@ -665,12 +641,7 @@
           "name": "div",
           "nodeName": "div",
           "elementId": "",
-          "attributes": [
-            {
-              "property": "data-id",
-              "value": "fvhTIA"
-            }
-          ],
+          "attributes": [],
           "classList": [],
           "conditionalClasses": [],
           "contentType": "text",
@@ -687,12 +658,7 @@
               "name": "span",
               "nodeName": "span",
               "elementId": "",
-              "attributes": [
-                {
-                  "property": "data-id",
-                  "value": "h2acEH"
-                }
-              ],
+              "attributes": [],
               "classList": [],
               "conditionalClasses": [],
               "contentType": "text",
@@ -729,12 +695,7 @@
               "name": "avatar",
               "nodeName": "avatar",
               "elementId": "",
-              "attributes": [
-                {
-                  "property": "data-id",
-                  "value": "2zVH7i"
-                }
-              ],
+              "attributes": [],
               "classList": [],
               "conditionalClasses": [],
               "contentType": "text",
@@ -771,12 +732,7 @@
       "name": "div",
       "nodeName": "div",
       "elementId": "task-view-content",
-      "attributes": [
-        {
-          "property": "data-id",
-          "value": "GPbkg5"
-        }
-      ],
+      "attributes": [],
       "classList": [
         "view-content"
       ],
@@ -795,12 +751,7 @@
           "name": "div",
           "nodeName": "div",
           "elementId": "",
-          "attributes": [
-            {
-              "property": "data-id",
-              "value": "UvcYK8"
-            }
-          ],
+          "attributes": [],
           "classList": [],
           "conditionalClasses": [],
           "contentType": "text",
@@ -817,12 +768,7 @@
               "name": "div",
               "nodeName": "div",
               "elementId": "",
-              "attributes": [
-                {
-                  "property": "data-id",
-                  "value": "ouR5zN"
-                }
-              ],
+              "attributes": [],
               "classList": [],
               "conditionalClasses": [],
               "contentType": "text",
@@ -845,12 +791,7 @@
                   "name": "h1",
                   "nodeName": "h1",
                   "elementId": "",
-                  "attributes": [
-                    {
-                      "property": "data-id",
-                      "value": "Hdz-kC"
-                    }
-                  ],
+                  "attributes": [],
                   "classList": [],
                   "conditionalClasses": [],
                   "contentType": "text",
@@ -880,10 +821,6 @@
                     {
                       "property": "core",
                       "value": ""
-                    },
-                    {
-                      "property": "data-id",
-                      "value": "b2qRL1"
                     }
                   ],
                   "classList": [],
@@ -965,12 +902,7 @@
               "name": "note-card",
               "nodeName": "note-card",
               "elementId": "",
-              "attributes": [
-                {
-                  "property": "data-id",
-                  "value": "_0-zpl"
-                }
-              ],
+              "attributes": [],
               "classList": [],
               "conditionalClasses": [],
               "contentType": "text",
@@ -986,7 +918,7 @@
               "children": [],
               "comments": "",
               "type": "custom-component",
-              "id": "66500ef868336a0ea4a6ae90",
+              "id": "665d63b54d6ac1fe2ed29ebb",
               "expressions": [
                 {
                   "expression": "note",
@@ -1001,12 +933,7 @@
           "name": "div",
           "nodeName": "div",
           "elementId": "",
-          "attributes": [
-            {
-              "property": "data-id",
-              "value": "ZGSy7P"
-            }
-          ],
+          "attributes": [],
           "classList": [],
           "conditionalClasses": [],
           "contentType": "text",
@@ -1044,12 +971,7 @@
               "name": "skeleton-loader",
               "nodeName": "skeleton-loader",
               "elementId": "",
-              "attributes": [
-                {
-                  "property": "data-id",
-                  "value": "HrjL3-"
-                }
-              ],
+              "attributes": [],
               "classList": [],
               "conditionalClasses": [],
               "contentType": "text",
@@ -1076,12 +998,7 @@
               "name": "skeleton-loader",
               "nodeName": "skeleton-loader",
               "elementId": "",
-              "attributes": [
-                {
-                  "property": "data-id",
-                  "value": "_5KIfj"
-                }
-              ],
+              "attributes": [],
               "classList": [],
               "conditionalClasses": [],
               "contentType": "text",

@@ -1,7 +1,7 @@
 {
   "name": "dashboard",
   "type": "page",
-  "url": "/home",
+  "url": "/dashboard",
   "params": {},
   "variables": [
     {

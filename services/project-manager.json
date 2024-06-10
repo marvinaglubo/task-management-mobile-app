@@ -112,14 +112,14 @@
       ]
     },
     {
-      "name": "user",
-      "type": "service",
-      "id": "66541b3a761bb263eba724f5"
-    },
-    {
       "name": "demoTaskApi",
       "type": "open-api",
       "id": "66541b38761bb263eba724d5"
+    },
+    {
+      "name": "user",
+      "type": "service",
+      "id": "665d63b34d6ac1fe2ed29eb5"
     }
   ],
   "visible": [
