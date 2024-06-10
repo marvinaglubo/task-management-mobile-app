@@ -485,7 +485,7 @@
       "attributes": [
         {
           "property": "data-id",
-          "value": "GnMLh0"
+          "value": "asATZN"
         }
       ],
       "classList": [],
@@ -498,17 +498,11 @@
         "variable": "",
         "trackByIndex": false
       },
-      "styles": [
-        {
-          "property": "border-top",
-          "value": "1px solid #ccc",
-          "enabled": true
-        }
-      ],
+      "styles": [],
       "children": [],
       "comments": "",
       "type": "custom-component",
-      "id": "6659a0cea90f89de79772cae",
+      "id": "665d63b54d6ac1fe2ed29ec1",
       "expressions": []
     },
     {
@@ -518,13 +512,13 @@
       "attributes": [
         {
           "property": "data-id",
-          "value": "a0Dhy5"
+          "value": "XK-GMA"
         }
       ],
       "classList": [],
       "conditionalClasses": [],
       "contentType": "text",
-      "displayExpression": "$ctrl.loaded",
+      "displayExpression": "",
       "events": {},
       "iterate": {
         "array": "",
@@ -535,7 +529,7 @@
       "children": [],
       "comments": "",
       "type": "custom-component",
-      "id": "6659a0cea90f89de79772cb9",
+      "id": "665d63b54d6ac1fe2ed29ebd",
       "expressions": []
     }
   ]
