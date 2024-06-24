@@ -704,7 +704,12 @@
               "comments": "",
               "type": "custom-component",
               "id": "6665b50a2268f76de4f7861e",
-              "expressions": []
+              "expressions": [
+                {
+                  "expression": "\"dashboard-projects\"",
+                  "to": "type"
+                }
+              ]
             }
           ],
           "comments": ""
