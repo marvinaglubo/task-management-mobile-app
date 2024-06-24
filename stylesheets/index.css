@@ -10,13 +10,12 @@ h1, h2 {
     margin: 0;
 }
 
-main {
+main, .main {
     flex: 1;
     display: flex;
     flex-direction: column;
     overflow: auto;
 }
-
 
 .content-header {
     background-color: var(--background);

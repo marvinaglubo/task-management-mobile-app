@@ -412,16 +412,18 @@
       "comments": ""
     },
     {
-      "name": "main",
-      "nodeName": "main",
+      "name": "div",
+      "nodeName": "div",
       "elementId": "",
       "attributes": [
         {
           "property": "data-id",
-          "value": "wOVlYw"
+          "value": "QYBwf2"
         }
       ],
-      "classList": [],
+      "classList": [
+        "main"
+      ],
       "conditionalClasses": [],
       "contentType": "text",
       "displayExpression": "",
@@ -431,13 +433,7 @@
         "variable": "",
         "trackByIndex": false
       },
-      "styles": [
-        {
-          "property": "flex",
-          "value": "1",
-          "enabled": true
-        }
-      ],
+      "styles": [],
       "children": [
         {
           "name": "div",
@@ -446,7 +442,7 @@
           "attributes": [
             {
               "property": "data-id",
-              "value": "06UDN6"
+              "value": "X43IaC"
             }
           ],
           "classList": [
@@ -470,7 +466,7 @@
               "attributes": [
                 {
                   "property": "data-id",
-                  "value": "uuMrLu"
+                  "value": "bgoxKd"
                 }
               ],
               "classList": [
@@ -494,7 +490,7 @@
                   "attributes": [
                     {
                       "property": "data-id",
-                      "value": "ab7gLi"
+                      "value": "2R_iEE"
                     }
                   ],
                   "classList": [],
@@ -529,7 +525,7 @@
                     },
                     {
                       "property": "data-id",
-                      "value": "3mcj0T"
+                      "value": "fe0aaz"
                     }
                   ],
                   "classList": [],
@@ -609,7 +605,7 @@
               "attributes": [
                 {
                   "property": "data-id",
-                  "value": "tRAS8_"
+                  "value": "aIO46f"
                 }
               ],
               "classList": [
@@ -633,7 +629,7 @@
                   "attributes": [
                     {
                       "property": "data-id",
-                      "value": "yz-koO"
+                      "value": "W8uTWt"
                     }
                   ],
                   "classList": [],
@@ -690,7 +686,7 @@
               "attributes": [
                 {
                   "property": "data-id",
-                  "value": "3BVI_O"
+                  "value": "bvrbBI"
                 }
               ],
               "classList": [],
