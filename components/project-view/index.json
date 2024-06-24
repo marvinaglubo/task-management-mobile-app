@@ -1510,7 +1510,7 @@
       "name": "init",
       "type": "method",
       "description": "",
-      "body": "$ctrl.$device.onBackButton(e => {\r\n    e.preventDefault()\r\n    $ctrl.$timeout(() => {\r\n        $ctrl.hide()\r\n    })\r\n})\r\n\r\n$ctrl.pullToRefresh.register('#project-view-content', () => $ctrl.fetchTasks())",
+      "body": "$ctrl.$device.onBackButton(e => {\r\n    e.preventDefault()\r\n    $ctrl.$timeout(() => {\r\n        $ctrl.hide()\r\n    })\r\n})\r\n\r\n$ctrl.pullToRefresh.register('#project-view-content', () => $ctrl.fetchTasks(), {zIndex: 2})",
       "invokeOnLoad": true,
       "isAsync": true,
       "returnType": {
