@@ -128,7 +128,7 @@
       "name": "init",
       "type": "method",
       "description": "",
-      "body": "$ctrl.$device.onBackButton(e => {\r\n    e.preventDefault()\r\n})\r\n\r\n$ctrl.refreshData()\r\n$ctrl.pullToRefresh.register('.main', () => {\r\n    return $ctrl.refreshData()\r\n})",
+      "body": "$ctrl.$device.onBackButton(e => {\r\n    e.preventDefault()\r\n})\r\n\r\nawait $ctrl.refreshData()\r\n$ctrl.pullToRefresh.register('.main', () => {\r\n    return $ctrl.refreshData()\r\n})",
       "invokeOnLoad": true,
       "isAsync": true,
       "returnType": {
@@ -272,7 +272,7 @@
               "classList": [],
               "conditionalClasses": [],
               "contentType": "text",
-              "displayExpression": "",
+              "displayExpression": "false",
               "events": {},
               "iterate": {
                 "array": "",
