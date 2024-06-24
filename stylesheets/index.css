@@ -67,6 +67,7 @@ main, .main {
 
 .in-progress-projects project-card {
     flex-basis: calc(50% - 1.5rem);
+    max-width: calc(50% - 1.5rem);
 }
 
 .projects {
