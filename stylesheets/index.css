@@ -6,6 +6,11 @@ ui-view {
     background-color: var(--bg-gray);
 }
 
+* {
+    -webkit-tap-highlight-color: transparent !important;
+}
+
+
 h1, h2 {
     margin: 0;
 }
