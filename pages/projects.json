@@ -13,7 +13,7 @@
       "name": "init",
       "type": "method",
       "description": "",
-      "body": "$ctrl.refresh()\n\n$ctrl.pullToRefresh.register('main', () => $ctrl.refresh(), {zIndex: '2'})",
+      "body": "$ctrl.refresh()\n\n$ctrl.pullToRefresh.register('.main', () => $ctrl.refresh(), {zIndex: '2'})",
       "invokeOnLoad": true,
       "isAsync": true,
       "returnType": {
@@ -232,16 +232,18 @@
       "comments": ""
     },
     {
-      "name": "main",
-      "nodeName": "main",
+      "name": "div",
+      "nodeName": "div",
       "elementId": "",
       "attributes": [
         {
           "property": "data-id",
-          "value": "1sdqpp"
+          "value": "4yDFMI"
         }
       ],
-      "classList": [],
+      "classList": [
+        "main"
+      ],
       "conditionalClasses": [],
       "contentType": "text",
       "displayExpression": "",
