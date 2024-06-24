@@ -609,7 +609,7 @@
               "attributes": [
                 {
                   "property": "data-id",
-                  "value": "0SVAsL"
+                  "value": "tRAS8_"
                 }
               ],
               "classList": [
@@ -633,7 +633,7 @@
                   "attributes": [
                     {
                       "property": "data-id",
-                      "value": "WGyRf7"
+                      "value": "yz-koO"
                     }
                   ],
                   "classList": [],
@@ -645,7 +645,8 @@
                   },
                   "iterate": {
                     "array": "$ctrl.ongoingProjects",
-                    "variable": "project"
+                    "variable": "project",
+                    "trackByIndex": false
                   },
                   "styles": [],
                   "children": [],
@@ -653,10 +654,6 @@
                   "type": "custom-component",
                   "id": "665d63b54d6ac1fe2ed29eba",
                   "expressions": [
-                    {
-                      "expression": "project.description",
-                      "to": "description"
-                    },
                     {
                       "expression": "project.name",
                       "to": "name"
@@ -666,12 +663,16 @@
                       "to": "progress"
                     },
                     {
+                      "expression": "project.assignedUsers",
+                      "to": "assignedUsers"
+                    },
+                    {
                       "expression": "project.deadLine",
                       "to": "deadline"
                     },
                     {
-                      "expression": "project.assignedUsers",
-                      "to": "assignedUsers"
+                      "expression": "project.description",
+                      "to": "description"
                     },
                     {
                       "expression": "project.code",
@@ -683,13 +684,13 @@
               "comments": ""
             },
             {
-              "name": "div",
-              "nodeName": "div",
+              "name": "skeleton-loader",
+              "nodeName": "skeleton-loader",
               "elementId": "",
               "attributes": [
                 {
                   "property": "data-id",
-                  "value": "pMxmpV"
+                  "value": "3BVI_O"
                 }
               ],
               "classList": [],
@@ -703,41 +704,11 @@
                 "trackByIndex": false
               },
               "styles": [],
-              "children": [
-                {
-                  "name": "skeleton-loader",
-                  "nodeName": "skeleton-loader",
-                  "elementId": "",
-                  "attributes": [
-                    {
-                      "property": "data-id",
-                      "value": "aaxEA-"
-                    }
-                  ],
-                  "classList": [],
-                  "conditionalClasses": [],
-                  "contentType": "text",
-                  "displayExpression": "!$ctrl.loaded",
-                  "events": {},
-                  "iterate": {
-                    "array": "",
-                    "variable": "",
-                    "trackByIndex": false
-                  },
-                  "styles": [],
-                  "children": [],
-                  "comments": "",
-                  "type": "custom-component",
-                  "id": "6665b50a2268f76de4f7861e",
-                  "expressions": [
-                    {
-                      "expression": "\"dashboard-projects\"",
-                      "to": "type"
-                    }
-                  ]
-                }
-              ],
-              "comments": ""
+              "children": [],
+              "comments": "",
+              "type": "custom-component",
+              "id": "6665b50a2268f76de4f7861e",
+              "expressions": []
             }
           ],
           "comments": ""
@@ -752,7 +723,7 @@
       "attributes": [
         {
           "property": "data-id",
-          "value": "z4gsaw"
+          "value": "RCnW9h"
         }
       ],
       "classList": [],
