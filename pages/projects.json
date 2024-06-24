@@ -40,7 +40,7 @@
       "name": "refresh",
       "type": "method",
       "description": "",
-      "body": "$ctrl.loaded = false\nawait $ctrl.projectManager.refreshProjects()\n$ctrl.loaded = true",
+      "body": "$ctrl.loaded = false\nawait $ctrl.projectManager.refreshProjects()\n\n$ctrl.$scope.$apply(() => {\n    $ctrl.loaded = true\n})",
       "invokeOnLoad": false,
       "isAsync": true,
       "returnType": {

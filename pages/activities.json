@@ -14,7 +14,7 @@
       "name": "fetchNotes",
       "type": "method",
       "description": "",
-      "body": "$ctrl.loaded = false\r\n\r\n$ctrl.demoTaskApi.demo_api_tasks_services_note_SelectAllNote({\r\n    limit: 1000,\r\n    offset: 0.\r\n}).then(result => {\r\n    $ctrl.loaded = true\r\n    $ctrl.notes = result.data.note\r\n})",
+      "body": "$ctrl.loaded = false\r\n\r\n$ctrl.demoTaskApi.demo_api_tasks_services_note_SelectAllNote({\r\n    limit: 1000,\r\n    offset: 0.\r\n}).then(result => {\r\n    $ctrl.notes = result.data.note\r\n})",
       "invokeOnLoad": false,
       "isAsync": false,
       "returnType": {
@@ -81,7 +81,7 @@
       "name": "refresh",
       "type": "method",
       "description": "",
-      "body": "$ctrl.$scope.$apply(() => {\n    $ctrl.loaded = false\n})\n\nawait $ctrl.taskManager.refreshTasks()\nawait $ctrl.projectManager.refreshProjects()\nawait $ctrl.user.refreshUsers()\nawait $ctrl.fetchNotes()\n$ctrl.loaded = true",
+      "body": "$ctrl.loaded = false\n\nawait $ctrl.taskManager.refreshTasks()\nawait $ctrl.projectManager.refreshProjects()\nawait $ctrl.user.refreshUsers()\nawait $ctrl.fetchNotes()\n\n$ctrl.$scope.$apply(() => {\n    $ctrl.loaded = true\n})\n\n",
       "invokeOnLoad": false,
       "isAsync": true,
       "returnType": {
