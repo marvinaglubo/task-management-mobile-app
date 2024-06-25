@@ -43,7 +43,7 @@
           ],
           "conditionalClasses": [],
           "contentType": "text",
-          "displayExpression": "user && $ctrl.style && ($ctrl.limit > 0 ? $index + 1 < $ctrl.limit : true)",
+          "displayExpression": "user && $ctrl.style && ($ctrl.limit > 0 ? $index + 1 <= $ctrl.limit : true)",
           "events": {
             "click": "$ctrl.viewOnClick ? $ctrl.$modal.open(\"user-overview-modal\", {info: user}) : null"
           },
@@ -90,7 +90,7 @@
             {
               "name": "text",
               "nodeName": "text",
-              "textContent": "$ctrl.limit && $ctrl.limit < $ctrl.users.length ? '+' + ($ctrl.users.length - $ctrl.limit) : ''",
+              "textContent": "$ctrl.limit && $ctrl.limit < $ctrl.users.length && ($ctrl.users.length - $ctrl.limit > 0) ? '+' + ($ctrl.users.length - $ctrl.limit) : ''",
               "evaluate": true
             }
           ],
