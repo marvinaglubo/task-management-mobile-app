@@ -184,7 +184,12 @@
       "name": "div",
       "nodeName": "div",
       "elementId": "",
-      "attributes": [],
+      "attributes": [
+        {
+          "property": "data-id",
+          "value": "i2Dk4E"
+        }
+      ],
       "classList": [
         "legend-container"
       ],
@@ -234,13 +239,18 @@
           "name": "div",
           "nodeName": "div",
           "elementId": "",
-          "attributes": [],
+          "attributes": [
+            {
+              "property": "data-id",
+              "value": "SwPmpY"
+            }
+          ],
           "classList": [
             "legend"
           ],
           "conditionalClasses": [],
           "contentType": "text",
-          "displayExpression": "",
+          "displayExpression": "$ctrl.legends.length",
           "events": {},
           "iterate": {
             "array": "$ctrl.legends",
@@ -252,7 +262,12 @@
               "name": "div",
               "nodeName": "div",
               "elementId": "",
-              "attributes": [],
+              "attributes": [
+                {
+                  "property": "data-id",
+                  "value": "1PmfqF"
+                }
+              ],
               "classList": [
                 "legend-value-container"
               ],
@@ -275,6 +290,10 @@
                     {
                       "property": "ng-style",
                       "value": "{ 'background-color': $ctrl.colors[$index] }"
+                    },
+                    {
+                      "property": "data-id",
+                      "value": "1TbyL8"
                     }
                   ],
                   "classList": [
@@ -304,7 +323,12 @@
                   "name": "span",
                   "nodeName": "span",
                   "elementId": "",
-                  "attributes": [],
+                  "attributes": [
+                    {
+                      "property": "data-id",
+                      "value": "nDrYlZ"
+                    }
+                  ],
                   "classList": [
                     "legend-value"
                   ],
@@ -335,7 +359,12 @@
               "name": "div",
               "nodeName": "div",
               "elementId": "",
-              "attributes": [],
+              "attributes": [
+                {
+                  "property": "data-id",
+                  "value": "WECwRo"
+                }
+              ],
               "classList": [
                 "legend-value-container"
               ],
@@ -354,7 +383,12 @@
                   "name": "span",
                   "nodeName": "span",
                   "elementId": "",
-                  "attributes": [],
+                  "attributes": [
+                    {
+                      "property": "data-id",
+                      "value": "Kes0vy"
+                    }
+                  ],
                   "classList": [
                     "legend-label-padding"
                   ],
@@ -382,7 +416,12 @@
                   "name": "span",
                   "nodeName": "span",
                   "elementId": "",
-                  "attributes": [],
+                  "attributes": [
+                    {
+                      "property": "data-id",
+                      "value": "tQEh2N"
+                    }
+                  ],
                   "classList": [
                     "legend-label"
                   ],
@@ -411,6 +450,139 @@
             }
           ],
           "comments": ""
+        },
+        {
+          "name": "div",
+          "nodeName": "div",
+          "elementId": "",
+          "attributes": [
+            {
+              "property": "data-id",
+              "value": "8JlvVj"
+            }
+          ],
+          "classList": [],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "!$ctrl.legends.length",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [],
+          "children": [
+            {
+              "name": "skeleton-loader",
+              "nodeName": "skeleton-loader",
+              "elementId": "",
+              "attributes": [
+                {
+                  "property": "data-id",
+                  "value": "Ctsnex"
+                }
+              ],
+              "classList": [],
+              "conditionalClasses": [],
+              "contentType": "text",
+              "displayExpression": "",
+              "events": {},
+              "iterate": {
+                "array": "",
+                "variable": "",
+                "trackByIndex": false
+              },
+              "styles": [
+                {
+                  "property": "margin-bottom",
+                  "value": "1rem",
+                  "enabled": true
+                }
+              ],
+              "children": [],
+              "comments": "",
+              "type": "custom-component",
+              "id": "6665b50a2268f76de4f7861e",
+              "expressions": [
+                {
+                  "expression": "\"legends\"",
+                  "to": "type"
+                }
+              ]
+            },
+            {
+              "name": "skeleton-loader",
+              "nodeName": "skeleton-loader",
+              "elementId": "",
+              "attributes": [
+                {
+                  "property": "data-id",
+                  "value": "NVrnkF"
+                }
+              ],
+              "classList": [],
+              "conditionalClasses": [],
+              "contentType": "text",
+              "displayExpression": "",
+              "events": {},
+              "iterate": {
+                "array": "",
+                "variable": "",
+                "trackByIndex": false
+              },
+              "styles": [
+                {
+                  "property": "margin-bottom",
+                  "value": "1rem",
+                  "enabled": true
+                }
+              ],
+              "children": [],
+              "comments": "",
+              "type": "custom-component",
+              "id": "6665b50a2268f76de4f7861e",
+              "expressions": [
+                {
+                  "expression": "\"legends\"",
+                  "to": "type"
+                }
+              ]
+            },
+            {
+              "name": "skeleton-loader",
+              "nodeName": "skeleton-loader",
+              "elementId": "",
+              "attributes": [
+                {
+                  "property": "data-id",
+                  "value": "laZ_Jf"
+                }
+              ],
+              "classList": [],
+              "conditionalClasses": [],
+              "contentType": "text",
+              "displayExpression": "",
+              "events": {},
+              "iterate": {
+                "array": "",
+                "variable": "",
+                "trackByIndex": false
+              },
+              "styles": [],
+              "children": [],
+              "comments": "",
+              "type": "custom-component",
+              "id": "6665b50a2268f76de4f7861e",
+              "expressions": [
+                {
+                  "expression": "\"legends\"",
+                  "to": "type"
+                }
+              ]
+            }
+          ],
+          "comments": ""
         }
       ],
       "comments": ""
@@ -430,7 +602,7 @@
       "type": "<",
       "description": "",
       "propertyType": "property",
-      "default": "[{label: 'Legend', value: 'N/A' }]"
+      "default": "[]"
     },
     {
       "name": "colors",

@@ -2434,6 +2434,273 @@
         }
       ],
       "comments": ""
+    },
+    {
+      "name": "div",
+      "nodeName": "div",
+      "elementId": "legends",
+      "attributes": [
+        {
+          "property": "data-id",
+          "value": "taq3yk"
+        }
+      ],
+      "classList": [],
+      "conditionalClasses": [],
+      "contentType": "text",
+      "displayExpression": "",
+      "events": {},
+      "iterate": {
+        "array": "",
+        "variable": "",
+        "trackByIndex": false
+      },
+      "styles": [],
+      "children": [
+        {
+          "name": "div",
+          "nodeName": "div",
+          "elementId": "",
+          "attributes": [
+            {
+              "property": "data-id",
+              "value": "aMj63a"
+            }
+          ],
+          "classList": [],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [
+            {
+              "property": "display",
+              "value": "flex",
+              "enabled": true
+            }
+          ],
+          "children": [
+            {
+              "name": "div",
+              "nodeName": "div",
+              "elementId": "",
+              "attributes": [
+                {
+                  "property": "data-id",
+                  "value": "v6pLbl"
+                }
+              ],
+              "classList": [],
+              "conditionalClasses": [],
+              "contentType": "text",
+              "displayExpression": "",
+              "events": {},
+              "iterate": {
+                "array": "",
+                "variable": "",
+                "trackByIndex": false
+              },
+              "styles": [
+                {
+                  "property": "display",
+                  "value": "flex",
+                  "enabled": true
+                }
+              ],
+              "children": [
+                {
+                  "name": "div",
+                  "nodeName": "div",
+                  "elementId": "",
+                  "attributes": [
+                    {
+                      "property": "data-id",
+                      "value": "nioUhM"
+                    }
+                  ],
+                  "classList": [
+                    "skeleton"
+                  ],
+                  "conditionalClasses": [],
+                  "contentType": "text",
+                  "displayExpression": "",
+                  "events": {},
+                  "iterate": {
+                    "array": "",
+                    "variable": "",
+                    "trackByIndex": false
+                  },
+                  "styles": [
+                    {
+                      "property": "height",
+                      "value": "15px",
+                      "enabled": true
+                    },
+                    {
+                      "property": "width",
+                      "value": "15px",
+                      "enabled": true
+                    },
+                    {
+                      "property": "border-radius",
+                      "value": "100%",
+                      "enabled": true
+                    }
+                  ],
+                  "children": [],
+                  "comments": ""
+                },
+                {
+                  "name": "div",
+                  "nodeName": "div",
+                  "elementId": "",
+                  "attributes": [
+                    {
+                      "property": "data-id",
+                      "value": "_n8sqO"
+                    }
+                  ],
+                  "classList": [],
+                  "conditionalClasses": [],
+                  "contentType": "text",
+                  "displayExpression": "",
+                  "events": {},
+                  "iterate": {
+                    "array": "",
+                    "variable": "",
+                    "trackByIndex": false
+                  },
+                  "styles": [],
+                  "children": [],
+                  "comments": ""
+                }
+              ],
+              "comments": ""
+            },
+            {
+              "name": "div",
+              "nodeName": "div",
+              "elementId": "",
+              "attributes": [
+                {
+                  "property": "data-id",
+                  "value": "OGVbnF"
+                }
+              ],
+              "classList": [],
+              "conditionalClasses": [],
+              "contentType": "text",
+              "displayExpression": "",
+              "events": {},
+              "iterate": {
+                "array": "",
+                "variable": "",
+                "trackByIndex": false
+              },
+              "styles": [],
+              "children": [
+                {
+                  "name": "div",
+                  "nodeName": "div",
+                  "elementId": "",
+                  "attributes": [
+                    {
+                      "property": "data-id",
+                      "value": "_6-Hj2"
+                    }
+                  ],
+                  "classList": [
+                    "skeleton"
+                  ],
+                  "conditionalClasses": [],
+                  "contentType": "text",
+                  "displayExpression": "",
+                  "events": {},
+                  "iterate": {
+                    "array": "",
+                    "variable": "",
+                    "trackByIndex": false
+                  },
+                  "styles": [
+                    {
+                      "property": "height",
+                      "value": "12px",
+                      "enabled": true
+                    },
+                    {
+                      "property": "margin-left",
+                      "value": ".5rem",
+                      "enabled": true
+                    },
+                    {
+                      "property": "width",
+                      "value": "70px",
+                      "enabled": true
+                    },
+                    {
+                      "property": "margin-bottom",
+                      "value": ".5rem",
+                      "enabled": true
+                    }
+                  ],
+                  "children": [],
+                  "comments": ""
+                },
+                {
+                  "name": "div",
+                  "nodeName": "div",
+                  "elementId": "",
+                  "attributes": [
+                    {
+                      "property": "data-id",
+                      "value": "KD2X_Y"
+                    }
+                  ],
+                  "classList": [
+                    "skeleton"
+                  ],
+                  "conditionalClasses": [],
+                  "contentType": "text",
+                  "displayExpression": "",
+                  "events": {},
+                  "iterate": {
+                    "array": "",
+                    "variable": "",
+                    "trackByIndex": false
+                  },
+                  "styles": [
+                    {
+                      "property": "height",
+                      "value": "12px",
+                      "enabled": true
+                    },
+                    {
+                      "property": "margin-left",
+                      "value": ".5rem",
+                      "enabled": true
+                    },
+                    {
+                      "property": "width",
+                      "value": "70px",
+                      "enabled": true
+                    }
+                  ],
+                  "children": [],
+                  "comments": ""
+                }
+              ],
+              "comments": ""
+            }
+          ],
+          "comments": ""
+        }
+      ],
+      "comments": ""
     }
   ],
   "variables": [],
@@ -2443,7 +2710,7 @@
       "type": "<",
       "description": "",
       "propertyType": "enum",
-      "default": "'task-card'",
+      "default": "'legends'",
       "multi": false,
       "enumOptions": [
         {
@@ -2460,6 +2727,9 @@
         },
         {
           "value": "activity-card"
+        },
+        {
+          "value": "legends"
         }
       ]
     }
