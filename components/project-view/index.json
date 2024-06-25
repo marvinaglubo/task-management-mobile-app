@@ -466,7 +466,12 @@
       "name": "div",
       "nodeName": "div",
       "elementId": "",
-      "attributes": [],
+      "attributes": [
+        {
+          "property": "data-id",
+          "value": "Fvm8mF"
+        }
+      ],
       "classList": [
         "view-overview"
       ],
@@ -485,7 +490,12 @@
           "name": "div",
           "nodeName": "div",
           "elementId": "",
-          "attributes": [],
+          "attributes": [
+            {
+              "property": "data-id",
+              "value": "1YHnG5"
+            }
+          ],
           "classList": [],
           "conditionalClasses": [],
           "contentType": "text",
@@ -508,7 +518,12 @@
               "name": "span",
               "nodeName": "span",
               "elementId": "",
-              "attributes": [],
+              "attributes": [
+                {
+                  "property": "data-id",
+                  "value": "a1hoUN"
+                }
+              ],
               "classList": [
                 "view-title"
               ],
@@ -547,7 +562,12 @@
               "name": "div",
               "nodeName": "div",
               "elementId": "",
-              "attributes": [],
+              "attributes": [
+                {
+                  "property": "data-id",
+                  "value": "mqU5D0"
+                }
+              ],
               "classList": [],
               "conditionalClasses": [],
               "contentType": "text",
@@ -608,6 +628,10 @@
                 {
                   "property": "core",
                   "value": ""
+                },
+                {
+                  "property": "data-id",
+                  "value": "LR8wq9"
                 }
               ],
               "classList": [
@@ -676,7 +700,12 @@
           "name": "p",
           "nodeName": "p",
           "elementId": "",
-          "attributes": [],
+          "attributes": [
+            {
+              "property": "data-id",
+              "value": "8mUrwA"
+            }
+          ],
           "classList": [
             "view-description"
           ],
@@ -704,7 +733,12 @@
           "name": "div",
           "nodeName": "div",
           "elementId": "",
-          "attributes": [],
+          "attributes": [
+            {
+              "property": "data-id",
+              "value": "dhAPC5"
+            }
+          ],
           "classList": [],
           "conditionalClasses": [],
           "contentType": "text",
@@ -735,7 +769,12 @@
               "name": "div",
               "nodeName": "div",
               "elementId": "",
-              "attributes": [],
+              "attributes": [
+                {
+                  "property": "data-id",
+                  "value": "PZv4P9"
+                }
+              ],
               "classList": [],
               "conditionalClasses": [],
               "contentType": "text",
@@ -759,7 +798,12 @@
                   "name": "div",
                   "nodeName": "div",
                   "elementId": "",
-                  "attributes": [],
+                  "attributes": [
+                    {
+                      "property": "data-id",
+                      "value": "ymiKds"
+                    }
+                  ],
                   "classList": [
                     "deadline"
                   ],
@@ -782,6 +826,10 @@
                         {
                           "property": "core",
                           "value": ""
+                        },
+                        {
+                          "property": "data-id",
+                          "value": "C4g04K"
                         }
                       ],
                       "classList": [],
@@ -845,7 +893,12 @@
                       "name": "span",
                       "nodeName": "span",
                       "elementId": "",
-                      "attributes": [],
+                      "attributes": [
+                        {
+                          "property": "data-id",
+                          "value": "AZn5nF"
+                        }
+                      ],
                       "classList": [],
                       "conditionalClasses": [],
                       "contentType": "text",
@@ -882,7 +935,12 @@
                       "name": "span",
                       "nodeName": "span",
                       "elementId": "",
-                      "attributes": [],
+                      "attributes": [
+                        {
+                          "property": "data-id",
+                          "value": "FjKeDu"
+                        }
+                      ],
                       "classList": [],
                       "conditionalClasses": [],
                       "contentType": "text",
@@ -920,7 +978,12 @@
               "name": "div",
               "nodeName": "div",
               "elementId": "",
-              "attributes": [],
+              "attributes": [
+                {
+                  "property": "data-id",
+                  "value": "aq1Jf3"
+                }
+              ],
               "classList": [],
               "conditionalClasses": [],
               "contentType": "text",
@@ -952,6 +1015,10 @@
                     {
                       "property": "core",
                       "value": ""
+                    },
+                    {
+                      "property": "data-id",
+                      "value": "nZguPf"
                     }
                   ],
                   "classList": [],
@@ -987,7 +1054,7 @@
                     },
                     {
                       "property": "--bln-progress-background-color",
-                      "value": "var(--light-gray, #ccc)",
+                      "value": "var(--bg-gray, #ccc)",
                       "enabled": true
                     },
                     {
