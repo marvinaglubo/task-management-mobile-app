@@ -183,7 +183,12 @@
       "name": "div",
       "nodeName": "div",
       "elementId": "edit-project-panel",
-      "attributes": [],
+      "attributes": [
+        {
+          "property": "data-id",
+          "value": "hcMLCe"
+        }
+      ],
       "classList": [],
       "conditionalClasses": [],
       "contentType": "text",
@@ -210,11 +215,16 @@
           "name": "edit-project-view",
           "nodeName": "edit-project-view",
           "elementId": "",
-          "attributes": [],
+          "attributes": [
+            {
+              "property": "data-id",
+              "value": "YvU1AF"
+            }
+          ],
           "classList": [],
           "conditionalClasses": [],
           "contentType": "text",
-          "displayExpression": "",
+          "displayExpression": "$ctrl.views.editProject.shown",
           "events": {},
           "iterate": {
             "array": "",
@@ -241,7 +251,12 @@
       "name": "div",
       "nodeName": "div",
       "elementId": "edit-task-panel",
-      "attributes": [],
+      "attributes": [
+        {
+          "property": "data-id",
+          "value": "UkNR4m"
+        }
+      ],
       "classList": [],
       "conditionalClasses": [],
       "contentType": "text",
@@ -268,11 +283,16 @@
           "name": "edit-task-view",
           "nodeName": "edit-task-view",
           "elementId": "",
-          "attributes": [],
+          "attributes": [
+            {
+              "property": "data-id",
+              "value": "L3bnUv"
+            }
+          ],
           "classList": [],
           "conditionalClasses": [],
           "contentType": "text",
-          "displayExpression": "",
+          "displayExpression": "$ctrl.views.editTask.shown",
           "events": {},
           "iterate": {
             "array": "",
